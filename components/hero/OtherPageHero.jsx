@@ -30,12 +30,12 @@ export default function OtherPageHero({
         <div className="flex flex-col items-start justify-center gap-8 px-[4vw] py-[8vh] order-2 md:order-1">
           <HeaderOne
             text={title}
-            color={`${bgImage === null ? "text-black" : "text-white"} w-3/4 `}
-            size={"text-[60px] leading-[70px]"}
+            color={`${bgImage === null ? "text-black" : "text-white"} `}
+            size={"text-[38px] leading-[45px] md:text-[55px] md:leading-[70px]"}
           />
           <MainText
             text={subtitle}
-            size={"text-[22px] leading-[38px] "}
+            size={"text-[20px] leading-[34px] font-light "}
             color={`${bgImage === null ? "text-[#12152E] opacity-50" : "text-white"} `}
           />
           <Link href={btnLink}>
@@ -45,11 +45,11 @@ export default function OtherPageHero({
         <div className="order-1 md:order-2">
           {" "}
           <ImageWrapper
-            src={cover}
+            src={image}
             width={120}
             height={60}
-            alt={"Tinqlab logo"}
-            style={"h-full object-cover w-full"}
+            alt={"Tinqlab image"}
+            style={"h-full object-contain w-full"}
           />
         </div>
       </section>

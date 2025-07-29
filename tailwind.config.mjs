@@ -23,6 +23,11 @@ export default {
         arrowvector: "url('/images/vector.png')",
         arrowvector1: "url('/images/vector1.png')",
         arrowvector2: "url('/images/vector2.png')",
+        edtech1: "url('/images/edtech1.svg')",
+        edtechbg: "url('/images/edtechbg.svg')",
+        edtechHero: "url('/images/edtechHero.svg')",
+        retailBg: "url('/images/retailBg.svg')",
+        retailBg2: "url('/images/retailBg2.svg')",
       },
       boxShadow: {
         "custom-primary": "4px 4px 25px 0 rgba(90, 103, 216, 0.2)",

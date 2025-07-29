@@ -10,6 +10,8 @@ import HeaderTwo from "@/components/typography/HeaderTwo";
 import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
 import MoreContentCard from "@/components/card/MoreContentCard";
 import { SpecificationItem } from "@/components/section/SpecificationItem";
+import heroImage from "@/public/images/retailHero.svg";
+import TechStack from "@/components/section/TechStack";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -194,7 +196,7 @@ export default function Home() {
           }
           btnLink={"/"}
           btnText={"Schedule a call"}
-          image={""}
+          image={heroImage}
         />
 
         <PageBorders>
@@ -243,7 +245,7 @@ export default function Home() {
                   color={"text-[#12152E] opacity-50"}
                 />
               </div>
-              <div className="hidden md:block bg-arrowvector bg-contain bg-left-bottom bg-no-repeat h-full"></div>
+              <div className="hidden md:block bg-retailBg bg-contain bg-left-bottom bg-no-repeat h-full"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               {" "}
@@ -280,7 +282,7 @@ export default function Home() {
                   color={"text-[#12152E] opacity-50"}
                 />
               </div>
-              <div className="hidden md:block bg-arrowvector bg-contain bg-left-bottom bg-no-repeat h-full"></div>
+              <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat h-full"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               {" "}
@@ -295,22 +297,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="grid grid-cols-4 gap-4 md:gap-8 justify-items-center">
-              {technologyWeUse.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-4 rounded-[10px] w-full flex items-center justify-center"
-                >
-                  <ImageWrapper
-                    alt={"react"}
-                    src={react}
-                    width={100}
-                    height={100}
-                    style={`cursor-pointer object-cover `}
-                  />
-                </div>
-              ))}
-            </div>
+            <TechStack />
           </div>
         </DoublePageBorders>
         <PageBorders>
