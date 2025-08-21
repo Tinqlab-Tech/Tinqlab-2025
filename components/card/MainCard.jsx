@@ -16,7 +16,7 @@ export default function MainCard({
       className={`${bgColor ? bgColor : "bg-white"} h-full  p-[20px] md:py-[40px] flex flex-col gap-8 justify-between rounded-[10px] shadow-custom-primary`}
     >
       <div
-        className={`${bgColor === null ? "text-black" : "text-white"} text-[18px] lg:text-[24px] font-semibold leading-[24px] lg:leading-[32px] flex items-center justify-start gap-4 w-4/5`}
+        className={`${bgColor === null ? "text-black" : "text-white"} text-[16px] lg:text-[22px] font-semibold leading-[24px] lg:leading-[32px] flex items-center justify-start gap-4 w-4/5`}
       >
         {hasIcon === true && (
           <ImageWrapper
@@ -35,10 +35,12 @@ export default function MainCard({
         {title}
       </div>
 
-      <MainText
-        text={subtitle}
-        color={`${bgColor === null ? "text-[#12152E] opacity-50" : "text-white"}`}
-      />
+      {subtitle != "" && (
+        <MainText
+          text={subtitle}
+          color={`${bgColor === null ? "text-[#12152E] opacity-50" : "text-white"}`}
+        />
+      )}
     </div>
   );
 }

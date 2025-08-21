@@ -21,13 +21,15 @@ export const SpecificationItem = ({ title, subTitle }) => {
                 }
               />
             </summary>
-            <article className=" w-4/5 list-inside list-disc break-words px-2 pb-4">
-              <MainText
-                text={subTitle}
-                color={"text-[#12152E] opacity-50"}
-                size={"text-[16px] leading-[24px]"}
-              />
-            </article>
+            {subTitle != "" && (
+              <article className=" w-4/5 list-inside list-disc break-words px-2 pb-4">
+                <MainText
+                  text={subTitle}
+                  color={"text-[#12152E] opacity-50"}
+                  size={"text-[16px] leading-[24px]"}
+                />
+              </article>
+            )}
           </details>
         </li>
       </ul>
