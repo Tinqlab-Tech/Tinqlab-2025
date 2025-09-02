@@ -13,6 +13,10 @@ export default {
         primary: "#5A67D8",
         mainBlack: "#000000",
         mainGrey: "#FAFAFA",
+        mainWhite: "#FFFFFF",
+        lightBlue: "#EDF4FE",
+        darkestBlue: "#12152E",
+        darkBlue: "#2B305E",
       },
       backgroundImage: {
         herobg: "url('/images/herobg.png')",
@@ -28,6 +32,7 @@ export default {
         edtechHero: "url('/images/edtechHero.svg')",
         retailBg: "url('/images/retailBg.svg')",
         retailBg2: "url('/images/retailBg2.svg')",
+        features1: "url('/images/features1.png')",
       },
       boxShadow: {
         "custom-primary": "4px 4px 25px 0 rgba(90, 103, 216, 0.2)",

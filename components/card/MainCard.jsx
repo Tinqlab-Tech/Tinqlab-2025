@@ -13,10 +13,10 @@ export default function MainCard({
 }) {
   return (
     <div
-      className={`${bgColor ? bgColor : "bg-white"} h-full  p-[20px] md:py-[40px] flex flex-col gap-8 justify-between rounded-[10px] shadow-custom-primary`}
+      className={`${bgColor ? bgColor : "bg-white"}    h-full  p-[20px] md:py-[40px] flex flex-col gap-8 justify-between rounded-[10px] shadow-custom-primary`}
     >
       <div
-        className={`${bgColor === null ? "text-black" : "text-white"} text-[16px] lg:text-[22px] font-semibold leading-[24px] lg:leading-[32px] flex items-center justify-start gap-4 w-4/5`}
+        className={`${bgColor === null ? "text-black" : "text-white"}  flex items-center justify-start text-[16px] lg:text-[22px] font-semibold leading-[24px] lg:leading-[32px]  gap-4 w-4/5`}
       >
         {hasIcon === true && (
           <ImageWrapper

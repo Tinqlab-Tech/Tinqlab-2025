@@ -1,20 +1,23 @@
 import { MainButton } from "@/components/button/MainButton";
 import HomepageHero from "@/components/hero/HomepageHero";
 import PageStarter from "@/components/section/PageStarter";
-import Link from "next/link";
-import Clients from "@/components/section/Clients";
 import PageBorders from "@/components/wrappers/PageBorders";
 import MainText from "@/components/typography/MainText";
-import ServicesCard from "@/components/card/ServicesCard";
-import { ContactUsModal } from "@/components/forms/ContactUsModal";
-import icon1 from "@/public/images/icon1.png";
-import icon2 from "@/public/images/icon2.png";
-import icon3 from "@/public/images/icon3.png";
-import logo from "@/public/images/logo.svg";
-import ImageWrapper from "@/components/wrappers/ImageWrapper";
 import HeaderOne from "@/components/typography/HeaderOne";
-import OtherPageHero from "@/components/hero/OtherPageHero";
+import features1 from "@/public/images/features1.png";
+import { OutlineButton } from "@/components/button/OutlineButton";
+import { IoIosAdd } from "react-icons/io";
+import IndustryCard from "@/components/card/industryCard";
 import MainCard from "@/components/card/MainCard";
+import Link from "next/link";
+import { SpecificationItem } from "@/components/section/SpecificationItem";
+import { Specification } from "@/components/wrappers/specification";
+import show2 from "@/public/images/show2.svg";
+import ImageWrapper from "@/components/wrappers/ImageWrapper";
+import TechStack from "@/components/section/TechStack";
+import FeedackCard from "@/components/card/FeedbackCard";
+import { title } from "process";
+import { SpecificationWrapper } from "@/components/wrappers/SpecificationWrapper";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -23,234 +26,338 @@ export const metadata = {
 };
 
 export default function Home() {
-  const services = [
+  const industryProduction = [
     {
-      title: "Project Management",
+      bgImage: features1,
+      title: "Fintech",
       subtitle:
-        "Experienced project managers aligned by discipline and client verticals.",
+        "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
+      btnText: "Learn more",
     },
     {
-      title: "Partner Development",
+      bgImage: features1,
+      title: "Edtech",
       subtitle:
-        "Connect with prospective alliance partners for offer distribution, promotion, and cross-selling.",
+        "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
+      btnText: "Learn more",
     },
     {
-      title: "Strategic Procurement",
+      bgImage: features1,
+      title: "Real Estate",
       subtitle:
-        "Experienced project managers aligned by discipline and client verticals.",
+        "To train employees on any device, from soft skills to technical expertise.",
+      btnText: "Learn more",
     },
     {
-      title: "Financial Services",
+      bgImage: features1,
+      title: "Retail",
       subtitle:
-        "Operations, credit underwriting, and governance expertise in finance sectors like banking and fintech.",
-    },
-    {
-      title: "Business Development",
-      subtitle:
-        "Expand retail outlets and new markets, facilitating product distribution.",
-    },
-    {
-      title: "Executive Recruitment & Interim Management",
-      subtitle:
-        "Deploy senior executives for business optimization in insurance, banking, and political campaigns.",
-    },
-    {
-      title: "Advertising & Marketing",
-      subtitle:
-        "Access major data sources to inform programmatic ads, geofencing, and geo-conquesting campaigns.",
-    },
-    {
-      title: "Technology",
-      subtitle:
-        "Cloud-based IT support, app development, hosting, and consulting services.",
-    },
-    {
-      title: "Manufacturing",
-      subtitle:
-        "Logistics, supply chain sourcing, patent specs, and product development consulting.",
-    },
-    {
-      title: "Public Relations",
-      subtitle:
-        "Media planning services to build institutional awareness and product reputation in the U.S. market.",
-    },
-    {
-      title: "Government Relations",
-      subtitle:
-        "Development and implementation of government relations strategies in the U.S. and EMEA markets",
-    },
-    {
-      title: "Political Consulting",
-      subtitle: "Data-driven advisement for political campaigns.",
+        "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
+      btnText: "Learn more",
     },
   ];
-
-  const servicesDetails = [
+  const ourPartners = [
     {
-      title: "Consultation",
-      subtitle:
-        "Get personalized consultation on the best practices and approaches for your business.",
-      icon: icon1,
+      icon: features1,
     },
     {
-      title: "Strategic Planning",
-      subtitle:
-        "Develop the most effective strategies and plans to boost your growth and achieve your goal.",
-      icon: icon2,
+      icon: features1,
     },
     {
-      title: "Analytics & Evaluation",
-      subtitle:
-        "Receive detailed feedback and evaluation based on insightful data for your business.",
-      icon: icon3,
+      icon: features1,
+    },
+    {
+      icon: features1,
+    },
+    {
+      icon: features1,
+    },
+  ];
+  const getHelp = [
+    {
+      background: "bg-darkestBlue",
+      title: "Web Development",
+    },
+    {
+      background: "bg-features1",
+      title: "Mobile Application Development",
+    },
+    {
+      background: "bg-darkestBlue",
+      title: "Discovery Phase",
+    },
+    {
+      background: "bg-features1",
+      title: "UI/UX Design",
+    },
+    {
+      background: "bg-darkestBlue",
+      title: "Quality Assurance",
+    },
+    {
+      background: "bg-features1",
+      title: "IT Security",
     },
   ];
 
   const singleServive = [
-    "Healthcare",
-    "Manufacturing",
-    "Real Estate",
-    "Retail",
-    "Aviation",
-    "Financial Services",
-    "Corporations",
-    "Natural Resource Exploration and Advisory",
-    "Governments",
-    "Political Campaign Strategy and Management",
+    "Web development",
+    "Project management",
+    "UI/UX Design",
+    "DevOps",
+    "QA/QC Testing",
+    "Mobile App",
   ];
 
+  const testimonials = [
+    {
+      description:
+        "“TinqLab has helped us get to market faster, allowing us to fill products gaps easily.”",
+      icon: features1,
+      title: "Gavin Aaron",
+      subTitle: "Lead Software Developer, Hungrit Ltd",
+    },
+    {
+      description:
+        "“They were able to handle everything we threw at them fairly easily.”",
+      icon: features1,
+      title: "Dimitry Konoval",
+      subTitle: "Founder & CEO, BlackBunny Capital",
+    },
+  ];
+  const softwareDevelopment = [
+    {
+      title: "Our Software Development Process",
+      subTitle:
+        "Engaging in software development projects entails a complex and iterative process, necessitating meticulous planning, skillful execution, and continuous improvement. At TinqLab, we recognize the significance of extracting insights from each stage of the software development lifecycle, encompassing business analysis and the development of a software project, to effectively navigate from inception to launch while managing development costs.",
+      items: [
+        {
+          title: "Project initiation",
+          subTitle:
+            "During the discovery phase, as part of our software consulting services, we delve deeply into gaining comprehensive insights into your business needs, uncovering opportunities, and defining clear goals for the project. In-depth consultations, market research, and stakeholder interviews, integral to our software consulting approach, help us identify pain points and lay the foundation for a transformative software solution tailored to your project.",
+        },
+        {
+          title: "Project Planning",
+          subTitle:
+            "To guarantee a successful and efficient execution of software products, we emphasize meticulous planning. Collaborating with our team, you formulate a detailed roadmap, delineate the project scope, set deadlines, and allocate resources. The process is accompanied by clear communication and effective coordination to promptly achieve the best results.",
+        },
+        {
+          title: "Design",
+          subTitle:
+            "The design phase bridges the gap between concept and reality. Our design team creates wireframes, mockups, and prototypes that visualize the final product. This stage include User Experience (UX) Design, User Interface (UI) Design and prototyping.",
+        },
+        {
+          title: "Agile Development",
+          subTitle:
+            "Agile development, with its emphasis on iterative and incremental progress, along with continuous feedback and course correction throughout the development process, showcases a fascinating ability to adapt to changes. This, coupled with the collaborative approach fostered by agile methodologies, contributes to successful project outcomes. The end result is a product that genuinely aligns with the evolving needs of the target audience. This approach is further enhanced when guided by effective technology consulting.",
+        },
+        {
+          title: "Quality Assurance Testing",
+          subTitle:
+            "TinqLab is committed to delivering a seamless user experience, and to ensure this, we implement rigorous quality assurance testing, leveraging a robust quality management system. Our QA engineers meticulously evaluate every aspect of the web product, conducting comprehensive tests to identify and resolve potential issues or bugs. As part of our custom web app development services, we also offer QA automation testing services for both mobile and web applications.",
+        },
+        {
+          title: "Delivery and Deployment",
+          subTitle:
+            "In this pivotal stage of software development process, our dedicated team meticulously configures your software for deployment, considering all technical specifications and requirements. Our goal is not just to deliver software but to ensure a successful launch that aligns seamlessly with your business objectives.",
+        },
+        {
+          title: "Maintenance and Support",
+          subTitle:
+            "Your software is in good hands. We understand that software development is an ongoing process. Once your software is deployed, we offer a comprehensive maintenance and support service to ensure that it continues to meet your needs and perform at its best.",
+        },
+      ],
+    },
+  ];
   return (
     <div className="min-h-screen">
       <div className="">
         <HomepageHero />
 
+        {/* Home Features */}
         <PageBorders>
+          {" "}
           <div
+            className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 lg:px-6 bg-lightBlue  rounded-[20px]"
             id={"about"}
-            className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-8 lg:justify-items-center "
           >
-            <div className="flex flex-col gap-4 md:gap-8 justify-center items-start pr-[20px] lg:pr-[40px] py-[20px] md:py-[40px] ">
-              <PageStarter Title={"Who we are"} SubtitleText={""} />
-              <MainText text="Tinqlab is part of EHD Group, a collection of businesses primarily focused on importing and exporting goods and services between Western and EMEA markets." />
-              <MainText text="Our diverse capabilities include mining interests, food products, logistics, and navigation, giving us a unique window into cross-border trade, project management, strategic planning, deal facilitation, and international networking." />
-              <MainText text="Tinqlab is a premier international consultancy that helps clients improve their bottom line, drive process improvement, and provide senior talent for effective implementation." />
-
-              <ContactUsModal btnText={"Learn more"} />
-            </div>
-            <div className="bg-aboutus md:h-full w-full h-[40vh] bg-cover bg-center bg-no-repeat"></div>
-          </div>
-        </PageBorders>
-        <PageBorders
-          background={
-            "bg-gradient-to-r from-[#E7E9F4] via-[#FFFFFF] to-[#F6F7FB]"
-          }
-        >
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
             {" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 ">
-              {" "}
-              <div className="col-span-1 md:col-span-2">
-                {" "}
-                <PageStarter
-                  Title={"Our Service"}
-                  SubtitleText={
-                    "Tinqlab focuses on EMEA markets, particularly the Middle East and Africa, leveraging U.S. expertise to drive global trade and innovation."
-                  }
-                  color={"text-[#131313]"}
-                />
-              </div>
-              <div className="hidden md:block bg-arrowvector bg-contain bg-left-bottom bg-no-repeat h-full"></div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-              {" "}
-              {servicesDetails.map((item, index) => (
-                <div key={index}>
-                  {" "}
-                  <MainCard
-                    title={item.title}
-                    subtitle={item.subtitle}
-                    bgColor={"bg-green-300"}
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="bg-white rounded-[15px] md:divide-x-[1px] lg:divide-x-[1px] divide-solid divide-[#EFF1EC] border-[1px] border-[#EFF1EC] grid grid-cols-1 md:grid-cols-3 md:p-[20px]">
-              {" "}
-              {servicesDetails.map((item, index) => (
-                <div key={index}>
-                  {" "}
-                  <ServicesCard
-                    icon={item.icon}
-                    title={item.title}
-                    subtitle={item.subtitle}
-                    isSingleService={true}
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="gap-2 lg:gap-4 flex flex-wrap items-center justify-start ">
-              {singleServive.map((item, index) => (
-                <p
-                  key={index}
-                  className="text-[10px] tracking-normal  md:text-[14px] lg:text-[16px] bg-[#c9ceea] text-mainBlack px-2 py-2 md:px-6 md:py-3 rounded-[50px] font-Gilroy font-extralight "
-                >
-                  {item}
-                </p>
-              ))}
-            </div>
-          </div>
-        </PageBorders>
-        <PageBorders>
-          <div className="flex flex-col gap-8">
-            {" "}
-            <div className="lg:w-[45vw]">
-              {" "}
+            <div className="  bg-features1 bg-start bg-no-repeat min-h-[40vh] "></div>
+            <div className="flex flex-col gap-5 p-4 xl:p-8">
               <PageStarter
-                Title={"Key Focus Areas"}
+                Title={"Discover how we can assist in achieving your goals!"}
                 SubtitleText={
-                  "Tinqlab provides access to an extensive network of international and global resources, including experts in finance, technology, and business development."
+                  "Answer a few questions to aid us match our expertise and solutions to your industry."
                 }
                 color={"text-[#131313]"}
+              />{" "}
+              <MainText text={"Choose your industry"} />
+              <div className="grid grid-cols-2 md:grid-cols-3 items-center gap-4 ">
+                <MainButton text={"FinTech"} />
+                <MainButton text={"FinTech"} />
+                <MainButton text={"FinTech"} />
+                <OutlineButton text={"More"} icon={<IoIosAdd />} />
+              </div>
+            </div>
+          </div>
+        </PageBorders>
+
+        {/* Home Services */}
+        <PageBorders>
+          <div
+            className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8"
+            id="services"
+          >
+            {" "}
+            <div className="flex flex-col gap-8">
+              <HeaderOne text={"Case studies"} color={"text-darkestBlue/50 "} />
+              <HeaderOne text={"TinqFi - Automated digital assets platform"} />
+              <div className="gap-2 lg:gap-4 flex flex-wrap items-center justify-start ">
+                {singleServive.map((item, index) => (
+                  <p
+                    key={index}
+                    className="text-[10px] tracking-normal  md:text-[14px] lg:text-[16px] bg-[#c9ceea] text-mainBlack px-2 py-2 md:px-6 md:py-3 rounded-[50px] font-Gilroy font-extralight "
+                  >
+                    {item}
+                  </p>
+                ))}
+              </div>
+              <MainText
+                text={
+                  "TinqLab Technologies was excited to work with TinqFi team, creating together an online tutoring platform that reshaped school education. the was a 100% reform and reconfiguration of the industry."
+                }
+              />
+              <div className="flex gap-4">
+                <MainButton text={"Case details"} />
+                <MainButton text={"All cases studies"} />
+              </div>
+            </div>{" "}
+            <div className="  bg-features1 bg-center bg-no-repeat min-h-[40vh] "></div>
+          </div>
+        </PageBorders>
+
+        {/* Industy */}
+        <PageBorders>
+          <div className="flex flex-col gap-8" id="industry">
+            <div className="md:w-1/2">
+              <HeaderOne
+                text={"Build and scale securely with us in your domian"}
               />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 justify-items-center mt-[20px] md:mt-[40px]">
-              {services.map((item, index) => (
+            <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
+              {industryProduction.map((item, index) => (
                 <div key={index}>
-                  {" "}
-                  <ServicesCard title={item.title} subtitle={item.subtitle} />
+                  <IndustryCard
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    bgImg={item.bgImage}
+                    btnText={item.btnText}
+                    background={"bg-darkBlue"}
+                  />
                 </div>
               ))}
             </div>
           </div>
         </PageBorders>
-        <PageBorders
-          background={
-            "bg-gradient-to-r from-[#FFFFFF] via-[#E5E8FF] to-[#FFFFFF] "
-          }
-        >
-          <div className="bg-arrowvector1 hidden md:block bg-contain bg-left-top bg-no-repeat h-[60px]"></div>
-          <div className="flex flex-col gap-4 justify-center items-center md:bg-arrowvector2 bg-contain bg-right-bottom bg-no-repeat ">
-            <ImageWrapper
-              src={logo}
-              width={120}
-              height={60}
-              alt={"Tinqlab logo"}
-              style={"darks:hidden"}
-            />
 
-            <HeaderOne
-              text={"Why Choose Us?"}
-              color={"text-[#131313]"}
-              size={
-                "text-[24px] lg:text-[32px] leading-[30px] lg:leading-[40px] "
-              }
-            />
-
-            <div className="md:w-1/2 text-center ">
-              {" "}
-              <MainText text=" Every recommendation we make can be fully implemented by our team, ensuring seamless execution and success." />
+        {/* Our Partners */}
+        <PageBorders>
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-4">
+              <HeaderOne text={"Our partners"} />
+              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-8 ">
+                {ourPartners.map((item, index) => (
+                  <div key={index}>
+                    <TechStack stack={item.icon} />{" "}
+                  </div>
+                ))}
+              </div>
             </div>
-            <ContactUsModal btnText={"Get a Consultation"} />
+
+            {/* Get Help */}
+            <div className="flex flex-col gap-4">
+              <HeaderOne text={"How we can help you "} />
+              <div className="grid md:grid-cols-3 gap-4 md:gap-8 ">
+                {getHelp.map((item, index) => (
+                  <div key={index}>
+                    <div
+                      className={`${item.background} p-[20px] md:py-[40px] flex  gap-8 justify-start items-center rounded-[10px] shadow-custom-primary min-h-full max-h-[40vh]`}
+                    >
+                      {" "}
+                      <div
+                        className={`text-[16px] lg:text-[22px] font-semibold leading-[24px] lg:leading-[32px] text-mainWhite gap-4 w-4/5 border-b border-mainWhite`}
+                      >
+                        {item.title}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* button Text */}
+            <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+              <HeaderOne
+                text={"Engage with our experts: Free discovery session"}
+              />
+              <div className="flex flex-col justify-center gap-5">
+                <MainText
+                  text={
+                    "Through some basic info we'll schedule a 30 minute-call to discover how we can collaborate."
+                  }
+                  color={"opacity-50"}
+                />
+                <MainText
+                  text={
+                    "Our team of experts is here to identify ways to enhance and scale your digital solutions."
+                  }
+                  color={"opacity-50"}
+                />
+                <Link href={"/"}>
+                  <MainButton text={"Start today"} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </PageBorders>
+
+        <PageBorders>
+          <div>
+            {" "}
+            {softwareDevelopment.map((item, index) => (
+              <div key={index}>
+                {" "}
+                <SpecificationWrapper
+                  useIndexes={true}
+                  title={item.title}
+                  subTitle={item.subTitle}
+                  items={item.items}
+                  bgColor={"bg-darkBlue"}
+                />
+              </div>
+            ))}{" "}
+          </div>
+        </PageBorders>
+
+        <PageBorders>
+          <div className="flex flex-col gap-8" id="career">
+            <div className="px-4">
+              <HeaderOne text={"Testimonials"} />
+            </div>
+            <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
+              {testimonials.map((item, index) => (
+                <div key={index}>
+                  <FeedackCard
+                    description={item.description}
+                    bgColor={null}
+                    hasIcon={true}
+                    icon={item.icon}
+                    title={item.title}
+                    subTitle={item.subTitle}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </PageBorders>
       </div>

@@ -3,7 +3,7 @@ export default function PageBorders({ children, background }) {
     <div
       className={`${
         background ? `${background}` : "bg-white"
-      }  px-[8vw] py-[10vh] `}
+      }  px-[6vw] py-[10vh] `}
     >
       {children}
     </div>
