@@ -12,6 +12,7 @@ export default function IndustryCard({
   useIndex,
   index,
   btnText,
+  btnLink,
   hasbtnText2,
   btnText2,
 }) {
@@ -47,10 +48,14 @@ export default function IndustryCard({
         {btnText2 ? (
           <div className="hidden">
             {" "}
-            <MainButton text={btnText} />{" "}
+            <Link href={btnLink}>
+              <MainButton text={btnText} />{" "}
+            </Link>
           </div>
         ) : (
-          <MainButton text={btnText} />
+          <Link href={"/"}>
+            <MainButton text={btnLink} />
+          </Link>
         )}{" "}
       </div>
       <div>
@@ -59,7 +64,7 @@ export default function IndustryCard({
           src={bgImg}
           width={500}
           height={500}
-          style={" bg-no-repeat bg-contain hidden md:block"}
+          style={" bg-no-repeat bg-contain hidden lg:block"}
         />
       </div>
     </div>

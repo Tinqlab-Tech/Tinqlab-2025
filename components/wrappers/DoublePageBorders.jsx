@@ -1,6 +1,6 @@
 export default function DoublePageBorders({ children, background }) {
   return (
-    <div className={`bg-white px-[4vw]`}>
+    <div className={`bg-white px-[4vw] py-[8vh]`}>
       <div
         className={`${
           background ? `${background}` : "bg-white"

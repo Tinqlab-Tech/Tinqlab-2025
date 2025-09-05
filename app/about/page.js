@@ -8,6 +8,7 @@ import OtherPageHero from "@/components/hero/OtherPageHero";
 import PageStarter from "@/components/section/PageStarter";
 import TechStack from "@/components/section/TechStack";
 import HeaderOne from "@/components/typography/HeaderOne";
+import HeaderTwo from "@/components/typography/HeaderTwo";
 import MainText from "@/components/typography/MainText";
 import PageBorders from "@/components/wrappers/PageBorders";
 import edtechHero from "@/public/images/edtechHero.svg";
@@ -42,28 +43,49 @@ export default function Home() {
         "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration, propelling us to new heights of success.",
     },
   ];
-  const feedback = [
+
+  const rates = [
     {
-      description:
-        "“TinqLab has helped us get to market faster, allowing us to fill products gaps easily.”",
-      icon: features1,
-      title: "Gavin Aaron",
-      subTitle: "Lead Software Developer, Hungrit Ltd",
+      title: "42%",
+      subtitle: "Front-End, Mobile Engineers",
     },
     {
-      description:
-        "“They were able to handle everything we threw at them fairly easily.”",
-      icon: features1,
-      title: "Dimitry Konoval",
-      subTitle: "Founder & CEO, BlackBunny Capital",
+      title: "30%",
+      subtitle: "Back-End Engineers",
+    },
+    {
+      title: "18%",
+      subtitle: "Cloud Engineers",
     },
   ];
+
+  const ourTechnologies = [
+    {
+      title: "Blockchain-based platforms",
+      icon: features1,
+    },
+    {
+      title: "Financial analysis solutions",
+      icon: features1,
+    },
+    {
+      title: "Cryptocurrency exchanges",
+      icon: features1,
+    },
+    {
+      title: "Investment/savings solutions",
+      icon: features1,
+    },
+  ];
+
   const industryProduction = [
     {
       bgImage: features1,
       title: "Fintech",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
+
+      btnLink: "/",
       btnText2: "read more",
     },
     {
@@ -71,6 +93,8 @@ export default function Home() {
       title: "Edtech",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
+
+      btnLink: "/",
       btnText2: "read more",
     },
     {
@@ -78,6 +102,8 @@ export default function Home() {
       title: "Real Estate",
       subtitle:
         "To train employees on any device, from soft skills to technical expertise.",
+
+      btnLink: "/",
       btnText2: "read more",
     },
     {
@@ -85,106 +111,12 @@ export default function Home() {
       title: "Retail",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
+
+      btnLink: "/",
       btnText2: "read more",
     },
   ];
 
-  const benefits = [
-    {
-      title: "Work Scope:",
-      items: [
-        {
-          subtitle: "Competitive salary and good compensation package;",
-        },
-        {
-          subtitle:
-            "Exciting, challenging and stable startup projects with a modern stack;",
-        },
-        {
-          subtitle: "Career development opportunity.",
-        },
-      ],
-    },
-    {
-      title: "Growth Opportunity:",
-      items: [
-        {
-          subtitle: "Gain hands-on experience across multiple tech stacks;",
-        },
-        {
-          subtitle:
-            "Work in a merit-based culture that rewards initiative and creativity;",
-        },
-        {
-          subtitle: "Rapid skill development with a clear growth path.",
-        },
-      ],
-    },
-    {
-      title: "Collaborative & Agile Team:",
-      items: [
-        {
-          subtitle:
-            "Be part of a tight-knit, agile team where your voice matters;",
-        },
-        {
-          subtitle: "Collaborate across disciplines: developers, designers;",
-        },
-        {
-          subtitle:
-            "Enjoy a flexible, problem-solving work environment that values innovation..",
-        },
-      ],
-    },
-    {
-      title: "Impactful Projects:",
-      items: [
-        {
-          subtitle:
-            "Build solutions for local and global blockchain challenges;",
-        },
-        {
-          subtitle:
-            "Empower users through technology that drives transparency and trust;",
-        },
-        {
-          subtitle: "Contribute to the growing digital transformation journey.",
-        },
-      ],
-    },
-    {
-      title: "Visionary Leadership:",
-      items: [
-        {
-          subtitle:
-            "Learn from a forward-thinking team with a clear strategic direction;",
-        },
-        {
-          subtitle: "Receive guidance through mentorship and skill-building;",
-        },
-        {
-          subtitle:
-            "Thrive in a space where accountability, openness, and ethics are valued.",
-        },
-      ],
-    },
-  ];
-  const clientFeedback = [
-    {
-      description:
-        "“TinqLab has helped us get to market faster, allowing us to fill products gaps easily.”",
-      icon: features1,
-      title: "Gavin Aaron",
-      subTitle: "Lead Software Developer, Hungrit Ltd",
-    },
-    {
-      description:
-        "“They were able to handle everything we threw at them fairly easily.”",
-      icon: features1,
-      title: "Dimitry Konoval",
-      subTitle: "Founder & CEO, BlackBunny Capital",
-    },
-  ];
   const ourClient = [
     {
       client: features1,
@@ -256,6 +188,52 @@ export default function Home() {
                   title={item.title}
                   subtitle={item.subtitle}
                   bgColor={null}
+                  hasIcon={false}
+                  useIndex={true}
+                  index={index + 1}
+                  icon={item.icon}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </PageBorders>
+      {/* tinqlab team */}
+      <PageBorders>
+        <div className="flex flex-col gap-8" id="industry">
+          <HeaderTwo text={"TinqLab Team"} />
+
+          <div className=" h-full  p-[20px] md:py-[40px] flex gap-8 items-center  ">
+            <div className="text-[42px] leading-[38px] font-bold font-lato lg:text-[64px]  lg:leading-[32px]">
+              {" "}
+              40+
+            </div>
+
+            <MainText text={"Experts in their fields"} color={" opacity-50"} />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8 justify-center">
+            {" "}
+            {rates.map((item, index) => (
+              <div key={index}>
+                {" "}
+                <div className=" h-full  p-[20px] md:py-[40px] flex gap-8 items-center md:justify-center">
+                  <HeaderOne text={item.title} />
+
+                  <MainText text={item.subtitle} color={" opacity-50"} />
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-4 md:gap-8">
+            {" "}
+            {ourTechnologies.map((item, index) => (
+              <div key={index}>
+                {" "}
+                <MainCard
+                  title={item.title}
+                  bgColor={null}
+                  hasIcon={true}
+                  icon={item.icon}
                 />
               </div>
             ))}
@@ -265,7 +243,7 @@ export default function Home() {
       <PageBorders>
         <div className="flex flex-col gap-8" id="industry">
           <div className="md:w-1/2">
-            <HeaderOne
+            <HeaderTwo
               text={"Build and scale securely with us in your domian"}
             />
           </div>
@@ -277,6 +255,7 @@ export default function Home() {
                   subtitle={item.subtitle}
                   bgImg={item.bgImage}
                   background={null}
+                  btnLink={item.btnLink}
                   hasbtnText2={true}
                   btnText2={item.btnText2}
                 />
@@ -303,10 +282,19 @@ export default function Home() {
               color={"text-mainWhite"}
             />
             <HeaderOne text={"Our Vision"} color={"text-mainWhite"} />
-            <div className="grid grid-cols-2 md:grid-cols-3 items-center gap-4 ">
-              <MainButton text={"Innovate"} color={"text-mainWhite"} />
-              <MainButton text={"Innovate"} color={"text-mainWhite"} />
-              <MainButton text={"Innovate"} color={"text-mainWhite"} />
+            <div className="grid grid-cols-3 items-center gap-4 ">
+              <Link href={"/"}>
+                {" "}
+                <MainButton text={"Innovate"} color={"text-mainWhite"} />
+              </Link>
+              <Link href={"/"}>
+                {" "}
+                <MainButton text={"Innovate"} color={"text-mainWhite"} />
+              </Link>
+              <Link href={"/"}>
+                {" "}
+                <MainButton text={"Innovate"} color={"text-mainWhite"} />
+              </Link>{" "}
             </div>
           </div>
         </div>
@@ -332,20 +320,7 @@ export default function Home() {
           <div className="px-4">
             <HeaderOne text={"Feedback From Teammate's"} />
           </div>
-          <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
-            {clientFeedback.map((item, index) => (
-              <div key={index}>
-                <FeedbackCard
-                  description={item.description}
-                  bgColor={null}
-                  hasIcon={true}
-                  icon={item.icon}
-                  title={item.title}
-                  subTitle={item.subTitle}
-                />
-              </div>
-            ))}
-          </div>
+          <FeedbackCard />
         </div>
       </PageBorders>
     </div>

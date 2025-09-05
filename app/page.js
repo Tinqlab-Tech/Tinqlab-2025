@@ -8,16 +8,11 @@ import features1 from "@/public/images/features1.png";
 import { OutlineButton } from "@/components/button/OutlineButton";
 import { IoIosAdd } from "react-icons/io";
 import IndustryCard from "@/components/card/industryCard";
-import MainCard from "@/components/card/MainCard";
 import Link from "next/link";
-import { SpecificationItem } from "@/components/section/SpecificationItem";
-import { Specification } from "@/components/wrappers/specification";
-import show2 from "@/public/images/show2.svg";
-import ImageWrapper from "@/components/wrappers/ImageWrapper";
 import TechStack from "@/components/section/TechStack";
-import FeedackCard from "@/components/card/FeedbackCard";
-import { title } from "process";
 import { SpecificationWrapper } from "@/components/wrappers/SpecificationWrapper";
+import FeedbackCard from "@/components/card/FeedbackCard";
+import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -32,6 +27,7 @@ export default function Home() {
       title: "Fintech",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
+      btnLink: "/",
       btnText: "Learn more",
     },
     {
@@ -39,6 +35,7 @@ export default function Home() {
       title: "Edtech",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
+      btnLink: "/",
       btnText: "Learn more",
     },
     {
@@ -46,6 +43,7 @@ export default function Home() {
       title: "Real Estate",
       subtitle:
         "To train employees on any device, from soft skills to technical expertise.",
+      btnLink: "/",
       btnText: "Learn more",
     },
     {
@@ -53,6 +51,7 @@ export default function Home() {
       title: "Retail",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
+      btnLink: "/",
       btnText: "Learn more",
     },
   ];
@@ -109,22 +108,6 @@ export default function Home() {
     "Mobile App",
   ];
 
-  const testimonials = [
-    {
-      description:
-        "“TinqLab has helped us get to market faster, allowing us to fill products gaps easily.”",
-      icon: features1,
-      title: "Gavin Aaron",
-      subTitle: "Lead Software Developer, Hungrit Ltd",
-    },
-    {
-      description:
-        "“They were able to handle everything we threw at them fairly easily.”",
-      icon: features1,
-      title: "Dimitry Konoval",
-      subTitle: "Founder & CEO, BlackBunny Capital",
-    },
-  ];
   const softwareDevelopment = [
     {
       title: "Our Software Development Process",
@@ -175,15 +158,15 @@ export default function Home() {
         <HomepageHero />
 
         {/* Home Features */}
-        <PageBorders>
+        <DoublePageBorders background={"bg-lightBlue "}>
           {" "}
           <div
-            className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 lg:px-6 bg-lightBlue  rounded-[20px]"
+            className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8  bg-lightBlue h-full "
             id={"about"}
           >
             {" "}
-            <div className="  bg-features1 bg-start bg-no-repeat min-h-[40vh] "></div>
-            <div className="flex flex-col gap-5 p-4 xl:p-8">
+            <div className="hidden md:block  bg-features1 bg- bg-no-repeat  "></div>
+            <div className="flex flex-col gap-5  ">
               <PageStarter
                 Title={"Discover how we can assist in achieving your goals!"}
                 SubtitleText={
@@ -192,15 +175,23 @@ export default function Home() {
                 color={"text-[#131313]"}
               />{" "}
               <MainText text={"Choose your industry"} />
-              <div className="grid grid-cols-2 md:grid-cols-3 items-center gap-4 ">
-                <MainButton text={"FinTech"} />
-                <MainButton text={"FinTech"} />
-                <MainButton text={"FinTech"} />
-                <OutlineButton text={"More"} icon={<IoIosAdd />} />
+              <div className="grid grid-cols-3 items-center gap-4  ">
+                <Link href={"/"}>
+                  <MainButton text={"FinTech"} />
+                </Link>
+                <Link href={"/"}>
+                  <MainButton text={"FinTech"} />
+                </Link>
+                <Link href={"/"}>
+                  <MainButton text={"FinTech"} />
+                </Link>
+                <Link href={"/"}>
+                  <OutlineButton text={"More"} icon={<IoIosAdd />} />
+                </Link>
               </div>
             </div>
           </div>
-        </PageBorders>
+        </DoublePageBorders>
 
         {/* Home Services */}
         <PageBorders>
@@ -228,11 +219,15 @@ export default function Home() {
                 }
               />
               <div className="flex gap-4">
-                <MainButton text={"Case details"} />
-                <MainButton text={"All cases studies"} />
+                <Link href={"/"}>
+                  <MainButton text={"Case details"} />
+                </Link>
+                <Link href={"/"}>
+                  <MainButton text={"All cases studies"} />
+                </Link>
               </div>
             </div>{" "}
-            <div className="  bg-features1 bg-center bg-no-repeat min-h-[40vh] "></div>
+            <div className="hidden md:block  bg-features1 bg-center bg-no-repeat "></div>
           </div>
         </PageBorders>
 
@@ -251,6 +246,7 @@ export default function Home() {
                     title={item.title}
                     subtitle={item.subtitle}
                     bgImg={item.bgImage}
+                    btnLink={item.btnLink}
                     btnText={item.btnText}
                     background={"bg-darkBlue"}
                   />
@@ -322,7 +318,7 @@ export default function Home() {
         </PageBorders>
 
         <PageBorders>
-          <div>
+          <div className="">
             {" "}
             {softwareDevelopment.map((item, index) => (
               <div key={index}>
@@ -344,20 +340,8 @@ export default function Home() {
             <div className="px-4">
               <HeaderOne text={"Testimonials"} />
             </div>
-            <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
-              {testimonials.map((item, index) => (
-                <div key={index}>
-                  <FeedackCard
-                    description={item.description}
-                    bgColor={null}
-                    hasIcon={true}
-                    icon={item.icon}
-                    title={item.title}
-                    subTitle={item.subTitle}
-                  />
-                </div>
-              ))}
-            </div>
+
+            <FeedbackCard />
           </div>
         </PageBorders>
       </div>

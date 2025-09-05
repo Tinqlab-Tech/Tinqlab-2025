@@ -17,7 +17,7 @@ export const SpecificationItem = ({ title, subTitle, bgIcon, icon }) => {
                     alt={`Tinqlab ${title} services`}
                     height={30}
                     width={30}
-                    style="group-open:rotate-180 scale-75 group-open:scale-100 transition duration-300"
+                    style=""
                   />
                 )}
                 <MainText centerText={false} text={title} bold={true} />
@@ -28,7 +28,7 @@ export const SpecificationItem = ({ title, subTitle, bgIcon, icon }) => {
               alt={`Tinqlab ${title} services`}
               height={30}
               width={30}
-              style="group-open:rotate-180 scale-75 group-open:scale-100 transition duration-300"
+              style="group-open:rotate-45 scale-75 group-open:scale-100 transition duration-300"
             />
           </summary>
           {subTitle && (

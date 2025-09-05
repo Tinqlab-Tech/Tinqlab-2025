@@ -90,24 +90,6 @@ export default function Home() {
     },
   ];
 
-  const whyUs = [
-    {
-      title: "Flexibility",
-      subtitle:
-        "Our Edtech software development services are customized for each project, so we can pivot quickly as requirements change.",
-    },
-    {
-      title: "Experience",
-      subtitle:
-        "Our software engineers have worked with educational organizations and companies around the world, gaining valuable expertise in the education domain.",
-    },
-    {
-      title: "Expertise",
-      subtitle:
-        "Our innovative education products stay up-to-date with the latest technologies and design trends in the education industry to create solutions that enhance the learning experience.",
-    },
-  ];
-
   const technologyWeUse = [
     { technologies: java },
     { technologies: rn },
@@ -116,22 +98,7 @@ export default function Home() {
     { technologies: React },
     { technologies: React },
   ];
-  const clientFeedback = [
-    {
-      description:
-        "“TinqLab has helped us get to market faster, allowing us to fill products gaps easily.”",
-      icon: features1,
-      title: "Gavin Aaron",
-      subTitle: "Lead Software Developer, Hungrit Ltd",
-    },
-    {
-      description:
-        "“They were able to handle everything we threw at them fairly easily.”",
-      icon: features1,
-      title: "Dimitry Konoval",
-      subTitle: "Founder & CEO, BlackBunny Capital",
-    },
-  ];
+
   return (
     <div className="min-h-screen">
       <div className="">
@@ -272,20 +239,8 @@ export default function Home() {
             <div className="px-4">
               <HeaderOne text={"Testimonials"} />
             </div>
-            <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
-              {clientFeedback.map((item, index) => (
-                <div key={index}>
-                  <FeedbackCard
-                    description={item.description}
-                    bgColor={null}
-                    hasIcon={true}
-                    icon={item.icon}
-                    title={item.title}
-                    subTitle={item.subTitle}
-                  />
-                </div>
-              ))}
-            </div>
+
+            <FeedbackCard />
           </div>
         </PageBorders>
       </div>

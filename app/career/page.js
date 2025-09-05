@@ -39,22 +39,6 @@ export default function Home() {
         "Taking responsibility is a fundamental principle which directs our decisions and actions right here at TinqLab. We encourage integrity, accountability, and ownership at all levels, enabling our team to fulfil commitments, grow from challenges, and produce substantial results.",
     },
   ];
-  const teamFeedback = [
-    {
-      description:
-        "“TinqLab has helped us get to market faster, allowing us to fill products gaps easily.”",
-      icon: features1,
-      title: "Gavin Aaron",
-      subTitle: "Lead Software Developer, Hungrit Ltd",
-    },
-    {
-      description:
-        "“They were able to handle everything we threw at them fairly easily.”",
-      icon: features1,
-      title: "Dimitry Konoval",
-      subTitle: "Founder & CEO, BlackBunny Capital",
-    },
-  ];
 
   const benefits = [
     {
@@ -299,20 +283,7 @@ export default function Home() {
           <div className="px-4">
             <HeaderOne text={"Feedback From Teammate's"} />
           </div>
-          <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
-            {teamFeedback.map((item, index) => (
-              <div key={index}>
-                <FeedbackCard
-                  description={item.description}
-                  bgColor={null}
-                  hasIcon={true}
-                  icon={item.icon}
-                  title={item.title}
-                  subTitle={item.subTitle}
-                />
-              </div>
-            ))}
-          </div>
+          <FeedbackCard />
         </div>
       </PageBorders>
     </div>

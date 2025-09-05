@@ -181,22 +181,7 @@ export default function Home() {
     { technologies: React },
     { technologies: React },
   ];
-  const clientFeedback = [
-    {
-      description:
-        "“TinqLab has helped us get to market faster, allowing us to fill products gaps easily.”",
-      icon: features1,
-      title: "Gavin Aaron",
-      subTitle: "Lead Software Developer, Hungrit Ltd",
-    },
-    {
-      description:
-        "“They were able to handle everything we threw at them fairly easily.”",
-      icon: features1,
-      title: "Dimitry Konoval",
-      subTitle: "Founder & CEO, BlackBunny Capital",
-    },
-  ];
+
   return (
     <div className="min-h-screen">
       <div className="">
@@ -213,6 +198,7 @@ export default function Home() {
 
         {/* our software solutions */}
         <PageBorders>
+          y
           <div id={"about"} className="scroll-mt-4 grid grid-cols-1  gap-8 ">
             <HeaderTwo text={"Our Software Engineering Solutions"} />
 
@@ -314,18 +300,23 @@ export default function Home() {
             {" "}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 ">
               <HeaderTwo text={"Why choose Tinqlab?"} />
-
-              <div className="grid grid-cols-1  gap-4 md:gap-8">
+              <div className="flex flex-col gap-4 md:gap-8">
                 {" "}
                 {softwareDevelopmentProcess.map((item, index) => (
-                  <div key={index}>
-                    {" "}
-                    <MainCard
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      bgColor={null}
-                    />
-                  </div>
+                  <li
+                    key={index}
+                    className="block space-y-4 text-[18px] leading-[28px] text-[#12152E]"
+                  >
+                    <div className="flex items-center gap-4 p-4">
+                      <span className="h-12 w-12 border-[2px] rounded-full border-[#5A67D8] border-opacity-20 flex justify-center items-center">
+                        {index + 1}
+                      </span>
+                      {item.title}
+                    </div>
+                    <article className="list-inside list-disc break-words px-2 pb-4 opacity-50">
+                      {item.subtitle}
+                    </article>
+                  </li>
                 ))}
               </div>
             </div>
@@ -336,20 +327,7 @@ export default function Home() {
             <div className="px-4">
               <HeaderOne text={"Testimonials"} />
             </div>
-            <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
-              {clientFeedback.map((item, index) => (
-                <div key={index}>
-                  <FeedbackCard
-                    description={item.description}
-                    bgColor={null}
-                    hasIcon={true}
-                    icon={item.icon}
-                    title={item.title}
-                    subTitle={item.subTitle}
-                  />
-                </div>
-              ))}
-            </div>
+            <FeedbackCard />
           </div>
         </PageBorders>
       </div>
