@@ -13,6 +13,7 @@ import MainText from "@/components/typography/MainText";
 import PageBorders from "@/components/wrappers/PageBorders";
 import edtechHero from "@/public/images/edtechHero.svg";
 import features1 from "@/public/images/features1.png";
+import Link from "next/link";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",

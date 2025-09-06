@@ -2,7 +2,7 @@ import React from "react";
 import MainText from "../typography/MainText";
 import ImageWrapper from "../wrappers/ImageWrapper";
 import { MainButton } from "../button/MainButton";
-import HeaderOne from "../typography/HeaderOne";
+import Link from "next/link";
 
 export default function IndustryCard({
   background,
@@ -13,6 +13,7 @@ export default function IndustryCard({
   index,
   btnText,
   btnLink,
+
   hasbtnText2,
   btnText2,
 }) {
@@ -42,9 +43,12 @@ export default function IndustryCard({
           )}{" "}
           {/* read More buttton */}
           {hasbtnText2 === true && (
-            <MainText text={btnText2} color={"text-primary"} />
+            <Link href={btnLink}>
+              <MainText text={btnText2} color={"text-primary"} />
+            </Link>
           )}
         </span>
+        {/* if btntext2 is true hide btnText if not true show btn text */}
         {btnText2 ? (
           <div className="hidden">
             {" "}
@@ -53,8 +57,8 @@ export default function IndustryCard({
             </Link>
           </div>
         ) : (
-          <Link href={"/"}>
-            <MainButton text={btnLink} />
+          <Link href={btnLink}>
+            <MainButton text={btnText} />
           </Link>
         )}{" "}
       </div>
