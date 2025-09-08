@@ -294,9 +294,9 @@ export default function Home() {
                   subtitle={item.subtitle}
                   bgImg={item.bgImage}
                   background={null}
+                  hasbtnText={false}
                   btnLink={item.btnLink}
-                  hasbtnText2={true}
-                  btnText2={item.btnText2}
+                  btnText={item.btnText2}
                 />
               </div>
             ))}

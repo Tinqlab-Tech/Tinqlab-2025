@@ -259,6 +259,7 @@ export default function Home() {
                     subtitle={item.subtitle}
                     bgImg={item.bgImage}
                     btnLink={item.btnLink}
+                    hasbtnText={true}
                     btnText={item.btnText}
                     background={"bg-darkBlue"}
                   />
