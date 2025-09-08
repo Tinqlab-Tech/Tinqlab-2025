@@ -176,14 +176,14 @@ export default function Home() {
               />{" "}
               <MainText text={"Choose your industry"} />
               <div className="grid grid-cols-3 lg:grid-cols-4 items-center gap-4  ">
-                <Link href={"/"}>
+                <Link href={"/industry/fintech"}>
                   <MainButton text={"FinTech"} />
                 </Link>
-                <Link href={"/"}>
-                  <MainButton text={"FinTech"} />
+                <Link href={"/industry/edtech"}>
+                  <MainButton text={"EdTech"} />
                 </Link>
-                <Link href={"/"}>
-                  <MainButton text={"FinTech"} />
+                <Link href={"/industry/retail"}>
+                  <MainButton text={"Retail"} />
                 </Link>
                 <Link href={"/"}>
                   <OutlineButton text={"More"} icon={<IoIosAdd />} />
@@ -318,15 +318,6 @@ export default function Home() {
         </PageBorders>
 
         <PageBorders>
-          <div className="flex flex-col gap-8" id="career">
-            <div className="px-4">
-              <HeaderOne text={"Testimonials"} />
-            </div>
-
-            <FeedbackCard />
-          </div>
-        </PageBorders>
-        <PageBorders>
           <div className="">
             {" "}
             {softwareDevelopment.map((item, index) => (
@@ -341,6 +332,16 @@ export default function Home() {
                 />
               </div>
             ))}{" "}
+          </div>
+        </PageBorders>
+
+        <PageBorders>
+          <div className="flex flex-col gap-8" id="career">
+            <div className="px-4">
+              <HeaderOne text={"Testimonials"} />
+            </div>
+
+            <FeedbackCard />
           </div>
         </PageBorders>
       </div>

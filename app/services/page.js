@@ -6,7 +6,7 @@ import MainText from "@/components/typography/MainText";
 import HeaderOne from "@/components/typography/HeaderOne";
 import features1 from "@/public/images/features1.png";
 import { OutlineButton } from "@/components/button/OutlineButton";
-import { IoIosAdd } from "react-icons/io";
+import { IoIosAdd, IoIosArrowBack } from "react-icons/io";
 import IndustryCard from "@/components/card/industryCard";
 import Link from "next/link";
 import TechStack from "@/components/section/TechStack";
@@ -175,19 +175,31 @@ export default function Home() {
                 color={"text-[#131313]"}
               />{" "}
               <MainText text={"Choose your industry"} />
-              <div className="grid grid-cols-3 lg:grid-cols-4 items-center gap-4  ">
-                <Link href={"/"}>
-                  <MainButton text={"FinTech"} />
-                </Link>
-                <Link href={"/"}>
-                  <MainButton text={"FinTech"} />
-                </Link>
-                <Link href={"/"}>
-                  <MainButton text={"FinTech"} />
-                </Link>
-                <Link href={"/"}>
-                  <OutlineButton text={"More"} icon={<IoIosAdd />} />
-                </Link>
+              <div className="grid  items-center gap-4  ">
+                <div>
+                  <Link href={"/"}>
+                    <MainButton text={"Product Design"} />
+                  </Link>
+                  <Link href={"/"}>
+                    <MainButton text={"Consulting"} />
+                  </Link>
+                </div>
+                <div>
+                  <Link href={"/"}>
+                    <MainButton text={"Technical Support"} />
+                  </Link>
+                  <Link href={"/"}>
+                    <MainButton text={"Software Engineering Services"} />
+                  </Link>
+                </div>
+                <div className="flex">
+                  <Link href={"/"}>
+                    <MainButton text={"Out staffing"} />
+                  </Link>
+                  <Link href={"/"}>
+                    <OutlineButton text={"Back"} icon={<IoIosArrowBack />} />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -318,15 +330,6 @@ export default function Home() {
         </PageBorders>
 
         <PageBorders>
-          <div className="flex flex-col gap-8" id="career">
-            <div className="px-4">
-              <HeaderOne text={"Testimonials"} />
-            </div>
-
-            <FeedbackCard />
-          </div>
-        </PageBorders>
-        <PageBorders>
           <div className="">
             {" "}
             {softwareDevelopment.map((item, index) => (
@@ -341,6 +344,16 @@ export default function Home() {
                 />
               </div>
             ))}{" "}
+          </div>
+        </PageBorders>
+
+        <PageBorders>
+          <div className="flex flex-col gap-8" id="career">
+            <div className="px-4">
+              <HeaderOne text={"Testimonials"} />
+            </div>
+
+            <FeedbackCard />
           </div>
         </PageBorders>
       </div>

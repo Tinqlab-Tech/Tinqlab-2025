@@ -18,6 +18,7 @@ import file from "@/public/icons/file.svg";
 import rep from "@/public/icons/rep.svg";
 import star from "@/public/icons/star.svg";
 import tv from "@/public/icons/tv.svg";
+import features1 from "@/public/images/features1.png";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -30,36 +31,64 @@ export default function Home() {
     {
       icon: mobile2,
       title: "Blockchain-based platforms",
-      subtitle: "",
     },
     {
       icon: file,
       title: "Financial analysis solutions",
-      subtitle: "",
     },
     {
       icon: star,
       title: "Cryptocurrency exchanges",
-      subtitle: "",
     },
     {
       icon: tv,
       title: "Investment/savings solutions",
-      subtitle: "",
     },
     {
       icon: rep,
       title: "Multiple wallets types",
-      subtitle: "",
     },
     {
       icon: location,
       title: "Automated trading bots",
-      subtitle: "",
     },
   ];
 
-  const technologyWeUse = [
+  const softwareDevelopment = [
+    {
+      title: "Requirements",
+      subtitle:
+        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,",
+    },
+    {
+      title: "Design",
+      subtitle:
+        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,",
+    },
+
+    {
+      title: "Development",
+      subtitle:
+        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,",
+    },
+    {
+      title: "Testing",
+      subtitle:
+        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,",
+    },
+    {
+      title: "Release",
+      subtitle:
+        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,",
+    },
+    {
+      title: "Support",
+      subtitle:
+        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,",
+    },
+  ];
+
+  const fintechSoftwareDevelopment = [
     {
       title: "Online ordering systems",
       subtitle:
@@ -82,84 +111,31 @@ export default function Home() {
     },
   ];
 
-  const whyUs = [
+  const workWithTinqlab = [
     {
-      title: "Result",
+      title: "Proven Fintech expertise",
       subtitle:
-        "Our Edtech software development services are customized for each project, so we can pivot quickly as requirements change.",
+        "With a strong portfolio of successful projects across fintech, retail, edtech, and more, we bring domain-specific knowledge and technical excellence to every solution. From neobanks for Gen Z, blockchain ecosystems, and many more.",
     },
     {
-      title: "Fast development",
+      title: "Agile development",
       subtitle:
-        "Our software engineers have worked with educational organizations and companies around the world, gaining valuable expertise in the education domain.",
+        "Our agile teams adapt quickly to evolving needs. We build fast, test early, and deliver results that align with your goals and market realities.",
     },
     {
-      title: "Cost",
+      title: "Security and compliance",
       subtitle:
-        "Our innovative education products stay up-to-date with the latest technologies and design trends in the education industry to create solutions that enhance the learning experience.",
-    },
-  ];
-
-  const benefits = [
-    {
-      title: "Operational Efficiency and Productivity",
-      items: [
-        {
-          title: "Automation: ",
-          subtitle:
-            "Retail software automates tasks like inventory tracking, order processing, and payment processing, saving time and reducing manual errors. ",
-        },
-        {
-          title: "Real-time visibility:",
-          subtitle:
-            "Retailers gain real-time insights into inventory levels, sales data, and customer behavior, enabling data-driven decision-making. ",
-        },
-        {
-          title: "Cost saving: ",
-          subtitle:
-            "Automation and optimized processes can lead to lower operational costs, improved inventory management, and reduced waste.  ",
-        },
-      ],
+        "Security and regulatory compliance are embedded in every stage of our development process. We build with industry standards in mind, including GDPR, PCI-DSS, SOC 2, and PSD2 — so your product is both secure and compliant from day one.",
     },
     {
-      title: "Enhanced Customer Experience:",
-      items: [
-        {
-          title: "Improved customer service: ",
-          subtitle:
-            "Software solutions can empower employees with the tools they need to provide better customer service, address inquiries quickly, and resolve issues efficiently. ",
-        },
-        {
-          title: "Loyalty program: ",
-          subtitle:
-            "Retail software facilitates the implementation of loyalty programs, rewards customers for their purchases, and encourages repeat business. ",
-        },
-        {
-          title: "Personalized shopping experience:",
-          subtitle:
-            "Retail software allows for personalized recommendations, targeted promotions, and seamless omnichannel experiences, enhancing customer satisfaction. ",
-        },
-      ],
+      title: "Experts with microservices",
+      subtitle:
+        "Our engineers are experienced in building modern, modular systems using microservices, enabling faster deployment, easier maintenance, and scalable performance across complex digital ecosystems.",
     },
     {
-      title: "Data-Driven Decision-Making:",
-      items: [
-        {
-          title: "Better Business Planning: ",
-          subtitle:
-            "Retail software helps retailers create more accurate business plans, set realistic goals, and track their progress. ",
-        },
-        {
-          title: "Improved Forecasting:",
-          subtitle:
-            "Data analytics can help retailers forecast future demand, optimize inventory levels, and make more informed business decisions. ",
-        },
-        {
-          title: "Competitive Advantage:",
-          subtitle:
-            "By leveraging data-driven insights, retailers can gain a competitive advantage in the market. ",
-        },
-      ],
+      title: "End-to-End Partnership",
+      subtitle:
+        "From strategy and product design to development, launch, and support, we partner with you through the full lifecycle — ensuring speed, quality, and long-term scalability.",
     },
   ];
 
@@ -192,6 +168,17 @@ export default function Home() {
       title: "Wealth and investment software",
       subtitle: "",
     },
+  ];
+
+  const technologyWeUse = [
+    { technologies: features1 },
+    { technologies: features1 },
+    { technologies: features1 },
+    { technologies: features1 },
+    { technologies: features1 },
+    { technologies: features1 },
+    { technologies: features1 },
+    { technologies: features1 },
   ];
 
   return (
@@ -256,14 +243,13 @@ export default function Home() {
               </div>
               <div className="hidden md:block bg-retailBg bg-contain bg-left-bottom bg-no-repeat min-h-[20vh] md:min-h-[30vh]"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2  gap-4 md:gap-8">
               {" "}
               {softwareSolutions.map((item, index) => (
                 <div key={index}>
                   {" "}
                   <MainCard
                     title={item.title}
-                    subtitle={item.subtitle}
                     bgColor={null}
                     hasIcon={true}
                     icon={item.icon}
@@ -289,57 +275,119 @@ export default function Home() {
               </div>
               <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh] md:min-h-[30vh]"></div>
             </div>
-            <TechStack />
-          </div>
-        </DoublePageBorders>
-        <PageBorders>
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
-            {" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 ">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
               {" "}
-              <div className="col-span-1 md:col-span-2">
-                {" "}
-                <HeaderTwo text={"Benefits of retail software development"} />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-              {" "}
-              {benefits.map((item, index) => (
+              {technologyWeUse.map((item, index) => (
                 <div key={index}>
                   {" "}
-                  <MoreContentCard
-                    title={item.title}
-                    items={item.items}
-                    bgColor={null}
-                  />
+                  <TechStack stack={item.technologies} />
                 </div>
               ))}
             </div>
           </div>
-        </PageBorders>
+        </DoublePageBorders>
+        {/* our fintech development process */}
         <PageBorders>
           <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
             {" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 ">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
               {" "}
-              <div className="col-span-1 md:col-span-2">
+              <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8">
                 {" "}
-                <HeaderTwo
+                <HeaderTwo text={"Our Fintech Software Development Process"} />
+                <MainText
                   text={
-                    "Why make Tinqlab your retail software development partner?"
+                    "We follow a structured and agile development process designed to deliver secure, scalable, and user-focused fintech solutions. Our approach ensures your product meets regulatory standards, adapts to market shifts, and delivers exceptional customer experiences."
                   }
+                  color={"text-[#12152E] opacity-50"}
                 />
               </div>
+              <div className="hidden md:block bg-retailBg bg-contain bg-left-bottom bg-no-repeat min-h-[20vh] md:min-h-[30vh]"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2  gap-4 md:gap-8">
               {" "}
-              {whyUs.map((item, index) => (
+              {softwareDevelopment.map((item, index) => (
                 <div key={index}>
                   {" "}
                   <MainCard
                     title={item.title}
                     subtitle={item.subtitle}
                     bgColor={null}
+                    useIndex={true}
+                    index={index + 1}
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="grid grid-cols-1 justify-items-center">
+              <Link href={"/"}>
+                <MainButton text={"Book consultation"} />
+              </Link>
+            </div>
+          </div>
+        </PageBorders>
+
+        <DoublePageBorders
+          background={"bg-features1 bg-cover bg-no-repeat bg-center"}
+        >
+          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
+            {" "}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+              {" "}
+              <div className="col-span-1 md:col-span-2 flex flex-col gap-8 md:w-4/5">
+                {" "}
+                <HeaderTwo
+                  text={
+                    "We Understand that the key to success is clear communication"
+                  }
+                  color={"text-white"}
+                />
+                <MainText
+                  text={
+                    "The product owner gets full access to project documentation and planning, which gives them control over the entire process of custom software development at all stages. Our FinTech software development services team is adaptive to clients’ schedules and workflow."
+                  }
+                  color={"text-white"}
+                />
+              </div>
+              <div className=" flex items-center justify-start">
+                {" "}
+                <Link href={"/"}>
+                  <MainButton text={"Schedule a call"} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </DoublePageBorders>
+
+        {/* why work with tinqlab */}
+        <PageBorders>
+          <div
+            id={"about"}
+            className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 "
+          >
+            <div className="flex flex-col gap-8 justify-start items-start ">
+              <HeaderTwo text={"Why Work with Tinqlab?"} />
+              <MainText
+                text={
+                  "At Tinqlab, we do more than just build software — we solve real business challenges with technology that delivers measurable impact. Our approach is rooted in collaboration, innovation, and a deep understanding of the industries we serve."
+                }
+                color={"opacity-50"}
+              />
+              <Link href={"/"}>
+                <MainButton text={"Get a consultation"} />
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 gap-4 md:gap-8">
+              {workWithTinqlab.map((item, index) => (
+                <div key={index}>
+                  <MainCard
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    bgColor={null}
+                    hasIcon={false}
+                    useIndex={true}
+                    index={index + 1}
+                    icon={item.icon}
                   />
                 </div>
               ))}

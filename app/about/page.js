@@ -79,45 +79,6 @@ export default function Home() {
     },
   ];
 
-  const industryProduction = [
-    {
-      bgImage: features1,
-      title: "Fintech",
-      subtitle:
-        "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
-
-      btnLink: "/",
-      btnText2: "read more",
-    },
-    {
-      bgImage: features1,
-      title: "Edtech",
-      subtitle:
-        "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
-
-      btnLink: "/",
-      btnText2: "read more",
-    },
-    {
-      bgImage: features1,
-      title: "Real Estate",
-      subtitle:
-        "To train employees on any device, from soft skills to technical expertise.",
-
-      btnLink: "/",
-      btnText2: "read more",
-    },
-    {
-      bgImage: features1,
-      title: "Retail",
-      subtitle:
-        "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
-
-      btnLink: "/",
-      btnText2: "read more",
-    },
-  ];
-
   const ourClient = [
     {
       client: features1,
@@ -212,7 +173,7 @@ export default function Home() {
 
             <MainText text={"Experts in their fields"} color={" opacity-50"} />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-8 justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 justify-center">
             {" "}
             {rates.map((item, index) => (
               <div key={index}>
@@ -235,30 +196,6 @@ export default function Home() {
                   bgColor={null}
                   hasIcon={true}
                   icon={item.icon}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </PageBorders>
-      <PageBorders>
-        <div className="flex flex-col gap-8" id="industry">
-          <div className="md:w-1/2">
-            <HeaderTwo
-              text={"Build and scale securely with us in your domian"}
-            />
-          </div>
-          <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
-            {industryProduction.map((item, index) => (
-              <div key={index}>
-                <IndustryCard
-                  title={item.title}
-                  subtitle={item.subtitle}
-                  bgImg={item.bgImage}
-                  background={null}
-                  btnLink={item.btnLink}
-                  hasbtnText2={true}
-                  btnText2={item.btnText2}
                 />
               </div>
             ))}

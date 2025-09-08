@@ -5,6 +5,7 @@ import MainCard from "@/components/card/MainCard";
 import MoreContentCard from "@/components/card/MoreContentCard";
 import OtherPageHero from "@/components/hero/OtherPageHero";
 import HeaderOne from "@/components/typography/HeaderOne";
+import HeaderTwo from "@/components/typography/HeaderTwo";
 import MainText from "@/components/typography/MainText";
 import PageBorders from "@/components/wrappers/PageBorders";
 import edtechHero from "@/public/images/edtechHero.svg";
@@ -122,32 +123,52 @@ export default function Home() {
   ];
   const jobOpenings = [
     {
-      title: "Team Synergy",
-      subTitle:
-        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration, propelling us to new heights of success.",
-      btnText: "Read more",
       bgImage: features1,
+      title: "Junior BD Executive",
+      subtitle:
+        "Tinqlab is looking to hire a talented junior business development executive to join our company.",
+      btnLink: "/",
+      btnText2: "Apply now",
     },
     {
-      title: "Continuous Growth",
-      subTitle:
-        "Our company's constant growth is fueled by creativity, flexibility, and an optimistic outlook. In order to adapt to shifting market conditions and continuously provide our clients, partners, and team with more value, we are dedicated to learning, development, and long-term growth.",
-      btnText: "Read more",
       bgImage: features1,
+      title: "Middle- Senior BD Executive",
+      subtitle:
+        "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
+      btnLink: "/",
+      btnText2: "Apply now",
     },
     {
-      title: "Results Oriented",
-      subTitle:
-        "Fundamentally, we set priorities and stay committed to our major objectives of providing the finest possible results for each and every project.  Metric-driven, we leverage this information and our experience to not only meet but surpass expectations.",
-      btnText: "Read more",
       bgImage: features1,
+      title: "Middle- Senior BD Executive",
+      subtitle:
+        "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
+      btnLink: "/",
+      btnText2: "Apply now",
     },
     {
-      title: "Taking responsibility",
-      subTitle:
-        "Taking responsibility is a fundamental principle which directs our decisions and actions right here at TinqLab. We encourage integrity, accountability, and ownership at all levels, enabling our team to fulfil commitments, grow from challenges, and produce substantial results.",
-      btnText: "Read more",
       bgImage: features1,
+      title: "Middle- Senior BD Executive",
+      subtitle:
+        "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
+      btnLink: "/",
+      btnText2: "Apply now",
+    },
+    {
+      bgImage: features1,
+      title: "Middle- Senior BD Executive",
+      subtitle:
+        "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
+      btnLink: "/",
+      btnText2: "Apply now",
+    },
+    {
+      bgImage: features1,
+      title: "Middle- DevOps Engineer",
+      subtitle:
+        "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
+      btnLink: "/",
+      btnText2: "Apply now",
     },
   ];
   const feedback = [
@@ -230,13 +251,17 @@ export default function Home() {
       {/*  Reason to be a tinqer*/}
       <PageBorders background={"bg-darkestBlue"}>
         <div className="flex flex-col gap-8" id="industry">
-          <div className="px-4">
-            <HeaderOne
-              text={"Reasons to be one of our Tinqers:"}
-              color={"text-mainWhite"}
-            />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
+            {" "}
+            <div className="col-span-1 md:col-span-2">
+              {" "}
+              <HeaderTwo
+                text={"Benefits Of Working With TinqLab"}
+                color={"text-mainWhite"}
+              />
+            </div>
+            <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
           </div>
-          <div className="bg-features1 bg-cover h-[40vh] bg-center w-full" />
           <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
             {benefits.map((item, index) => (
               <div key={index}>
@@ -266,11 +291,12 @@ export default function Home() {
                 {" "}
                 <IndustryCard
                   title={item.title}
-                  subtitle={item.subTitle}
+                  subtitle={item.subtitle}
                   bgImg={item.bgImage}
                   background={null}
+                  btnLink={item.btnLink}
                   hasbtnText2={true}
-                  btnText2={item.btnText}
+                  btnText2={item.btnText2}
                 />
               </div>
             ))}

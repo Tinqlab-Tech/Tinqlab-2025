@@ -110,7 +110,7 @@ export default function Home() {
             "Building great digital products requires dedication, design thinking, sharp hard skills, domain expertise, and sincere empathy for end-customer needs. The digital product design services by TinqLab include all of that, along with a cutting-edge tech stack and brilliant custom development. You should not agree to less! Create digital experiences that engage people at every touchpoint with us."
           }
           btnLink={"/"}
-          btnText={"Schedule a call"}
+          hasNav={true}
         />
 
         {/* digital product */}

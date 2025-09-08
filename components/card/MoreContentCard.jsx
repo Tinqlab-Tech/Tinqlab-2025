@@ -18,7 +18,7 @@ export default function MoreContentCard({
         {" "}
         {useIndexes === true && (
           <span
-            className={`${bgColor === null ? "border-[2px] border-mainBlack border-opacity-20" : "bg-darkestBlue"} h-12 w-12 rounded-full  flex justify-center items-center`}
+            className={`${bgColor === null ? "border-[2px] border-mainBlack border-opacity-20" : "bg-darkestBlue/30"} h-12 w-12 rounded-full  flex justify-center items-center`}
           >
             {indexes}
           </span>

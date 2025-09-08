@@ -108,6 +108,7 @@ export default function Home() {
           }
           btnLink={"/"}
           btnText={"Schedule a call"}
+          hasNav={true}
         />
         {/* consulting sevices */}
         <DoublePageBorders background={"bg-lightBlue"}>

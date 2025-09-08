@@ -194,11 +194,11 @@ export default function Home() {
           }
           btnLink={"/"}
           btnText={"Schedule a call"}
+          hasNav={true}
         />
 
         {/* our software solutions */}
         <PageBorders>
-          y
           <div id={"about"} className="scroll-mt-4 grid grid-cols-1  gap-8 ">
             <HeaderTwo text={"Our Software Engineering Solutions"} />
 
