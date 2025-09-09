@@ -176,7 +176,7 @@ export default function Home() {
               />{" "}
               <MainText text={"Choose your industry"} />
               <div className="grid  items-center gap-4  ">
-                <div>
+                <div className="flex gap-4">
                   <Link href={"/"}>
                     <MainButton text={"Product Design"} />
                   </Link>
@@ -184,15 +184,15 @@ export default function Home() {
                     <MainButton text={"Consulting"} />
                   </Link>
                 </div>
-                <div>
+                <div className=" grid xl:grid-cols-3 gap-4">
                   <Link href={"/"}>
                     <MainButton text={"Technical Support"} />
                   </Link>
-                  <Link href={"/"}>
+                  <Link href={"/"} className="xl:col-span-2">
                     <MainButton text={"Software Engineering Services"} />
                   </Link>
                 </div>
-                <div className="flex">
+                <div className="flex gap-4">
                   <Link href={"/"}>
                     <MainButton text={"Out staffing"} />
                   </Link>

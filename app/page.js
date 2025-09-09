@@ -13,6 +13,7 @@ import TechStack from "@/components/section/TechStack";
 import { SpecificationWrapper } from "@/components/wrappers/SpecificationWrapper";
 import FeedbackCard from "@/components/card/FeedbackCard";
 import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
+import AdsSlider from "@/components/section/AdsSlider";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -156,7 +157,9 @@ export default function Home() {
     <div className="min-h-screen">
       <div className="">
         <HomepageHero />
-
+        <PageBorders background={"bg-mainGrey"}>
+          <AdsSlider />
+        </PageBorders>
         {/* Home Features */}
         <DoublePageBorders background={"bg-lightBlue "}>
           {" "}
