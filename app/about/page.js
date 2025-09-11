@@ -10,10 +10,19 @@ import TechStack from "@/components/section/TechStack";
 import HeaderOne from "@/components/typography/HeaderOne";
 import HeaderTwo from "@/components/typography/HeaderTwo";
 import MainText from "@/components/typography/MainText";
+import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
 import PageBorders from "@/components/wrappers/PageBorders";
-import edtechHero from "@/public/images/edtechHero.svg";
+import aboutHerobg from "@/public/images/aboutHerobg.png";
 import features1 from "@/public/images/features1.png";
 import Link from "next/link";
+import bitgert from "@/public/images/client1.png";
+import tatum from "@/public/images/client2.png";
+import aws from "@/public/images/client3.png";
+import polygon from "@/public/images/client4.png";
+import mobile2 from "@/public/icons/mobile2.svg";
+import file from "@/public/icons/file.svg";
+import star from "@/public/icons/star.svg";
+import tv from "@/public/icons/tv.svg";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -63,34 +72,37 @@ export default function Home() {
   const ourTechnologies = [
     {
       title: "Blockchain-based platforms",
-      icon: features1,
+      icon: mobile2,
     },
     {
       title: "Financial analysis solutions",
-      icon: features1,
+      icon: file,
     },
     {
       title: "Cryptocurrency exchanges",
-      icon: features1,
+      icon: star,
     },
     {
       title: "Investment/savings solutions",
-      icon: features1,
+      icon: tv,
     },
   ];
 
   const ourClient = [
     {
-      client: features1,
+      icon: bitgert,
     },
     {
-      client: features1,
+      icon: tatum,
     },
     {
-      client: features1,
+      icon: aws,
     },
     {
-      client: features1,
+      icon: polygon,
+    },
+    {
+      icon: polygon,
     },
   ];
   return (
@@ -98,7 +110,7 @@ export default function Home() {
       {" "}
       <OtherPageHero
         bgImage={"bg-[#12152E]"}
-        image={edtechHero}
+        image={aboutHerobg}
         title={"A highly efficient product team "}
         subtitle={
           "Dedicated to providing innovative solutions and fueled by innovation, a dependable technological partner. The Tinqlab team employs best practices, rigorous testing, and comprehensive quality assurance methods to ensure that our software is secure and operates reliably, meeting and exceeding our clients' expectations."
@@ -106,14 +118,16 @@ export default function Home() {
         btnLink={"/"}
         btnText={"Schedule a call"}
       />
-      <PageBorders>
+      <DoublePageBorders
+        background={"bg-featuresbg bg-cover bg-no-repeat bg-center"}
+      >
         {" "}
         <div
-          className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 lg:px-6 bg-lightBlue  rounded-[20px]"
+          className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 lg:px-6  "
           id={"about"}
         >
           {" "}
-          <div className="flex flex-col gap-5 p-4 xl:p-8">
+          <div className="flex flex-col gap-5 p-4 xl:p-8 ">
             <HeaderOne text={"Who are Tinqlab?"} />{" "}
             <MainText
               text={
@@ -134,9 +148,9 @@ export default function Home() {
               color={"opacity-50"}
             />
           </div>
-          <div className="hidden md:block bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+          <div className="hidden md:block bg-vector4 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
         </div>
-      </PageBorders>{" "}
+      </DoublePageBorders>{" "}
       {/* Our Core Values */}
       <PageBorders>
         <div className="flex flex-col gap-8" id="industry">
@@ -203,15 +217,15 @@ export default function Home() {
         </div>
       </PageBorders>
       {/* Our Mission*/}
-      <PageBorders>
+      <DoublePageBorders>
         {" "}
         <div
-          className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 lg:px-6 bg-darkestBlue  rounded-[20px]"
+          className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-3 gap-8  bg-darkestBlue  rounded-[20px]"
           id={"about"}
         >
           {" "}
-          <div className="hidden md:block bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
-          <div className="flex flex-col gap-5 p-4 xl:p-8">
+          <div className="hidden md:block  w-full min-h-[40vh] bg-features3 bg-cover bg-left-bottom bg-no-repeat"></div>
+          <div className="flex flex-col gap-5 justify-center p-4 md:p-8 col-span-2">
             <HeaderOne text={"Our Mission"} color={"text-mainWhite"} />
             <MainText
               text={
@@ -220,7 +234,7 @@ export default function Home() {
               color={"text-mainWhite"}
             />
             <HeaderOne text={"Our Vision"} color={"text-mainWhite"} />
-            <div className="grid grid-cols-3 items-center gap-4 ">
+            <div className="grid grid-cols-3 items-center gap-4 md:w-3/4 lg:1/2">
               <Link href={"/"}>
                 {" "}
                 <MainButton text={"Innovate"} color={"text-mainWhite"} />
@@ -236,7 +250,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </PageBorders>
+      </DoublePageBorders>
       {/* Our clients*/}
       <PageBorders>
         <div className="flex flex-col gap-8" id="career">
@@ -246,7 +260,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 ">
             {ourClient.map((item, index) => (
               <div key={index}>
-                <TechStack stack={item.client} />
+                <TechStack stack={item.icon} />
               </div>
             ))}
           </div>

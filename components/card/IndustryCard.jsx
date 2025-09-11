@@ -17,7 +17,7 @@ export default function IndustryCard({
 }) {
   return (
     <div
-      className={`${background ? background : "bg-mainWhite"} h-full p-[20px] md:py-[40px] grid lg:grid-cols-2 justify-center items-center gap-8 rounded-[10px] shadow-custom-primary`}
+      className={`${background ? background : "bg-Industrybg"}  bg-cover bg-no-repeat bg-center h-full p-[20px] md:py-[40px] grid lg:grid-cols-2 justify-center items-center gap-8 rounded-[10px] shadow-custom-primary`}
     >
       <div className="flex flex-col gap-5 justify-center">
         <div
@@ -57,9 +57,9 @@ export default function IndustryCard({
         <ImageWrapper
           alt={`Tinqlab Industrial Services ${title}`}
           src={bgImg}
-          width={500}
-          height={500}
-          style="bg-no-repeat bg-contain hidden lg:block"
+          width={300}
+          height={300}
+          style="bg-no-repeat bg-contain hidden lg:block "
         />
       </div>
     </div>

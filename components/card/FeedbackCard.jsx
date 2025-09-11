@@ -1,21 +1,22 @@
 import React from "react";
 import MainText from "../typography/MainText";
 import ImageWrapper from "../wrappers/ImageWrapper";
-import features1 from "@/public/images/features1.png";
+import feedback1 from "@/public/images/feedback1.png";
+import feedback2 from "@/public/images/feedback2.png";
 
 export default function FeedbackCard({}) {
   const clientFeedback = [
     {
       description:
         "“TinqLab has helped us get to market faster, allowing us to fill products gaps easily.”",
-      icon: features1,
+      icon: feedback1,
       title: "Gavin Aaron",
       subTitle: "Lead Software Developer, Hungrit Ltd",
     },
     {
       description:
         "“They were able to handle everything we threw at them fairly easily.”",
-      icon: features1,
+      icon: feedback2,
       title: "Dimitry Konoval",
       subTitle: "Founder & CEO, BlackBunny Capital",
     },
@@ -27,8 +28,8 @@ export default function FeedbackCard({}) {
           key={index}
           className={` h-full p-[20px] md:py-[40px] flex flex-col gap-8 justify-between rounded-[10px] shadow-custom-primary`}
         >
-          <div className="flex items-center justify-start  gap-4 ">
-            <div className="bg-features1 bg-no-repeat bg-contain w-12 h-12" />
+          <div className="flex items-center justify-start  gap-4 md:gap-8 ">
+            <div className="bg-quote bg-no-repeat bg-contain w-12 h-12" />
             <MainText text={item.description} color={"opacity-50"} />
           </div>
           <div className="flex items-center justify-end gap-4 px-6 ">

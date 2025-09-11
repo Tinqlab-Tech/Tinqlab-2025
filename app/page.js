@@ -4,7 +4,6 @@ import PageStarter from "@/components/section/PageStarter";
 import PageBorders from "@/components/wrappers/PageBorders";
 import MainText from "@/components/typography/MainText";
 import HeaderOne from "@/components/typography/HeaderOne";
-import features1 from "@/public/images/features1.png";
 import { OutlineButton } from "@/components/button/OutlineButton";
 import { IoIosAdd } from "react-icons/io";
 import IndustryCard from "@/components/card/industryCard";
@@ -14,6 +13,15 @@ import { SpecificationWrapper } from "@/components/wrappers/SpecificationWrapper
 import FeedbackCard from "@/components/card/FeedbackCard";
 import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
 import AdsSlider from "@/components/section/AdsSlider";
+import fintech from "@/public/images/FintechIcon.svg";
+import edtech from "@/public/images/EdtechIcon.svg";
+import retail from "@/public/images/RetailIcon.svg";
+import realEstate from "@/public/images/RealEstateIcon.svg";
+import bitgert from "@/public/images/client1.png";
+import tatum from "@/public/images/client2.png";
+import aws from "@/public/images/client3.png";
+import polygon from "@/public/images/client4.png";
+import HeaderTwo from "@/components/typography/HeaderTwo";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -24,7 +32,7 @@ export const metadata = {
 export default function Home() {
   const industryProduction = [
     {
-      bgImage: features1,
+      bgImage: fintech,
       title: "Fintech",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
@@ -32,7 +40,7 @@ export default function Home() {
       btnText: "Learn more",
     },
     {
-      bgImage: features1,
+      bgImage: edtech,
       title: "Edtech",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
@@ -40,7 +48,7 @@ export default function Home() {
       btnText: "Learn more",
     },
     {
-      bgImage: features1,
+      bgImage: realEstate,
       title: "Real Estate",
       subtitle:
         "To train employees on any device, from soft skills to technical expertise.",
@@ -48,7 +56,7 @@ export default function Home() {
       btnText: "Learn more",
     },
     {
-      bgImage: features1,
+      bgImage: retail,
       title: "Retail",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
@@ -58,44 +66,44 @@ export default function Home() {
   ];
   const ourPartners = [
     {
-      icon: features1,
+      icon: bitgert,
     },
     {
-      icon: features1,
+      icon: tatum,
     },
     {
-      icon: features1,
+      icon: aws,
     },
     {
-      icon: features1,
+      icon: polygon,
     },
     {
-      icon: features1,
+      icon: polygon,
     },
   ];
   const getHelp = [
     {
-      background: "bg-darkestBlue",
+      background: "bg-getHelpbg1",
       title: "Web Development",
     },
     {
-      background: "bg-features1",
+      background: "bg-getHelpbg2",
       title: "Mobile Application Development",
     },
     {
-      background: "bg-darkestBlue",
+      background: "bg-getHelpbg3",
       title: "Discovery Phase",
     },
     {
-      background: "bg-features1",
+      background: "bg-getHelpbg4",
       title: "UI/UX Design",
     },
     {
-      background: "bg-darkestBlue",
+      background: "bg-getHelpbg5",
       title: "Quality Assurance",
     },
     {
-      background: "bg-features1",
+      background: "bg-getHelpbg6",
       title: "IT Security",
     },
   ];
@@ -157,19 +165,21 @@ export default function Home() {
     <div className="min-h-screen">
       <div className="">
         <HomepageHero />
+
         <PageBorders background={"bg-mainGrey"}>
           <AdsSlider />
         </PageBorders>
+
         {/* Home Features */}
-        <DoublePageBorders background={"bg-lightBlue "}>
+        <DoublePageBorders>
           {" "}
           <div
-            className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8  bg-lightBlue h-full "
+            className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-3 items-center gap-4 bg-lightBlue rounded-[10px] md:rounded-[20px] h-full "
             id={"about"}
           >
             {" "}
-            <div className="hidden md:block  bg-features1 bg- bg-no-repeat  "></div>
-            <div className="flex flex-col gap-5  ">
+            <div className="hidden md:block  bg-features1  bg-contain   bg-left-bottom bg-no-repeat    min-h-[60vh]"></div>
+            <div className="flex flex-col gap-4 p-4 md:p-10 col-span-2">
               <PageStarter
                 Title={"Discover how we can assist in achieving your goals!"}
                 SubtitleText={
@@ -178,7 +188,7 @@ export default function Home() {
                 color={"text-[#131313]"}
               />{" "}
               <MainText text={"Choose your industry"} />
-              <div className="grid grid-cols-3 lg:grid-cols-4 items-center gap-4  ">
+              <div className="grid  grid-cols-2   md:grid-cols-3 lg:w-3/4 xl:w-1/2 items-center  gap-4 ">
                 <Link href={"/"}>
                   <MainButton text={"FinTech"} />
                 </Link>
@@ -204,8 +214,8 @@ export default function Home() {
           >
             {" "}
             <div className="flex flex-col gap-8">
-              <HeaderOne text={"Case studies"} color={"text-darkestBlue/50 "} />
-              <HeaderOne text={"TinqFi - Automated digital assets platform"} />
+              <HeaderTwo text={"Case studies"} color={"text-darkestBlue/50 "} />
+              <HeaderTwo text={"TinqFi - Automated digital assets platform"} />
               <div className="gap-2 lg:gap-4 flex flex-wrap items-center justify-start ">
                 {singleServive.map((item, index) => (
                   <p
@@ -230,7 +240,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>{" "}
-            <div className="hidden md:block  bg-features1 bg-center bg-no-repeat "></div>
+            <div className="hidden md:block  bg-features2 bg-contain bg-center bg-no-repeat  "></div>
           </div>
         </PageBorders>
 
@@ -238,7 +248,7 @@ export default function Home() {
         <PageBorders>
           <div className="flex flex-col gap-8" id="industry">
             <div className="md:w-1/2">
-              <HeaderOne
+              <HeaderTwo
                 text={"Build and scale securely with us in your domian"}
               />
             </div>
@@ -260,11 +270,11 @@ export default function Home() {
           </div>
         </PageBorders>
 
-        {/* Our Partners */}
         <PageBorders>
-          <div className="flex flex-col gap-8">
-            <div className="flex flex-col gap-4">
-              <HeaderOne text={"Our partners"} />
+          <div className="flex flex-col gap-20">
+            {/* Our Partners */}
+            <div className="flex flex-col gap-8">
+              <HeaderTwo text={"Our partners"} />
               <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-8 ">
                 {ourPartners.map((item, index) => (
                   <div key={index}>
@@ -275,19 +285,18 @@ export default function Home() {
             </div>
 
             {/* Get Help */}
-            <div className="flex flex-col gap-4">
-              <HeaderOne text={"How we can help you "} />
+            <div className="flex flex-col gap-8">
+              <HeaderTwo text={"How we can help you "} />
               <div className="grid md:grid-cols-3 gap-4 md:gap-8 ">
                 {getHelp.map((item, index) => (
                   <div key={index}>
                     <div
-                      className={`${item.background} p-[20px] md:py-[40px] flex  gap-8 justify-start items-center rounded-[10px] shadow-custom-primary min-h-full max-h-[40vh]`}
+                      className={`${item.background}  bg-cover bg-no-repeat bg-center overflow-hidden rounded-[10px] shadow-custom-primary h-full`}
                     >
-                      {" "}
-                      <div
-                        className={`text-[16px] lg:text-[22px] font-semibold leading-[24px] lg:leading-[32px] text-mainWhite gap-4 w-4/5 underline`}
-                      >
-                        {item.title}
+                      <div className="bg-darkBlue/50  h-full p-[20px] md:py-[40px] flex justify-start items-center">
+                        <div className="text-[16px] lg:text-[22px] font-semibold leading-[24px] lg:leading-[32px] text-mainWhite underline">
+                          {item.title}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -295,9 +304,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* button Text */}
             <div className="grid md:grid-cols-2 gap-4 md:gap-8">
-              <HeaderOne
+              <HeaderTwo
                 text={"Engage with our experts: Free discovery session"}
               />
               <div className="flex flex-col justify-center gap-5">
@@ -324,7 +332,7 @@ export default function Home() {
         <PageBorders>
           <div className="flex flex-col gap-8" id="career">
             <div className="px-4">
-              <HeaderOne text={"Testimonials"} />
+              <HeaderTwo text={"Testimonials"} />
             </div>
 
             <FeedbackCard />

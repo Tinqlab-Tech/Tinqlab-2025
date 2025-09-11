@@ -10,6 +10,11 @@ import MainText from "@/components/typography/MainText";
 import PageBorders from "@/components/wrappers/PageBorders";
 import edtechHero from "@/public/images/edtechHero.svg";
 import features1 from "@/public/images/features1.png";
+import careerHerobg from "@/public/images/careerHerobg.png";
+import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
+import vector1 from "@/public/images/vector1.png";
+import vector2 from "@/public/images/vector2.png";
+import vector3 from "@/public/images/vector3.png";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -123,7 +128,7 @@ export default function Home() {
   ];
   const jobOpenings = [
     {
-      bgImage: features1,
+      bgImage: vector1,
       title: "Junior BD Executive",
       subtitle:
         "Tinqlab is looking to hire a talented junior business development executive to join our company.",
@@ -131,7 +136,7 @@ export default function Home() {
       btnText2: "Apply now",
     },
     {
-      bgImage: features1,
+      bgImage: vector1,
       title: "Middle- Senior BD Executive",
       subtitle:
         "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
@@ -139,7 +144,7 @@ export default function Home() {
       btnText2: "Apply now",
     },
     {
-      bgImage: features1,
+      bgImage: vector1,
       title: "Middle- Senior BD Executive",
       subtitle:
         "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
@@ -147,7 +152,7 @@ export default function Home() {
       btnText2: "Apply now",
     },
     {
-      bgImage: features1,
+      bgImage: vector1,
       title: "Middle- Senior BD Executive",
       subtitle:
         "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
@@ -155,7 +160,7 @@ export default function Home() {
       btnText2: "Apply now",
     },
     {
-      bgImage: features1,
+      bgImage: vector2,
       title: "Middle- Senior BD Executive",
       subtitle:
         "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
@@ -163,7 +168,7 @@ export default function Home() {
       btnText2: "Apply now",
     },
     {
-      bgImage: features1,
+      bgImage: vector3,
       title: "Middle- DevOps Engineer",
       subtitle:
         "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
@@ -192,22 +197,22 @@ export default function Home() {
       {" "}
       <OtherPageHero
         bgImage={"bg-[#12152E]"}
-        image={edtechHero}
+        image={careerHerobg}
         title={"The world is in awe of your brilliance!"}
         subtitle={"And we are here to properly value it."}
         btnLink={"/"}
         btnText={"Join TinqLab team"}
       />
-      <PageBorders>
+      <DoublePageBorders>
         {" "}
         <div
-          className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 lg:px-6 bg-lightBlue  rounded-[20px]"
+          className=" scroll-mt-4 overflow-hidden bg-featuresbg bg-cover bg-no-repeat bg-center grid grid-cols-1 md:grid-cols-3 gap-8  rounded-[10px] md:rounded-[20px] "
           id={"about"}
         >
           {" "}
-          <div className="  bg-features1 bg-start bg-no-repeat min-h-[40vh] "></div>
-          <div className="flex flex-col gap-5 p-4 xl:p-8">
-            <HeaderOne text={"Who are Tinqlab?"} />{" "}
+          <div className="hidden md:block  w-full min-h-[40vh] bg-features3 bg-cover bg-left-bottom bg-no-repeat"></div>
+          <div className="flex flex-col gap-5 p-6 col-span-2">
+            <HeaderTwo text={"Who are Tinqlab?"} />{" "}
             <MainText
               text={
                 "TinqLab is a software development company founded in 2019 which develops mobile applications, web apps, and custom blockchain software"
@@ -228,12 +233,12 @@ export default function Home() {
             />
           </div>
         </div>
-      </PageBorders>{" "}
+      </DoublePageBorders>{" "}
       {/* Our Values */}
       <PageBorders>
         <div className="flex flex-col gap-8" id="industry">
           <div className="px-4">
-            <HeaderOne text={"Our Values"} />
+            <HeaderTwo text={"Our Values"} />
           </div>
           <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
             {ourValues.map((item, index) => (
@@ -251,7 +256,7 @@ export default function Home() {
       {/*  Reason to be a tinqer*/}
       <PageBorders background={"bg-darkestBlue"}>
         <div className="flex flex-col gap-8" id="industry">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
+          <div className="grid grid-cols-1 md:grid-cols-3  gap-4 md:gap-8 items-center ">
             {" "}
             <div className="col-span-1 md:col-span-2">
               {" "}
@@ -260,7 +265,7 @@ export default function Home() {
                 color={"text-mainWhite"}
               />
             </div>
-            <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+            <div className="hidden md:block bg-features4 bg-contain bg-left-bottom bg-no-repeat  h-[20vh] xl:h-[40vh]"></div>
           </div>
           <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
             {benefits.map((item, index) => (

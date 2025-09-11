@@ -22,7 +22,7 @@ export default function HomepageHero({ bgImage, path }) {
   return (
     <div className="min-h-[80vh]">
       <div className="bg-features1 min-h-[40vh] bg-cover bg-no-repeat  bg-center">
-        <div className="bg-darkBlue/50 min-h-[40vh] bg-cover bg-no-repeat  bg-center">
+        <div className="bg-darkBlue/50 h-full bg-cover  bg-center">
           <section className={`tracking-normal md:p-[6vw] `}>
             {" "}
             <div className="flex flex-col items-start justify-center gap-8 px-[4vw] lea py-[8vh]">

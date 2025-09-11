@@ -26,7 +26,7 @@ export default function OtherPageHero({
   ];
   return (
     <div
-      className={`${bgImage ? bgImage : "bg-white"} min-h-[80vh] bg-cover bg-no-repeat bg-center`}
+      className={`${bgImage ? bgImage : "bg-white"} bg-cover bg-no-repeat bg-center`}
     >
       <section className={`tracking-normal md:p-[6vw] flex flex-col md:gap-8 `}>
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4">
