@@ -9,7 +9,6 @@ import HeaderTwo from "@/components/typography/HeaderTwo";
 import MainText from "@/components/typography/MainText";
 import PageBorders from "@/components/wrappers/PageBorders";
 import edtechHero from "@/public/images/edtechHero.svg";
-import features1 from "@/public/images/features1.png";
 import careerHerobg from "@/public/images/careerHerobg.png";
 import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
 import vector1 from "@/public/images/vector1.png";
@@ -176,22 +175,7 @@ export default function Home() {
       btnText2: "Apply now",
     },
   ];
-  const feedback = [
-    {
-      description:
-        "“TinqLab has helped us get to market faster, allowing us to fill products gaps easily.”",
-      icon: features1,
-      title: "Gavin Aaron",
-      subTitle: "Lead Software Developer, Hungrit Ltd",
-    },
-    {
-      description:
-        "“They were able to handle everything we threw at them fairly easily.”",
-      icon: features1,
-      title: "Dimitry Konoval",
-      subTitle: "Founder & CEO, BlackBunny Capital",
-    },
-  ];
+
   return (
     <div className="min-h-screen">
       {" "}

@@ -17,10 +17,10 @@ import fintech from "@/public/images/FintechIcon.svg";
 import edtech from "@/public/images/EdtechIcon.svg";
 import retail from "@/public/images/RetailIcon.svg";
 import realEstate from "@/public/images/RealEstateIcon.svg";
-import bitgert from "@/public/images/client1.png";
-import tatum from "@/public/images/client2.png";
-import aws from "@/public/images/client3.png";
-import polygon from "@/public/images/client4.png";
+import bitgert from "@/public/images/stacks/bitgert.png";
+import tatum from "@/public/images/stacks/tatum.png";
+import aws from "@/public/images/stacks/aws.png";
+import polygon from "@/public/images/stacks/polygon.png";
 import HeaderTwo from "@/components/typography/HeaderTwo";
 
 export const metadata = {
@@ -174,11 +174,13 @@ export default function Home() {
         <DoublePageBorders>
           {" "}
           <div
-            className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-3 items-center gap-4 bg-lightBlue rounded-[10px] md:rounded-[20px] h-full "
+            className=" scroll-mt-4 overflow-hidden bg-lightBlue bg-cover bg-no-repeat bg-center grid grid-cols-1 md:grid-cols-3 gap-8  rounded-[10px] md:rounded-[20px] "
             id={"about"}
           >
             {" "}
-            <div className="hidden md:block  bg-features1  bg-contain   bg-left-bottom bg-no-repeat    min-h-[60vh]"></div>
+            <div className="hidden md:flex w-full min-h-[40vh] justify-center items-center">
+              <div className="w-full h-full bg-features1 bg-contain bg-center bg-no-repeat" />
+            </div>{" "}
             <div className="flex flex-col gap-4 p-4 md:p-10 col-span-2">
               <PageStarter
                 Title={"Discover how we can assist in achieving your goals!"}
@@ -188,15 +190,15 @@ export default function Home() {
                 color={"text-[#131313]"}
               />{" "}
               <MainText text={"Choose your industry"} />
-              <div className="grid  grid-cols-2   md:grid-cols-3 lg:w-3/4 xl:w-1/2 items-center  gap-4 ">
+              <div className="grid  grid-cols-3 lg:w-3/4 xl:w-1/2 items-center  gap-4 ">
                 <Link href={"/"}>
                   <MainButton text={"FinTech"} />
                 </Link>
                 <Link href={"/"}>
-                  <MainButton text={"FinTech"} />
+                  <MainButton text={"EdTech"} />
                 </Link>
                 <Link href={"/"}>
-                  <MainButton text={"FinTech"} />
+                  <MainButton text={"Retail"} />
                 </Link>
                 <Link href={"/"}>
                   <OutlineButton text={"More"} icon={<IoIosAdd />} />

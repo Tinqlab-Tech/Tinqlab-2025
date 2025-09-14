@@ -21,19 +21,19 @@ export default function HomepageHero({ bgImage, path }) {
 
   return (
     <div className="min-h-[80vh]">
-      <div className="bg-features1 min-h-[40vh] bg-cover bg-no-repeat  bg-center">
+      <div className="bg-homeHerobg min-h-[40vh] bg-cover bg-no-repeat  bg-center">
         <div className="bg-darkBlue/50 h-full bg-cover  bg-center">
           <section className={`tracking-normal md:p-[6vw] `}>
             {" "}
             <div className="flex flex-col items-start justify-center gap-8 px-[4vw] lea py-[8vh]">
               <HeaderOne
-                text={"Consulting"}
+                text={"Software Engineering"}
                 color={"text-white"}
                 size={"text-[60px] leading-[70px] "}
               />
               <MainText
                 text={
-                  "Elevating your business to new heights and increasing your process efficiency with customized, results driven consulting services. Our experts help you grow longer feathers for your wings."
+                  "Build scalable, secure, and high-performance applications that power digital transformation across industries. From ideation to deployment, Tinqlab is happy to be your trusted partner."
                 }
                 size={"text-[22px] leading-[38px] "}
                 color={"text-white md:w-3/5"}

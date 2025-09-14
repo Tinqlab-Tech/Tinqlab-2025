@@ -16,16 +16,33 @@ import consultation from "@/public/icons/consultation.svg";
 import custom from "@/public/icons/custom.svg";
 import mobile from "@/public/icons/mobile.svg";
 import study from "@/public/icons/study.svg";
-import edtechHero from "@/public/images/edtechHero.svg";
+import softwareHerobg from "@/public/images/softwareHerobg.png";
 import TechStack from "@/components/section/TechStack";
 import java from "@/public/images/stacks/java.svg";
-import rn from "@/public/images/stacks/rn.png";
-import nodejs from "@/public/images/stacks/nodejs.png";
+import flutter from "@/public/images/stacks/flutter.png";
+import aws from "@/public/images/stacks/aws.png";
 import React from "@/public/images/stacks/react.png";
-import features1 from "@/public/images/features1.png";
+import javascript from "@/public/images/stacks/javascript.png";
+import swift from "@/public/images/stacks/swift.png";
+import vue from "@/public/images/stacks/vue.png";
+import angular from "@/public/images/stacks/angular.png";
+
+import features1 from "@/public/images/featuresbg/features1.png";
 import ServicesCard from "@/components/card/ServicesCard";
 import FeedbackCard from "@/components/card/FeedbackCard";
 import HeaderOne from "@/components/typography/HeaderOne";
+import box from "@/public/icons/box.png";
+import connect from "@/public/icons/connect.png";
+import network from "@/public/icons/network.png";
+import cloud from "@/public/icons/cloud.png";
+import mobile3 from "@/public/icons/mobile3.png";
+import wallet from "@/public/icons/wallet.png";
+import web from "@/public/icons/web.png";
+import wifi from "@/public/icons/wifi.png";
+import fintech from "@/public/icons/fintech.png";
+import realEstate from "@/public/icons/realEstate.png";
+import edtech from "@/public/icons/edtech.png";
+import retail from "@/public/icons/retail.png";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -36,49 +53,49 @@ export const metadata = {
 export default function Home() {
   const softwareEngineeringSolution = [
     {
-      bgIcon: features1,
+      bgIcon: box,
       title: "Custom blockchain development",
       subtitle:
         "We offer end-to-end blockchain development services to build secure, decentralized applications and platforms. Our blockchain developers have experience with Ethereum, Hyperledger Fabric, R3 Corda, and other blockchain frameworks.",
     },
     {
-      bgIcon: features1,
+      bgIcon: wallet,
       title: "Software consulting",
       subtitle:
         "We guide you through every phase of the software lifecycle from planning and architecture to optimization and transformation ensuring solutions align with business goals, industry standards, and emerging tech trends.",
     },
     {
-      bgIcon: features1,
+      bgIcon: network,
       title: "API Integration",
       subtitle:
         "We offer seamless API integration services that connect your systems, platforms, and applications to streamline operations and enhance functionality. Whether you're integrating third-party services or building custom APIs, we ensure secure, efficient, and scalable solutions that power business agility.",
     },
     {
-      bgIcon: features1,
+      bgIcon: connect,
       title: "Enterprise software development",
       subtitle:
         "Tinqlab delivers robust, scalable, and tailored enterprise software solutions that streamline complex business processes and drive organizational efficiency. We design and build powerful systems that support everything from internal operations to customer engagement at scale.",
     },
     {
-      bgIcon: features1,
+      bgIcon: web,
       title: "Web development",
       subtitle:
         "We build high-performance, user-centric websites and web applications that meet the evolving demands of modern businesses. Our web development services blend sleek design with powerful functionality to create digital experiences that are fast, secure, and scalable.",
     },
     {
-      bgIcon: features1,
+      bgIcon: mobile3,
       title: "Mobile app development",
       subtitle:
         "Our software engineers use leading frameworks to develop engaging iOS and Android apps that provide seamless user experiences. We incorporate best practices for security, performance, and UX design to build apps that delight your customer",
     },
     {
-      bgIcon: features1,
+      bgIcon: wifi,
       title: "IoT development",
       subtitle:
         "We build IoT systems from the ground up, handling everything from firmware and hardware engineering to mobile apps and cloud platforms. When you work with us, you're getting a trusted partner in IoT development. We understand your vision and craft tailored software solutions that transform the way people live and work.",
     },
     {
-      bgIcon: features1,
+      bgIcon: cloud,
       title: "DevOps",
       subtitle:
         "At Tinqlab, our DevOps services bridge the gap between development and operations to enable faster, more reliable software delivery. We automate and streamline workflows to ensure continuous integration, continuous deployment (CI/CD), and real-time monitoring.",
@@ -114,25 +131,25 @@ export default function Home() {
 
   const expertise = [
     {
-      icon: mobile,
+      icon: fintech,
       title: "Fintech",
       subtitle:
         "Financial technology company engage us to design and build secure, scalable, and compliant fintech solutions that power the future of finance. Whether you're launching a digital wallet, building a lending platform, or integrating blockchain into financial services, we deliver robust technology tailored to modern financial ecosystems.",
     },
     {
-      icon: consultation,
+      icon: edtech,
       title: "Edtech",
       subtitle:
         "Education technology companies turn to us to develop cutting-edge EdTech solutions that make learning more accessible, engaging, and effective. From virtual classrooms to AI-powered learning platforms, we empower institutions, educators, and learners with the digital tools they need to succeed.",
     },
     {
-      icon: custom,
+      icon: realEstate,
       title: "Real Estate",
       subtitle:
         "We build powerful, user-friendly real estate platforms that simplify property management, enhance listings, and improve customer engagement. Our solutions are designed to streamline operations for agencies, developers, and property tech startups.",
     },
     {
-      icon: comms,
+      icon: retail,
       title: "Retail",
       subtitle:
         "We collaborates with retailers to create seamless e-commerce experiences that connect brands with customers and drive business growth, and intelligent analytics tools designed to optimize operations, boost sales, and elevate customer satisfaction.",
@@ -174,12 +191,14 @@ export default function Home() {
   ];
 
   const technologyWeUse = [
+    { technologies: javascript },
+    { technologies: flutter },
+    { technologies: react },
     { technologies: java },
-    { technologies: rn },
-    { technologies: nodejs },
-    { technologies: React },
-    { technologies: React },
-    { technologies: React },
+    { technologies: swift },
+    { technologies: aws },
+    { technologies: vue },
+    { technologies: angular },
   ];
 
   return (
@@ -187,7 +206,7 @@ export default function Home() {
       <div className="">
         <OtherPageHero
           bgImage={null}
-          image={edtechHero}
+          image={softwareHerobg}
           title={"Software Engineering"}
           subtitle={
             "At Tinqlab, we turn bold ideas into powerful, high-performance digital solutions. From concept to launch, we deliver full-cycle development that’s fast, scalable, and built to drive results. With the right tech partner, your possibilities are limitless."
@@ -228,7 +247,7 @@ export default function Home() {
               </div>
               <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
             </div>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-8 justify-items-center">
+            <div className="grid grid-cols-3 md:grid-cols-8 gap-4 md:gap-8 justify-items-center">
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
                   <TechStack stack={item.technologies} />
@@ -251,13 +270,14 @@ export default function Home() {
                 <MainButton text={"Book a meeting"} />
               </Link>
             </div>
-            <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+            <div className="grid xl:grid-cols-2 gap-4 md:gap-8">
               {expertise.map((item, index) => (
                 <div key={index}>
                   <ServicesCard
                     title={item.title}
                     subtitle={item.subtitle}
                     icon={item.icon}
+                    isSingleService={true}
                   />
                 </div>
               ))}
@@ -277,7 +297,7 @@ export default function Home() {
                   color={"text-mainWhite"}
                 />
               </div>
-              <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+              <div className="hidden md:block bg-features5 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               {" "}
@@ -299,26 +319,32 @@ export default function Home() {
           <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
             {" "}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 ">
-              <HeaderTwo text={"Why choose Tinqlab?"} />
               <div className="flex flex-col gap-4 md:gap-8">
-                {" "}
+                <HeaderTwo text={"Our Software Development Process"} />
+
+                <Link href={"/"}>
+                  <MainButton text={"Get a consultation"} />
+                </Link>
+              </div>
+              <ul className="flex flex-col ">
                 {softwareDevelopmentProcess.map((item, index) => (
-                  <li
-                    key={index}
-                    className="block space-y-4 text-[18px] leading-[28px] text-[#12152E]"
-                  >
-                    <div className="flex items-center gap-4 p-4">
-                      <span className="h-12 w-12 border-[2px] rounded-full border-[#5A67D8] border-opacity-20 flex justify-center items-center">
+                  <li key={index} className="flex items-start gap-4 md:gap-8">
+                    <div className="flex flex-col items-center">
+                      <span className="h-12 w-12 rounded-full bg-tansparent text-mainBlack flex justify-center items-center font-semibold border border-mainGray shrink-0">
                         {index + 1}
                       </span>
-                      {item.title}
+
+                      <div className="  bg-line bg-contain  bg-center bg-no-repeat min-h-[10vh] min-w-[1vh]" />
                     </div>
-                    <article className="list-inside list-disc break-words px-2 pb-4 opacity-50">
-                      {item.subtitle}
-                    </article>
+                    <div className="pb-4 md:pb-4 pt-2">
+                      <h1 className="text-[18px] leading-[28px] text-[#12152E] font-medium">
+                        {item.title}
+                      </h1>
+                      <MainText text={item.subtitle} color={"opacity-50"} />
+                    </div>
                   </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>{" "}
         </PageBorders>

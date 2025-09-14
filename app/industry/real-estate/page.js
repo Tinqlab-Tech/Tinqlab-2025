@@ -2,7 +2,6 @@ import { MainButton } from "@/components/button/MainButton";
 import Link from "next/link";
 import PageBorders from "@/components/wrappers/PageBorders";
 import MainText from "@/components/typography/MainText";
-import react from "@/public/images/react.png";
 import ImageWrapper from "@/components/wrappers/ImageWrapper";
 import OtherPageHero from "@/components/hero/OtherPageHero";
 import MainCard from "@/components/card/MainCard";
@@ -10,9 +9,23 @@ import HeaderTwo from "@/components/typography/HeaderTwo";
 import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
 import MoreContentCard from "@/components/card/MoreContentCard";
 import { SpecificationItem } from "@/components/section/SpecificationItem";
-import heroImage from "@/public/images/retailHero.svg";
+import realEstateHerobg from "@/public/images/realEstateHerobg.svg";
 import TechStack from "@/components/section/TechStack";
-import features1 from "@/public/images/features1.png";
+import features1 from "@/public/images/featuresbg/features1.png";
+import mobile2 from "@/public/icons/mobile2.svg";
+import star from "@/public/icons/star.svg";
+import rep from "@/public/icons/rep.svg";
+import file from "@/public/icons/file.svg";
+import tv from "@/public/icons/tv.svg";
+import location from "@/public/icons/location.svg";
+import react from "@/public/images/stacks/react.png";
+import java from "@/public/images/stacks/java.svg";
+import swift from "@/public/images/stacks/swift.png";
+import javascript from "@/public/images/stacks/javascript.png";
+import mongodb from "@/public/images/stacks/mongodb.png";
+import rn from "@/public/images/stacks/rn.png";
+import nodejs from "@/public/images/stacks/nodejs.png";
+import aws from "@/public/images/stacks/aws.png";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -24,39 +37,39 @@ export default function Home() {
   const realEstateSoftwareSolutions = [
     {
       title: "Mobile apps for buyer, agents & tenants",
-      icon: features1,
+      icon: mobile2,
     },
     {
       title: "Property management software",
-      icon: features1,
+      icon: file,
     },
     {
       title: "Property search & listing platforms",
-      icon: features1,
+      icon: star,
     },
     {
       title: "Smart utility checking solutions",
-      icon: features1,
+      icon: tv,
     },
     {
       title: "ERP process automation services",
-      icon: features1,
+      icon: rep,
     },
     {
       title: "Location-based services",
-      icon: features1,
+      icon: location,
     },
   ];
 
   const technologyWeUse = [
-    { technologies: features1 },
-    { technologies: features1 },
-    { technologies: features1 },
-    { technologies: features1 },
-    { technologies: features1 },
-    { technologies: features1 },
-    { technologies: features1 },
-    { technologies: features1 },
+    { technologies: react },
+    { technologies: java },
+    { technologies: swift },
+    { technologies: javascript },
+    { technologies: mongodb },
+    { technologies: rn },
+    { technologies: nodejs },
+    { technologies: aws },
   ];
 
   const whyUs = [
@@ -194,10 +207,12 @@ export default function Home() {
           }
           btnLink={"/"}
           btnText={"Schedule a call"}
-          image={heroImage}
+          image={realEstateHerobg}
         />
         {/* consulting sevices */}
-        <DoublePageBorders background={"bg-lightBlue"}>
+        <DoublePageBorders
+          background={"bg-featuresbg bg-cover bg-center bg-no-repeat"}
+        >
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8  p-6 rounded-[20px] scroll-mt-4"
             id={"about"}
@@ -213,7 +228,7 @@ export default function Home() {
                 color={"text-[#12152E] opacity-50"}
               />
             </div>
-            <div className="hidden md:block bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+            <div className="hidden md:block bg-features10 bg-contain bg-left bg-no-repeat min-h-[20vh]"></div>
           </div>
         </DoublePageBorders>
         <PageBorders>

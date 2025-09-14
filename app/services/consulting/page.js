@@ -2,28 +2,19 @@ import { MainButton } from "@/components/button/MainButton";
 import Link from "next/link";
 import PageBorders from "@/components/wrappers/PageBorders";
 import MainText from "@/components/typography/MainText";
-import react from "@/public/images/react.png";
-import ImageWrapper from "@/components/wrappers/ImageWrapper";
 import OtherPageHero from "@/components/hero/OtherPageHero";
 import MainCard from "@/components/card/MainCard";
 import HeaderTwo from "@/components/typography/HeaderTwo";
 import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
-import MoreContentCard from "@/components/card/MoreContentCard";
 import { SpecificationItem } from "@/components/section/SpecificationItem";
-import assessment from "@/public/icons/assessment.svg";
-import comms from "@/public/icons/comms.svg";
-import consultation from "@/public/icons/consultation.svg";
-import custom from "@/public/icons/custom.svg";
-import mobile from "@/public/icons/mobile.svg";
-import study from "@/public/icons/study.svg";
-import edtechHero from "@/public/images/edtechHero.svg";
+import consultingHerobg from "@/public/images/consultingHerobg.png";
 import TechStack from "@/components/section/TechStack";
-import java from "@/public/images/stacks/java.svg";
-import rn from "@/public/images/stacks/rn.png";
+import aws from "@/public/images/stacks/aws.png";
+import react from "@/public/images/stacks/react.png";
 import nodejs from "@/public/images/stacks/nodejs.png";
-import React from "@/public/images/stacks/react.png";
+import flutter from "@/public/images/stacks/flutter.png";
+import googleCloud from "@/public/images/stacks/googlecloud.png";
 import FeedbackCard from "@/components/card/FeedbackCard";
-import features1 from "@/public/images/features1.png";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -89,11 +80,11 @@ export default function Home() {
   ];
 
   const technologyWeUse = [
-    { technologies: java },
-    { technologies: rn },
+    { technologies: aws },
+    { technologies: react },
     { technologies: nodejs },
-    { technologies: React },
-    { technologies: React },
+    { technologies: flutter },
+    { technologies: googleCloud },
   ];
 
   return (
@@ -101,7 +92,7 @@ export default function Home() {
       <div className="">
         <OtherPageHero
           bgImage={null}
-          image={edtechHero}
+          image={consultingHerobg}
           title={"Digital Consulting Services"}
           subtitle={
             "In a world shaped by rapid change, global disruption, digital acceleration, and shifting customer expectations, navigating transformation isn’t optional, it’s essential. At Tinqlab, we help you define the right digital strategy, adopt the right technologies, and unlock new value for your business. Let’s turn complexity into clarity—and make your digital breakthrough a reality."
@@ -111,7 +102,9 @@ export default function Home() {
           hasNav={true}
         />
         {/* consulting sevices */}
-        <DoublePageBorders background={"bg-lightBlue"}>
+        <DoublePageBorders
+          background={"bg-featuresbg2 bg-cover bg-center bg-no-repeat"}
+        >
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8  p-6 rounded-[20px] scroll-mt-4"
             id={"about"}
@@ -128,7 +121,7 @@ export default function Home() {
               />
               <MainButton text={"Speak to Experts"} />
             </div>
-            <div className="hidden md:block bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+            <div className="hidden md:block bg-features8 bg-contain bg-left bg-no-repeat min-h-[20vh]"></div>
           </div>
         </DoublePageBorders>
 
@@ -188,7 +181,7 @@ export default function Home() {
 
         {/* solutions offered in edtexh */}
         <DoublePageBorders
-          background={"bg-retailBg2 bg-cover bg-no-repeat bg-center"}
+          background={"bg-featuresbg2 bg-cover bg-no-repeat bg-center"}
         >
           <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
             {" "}
@@ -221,7 +214,7 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="hidden md:block bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+              <div className="hidden md:block bg-features9 bg-contain bg-left bg-no-repeat min-h-[20vh]"></div>
             </div>
           </div>
         </DoublePageBorders>

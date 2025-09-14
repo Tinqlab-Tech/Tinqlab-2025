@@ -63,9 +63,9 @@ export default function OtherPageHero({
             {services.map((item, index) => {
               const isActive = pathname === item.path;
               return (
-                <Link href={item.path} key={index}>
+                <Link href={item.path} key={index} className="h-full">
                   <div
-                    className={`flex justify-center group p-[10px] bg-mainGrey items-center rounded-t-[4px] border-t-[10px] cursor-pointer
+                    className={`flex justify-center  group p-[10px] bg-mainGrey items-center rounded-t-[4px] border-t-[10px] cursor-pointer
                      ${isActive ? "border-mainBlack" : "border-mainBlack/50"}  hover:border-primary`}
                   >
                     <MainText

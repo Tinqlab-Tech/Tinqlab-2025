@@ -31,12 +31,16 @@ const Ads = () => {
 const AdsSlider = () => {
   return (
     <div className="flex flex-col gap-4">
-      <Slide>
-        <Ads />
+      <Slide slideleft={true}>
+        <div className="flex ">
+          <Ads />
+        </div>
       </Slide>
 
-      <Slide>
-        <Ads />
+      <Slide slideright={true}>
+        <div className="flex ">
+          <Ads />
+        </div>
       </Slide>
     </div>
   );

@@ -13,12 +13,11 @@ import MainText from "@/components/typography/MainText";
 import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
 import PageBorders from "@/components/wrappers/PageBorders";
 import aboutHerobg from "@/public/images/aboutHerobg.png";
-import features1 from "@/public/images/features1.png";
 import Link from "next/link";
-import bitgert from "@/public/images/client1.png";
-import tatum from "@/public/images/client2.png";
-import aws from "@/public/images/client3.png";
-import polygon from "@/public/images/client4.png";
+import bitgert from "@/public/images/stacks/bitgert.png";
+import tatum from "@/public/images/stacks/tatum.png";
+import aws from "@/public/images/stacks/aws.png";
+import polygon from "@/public/images/stacks/polygon.png";
 import mobile2 from "@/public/icons/mobile2.svg";
 import file from "@/public/icons/file.svg";
 import star from "@/public/icons/star.svg";
@@ -97,9 +96,6 @@ export default function Home() {
     },
     {
       icon: aws,
-    },
-    {
-      icon: polygon,
     },
     {
       icon: polygon,

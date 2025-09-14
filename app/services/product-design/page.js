@@ -18,14 +18,18 @@ import mobile from "@/public/icons/mobile.svg";
 import study from "@/public/icons/study.svg";
 import edtechHero from "@/public/images/edtechHero.svg";
 import TechStack from "@/components/section/TechStack";
-import java from "@/public/images/stacks/java.svg";
-import rn from "@/public/images/stacks/rn.png";
-import nodejs from "@/public/images/stacks/nodejs.png";
-import React from "@/public/images/stacks/react.png";
-import features1 from "@/public/images/features1.png";
+import figma from "@/public/images/stacks/figma.png";
+import vision from "@/public/images/stacks/vision.png";
+import firebase from "@/public/images/stacks/firebase.png";
+import stack from "@/public/images/stacks/stack.svg";
+import figjam from "@/public/images/stacks/figjam.png";
+
+import features1 from "@/public/images/featuresbg/features1.png";
 import ServicesCard from "@/components/card/ServicesCard";
 import HeaderOne from "@/components/typography/HeaderOne";
 import FeedbackCard from "@/components/card/FeedbackCard";
+import productHerobg from "@/public/images/productHerobg.png";
+import infographics from "@/public/images/infographics.svg";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -91,12 +95,11 @@ export default function Home() {
   ];
 
   const technologyWeUse = [
-    { technologies: java },
-    { technologies: rn },
-    { technologies: nodejs },
-    { technologies: React },
-    { technologies: React },
-    { technologies: React },
+    { technologies: figma },
+    { technologies: vision },
+    { technologies: firebase },
+    { technologies: stack },
+    { technologies: figjam },
   ];
 
   return (
@@ -104,23 +107,26 @@ export default function Home() {
       <div className="">
         <OtherPageHero
           bgImage={null}
-          image={edtechHero}
+          image={productHerobg}
           title={"Digital Product Design Services"}
           subtitle={
             "Building great digital products requires dedication, design thinking, sharp hard skills, domain expertise, and sincere empathy for end-customer needs. The digital product design services by TinqLab include all of that, along with a cutting-edge tech stack and brilliant custom development. You should not agree to less! Create digital experiences that engage people at every touchpoint with us."
           }
           btnLink={"/"}
+          btnText={"Schedule a call"}
           hasNav={true}
         />
 
         {/* digital product */}
-        <PageBorders>
+        <DoublePageBorders
+          background={"bg-productbg bg-no-repeat bg-center bg-cover"}
+        >
           <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 bg-lightBlue p-6 rounded-[20px] scroll-mt-4"
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8  p-6 rounded-[20px] scroll-mt-4"
             id={"services"}
           >
             {" "}
-            <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 items-center">
+            <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 items-start">
               {" "}
               <HeaderTwo text={"Digital product Experience Design Services"} />
               <MainText
@@ -130,9 +136,9 @@ export default function Home() {
                 color={"text-[#12152E] opacity-50"}
               />
             </div>
-            <div className="hidden md:block bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+            <div className="hidden md:block bg-features6 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
           </div>
-        </PageBorders>
+        </DoublePageBorders>
 
         {/* digital product design services */}
         <PageBorders>
@@ -174,7 +180,7 @@ export default function Home() {
                 {" "}
                 <HeaderTwo text={"Technology We Use"} />
               </div>
-              <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+              <div className="hidden md:block bg-features7 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
             </div>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-8 justify-items-center">
               {technologyWeUse.map((item, index) => (
@@ -187,23 +193,26 @@ export default function Home() {
         </DoublePageBorders>
 
         <PageBorders>
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
-            {" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 ">
-              {" "}
-              <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 items-center">
-                {" "}
-                <HeaderTwo text={"Our Design Model"} />
+          <div className="flex flex-col gap-8  scroll-mt-4" id="services">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+              <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 items-start">
+                <HeaderTwo text="Our Design Model" />
                 <MainText
-                  text={
-                    "Our product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We provide you with complex market research to find out all clients’ pains and gains, analysis of digital products and provide a smooth process of digital transformation and product design services. Geniusee product designers have established a design process based on our practical expertise in 100+ projects that have performed well and won over the market!"
-                  }
-                  color={" opacity-50"}
+                  text="Our product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We provide you with complex market research to find out all clients’ pains and gains, analysis of digital products and provide a smooth process of digital transformation and product design services. Geniusee product designers have established a design process based on our practical expertise in 100+ projects that have performed well and won over the market!"
+                  color="opacity-50"
                 />
               </div>
-              <div className="hidden md:block bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+              <div className="hidden md:block bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]" />
             </div>
-            <div className="">content</div>
+
+            <div className="hidden md:flex w-full min-h-[40vh]  items-center justify-center">
+              <ImageWrapper
+                src={infographics}
+                alt="Edtech"
+                fill
+                className="object-contain object-center"
+              />
+            </div>
           </div>
         </PageBorders>
 
@@ -216,7 +225,7 @@ export default function Home() {
                 {" "}
                 <HeaderTwo text={"Benefits Of Working With TinqLab"} />
               </div>
-              <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+              <div className="hidden md:block bg-features5 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               {" "}
