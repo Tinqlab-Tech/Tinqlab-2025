@@ -187,15 +187,18 @@ export default function Home() {
         btnLink={"/"}
         btnText={"Join TinqLab team"}
       />
-      <DoublePageBorders>
+      <DoublePageBorders
+        background={"bg-featuresbg bg-cover bg-no-repeat bg-center pt-10"}
+        padding={null}
+      >
         {" "}
         <div
-          className=" scroll-mt-4 overflow-hidden bg-featuresbg bg-cover bg-no-repeat bg-center grid grid-cols-1 md:grid-cols-3 gap-8  rounded-[10px] md:rounded-[20px] "
+          className=" scroll-mt-4 overflow-hidden  grid grid-cols-1 md:grid-cols-2 gap-4   "
           id={"about"}
         >
           {" "}
-          <div className="hidden md:block  w-full min-h-[40vh] bg-features3 bg-cover bg-left-bottom bg-no-repeat"></div>
-          <div className="flex flex-col gap-5 p-6 col-span-2">
+          <div className="hidden md:block  w-full min-h-[40vh] bg-features3 bg-cover bg-left-bottom bg-no-repeat "></div>
+          <div className="flex flex-col items-start justify-center gap-5 p-6 pb-10 ">
             <HeaderTwo text={"Who are Tinqlab?"} />{" "}
             <MainText
               text={
@@ -294,11 +297,8 @@ export default function Home() {
       </PageBorders>
       {/* Feedbackfrom Team mate */}
       <PageBorders>
-        <div className="flex flex-col gap-8" id="career">
-          <div className="px-4">
-            <HeaderOne text={"Feedback From Teammate's"} />
-          </div>
-          <FeedbackCard />
+        <div id="career">
+          <FeedbackCard title={"Feedback From Teammate’s"} />
         </div>
       </PageBorders>
     </div>

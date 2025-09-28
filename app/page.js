@@ -22,6 +22,7 @@ import tatum from "@/public/images/stacks/tatum.png";
 import aws from "@/public/images/stacks/aws.png";
 import polygon from "@/public/images/stacks/polygon.png";
 import HeaderTwo from "@/components/typography/HeaderTwo";
+import DiscoverUs from "@/components/section/DiscoverUs";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -84,27 +85,18 @@ export default function Home() {
   const getHelp = [
     {
       background: "bg-getHelpbg1",
-      title: "Web Development",
     },
     {
       background: "bg-getHelpbg2",
-      title: "Mobile Application Development",
     },
     {
       background: "bg-getHelpbg3",
-      title: "Discovery Phase",
     },
     {
       background: "bg-getHelpbg4",
-      title: "UI/UX Design",
     },
     {
       background: "bg-getHelpbg5",
-      title: "Quality Assurance",
-    },
-    {
-      background: "bg-getHelpbg6",
-      title: "IT Security",
     },
   ];
 
@@ -165,50 +157,17 @@ export default function Home() {
     <div className="min-h-screen">
       <div className="">
         <HomepageHero />
-
+        {/* Ads slider */}
         <PageBorders background={"bg-mainGrey"}>
           <AdsSlider />
         </PageBorders>
 
-        {/* Home Features */}
-        <DoublePageBorders>
-          {" "}
-          <div
-            className=" scroll-mt-4 overflow-hidden bg-lightBlue bg-cover bg-no-repeat bg-center grid grid-cols-1 md:grid-cols-3 gap-8  rounded-[10px] md:rounded-[20px] "
-            id={"about"}
-          >
-            {" "}
-            <div className="hidden md:flex w-full min-h-[40vh] justify-center items-center">
-              <div className="w-full h-full bg-features1 bg-contain bg-center bg-no-repeat" />
-            </div>{" "}
-            <div className="flex flex-col gap-4 p-4 md:p-10 col-span-2">
-              <PageStarter
-                Title={"Discover how we can assist in achieving your goals!"}
-                SubtitleText={
-                  "Answer a few questions to aid us match our expertise and solutions to your industry."
-                }
-                color={"text-[#131313]"}
-              />{" "}
-              <MainText text={"Choose your industry"} />
-              <div className="grid  grid-cols-3 lg:w-3/4 xl:w-1/2 items-center  gap-4 ">
-                <Link href={"/"}>
-                  <MainButton text={"FinTech"} />
-                </Link>
-                <Link href={"/"}>
-                  <MainButton text={"EdTech"} />
-                </Link>
-                <Link href={"/"}>
-                  <MainButton text={"Retail"} />
-                </Link>
-                <Link href={"/"}>
-                  <OutlineButton text={"More"} icon={<IoIosAdd />} />
-                </Link>
-              </div>
-            </div>
-          </div>
+        {/* Discover Us */}
+        <DoublePageBorders background={"bg-lightBlue"} padding={null}>
+          <DiscoverUs />
         </DoublePageBorders>
 
-        {/* Home Services */}
+        {/* Case Studies */}
         <PageBorders>
           <div
             className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8"
@@ -235,10 +194,16 @@ export default function Home() {
               />
               <div className="flex gap-4">
                 <Link href={"/"}>
-                  <MainButton text={"Case details"} />
+                  <MainButton
+                    text={"Case details"}
+                    bgcolor={"bg-darkestBlue"}
+                  />
                 </Link>
                 <Link href={"/"}>
-                  <MainButton text={"All cases studies"} />
+                  <MainButton
+                    text={"All cases studies"}
+                    bgcolor={"bg-mainBlack/50"}
+                  />
                 </Link>
               </div>
             </div>{" "}
@@ -246,98 +211,84 @@ export default function Home() {
           </div>
         </PageBorders>
 
-        {/* Industy */}
-        <PageBorders>
-          <div className="flex flex-col gap-8" id="industry">
-            <div className="md:w-1/2">
-              <HeaderTwo
-                text={"Build and scale securely with us in your domian"}
-              />
-            </div>
-            <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
-              {industryProduction.map((item, index) => (
-                <div key={index}>
-                  <IndustryCard
-                    title={item.title}
-                    subtitle={item.subtitle}
-                    bgImg={item.bgImage}
-                    btnLink={item.btnLink}
-                    hasbtnText={true}
-                    btnText={item.btnText}
-                    background={"bg-darkBlue"}
+        {/* Build and Scale */}
+        <PageBorders padding={null}>
+          <div className="relative bg-darkestBlue " id="industry">
+            {" "}
+            <div className="absolute top-0 left-0 w-full z-0 bg-mainWhite  h-[30vh] lg:h-[25vh] xl:h-[40vh]"></div>
+            <PageBorders background={"relative"}>
+              <div className="flex flex-col gap-4 md:gap-8">
+                <div className="relative z-10 md:w-1/2">
+                  <HeaderTwo
+                    text={"Build and scale securely with us in your domain"}
                   />
                 </div>
-              ))}
-            </div>
+                <div className=" relative z-10  grid md:grid-cols-2 gap-4 md:gap-8">
+                  {industryProduction.map((item, index) => (
+                    <IndustryCard
+                      key={index}
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      bgImg={item.bgImage}
+                      btnLink={item.btnLink}
+                      hasbtnText={true}
+                      btnText={item.btnText}
+                      background={"bg-darkBlue"}
+                    />
+                  ))}
+                </div>{" "}
+              </div>
+            </PageBorders>
           </div>
         </PageBorders>
 
-        <PageBorders>
-          <div className="flex flex-col gap-20">
-            {/* Our Partners */}
-            <div className="flex flex-col gap-8">
-              <HeaderTwo text={"Our partners"} />
-              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-8 ">
-                {ourPartners.map((item, index) => (
-                  <div key={index}>
-                    <TechStack stack={item.icon} />{" "}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Get Help */}
-            <div className="flex flex-col gap-8">
-              <HeaderTwo text={"How we can help you "} />
-              <div className="grid md:grid-cols-3 gap-4 md:gap-8 ">
-                {getHelp.map((item, index) => (
-                  <div key={index}>
+        <PageBorders padding={null}>
+          <div className="relative bg-lightBlue " id="industry">
+            {" "}
+            <div className="absolute top-0 left-0 w-full z-0 bg-mainWhite  h-[30vh] lg:h-[25vh] xl:h-[40vh]"></div>
+            <PageBorders background={"relative"}>
+              <div className="flex flex-col gap-12">
+                <HeaderTwo text={"How we can help you"} />
+                {/* Get Help */}
+                <div className="flex gap-4 md:gap-8">
+                  {getHelp.map((item, index) => (
                     <div
-                      className={`${item.background}  bg-cover bg-no-repeat bg-center overflow-hidden rounded-[10px] shadow-custom-primary h-full`}
-                    >
-                      <div className="bg-darkBlue/50  h-full p-[20px] md:py-[40px] flex justify-start items-center">
-                        <div className="text-[16px] lg:text-[22px] font-semibold leading-[24px] lg:leading-[32px] text-mainWhite underline">
-                          {item.title}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+                      key={index}
+                      className={`${item.background} flex-grow transition-all duration-300 hover:flex-[2] bg-cover bg-no-repeat bg-center overflow-hidden rounded-[10px] shadow-custom-primary min-h-[40vh] max-h-[60vh]`}
+                    ></div>
+                  ))}
+                </div>
 
-            <div className="grid md:grid-cols-2 gap-4 md:gap-8">
-              <HeaderTwo
-                text={"Engage with our experts: Free discovery session"}
-              />
-              <div className="flex flex-col justify-center gap-5">
-                <MainText
-                  text={
-                    "Through some basic info we'll schedule a 30 minute-call to discover how we can collaborate."
-                  }
-                  color={"opacity-50"}
-                />
-                <MainText
-                  text={
-                    "Our team of experts is here to identify ways to enhance and scale your digital solutions."
-                  }
-                  color={"opacity-50"}
-                />
-                <Link href={"/"}>
-                  <MainButton text={"Start today"} />
-                </Link>
+                <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+                  <HeaderTwo
+                    text={"Engage with our experts: Free discovery session"}
+                  />
+                  <div className="flex flex-col justify-center gap-5">
+                    <MainText
+                      text={
+                        "Through some basic info we'll schedule a 30 minute-call to discover how we can collaborate."
+                      }
+                      color={"opacity-50"}
+                    />
+                    <MainText
+                      text={
+                        "Our team of experts is here to identify ways to enhance and scale your digital solutions."
+                      }
+                      color={"opacity-50"}
+                    />
+                    <Link href={"/"}>
+                      <MainButton text={"Start today"} />
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
+            </PageBorders>
           </div>
         </PageBorders>
 
         <PageBorders>
-          <div className="flex flex-col gap-8" id="career">
-            <div className="px-4">
-              <HeaderTwo text={"Testimonials"} />
-            </div>
-
-            <FeedbackCard />
+          <div id="career">
+            <FeedbackCard title={"Testimonials"} />
           </div>
         </PageBorders>
         <PageBorders>

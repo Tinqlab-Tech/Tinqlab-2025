@@ -349,11 +349,8 @@ export default function Home() {
           </div>{" "}
         </PageBorders>
         <PageBorders>
-          <div className="flex flex-col gap-8" id="career">
-            <div className="px-4">
-              <HeaderOne text={"Testimonials"} />
-            </div>
-            <FeedbackCard />
+          <div id="career">
+            <FeedbackCard title={"Clients Feedback"} />
           </div>
         </PageBorders>
       </div>

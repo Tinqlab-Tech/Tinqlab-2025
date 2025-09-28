@@ -182,7 +182,7 @@ export default function Home() {
               </div>
               <div className="hidden md:block bg-features7 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
             </div>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-8 justify-items-center">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8 justify-items-center">
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
                   <TechStack stack={item.technologies} />
@@ -244,12 +244,8 @@ export default function Home() {
         </PageBorders>
 
         <PageBorders>
-          <div className="flex flex-col gap-8" id="career">
-            <div className="px-4">
-              <HeaderOne text={"Testimonials"} />
-            </div>
-
-            <FeedbackCard />
+          <div id="career">
+            <FeedbackCard title={"Clients Feedback"} />
           </div>
         </PageBorders>
       </div>

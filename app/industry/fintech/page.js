@@ -10,7 +10,7 @@ import HeaderTwo from "@/components/typography/HeaderTwo";
 import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
 import MoreContentCard from "@/components/card/MoreContentCard";
 import { SpecificationItem } from "@/components/section/SpecificationItem";
-import heroImage from "@/public/images/retailHero.svg";
+import fintechHerobg from "@/public/images/fintechHerobg.svg";
 import TechStack from "@/components/section/TechStack";
 import mobile2 from "@/public/icons/mobile2.svg";
 import location from "@/public/icons/location.svg";
@@ -18,7 +18,13 @@ import file from "@/public/icons/file.svg";
 import rep from "@/public/icons/rep.svg";
 import star from "@/public/icons/star.svg";
 import tv from "@/public/icons/tv.svg";
-import features1 from "@/public/images/features1.png";
+import javascript from "@/public/images/stacks/javascript.png";
+import flutter from "@/public/images/stacks/flutter.png";
+import java from "@/public/images/stacks/java.svg";
+import swift from "@/public/images/stacks/swift.png";
+import aws from "@/public/images/stacks/aws.png";
+import vue from "@/public/images/stacks/vue.png";
+import angular from "@/public/images/stacks/angular.png";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -142,43 +148,50 @@ export default function Home() {
   const developmentServices = [
     {
       title: "Banking software development",
-      subtitle: "",
+      subtitle:
+        "We design and build core banking systems, digital banking platforms, and custom tools that streamline operations and enhance customer experiences for both traditional and neobanks.",
     },
     {
       title: "Lending software",
-      subtitle: "",
+      subtitle:
+        "From loan origination and credit scoring to automated workflows and repayment systems, we develop end-to-end lending platforms that simplify borrowing for users and reduce risk for providers.",
     },
     {
       title: "e-wallet development",
-      subtitle: "",
+      subtitle:
+        "Our team creates secure, compliant, and user-friendly digital wallets that support fast transactions, multi-currency payments, and seamless integration with third-party services.",
     },
     {
       title: "Accounting software",
-      subtitle: "",
+      subtitle:
+        "We develop intuitive, scalable accounting tools that automate financial processes, improve accuracy, and support real-time financial reporting and compliance.",
     },
     {
       title: "Trading software",
-      subtitle: "",
+      subtitle:
+        "We engineer high-performance platforms for stock, forex, and crypto trading, complete with real-time analytics, market data integration, and user-focused dashboards.",
     },
     {
       title: "Risk management",
-      subtitle: "",
+      subtitle:
+        "Tinqlab builds intelligent risk analysis and compliance tools to help financial organizations detect fraud, monitor regulatory obligations, and safeguard assets effectively.",
     },
     {
       title: "Wealth and investment software",
-      subtitle: "",
+      subtitle:
+        "We deliver digital solutions that empower financial advisors and clients with smart portfolio tools, performance tracking, and personalized investment insights.",
     },
   ];
 
   const technologyWeUse = [
-    { technologies: features1 },
-    { technologies: features1 },
-    { technologies: features1 },
-    { technologies: features1 },
-    { technologies: features1 },
-    { technologies: features1 },
-    { technologies: features1 },
-    { technologies: features1 },
+    { technologies: javascript },
+    { technologies: flutter },
+    { technologies: react },
+    { technologies: java },
+    { technologies: swift },
+    { technologies: aws },
+    { technologies: vue },
+    { technologies: angular },
   ];
 
   return (
@@ -192,7 +205,7 @@ export default function Home() {
           }
           btnLink={"/"}
           btnText={"Schedule a call"}
-          image={heroImage}
+          image={fintechHerobg}
         />
 
         <PageBorders>
@@ -328,7 +341,7 @@ export default function Home() {
         </PageBorders>
 
         <DoublePageBorders
-          background={"bg-features1 bg-cover bg-no-repeat bg-center"}
+          background={"bg-featuresbg bg-cover bg-no-repeat bg-center"}
         >
           <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
             {" "}
@@ -340,13 +353,12 @@ export default function Home() {
                   text={
                     "We Understand that the key to success is clear communication"
                   }
-                  color={"text-white"}
                 />
                 <MainText
                   text={
                     "The product owner gets full access to project documentation and planning, which gives them control over the entire process of custom software development at all stages. Our FinTech software development services team is adaptive to clients’ schedules and workflow."
                   }
-                  color={"text-white"}
+                  color={"opacity-50"}
                 />
               </div>
               <div className=" flex items-center justify-start">

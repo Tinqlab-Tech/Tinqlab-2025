@@ -119,7 +119,7 @@ export default function Home() {
       >
         {" "}
         <div
-          className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 lg:px-6  "
+          className=" scroll-mt-4 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:px-6  "
           id={"about"}
         >
           {" "}
@@ -144,7 +144,7 @@ export default function Home() {
               color={"opacity-50"}
             />
           </div>
-          <div className="hidden md:block bg-vector4 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+          <div className="hidden lg:block bg-vector4 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
         </div>
       </DoublePageBorders>{" "}
       {/* Our Core Values */}
@@ -213,15 +213,15 @@ export default function Home() {
         </div>
       </PageBorders>
       {/* Our Mission*/}
-      <DoublePageBorders>
+      <DoublePageBorders background={" bg-darkestBlue "} padding={null}>
         {" "}
         <div
-          className=" scroll-mt-4 grid grid-cols-1 md:grid-cols-3 gap-8  bg-darkestBlue  rounded-[20px]"
+          className=" scroll-mt-4 overflow-hidden grid grid-cols-1 md:grid-cols-2   "
           id={"about"}
         >
           {" "}
-          <div className="hidden md:block  w-full min-h-[40vh] bg-features3 bg-cover bg-left-bottom bg-no-repeat"></div>
-          <div className="flex flex-col gap-5 justify-center p-4 md:p-8 col-span-2">
+          <div className="hidden md:block  w-full min-h-[60vh] bg-features3 bg-cover bg-left-bottom bg-no-repeat"></div>
+          <div className="flex flex-col gap-8 justify-center p-[4vw] pr-[6vw] ">
             <HeaderOne text={"Our Mission"} color={"text-mainWhite"} />
             <MainText
               text={
@@ -230,19 +230,11 @@ export default function Home() {
               color={"text-mainWhite"}
             />
             <HeaderOne text={"Our Vision"} color={"text-mainWhite"} />
-            <div className="grid grid-cols-3 items-center gap-4 md:w-3/4 lg:1/2">
-              <Link href={"/"}>
-                {" "}
-                <MainButton text={"Innovate"} color={"text-mainWhite"} />
-              </Link>
-              <Link href={"/"}>
-                {" "}
-                <MainButton text={"Innovate"} color={"text-mainWhite"} />
-              </Link>
-              <Link href={"/"}>
-                {" "}
-                <MainButton text={"Innovate"} color={"text-mainWhite"} />
-              </Link>{" "}
+            <div className="flex flex-wrap items-center gap-4 md:gap-8">
+              {" "}
+              <MainButton text={"Innovate"} color={"text-mainWhite"} />{" "}
+              <MainButton text={"Innovate"} color={"text-mainWhite"} />{" "}
+              <MainButton text={"Innovate"} color={"text-mainWhite"} />{" "}
             </div>
           </div>
         </div>
@@ -264,11 +256,8 @@ export default function Home() {
       </PageBorders>
       {/* Feedbackfrom client */}
       <PageBorders>
-        <div className="flex flex-col gap-8" id="career">
-          <div className="px-4">
-            <HeaderOne text={"Feedback From Teammate's"} />
-          </div>
-          <FeedbackCard />
+        <div id="career">
+          <FeedbackCard title={"Feedback From Client’s"} />
         </div>
       </PageBorders>
     </div>

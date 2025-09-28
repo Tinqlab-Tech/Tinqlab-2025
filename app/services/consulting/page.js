@@ -251,16 +251,8 @@ export default function Home() {
         </PageBorders>
 
         <PageBorders>
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
-            {" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 ">
-              {" "}
-              <div className="col-span-1 md:col-span-2">
-                {" "}
-                <HeaderTwo text={"Clients Feedback"} />
-              </div>
-            </div>
-            <FeedbackCard />
+          <div id="career">
+            <FeedbackCard title={"Clients Feedback"} />
           </div>
         </PageBorders>
       </div>

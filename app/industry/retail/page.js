@@ -2,7 +2,6 @@ import { MainButton } from "@/components/button/MainButton";
 import Link from "next/link";
 import PageBorders from "@/components/wrappers/PageBorders";
 import MainText from "@/components/typography/MainText";
-import react from "@/public/images/react.png";
 import ImageWrapper from "@/components/wrappers/ImageWrapper";
 import OtherPageHero from "@/components/hero/OtherPageHero";
 import MainCard from "@/components/card/MainCard";
@@ -12,6 +11,14 @@ import MoreContentCard from "@/components/card/MoreContentCard";
 import { SpecificationItem } from "@/components/section/SpecificationItem";
 import heroImage from "@/public/images/retailHero.svg";
 import TechStack from "@/components/section/TechStack";
+import react from "@/public/images/stacks/react.png";
+import java from "@/public/images/stacks/java.svg";
+import swift from "@/public/images/stacks/swift.png";
+import javascript from "@/public/images/stacks/javascript.png";
+import mongodb from "@/public/images/stacks/mongodb.png";
+import rn from "@/public/images/stacks/rn.png";
+import nodejs from "@/public/images/stacks/nodejs.png";
+import aws from "@/public/images/stacks/aws.png";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -74,6 +81,17 @@ export default function Home() {
       subtitle:
         "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration, propelling us to new heights of success.",
     },
+  ];
+
+  const ourTechnology = [
+    { technologies: react },
+    { technologies: java },
+    { technologies: swift },
+    { technologies: javascript },
+    { technologies: mongodb },
+    { technologies: rn },
+    { technologies: nodejs },
+    { technologies: aws },
   ];
 
   const whyUs = [
@@ -297,7 +315,15 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <TechStack />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+              {" "}
+              {ourTechnology.map((item, index) => (
+                <div key={index}>
+                  {" "}
+                  <TechStack stack={item.technologies} />
+                </div>
+              ))}
+            </div>{" "}
           </div>
         </DoublePageBorders>
         <PageBorders>
