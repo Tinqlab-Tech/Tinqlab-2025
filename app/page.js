@@ -23,6 +23,12 @@ import aws from "@/public/images/stacks/aws.png";
 import polygon from "@/public/images/stacks/polygon.png";
 import HeaderTwo from "@/components/typography/HeaderTwo";
 import DiscoverUs from "@/components/section/DiscoverUs";
+import { ComponentAnimation } from "@/animation/ComponentAnimation";
+import ImageWrapper from "@/components/wrappers/ImageWrapper";
+import SlideRight from "@/animation/SlideRight";
+import SlideLeft from "@/animation/SlideLeft";
+import SlideDown from "@/animation/SlideDown";
+import SlideUp from "@/animation/SlideUp";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -174,40 +180,56 @@ export default function Home() {
             id="services"
           >
             {" "}
-            <div className="flex flex-col gap-8">
-              <HeaderTwo text={"Case studies"} color={"text-darkestBlue/50 "} />
-              <HeaderTwo text={"TinqFi - Automated digital assets platform"} />
-              <div className="gap-2 lg:gap-4 flex flex-wrap items-center justify-start ">
-                {singleServive.map((item, index) => (
-                  <p
-                    key={index}
-                    className="text-[10px] tracking-normal  md:text-[14px] lg:text-[16px] bg-[#c9ceea] text-mainBlack px-2 py-2 md:px-6 md:py-3 rounded-[50px] font-Gilroy font-extralight "
-                  >
-                    {item}
-                  </p>
-                ))}
-              </div>
-              <MainText
-                text={
-                  "TinqLab Technologies was excited to work with TinqFi team, creating together an online tutoring platform that reshaped school education. the was a 100% reform and reconfiguration of the industry."
-                }
-              />
-              <div className="flex gap-4">
-                <Link href={"/"}>
+            <SlideRight>
+              <div className="flex flex-col gap-8">
+                <HeaderTwo
+                  text={"Case studies"}
+                  color={"text-darkestBlue/50 "}
+                />
+                <HeaderTwo
+                  text={"TinqFi - Automated digital assets platform"}
+                />
+                <div className="gap-2 lg:gap-4 flex flex-wrap items-center justify-start ">
+                  {singleServive.map((item, index) => (
+                    <p
+                      key={index}
+                      className="text-[10px] tracking-normal  md:text-[14px] lg:text-[16px] bg-[#c9ceea] text-mainBlack px-2 py-2 md:px-6 md:py-3 rounded-[50px] font-Gilroy font-extralight "
+                    >
+                      {item}
+                    </p>
+                  ))}
+                </div>
+                <MainText
+                  text={
+                    "TinqLab Technologies was excited to work with TinqFi team, creating together an online tutoring platform that reshaped school education. the was a 100% reform and reconfiguration of the industry."
+                  }
+                />
+                <div className="flex gap-4">
+                  {" "}
                   <MainButton
                     text={"Case details"}
                     bgcolor={"bg-darkestBlue"}
                   />
-                </Link>
-                <Link href={"/"}>
                   <MainButton
                     text={"All cases studies"}
                     bgcolor={"bg-mainBlack/50"}
                   />
-                </Link>
+                </div>
+              </div>{" "}
+            </SlideRight>{" "}
+            <div className="flex w-full items-center justify-center">
+              <div className="hidden md:block">
+                <SlideLeft>
+                  <ImageWrapper
+                    src="/images/featuresbg/features2.png"
+                    alt="about Tinqlab"
+                    width={400}
+                    height={400}
+                    className="w-full bg-contain bg-right-bottom bg-no-repeat"
+                  />
+                </SlideLeft>
               </div>
-            </div>{" "}
-            <div className="hidden md:block  bg-features2 bg-contain bg-center bg-no-repeat  "></div>
+            </div>
           </div>
         </PageBorders>
 
@@ -225,16 +247,17 @@ export default function Home() {
                 </div>
                 <div className=" relative z-10  grid md:grid-cols-2 gap-4 md:gap-8">
                   {industryProduction.map((item, index) => (
-                    <IndustryCard
-                      key={index}
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      bgImg={item.bgImage}
-                      btnLink={item.btnLink}
-                      hasbtnText={true}
-                      btnText={item.btnText}
-                      background={"bg-darkBlue"}
-                    />
+                    <SlideDown delay={index * 0.2}>
+                      <IndustryCard
+                        title={item.title}
+                        subtitle={item.subtitle}
+                        bgImg={item.bgImage}
+                        btnLink={item.btnLink}
+                        hasbtnText={true}
+                        btnText={item.btnText}
+                        background={"bg-darkBlue"}
+                      />
+                    </SlideDown>
                   ))}
                 </div>{" "}
               </div>
@@ -248,38 +271,47 @@ export default function Home() {
             <div className="absolute top-0 left-0 w-full z-0 bg-mainWhite  h-[30vh] lg:h-[25vh] xl:h-[40vh]"></div>
             <PageBorders background={"relative"}>
               <div className="flex flex-col gap-12">
-                <HeaderTwo text={"How we can help you"} />
-                {/* Get Help */}
-                <div className="flex gap-4 md:gap-8">
-                  {getHelp.map((item, index) => (
-                    <div
-                      key={index}
-                      className={`${item.background} flex-grow transition-all duration-300 hover:flex-[2] bg-cover bg-no-repeat bg-center overflow-hidden rounded-[10px] shadow-custom-primary min-h-[40vh] max-h-[60vh]`}
-                    ></div>
-                  ))}
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-4 md:gap-8">
-                  <HeaderTwo
-                    text={"Engage with our experts: Free discovery session"}
-                  />
-                  <div className="flex flex-col justify-center gap-5">
-                    <MainText
-                      text={
-                        "Through some basic info we'll schedule a 30 minute-call to discover how we can collaborate."
-                      }
-                      color={"opacity-50"}
-                    />
-                    <MainText
-                      text={
-                        "Our team of experts is here to identify ways to enhance and scale your digital solutions."
-                      }
-                      color={"opacity-50"}
-                    />
-                    <Link href={"/"}>
-                      <MainButton text={"Start today"} />
-                    </Link>
+                <SlideUp>
+                  <HeaderTwo text={"How we can help you"} />
+                </SlideUp>
+                {/* Get Help */}{" "}
+                <SlideDown>
+                  <div className="flex gap-4 md:gap-8">
+                    {getHelp.map((item, index) => (
+                      <div
+                        key={index}
+                        className={`${item.background} flex-grow transition-all duration-300 hover:flex-[2] bg-cover bg-no-repeat bg-center overflow-hidden rounded-[10px] shadow-custom-primary min-h-[40vh] max-h-[60vh]`}
+                      ></div>
+                    ))}
                   </div>
+                </SlideDown>
+                <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+                  <SlideRight>
+                    {" "}
+                    <HeaderTwo
+                      text={"Engage with our experts: Free discovery session"}
+                    />
+                  </SlideRight>
+                  <SlideLeft>
+                    {" "}
+                    <div className="flex flex-col justify-center gap-5">
+                      <MainText
+                        text={
+                          "Through some basic info we'll schedule a 30 minute-call to discover how we can collaborate."
+                        }
+                        color={"opacity-50"}
+                      />
+                      <MainText
+                        text={
+                          "Our team of experts is here to identify ways to enhance and scale your digital solutions."
+                        }
+                        color={"opacity-50"}
+                      />
+                      <Link href={"/"}>
+                        <MainButton text={"Start today"} />
+                      </Link>
+                    </div>
+                  </SlideLeft>
                 </div>
               </div>
             </PageBorders>

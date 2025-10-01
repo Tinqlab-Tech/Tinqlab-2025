@@ -252,21 +252,32 @@ export default function Home() {
                 color={"text-mainWhite"}
               />
             </div>
-            <div className="hidden md:block bg-features4 bg-contain bg-left-bottom bg-no-repeat  h-[20vh] xl:h-[40vh]"></div>
           </div>
-          <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
-            {benefits.map((item, index) => (
-              <div key={index}>
-                {" "}
+          <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+            {benefits.map((item, index) => {
+              const slot = index + 1; // grid position (1-based)
+              const imageSlots = [1]; // 👈 where images go
+              const isImageSlot = imageSlots.includes(slot);
+
+              // keep a running index for cards only
+              let cardIndex = benefits
+                .slice(0, index + 1) // up to current
+                .filter((_, i) => !imageSlots.includes(i + 1)).length;
+
+              return (
                 <MoreContentCard
-                  useIndexes={true}
-                  indexes={index + 1}
+                  key={index}
+                  useIndexes={!isImageSlot}
+                  indexes={isImageSlot ? null : cardIndex}
                   title={item.title}
                   items={item.items}
                   bgColor={"bg-darkBlue"}
+                  addImage={true}
+                  gridSize={imageSlots}
+                  gridImg={["/images/featuresbg/features4.png"]}
                 />
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </PageBorders>
