@@ -7,10 +7,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SlideDown = ({
+  overflow,
   children,
   duration = 1.2,
   delay = 0,
-  playOnMount = false,
+  playOnMount,
 }) => {
   const sectionRef = useRef(null);
   const containerRef = useRef(null);
@@ -39,7 +40,11 @@ const SlideDown = ({
   }, [duration, delay, playOnMount]);
 
   return (
-    <div ref={sectionRef} className="w-full h-full overflow-hidden">
+    <div
+      ref={sectionRef}
+      className={`${overflow === null ? "" : "overflow-hidden"} w-full h-full`}
+    >
+      {" "}
       <div ref={containerRef} className="w-full h-full">
         {children}
       </div>

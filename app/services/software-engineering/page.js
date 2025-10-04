@@ -43,6 +43,10 @@ import fintech from "@/public/icons/fintech.png";
 import realEstate from "@/public/icons/realEstate.png";
 import edtech from "@/public/icons/edtech.png";
 import retail from "@/public/icons/retail.png";
+import SlideDown from "@/animation/SlideDown";
+import SlideUp from "@/animation/SlideUp";
+import SlideRight from "@/animation/SlideRight";
+import SlideLeft from "@/animation/SlideLeft";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -219,16 +223,20 @@ export default function Home() {
         {/* our software solutions */}
         <PageBorders>
           <div id={"about"} className="scroll-mt-4 grid grid-cols-1  gap-8 ">
-            <HeaderTwo text={"Our Software Engineering Solutions"} />
-
+            <SlideUp>
+              {" "}
+              <HeaderTwo text={"Our Software Engineering Solutions"} />
+            </SlideUp>
             <div className="grid md:grid-cols-2 gap-4 md:gap-8">
               {softwareEngineeringSolution.map((item, index) => (
                 <div key={index}>
-                  <SpecificationItem
-                    bgIcon={item.bgIcon}
-                    title={item.title}
-                    subTitle={item.subtitle}
-                  />
+                  <SlideRight delay={index * 0.2} overflow={null}>
+                    <SpecificationItem
+                      bgIcon={item.bgIcon}
+                      title={item.title}
+                      subTitle={item.subtitle}
+                    />{" "}
+                  </SlideRight>
                 </div>
               ))}
             </div>
@@ -242,15 +250,23 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
               {" "}
               <div className="col-span-1 md:col-span-2">
-                {" "}
-                <HeaderTwo text={"Technology Stack We Use"} />
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo text={"Technology Stack We Use"} />
+                </SlideUp>
               </div>
-              <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+              <div className="hidden md:block">
+                <SlideLeft>
+                  <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+                </SlideLeft>{" "}
+              </div>{" "}
             </div>
             <div className="grid grid-cols-3 md:grid-cols-8 gap-4 md:gap-8 justify-items-center">
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
-                  <TechStack stack={item.technologies} />
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <TechStack stack={item.technologies} />
+                  </SlideDown>
                 </div>
               ))}
             </div>
@@ -264,21 +280,30 @@ export default function Home() {
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 "
           >
             <div className="flex flex-col gap-8 justify-start items-start ">
-              <HeaderTwo text={"Our Expertise Across Industries"} />
-
-              <Link href={"/"}>
-                <MainButton text={"Book a meeting"} />
-              </Link>
+              <div>
+                {" "}
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo text={"Our Expertise Across Industries"} />
+                </SlideUp>
+              </div>
+              <SlideRight duration={1.5}>
+                <Link href={"/"}>
+                  <MainButton text={"Book a meeting"} />
+                </Link>
+              </SlideRight>
             </div>
             <div className="grid xl:grid-cols-2 gap-4 md:gap-8">
               {expertise.map((item, index) => (
                 <div key={index}>
-                  <ServicesCard
-                    title={item.title}
-                    subtitle={item.subtitle}
-                    icon={item.icon}
-                    isSingleService={true}
-                  />
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <ServicesCard
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      icon={item.icon}
+                      isSingleService={true}
+                    />{" "}
+                  </SlideDown>
                 </div>
               ))}
             </div>
@@ -292,23 +317,32 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
               <div className="col-span-1 md:col-span-2">
                 {" "}
-                <HeaderTwo
-                  text={"Technology We Use"}
-                  color={"text-mainWhite"}
-                />
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo
+                    text={"Technology We Use"}
+                    color={"text-mainWhite"}
+                  />
+                </SlideUp>
               </div>
-              <div className="hidden md:block bg-features5 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+              <div className="hidden md:block">
+                <SlideLeft>
+                  <div className=" bg-features5 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+                </SlideLeft>
+              </div>{" "}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               {" "}
               {tinqlabBenefits.map((item, index) => (
                 <div key={index}>
                   {" "}
-                  <MainCard
-                    title={item.title}
-                    subtitle={item.subtitle}
-                    bgColor={"bg-darkBlue"}
-                  />
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <MainCard
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      bgColor={"bg-darkBlue"}
+                    />{" "}
+                  </SlideDown>
                 </div>
               ))}
             </div>
@@ -320,29 +354,41 @@ export default function Home() {
             {" "}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 ">
               <div className="flex flex-col gap-4 md:gap-8">
-                <HeaderTwo text={"Our Software Development Process"} />
-
-                <Link href={"/"}>
-                  <MainButton text={"Get a consultation"} />
-                </Link>
+                <div>
+                  {" "}
+                  <SlideUp>
+                    {" "}
+                    <HeaderTwo text={"Our Software Development Process"} />{" "}
+                  </SlideUp>{" "}
+                </div>
+                <SlideRight duration={1.5}>
+                  <Link href={"/"}>
+                    <MainButton text={"Get a consultation"} />
+                  </Link>{" "}
+                </SlideRight>
               </div>
               <ul className="flex flex-col ">
                 {softwareDevelopmentProcess.map((item, index) => (
-                  <li key={index} className="flex items-start gap-4 md:gap-8">
-                    <div className="flex flex-col items-center">
-                      <span className="h-12 w-12 rounded-full bg-tansparent text-mainBlack flex justify-center items-center font-semibold border border-mainGray shrink-0">
-                        {index + 1}
-                      </span>
+                  <div key={index}>
+                    {" "}
+                    <SlideDown delay={index * 0.2}>
+                      <li className="flex items-start gap-4 md:gap-8">
+                        <div className="flex flex-col items-center">
+                          <span className="h-12 w-12 rounded-full bg-tansparent text-mainBlack flex justify-center items-center font-semibold border border-mainGray shrink-0">
+                            {index + 1}
+                          </span>
 
-                      <div className="  bg-line bg-contain  bg-center bg-no-repeat min-h-[10vh] min-w-[1vh]" />
-                    </div>
-                    <div className="pb-4 md:pb-4 pt-2">
-                      <h1 className="text-[18px] leading-[28px] text-[#12152E] font-medium">
-                        {item.title}
-                      </h1>
-                      <MainText text={item.subtitle} color={"opacity-50"} />
-                    </div>
-                  </li>
+                          <div className="  bg-line bg-contain  bg-center bg-no-repeat min-h-[10vh] min-w-[1vh]" />
+                        </div>
+                        <div className="pb-4 md:pb-4 pt-2">
+                          <h1 className="text-[18px] leading-[28px] text-[#12152E] font-medium">
+                            {item.title}
+                          </h1>
+                          <MainText text={item.subtitle} color={"opacity-50"} />
+                        </div>
+                      </li>
+                    </SlideDown>
+                  </div>
                 ))}
               </ul>
             </div>

@@ -30,6 +30,10 @@ import HeaderOne from "@/components/typography/HeaderOne";
 import FeedbackCard from "@/components/card/FeedbackCard";
 import productHerobg from "@/public/images/productHerobg.png";
 import infographics from "@/public/images/infographics.svg";
+import SlideUp from "@/animation/SlideUp";
+import SlideRight from "@/animation/SlideRight";
+import SlideLeft from "@/animation/SlideLeft";
+import SlideDown from "@/animation/SlideDown";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -128,15 +132,30 @@ export default function Home() {
             {" "}
             <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 items-start">
               {" "}
-              <HeaderTwo text={"Digital product Experience Design Services"} />
-              <MainText
-                text={
-                  "At Tinqlab, our product design services blend creativity, strategy, and user insight to craft digital experiences that are not only beautiful, but functional, intuitive, and backed by data. We help businesses build products users love through a holistic design process focused on value, usability, and performance."
-                }
-                color={"text-[#12152E] opacity-50"}
-              />
+              <div>
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo
+                    text={"Digital product Experience Design Services"}
+                  />
+                </SlideUp>
+              </div>
+              <SlideRight duration={1.5}>
+                {" "}
+                <MainText
+                  text={
+                    "At Tinqlab, our product design services blend creativity, strategy, and user insight to craft digital experiences that are not only beautiful, but functional, intuitive, and backed by data. We help businesses build products users love through a holistic design process focused on value, usability, and performance."
+                  }
+                  color={"text-[#12152E] opacity-50"}
+                />
+              </SlideRight>
             </div>
-            <div className="hidden md:block bg-features6 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+            <div className="hidden md:block">
+              <SlideLeft>
+                {" "}
+                <div className=" bg-features6 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+              </SlideLeft>{" "}
+            </div>{" "}
           </div>
         </DoublePageBorders>
 
@@ -146,23 +165,35 @@ export default function Home() {
             {" "}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 ">
               <div className="flex flex-col gap-8 items-start ">
-                <HeaderTwo text={"TinqLab's Digital Product Design Services"} />
-                <Link href={"/"}>
-                  <MainButton text={"Get a consultation"} />
-                </Link>
+                <div>
+                  <SlideUp>
+                    {" "}
+                    <HeaderTwo
+                      text={"TinqLab's Digital Product Design Services"}
+                    />{" "}
+                  </SlideUp>{" "}
+                </div>
+                <SlideRight duration={1.5}>
+                  {" "}
+                  <Link href={"/"}>
+                    <MainButton text={"Get a consultation"} />
+                  </Link>{" "}
+                </SlideRight>
               </div>
               <div className="grid grid-cols-1  gap-4 md:gap-8">
                 {" "}
                 {productDesignServices.map((item, index) => (
                   <div key={index}>
-                    {" "}
-                    <MainCard
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      bgColor={null}
-                      useIndex={true}
-                      index={index + 1}
-                    />
+                    <SlideDown delay={index * 0.2} overflow={null}>
+                      {" "}
+                      <MainCard
+                        title={item.title}
+                        subtitle={item.subtitle}
+                        bgColor={null}
+                        useIndex={true}
+                        index={index + 1}
+                      />
+                    </SlideDown>
                   </div>
                 ))}
               </div>
@@ -178,14 +209,24 @@ export default function Home() {
               {" "}
               <div className="col-span-1 md:col-span-2">
                 {" "}
-                <HeaderTwo text={"Technology We Use"} />
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo text={"Technology We Use"} />
+                </SlideUp>
               </div>
-              <div className="hidden md:block bg-features7 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+              <div className="hidden md:block">
+                {" "}
+                <SlideLeft>
+                  <div className=" bg-features7 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+                </SlideLeft>
+              </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8 justify-items-center">
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
-                  <TechStack stack={item.technologies} />
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <TechStack stack={item.technologies} />
+                  </SlideDown>
                 </div>
               ))}
             </div>
@@ -196,23 +237,39 @@ export default function Home() {
           <div className="flex flex-col gap-8  scroll-mt-4" id="services">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
               <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 items-start">
-                <HeaderTwo text="Our Design Model" />
-                <MainText
-                  text="Our product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We provide you with complex market research to find out all clients’ pains and gains, analysis of digital products and provide a smooth process of digital transformation and product design services. Geniusee product designers have established a design process based on our practical expertise in 100+ projects that have performed well and won over the market!"
-                  color="opacity-50"
-                />
+                <div>
+                  {" "}
+                  <SlideUp>
+                    {" "}
+                    <HeaderTwo text="Our Design Model" />
+                  </SlideUp>
+                </div>
+                <SlideRight duration={1.5}>
+                  {" "}
+                  <MainText
+                    text="Our product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We provide you with complex market research to find out all clients’ pains and gains, analysis of digital products and provide a smooth process of digital transformation and product design services. Geniusee product designers have established a design process based on our practical expertise in 100+ projects that have performed well and won over the market!"
+                    color="opacity-50"
+                  />
+                </SlideRight>
               </div>
-              <div className="hidden md:block bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]" />
+              <div className="hidden md:block">
+                {" "}
+                <SlideLeft>
+                  <div className="bg-edtech1 bg-contain bg-left-bottom bg-no-repeat h-full"></div>
+                </SlideLeft>{" "}
+              </div>{" "}
             </div>
-
-            <div className="hidden md:flex w-full min-h-[40vh]  items-center justify-center">
-              <ImageWrapper
-                src={infographics}
-                alt="Edtech"
-                fill
-                className="object-contain object-center"
-              />
-            </div>
+            <SlideDown>
+              <div className="flex w-full min-h-[40vh]  items-center justify-center">
+                {" "}
+                <ImageWrapper
+                  src={infographics}
+                  alt="Edtech"
+                  fill
+                  className="object-contain object-center w-full"
+                />
+              </div>{" "}
+            </SlideDown>
           </div>
         </PageBorders>
 
@@ -223,20 +280,30 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
               <div className="col-span-1 md:col-span-2">
                 {" "}
-                <HeaderTwo text={"Benefits Of Working With TinqLab"} />
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo text={"Benefits Of Working With TinqLab"} />
+                </SlideUp>
               </div>
-              <div className="hidden md:block bg-features5 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+              <div className="hidden md:block">
+                {" "}
+                <SlideLeft>
+                  <div className=" bg-features5 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+                </SlideLeft>{" "}
+              </div>{" "}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               {" "}
               {tinqlabBenefits.map((item, index) => (
                 <div key={index}>
-                  {" "}
-                  <MainCard
-                    title={item.title}
-                    subtitle={item.subtitle}
-                    bgColor={null}
-                  />
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    {" "}
+                    <MainCard
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      bgColor={null}
+                    />{" "}
+                  </SlideDown>
                 </div>
               ))}
             </div>

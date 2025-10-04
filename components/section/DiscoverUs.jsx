@@ -7,7 +7,6 @@ import MainText from "../typography/MainText";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import HeaderTwo from "../typography/HeaderTwo";
 import { IoIosAdd } from "react-icons/io";
-import { ComponentAnimation } from "@/animation/ComponentAnimation";
 import ImageWrapper from "../wrappers/ImageWrapper";
 import SlideRight from "@/animation/SlideRight";
 import SlideLeft from "@/animation/SlideLeft";

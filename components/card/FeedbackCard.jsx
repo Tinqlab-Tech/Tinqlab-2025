@@ -14,7 +14,7 @@ import SlideLeft from "@/animation/SlideLeft";
 
 function Card({ description, subTitle, title, icon }) {
   return (
-    <div className="flex flex-col p-6 gap-8 justify-between rounded-[10px] bg-white shadow-custom-primary h-full">
+    <div className="   h-full  p-[20px] md:py-[40px] flex flex-col gap-8 justify-between rounded-[10px] shadow-custom-primary">
       <div className="flex items-start gap-4 md:gap-8">
         <div className="bg-quote bg-no-repeat bg-contain w-12 h-12" />
         <MainText text={description} color="opacity-70" />
@@ -86,14 +86,14 @@ export default function FeedbackCard({ title }) {
   };
 
   return (
-    <section className="flex flex-col gap-8 overflow-hidden">
-      <div className="flex justify-between md:items-center gap-4 md:gap-8">
+    <section className="flex flex-col gap-8 ">
+      <div className="flex justify-between md:items-center gap-4 md:gap-8 h-full">
         <SlideUp>
           {" "}
           <HeaderTwo text={title} />
         </SlideUp>
         <div className="flex gap-4 md:gap-8">
-          <SlideLeft>
+          <SlideLeft overflow={null}>
             <button
               onClick={prev}
               className="flex items-center justify-center p-4 shadow-custom-primary group hover:bg-primary h-12 w-12 rounded-full transition-colors duration-300"
@@ -104,7 +104,7 @@ export default function FeedbackCard({ title }) {
               />
             </button>
           </SlideLeft>
-          <SlideRight>
+          <SlideRight overflow={null}>
             <button
               onClick={next}
               className="flex items-center justify-center p-4 shadow-custom-primary group hover:bg-primary h-12 w-12 rounded-full transition-colors duration-300"
@@ -122,9 +122,9 @@ export default function FeedbackCard({ title }) {
         {clientFeedback.map((item, index) => (
           <div key={index}>
             {/* flex + equal height */}
-            <SlideRight delay={index * 0.2}>
+            <SlideRight delay={index * 0.2} overflow={null}>
               {" "}
-              <div className="p-4 h-full">
+              <div className=" p-[2vh] md:p-[4vh]">
                 <Card
                   description={item.description}
                   icon={item.icon}

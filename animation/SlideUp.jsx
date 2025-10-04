@@ -7,19 +7,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const SlideUp = ({
+  overflow,
   children,
   duration = 1.2,
   delay = 0,
-  playOnMount = false,
+  playOnMount,
 }) => {
   const sectionRef = useRef(null);
-  const upRef = useRef(null);
+  const containerRef = useRef(null);
 
   // animate function
   const animate = () => {
-    if (upRef.current) {
+    if (containerRef.current) {
       gsap.fromTo(
-        upRef.current,
+        containerRef.current,
         { opacity: 0, y: "100%" }, // start below + invisible
         {
           opacity: 1,
@@ -47,8 +48,12 @@ const SlideUp = ({
   }, [duration, delay, playOnMount]);
 
   return (
-    <div ref={sectionRef} className="relative overflow-hidden w-full h-full">
-      <div ref={upRef} className="block w-full h-full">
+    <div
+      ref={sectionRef}
+      className={`${overflow === null ? "" : "overflow-hidden"} w-full h-full`}
+    >
+      {" "}
+      <div ref={containerRef} className=" w-full h-full">
         {children}
       </div>
     </div>

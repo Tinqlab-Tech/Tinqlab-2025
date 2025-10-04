@@ -8,6 +8,9 @@ import ConsentNav from "./ConsentNav";
 import PageBorders from "../wrappers/PageBorders";
 import HeaderOne from "../typography/HeaderOne";
 import { MainButton } from "../button/MainButton";
+import SlideRight from "@/animation/SlideRight";
+import SlideDown from "@/animation/SlideDown";
+import SlideUp from "@/animation/SlideUp";
 
 export default function Footer() {
   // const t = useTranslations("Footer");
@@ -41,34 +44,51 @@ export default function Footer() {
         <div className="md:m-0 mb-2 md:mb-0 col-span-2">
           <div className="flex flex-col items-start gap-4 justify-start mb-[20px]">
             <div className="mb-[20px]">
-              <ImageWrapper
-                src={logo}
-                width={150}
-                height={50}
-                alt={"Tinqlab Logo"}
-              />
-            </div>
-
-            {usefulLinks.map((item, index) => (
-              <Link href={item.link} key={index}>
-                <MainText
-                  text={item.title}
-                  color={
-                    "text-[#BDBDBD] opacity-80 hover:text-white hover:opacity-100"
-                  }
+              <SlideRight>
+                {" "}
+                <ImageWrapper
+                  src={logo}
+                  width={150}
+                  height={50}
+                  alt={"Tinqlab Logo"}
                 />
-              </Link>
+              </SlideRight>
+            </div>
+            {usefulLinks.map((item, index) => (
+              <div key={index}>
+                <SlideDown delay={index * 0.2}>
+                  {" "}
+                  <Link href={item.link}>
+                    <MainText
+                      text={item.title}
+                      color={
+                        "text-[#BDBDBD] opacity-80 hover:text-white hover:opacity-100"
+                      }
+                    />
+                  </Link>
+                </SlideDown>
+              </div>
             ))}
-            <SocialMediaItem />
+
+            <SlideDown delay={0.2}>
+              <SocialMediaItem />{" "}
+            </SlideDown>
           </div>
         </div>
         <div className="col-span-3 mb-[20px]">
           <div className="flex flex-col items-start gap-8 justify-center">
-            <HeaderOne
-              text="The key to success is action, start today!"
-              color={"text-white md:w-3/4"}
-            />
-            <MainButton text={"Schedule a call"} />
+            <div>
+              <SlideUp>
+                {" "}
+                <HeaderOne
+                  text="The key to success is action, start today!"
+                  color={"text-white md:w-3/4"}
+                />
+              </SlideUp>
+            </div>
+            <SlideRight duration={1.5}>
+              <MainButton text={"Schedule a call"} />
+            </SlideRight>
           </div>
         </div>
       </div>

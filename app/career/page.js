@@ -14,6 +14,10 @@ import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
 import vector1 from "@/public/images/vector1.png";
 import vector2 from "@/public/images/vector2.png";
 import vector3 from "@/public/images/vector3.png";
+import SlideUp from "@/animation/SlideUp";
+import SlideRight from "@/animation/SlideRight";
+import SlideDown from "@/animation/SlideDown";
+import SlideLeft from "@/animation/SlideLeft";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -196,45 +200,56 @@ export default function Home() {
           className=" scroll-mt-4 overflow-hidden  grid grid-cols-1 md:grid-cols-2 gap-4   "
           id={"about"}
         >
-          {" "}
-          <div className="hidden md:block  w-full min-h-[40vh] bg-features3 bg-cover bg-left-bottom bg-no-repeat "></div>
-          <div className="flex flex-col items-start justify-center gap-5 p-6 pb-10 ">
-            <HeaderTwo text={"Who are Tinqlab?"} />{" "}
-            <MainText
-              text={
-                "TinqLab is a software development company founded in 2019 which develops mobile applications, web apps, and custom blockchain software"
-              }
-              color={"opacity-50"}
-            />
-            <MainText
-              text={
-                "We solve business problems in addition to creating digital solutions. With a team of 40+ experts, 55+ completed projects, and more than 6 years of expertise, we know what it takes to transform your ideas into real outcomes."
-              }
-              color={"opacity-50"}
-            />
-            <MainText
-              text={
-                "What makes us unique?  We comprehend your objectives, company difficulties, and possibilities in order to develop digital solutions that offer real value.  Our clients, who range from creative startups to well-established businesses, rely on us to improve consumer experiences, optimize processes, and spur expansion."
-              }
-              color={"opacity-50"}
-            />
-          </div>
+          <div className="hidden md:block h-full">
+            <SlideRight>
+              <div className=" h-full bg-features3 bg-cover bg-left-bottom bg-no-repeat "></div>
+            </SlideRight>{" "}
+          </div>{" "}
+          <SlideLeft>
+            <div className="flex flex-col items-start justify-center gap-5 p-6 pb-10 ">
+              {" "}
+              <HeaderTwo text={"Who are Tinqlab?"} />
+              <MainText
+                text={
+                  "TinqLab is a software development company founded in 2019 which develops mobile applications, web apps, and custom blockchain software"
+                }
+                color={"opacity-50"}
+              />{" "}
+              <MainText
+                text={
+                  "We solve business problems in addition to creating digital solutions. With a team of 40+ experts, 55+ completed projects, and more than 6 years of expertise, we know what it takes to transform your ideas into real outcomes."
+                }
+                color={"opacity-50"}
+              />{" "}
+              <MainText
+                text={
+                  "What makes us unique?  We comprehend your objectives, company difficulties, and possibilities in order to develop digital solutions that offer real value.  Our clients, who range from creative startups to well-established businesses, rely on us to improve consumer experiences, optimize processes, and spur expansion."
+                }
+                color={"opacity-50"}
+              />
+            </div>{" "}
+          </SlideLeft>
         </div>
       </DoublePageBorders>{" "}
       {/* Our Values */}
       <PageBorders>
         <div className="flex flex-col gap-8" id="industry">
           <div className="px-4">
-            <HeaderTwo text={"Our Values"} />
+            <SlideUp>
+              {" "}
+              <HeaderTwo text={"Our Values"} />
+            </SlideUp>
           </div>
           <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
             {ourValues.map((item, index) => (
               <div key={index}>
-                <MainCard
-                  title={item.title}
-                  subtitle={item.subtitle}
-                  bgColor={null}
-                />
+                <SlideDown delay={index * 0.2} overflow={null}>
+                  <MainCard
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    bgColor={null}
+                  />{" "}
+                </SlideDown>
               </div>
             ))}
           </div>
@@ -247,10 +262,13 @@ export default function Home() {
             {" "}
             <div className="col-span-1 md:col-span-2">
               {" "}
-              <HeaderTwo
-                text={"Benefits Of Working With TinqLab"}
-                color={"text-mainWhite"}
-              />
+              <SlideUp>
+                {" "}
+                <HeaderTwo
+                  text={"Benefits Of Working With TinqLab"}
+                  color={"text-mainWhite"}
+                />
+              </SlideUp>
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-4 md:gap-8">
@@ -265,17 +283,20 @@ export default function Home() {
                 .filter((_, i) => !imageSlots.includes(i + 1)).length;
 
               return (
-                <MoreContentCard
-                  key={index}
-                  useIndexes={!isImageSlot}
-                  indexes={isImageSlot ? null : cardIndex}
-                  title={item.title}
-                  items={item.items}
-                  bgColor={"bg-darkBlue"}
-                  addImage={true}
-                  gridSize={imageSlots}
-                  gridImg={["/images/featuresbg/features4.png"]}
-                />
+                <div key={index}>
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <MoreContentCard
+                      useIndexes={!isImageSlot}
+                      indexes={isImageSlot ? null : cardIndex}
+                      title={item.title}
+                      items={item.items}
+                      bgColor={"bg-darkBlue"}
+                      addImage={true}
+                      gridSize={imageSlots}
+                      gridImg={["/images/featuresbg/features4.png"]}
+                    />
+                  </SlideDown>{" "}
+                </div>
               );
             })}
           </div>
@@ -284,23 +305,28 @@ export default function Home() {
       {/* job Openings */}
       <PageBorders>
         <div className="flex flex-col gap-8" id="industry">
-          <div className="px-4">
-            <HeaderOne text={"Consider our job openings!"} />
+          <div>
+            <SlideUp>
+              {" "}
+              <HeaderOne text={"Consider our job openings!"} />
+            </SlideUp>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
             {jobOpenings.map((item, index) => (
               <div key={index}>
-                {" "}
-                <IndustryCard
-                  title={item.title}
-                  subtitle={item.subtitle}
-                  bgImg={item.bgImage}
-                  background={null}
-                  hasbtnText={false}
-                  btnLink={item.btnLink}
-                  btnText={item.btnText2}
-                />
+                <SlideDown delay={index * 0.2} overflow={null}>
+                  {" "}
+                  <IndustryCard
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    bgImg={item.bgImage}
+                    background={null}
+                    hasbtnText={false}
+                    btnLink={item.btnLink}
+                    btnText={item.btnText2}
+                  />{" "}
+                </SlideDown>
               </div>
             ))}
           </div>

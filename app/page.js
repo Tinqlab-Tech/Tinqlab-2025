@@ -23,7 +23,6 @@ import aws from "@/public/images/stacks/aws.png";
 import polygon from "@/public/images/stacks/polygon.png";
 import HeaderTwo from "@/components/typography/HeaderTwo";
 import DiscoverUs from "@/components/section/DiscoverUs";
-import { ComponentAnimation } from "@/animation/ComponentAnimation";
 import ImageWrapper from "@/components/wrappers/ImageWrapper";
 import SlideRight from "@/animation/SlideRight";
 import SlideLeft from "@/animation/SlideLeft";
@@ -240,24 +239,29 @@ export default function Home() {
             <div className="absolute top-0 left-0 w-full z-0 bg-mainWhite  h-[30vh] lg:h-[25vh] xl:h-[40vh]"></div>
             <PageBorders background={"relative"}>
               <div className="flex flex-col gap-4 md:gap-8">
-                <div className="relative z-10 md:w-1/2">
-                  <HeaderTwo
-                    text={"Build and scale securely with us in your domain"}
-                  />
+                <div className="relative z-10 md:w-1/2  ">
+                  <SlideUp>
+                    {" "}
+                    <HeaderTwo
+                      text={"Build and scale securely with us in your domain"}
+                    />
+                  </SlideUp>
                 </div>
                 <div className=" relative z-10  grid md:grid-cols-2 gap-4 md:gap-8">
                   {industryProduction.map((item, index) => (
-                    <SlideDown delay={index * 0.2}>
-                      <IndustryCard
-                        title={item.title}
-                        subtitle={item.subtitle}
-                        bgImg={item.bgImage}
-                        btnLink={item.btnLink}
-                        hasbtnText={true}
-                        btnText={item.btnText}
-                        background={"bg-darkBlue"}
-                      />
-                    </SlideDown>
+                    <div key={index}>
+                      <SlideDown delay={index * 0.2}>
+                        <IndustryCard
+                          title={item.title}
+                          subtitle={item.subtitle}
+                          bgImg={item.bgImage}
+                          btnLink={item.btnLink}
+                          hasbtnText={true}
+                          btnText={item.btnText}
+                          background={"bg-darkBlue"}
+                        />
+                      </SlideDown>
+                    </div>
                   ))}
                 </div>{" "}
               </div>

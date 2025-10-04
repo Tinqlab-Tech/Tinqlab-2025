@@ -15,6 +15,10 @@ import nodejs from "@/public/images/stacks/nodejs.png";
 import flutter from "@/public/images/stacks/flutter.png";
 import googleCloud from "@/public/images/stacks/googlecloud.png";
 import FeedbackCard from "@/components/card/FeedbackCard";
+import SlideUp from "@/animation/SlideUp";
+import SlideRight from "@/animation/SlideRight";
+import SlideDown from "@/animation/SlideDown";
+import SlideLeft from "@/animation/SlideLeft";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -112,16 +116,35 @@ export default function Home() {
             {" "}
             <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 items-start">
               {" "}
-              <HeaderTwo text={"What Is a Technology Consulting Service?"} />
-              <MainText
-                text={
-                  "To create an efficient digital strategy or reassess an existing one, you need to attract experts in information technology consulting services who develop complex tech solutions daily for different businesses and startups. We provide technology consulting services in various formats based on requests, industry insights, and cross-sector expertise. With more than 55 impactfully delivered projects of different complexities for businesses in FinTech, EdTech, AgroTech, retail, and real estate."
-                }
-                color={"text-[#12152E] opacity-50"}
-              />
-              <MainButton text={"Speak to Experts"} />
+              <div>
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo
+                    text={"What Is a Technology Consulting Service?"}
+                  />
+                </SlideUp>
+              </div>{" "}
+              <div>
+                <SlideRight duration={1.5}>
+                  {" "}
+                  <MainText
+                    text={
+                      "To create an efficient digital strategy or reassess an existing one, you need to attract experts in information technology consulting services who develop complex tech solutions daily for different businesses and startups. We provide technology consulting services in various formats based on requests, industry insights, and cross-sector expertise. With more than 55 impactfully delivered projects of different complexities for businesses in FinTech, EdTech, AgroTech, retail, and real estate."
+                    }
+                    color={"text-[#12152E] opacity-50"}
+                  />{" "}
+                </SlideRight>{" "}
+              </div>
+              <SlideDown delay={0.2}>
+                {" "}
+                <MainButton text={"Speak to Experts"} />{" "}
+              </SlideDown>
             </div>
-            <div className="hidden md:block bg-features8 bg-contain bg-left bg-no-repeat min-h-[20vh]"></div>
+            <div className="hidden md:block h-full">
+              <SlideLeft>
+                <div className=" bg-features8 bg-contain bg-left bg-no-repeat h-full"></div>
+              </SlideLeft>
+            </div>
           </div>
         </DoublePageBorders>
 
@@ -132,26 +155,40 @@ export default function Home() {
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 "
           >
             <div className="flex flex-col gap-8 justify-start items-start ">
-              <HeaderTwo text={"Our Industry Expertise"} />
-
-              <MainText
-                text={
-                  "We believe focusing brings depth to our solutions. At Tinqlab, our technology consulting services are grounded in deep industry understanding such as FinTech, EdTech, retail, and real estate. We help businesses across those key sectors navigate digital transformation, adopt the right tech stack, and unlock scalable growth. With Tinqlab, consulting isn’t just advice—it’s actionable strategy."
-                }
-                color={"text-[#12152E] opacity-50"}
-              />
-
-              <Link href={"/"}>
-                <MainButton text={"Book consultation"} />
-              </Link>
+              <div>
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo text={"Our Industry Expertise"} />
+                </SlideUp>{" "}
+              </div>
+              <div>
+                <SlideRight duration={1.5}>
+                  {" "}
+                  <MainText
+                    text={
+                      "We believe focusing brings depth to our solutions. At Tinqlab, our technology consulting services are grounded in deep industry understanding such as FinTech, EdTech, retail, and real estate. We help businesses across those key sectors navigate digital transformation, adopt the right tech stack, and unlock scalable growth. With Tinqlab, consulting isn’t just advice—it’s actionable strategy."
+                    }
+                    color={"text-[#12152E] opacity-50"}
+                  />
+                </SlideRight>{" "}
+              </div>
+              <SlideDown duration={1.5}>
+                {" "}
+                <Link href={"/"}>
+                  <MainButton text={"Book consultation"} />
+                </Link>{" "}
+                /
+              </SlideDown>
             </div>
             <div className="grid grid-cols-1 gap-4 md:gap-8">
               {industryExpertise.map((item, index) => (
                 <div key={index}>
-                  <SpecificationItem
-                    title={item.title}
-                    subTitle={item.subtitle}
-                  />
+                  <SlideRight delay={index * 0.2} overflow={null}>
+                    <SpecificationItem
+                      title={item.title}
+                      subTitle={item.subtitle}
+                    />
+                  </SlideRight>
                 </div>
               ))}
             </div>
@@ -165,14 +202,23 @@ export default function Home() {
               {" "}
               <div className="col-span-1 md:col-span-2">
                 {" "}
-                <HeaderTwo text={"Technology We Use"} />
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo text={"Technology We Use"} />{" "}
+                </SlideUp>
               </div>
-              <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+              <div className="hidden md:block ">
+                <SlideLeft>
+                  <div className="bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+                </SlideLeft>
+              </div>{" "}
             </div>
             <div className="grid grid-cols-5 gap-4 md:gap-8 justify-items-center">
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
-                  <TechStack stack={item.technologies} />
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <TechStack stack={item.technologies} />{" "}
+                  </SlideDown>
                 </div>
               ))}
             </div>
@@ -183,38 +229,48 @@ export default function Home() {
         <DoublePageBorders
           background={"bg-featuresbg2 bg-cover bg-no-repeat bg-center"}
         >
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
+          <div
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 scroll-mt-4"
+            id={"services"}
+          >
             {" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 ">
-              {" "}
-              <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 items-start">
+            <div className="col-span-1 md:col-span-2 ">
+              <SlideRight>
                 {" "}
-                <HeaderTwo text={"Solutions we offer in EdTech for clients"} />
-                <MainText
-                  text={
-                    "As an experienced IT consulting services company, we understand how important it is for you that your IT strategy meets your business goals. Our team of IT consultants has a proven track of successfully completed projects. Tinqlab’s senior experts in information technology consulting can handle any challenge for multiple reasons:"
-                  }
-                  color={"text-[#12152E] opacity-50"}
-                />
-                <MainText
-                  text={
-                    "We achieve your results by thriving and personalizing our approach to each case."
-                  }
-                  color={"text-[#12152E] opacity-50"}
-                />
-                <MainText
-                  text={
-                    "We are driven by metrics and numbers; you can measure our promise by time, analytics, performance, and in the end, your outcome, especially given that we work to exceed your expectations."
-                  }
-                  color={"text-[#12152E] opacity-50"}
-                />
-                <div>
+                <div className="flex flex-col gap-4 md:gap-8 items-start">
+                  {" "}
+                  <HeaderTwo
+                    text={"Solutions we offer in EdTech for clients"}
+                  />
+                  <MainText
+                    text={
+                      "As an experienced IT consulting services company, we understand how important it is for you that your IT strategy meets your business goals. Our team of IT consultants has a proven track of successfully completed projects. Tinqlab’s senior experts in information technology consulting can handle any challenge for multiple reasons:"
+                    }
+                    color={"text-[#12152E] opacity-50"}
+                  />
+                  <MainText
+                    text={
+                      "We achieve your results by thriving and personalizing our approach to each case."
+                    }
+                    color={"text-[#12152E] opacity-50"}
+                  />
+                  <MainText
+                    text={
+                      "We are driven by metrics and numbers; you can measure our promise by time, analytics, performance, and in the end, your outcome, especially given that we work to exceed your expectations."
+                    }
+                    color={"text-[#12152E] opacity-50"}
+                  />
                   <Link href={"/"}>
                     <MainButton text={"Book consultation"} />
                   </Link>
                 </div>
-              </div>
-              <div className="hidden md:block bg-features9 bg-contain bg-left bg-no-repeat min-h-[20vh]"></div>
+              </SlideRight>{" "}
+            </div>{" "}
+            <div className="hidden md:block h-full">
+              {" "}
+              <SlideLeft>
+                <div className=" bg-features9 bg-contain bg-left bg-no-repeat h-full"></div>
+              </SlideLeft>{" "}
             </div>
           </div>
         </DoublePageBorders>
@@ -226,24 +282,33 @@ export default function Home() {
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 "
           >
             <div className="flex flex-col gap-8 justify-start items-start ">
-              <HeaderTwo text={"Consulting Services we Offer"} />
-
-              <Link href={"/"}>
-                <MainButton text={"Get a consultation"} />
-              </Link>
+              <div>
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo text={"Consulting Services we Offer"} />
+                </SlideUp>
+              </div>
+              <SlideRight duration={1.5}>
+                {" "}
+                <Link href={"/"}>
+                  <MainButton text={"Get a consultation"} />
+                </Link>
+              </SlideRight>
             </div>
             <div className="grid grid-cols-1 gap-4 md:gap-8">
               {consultingServices.map((item, index) => (
                 <div key={index}>
-                  <MainCard
-                    title={item.title}
-                    subtitle={item.subtitle}
-                    bgColor={null}
-                    hasIcon={false}
-                    useIndex={true}
-                    index={index + 1}
-                    icon={item.icon}
-                  />
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <MainCard
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      bgColor={null}
+                      hasIcon={false}
+                      useIndex={true}
+                      index={index + 1}
+                      icon={item.icon}
+                    />{" "}
+                  </SlideDown>
                 </div>
               ))}
             </div>

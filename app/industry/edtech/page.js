@@ -22,6 +22,9 @@ import java from "@/public/images/stacks/java.svg";
 import rn from "@/public/images/stacks/rn.png";
 import nodejs from "@/public/images/stacks/nodejs.png";
 import React from "@/public/images/stacks/react.png";
+import SlideUp from "@/animation/SlideUp";
+import SlideRight from "@/animation/SlideRight";
+import SlideDown from "@/animation/SlideDown";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -235,28 +238,41 @@ export default function Home() {
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 "
           >
             <div className="flex flex-col gap-8 justify-start items-start ">
-              <HeaderTwo
-                text={"Our educational software development services"}
-              />
-
-              <MainText
-                text={
-                  "We believe focusing brings depth to our solutions. At TinqLab, we focus on digital transformation consulting services in FinTech, EdTech, retail, and real estate. We build complex strategies using latest solutions, product experience design services, profound product discovery as the basis for further achievements, technology consulting utilizing our TechLead's expertise, and many more."
-                }
-                color={"text-[#12152E] opacity-50"}
-              />
-
-              <Link href={"/"}>
-                <MainButton text={"Book consultation"} />
-              </Link>
+              <div>
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo
+                    text={"Our educational software development services"}
+                  />
+                </SlideUp>
+              </div>
+              <div>
+                <SlideRight duration={1.5}>
+                  <MainText
+                    text={
+                      "We believe focusing brings depth to our solutions. At TinqLab, we focus on digital transformation consulting services in FinTech, EdTech, retail, and real estate. We build complex strategies using latest solutions, product experience design services, profound product discovery as the basis for further achievements, technology consulting utilizing our TechLead's expertise, and many more."
+                    }
+                    color={"text-[#12152E] opacity-50"}
+                  />
+                </SlideRight>
+              </div>
+              <div>
+                <SlideDown delay={0.2} overflow={null}>
+                  <Link href={"/"}>
+                    <MainButton text={"Book consultation"} />
+                  </Link>
+                </SlideDown>
+              </div>
             </div>
             <div className="grid grid-cols-1 gap-4 md:gap-8">
               {developmentServices.map((item, index) => (
                 <div key={index}>
-                  <SpecificationItem
-                    title={item.title}
-                    subTitle={item.subtitle}
-                  />
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <SpecificationItem
+                      title={item.title}
+                      subTitle={item.subtitle}
+                    />
+                  </SlideDown>
                 </div>
               ))}
             </div>
@@ -267,38 +283,55 @@ export default function Home() {
             {" "}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 ">
               {" "}
-              <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 items-center">
+              <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 ">
                 {" "}
-                <HeaderTwo text={"Solutions we offer in EdTech for clients"} />
-                <MainText
-                  text={
-                    "Our product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We provide you with complex market research to find out all clients’ pains and gains, analysis of digital products and provide a smooth process of digital transformation and product design services. Geniusee product designers have established a design process based on our practical expertise in 100+ projects that have performed well and won over the market!"
-                  }
-                  color={"text-[#12152E] opacity-50"}
-                />
+                <div>
+                  {" "}
+                  <SlideUp>
+                    {" "}
+                    <HeaderTwo
+                      text={"Solutions we offer in EdTech for clients"}
+                    />
+                  </SlideUp>{" "}
+                </div>{" "}
+                <div>
+                  <SlideRight duration={1.5}>
+                    {" "}
+                    <MainText
+                      text={
+                        "Our product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We provide you with complex market research to find out all clients’ pains and gains, analysis of digital products and provide a smooth process of digital transformation and product design services. Geniusee product designers have established a design process based on our practical expertise in 100+ projects that have performed well and won over the market!"
+                      }
+                      color={"text-[#12152E] opacity-50"}
+                    />
+                  </SlideRight>
+                </div>
               </div>
-              <div className="hidden md:block bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+              <div className=" hidden md:block bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               {" "}
               {edtechSoftwareSolutions.map((item, index) => (
                 <div key={index}>
-                  {" "}
-                  <MainCard
-                    title={item.title}
-                    subtitle={item.subtitle}
-                    bgColor={null}
-                    hasIcon={true}
-                    icon={item.icon}
-                  />
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <MainCard
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      bgColor={null}
+                      hasIcon={true}
+                      icon={item.icon}
+                    />
+                  </SlideDown>
                 </div>
               ))}
             </div>
-            <div className="grid grid-cols-1 justify-items-center">
-              <Link href={"/"}>
-                <MainButton text={"Book consultation"} />
-              </Link>
-            </div>
+            <div></div>{" "}
+            <SlideDown delay={0.2} overflow={null}>
+              <div className="grid grid-cols-1 justify-items-center">
+                <Link href={"/"}>
+                  <MainButton text={"Book consultation"} />
+                </Link>
+              </div>
+            </SlideDown>
           </div>
         </PageBorders>
         <DoublePageBorders
@@ -310,24 +343,37 @@ export default function Home() {
               {" "}
               <div className="col-span-1 md:col-span-2 flex flex-col gap-8 md:w-4/5">
                 {" "}
-                <HeaderTwo
-                  text={
-                    "We Understand that the key to success is clear communication"
-                  }
-                  color={"text-white"}
-                />
-                <MainText
-                  text={
-                    "Are you looking for a full cycle product development? go no further. just fill out the contact us form and we will reach out immediately."
-                  }
-                  color={"text-white"}
-                />
+                <div>
+                  {" "}
+                  <SlideUp>
+                    {" "}
+                    <HeaderTwo
+                      text={
+                        "We Understand that the key to success is clear communication"
+                      }
+                      color={"text-white"}
+                    />
+                  </SlideUp>
+                </div>
+                <div>
+                  <SlideRight duration={1.5}>
+                    <MainText
+                      text={
+                        "Are you looking for a full cycle product development? go no further. just fill out the contact us form and we will reach out immediately."
+                      }
+                      color={"text-white"}
+                    />
+                  </SlideRight>
+                </div>
               </div>
               <div className=" flex items-center justify-start">
-                {" "}
-                <Link href={"/"}>
-                  <MainButton text={"Contact Us"} />
-                </Link>
+                <div>
+                  <SlideRight delay={0.2}>
+                    <Link href={"/"}>
+                      <MainButton text={"Contact Us"} />
+                    </Link>
+                  </SlideRight>
+                </div>
               </div>
             </div>
           </div>
@@ -338,24 +384,33 @@ export default function Home() {
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 "
           >
             <div className="flex flex-col gap-8 justify-start items-start ">
-              <HeaderTwo text={"Our cooperation process"} />
-
-              <Link href={"/"}>
-                <MainButton text={"Book consultation"} />
-              </Link>
+              <div>
+                {" "}
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo text={"Our cooperation process"} />
+                </SlideUp>
+              </div>
+              <SlideRight duration={1.5} overflow={null}>
+                <Link href={"/"}>
+                  <MainButton text={"Book consultation"} />
+                </Link>
+              </SlideRight>
             </div>
             <div className="grid grid-cols-1 gap-4 md:gap-8">
               {process.map((item, index) => (
                 <div key={index}>
-                  <MainCard
-                    title={item.title}
-                    subtitle={item.subtitle}
-                    bgColor={null}
-                    hasIcon={false}
-                    useIndex={true}
-                    index={index + 1}
-                    icon={item.icon}
-                  />
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <MainCard
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      bgColor={null}
+                      hasIcon={false}
+                      useIndex={true}
+                      index={index + 1}
+                      icon={item.icon}
+                    />
+                  </SlideDown>
                 </div>
               ))}
             </div>
@@ -368,17 +423,19 @@ export default function Home() {
               {" "}
               <div className="col-span-1 md:col-span-2">
                 {" "}
-                <HeaderTwo text={"Technology We Use"} />
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo text={"Technology We Use"} />
+                </SlideUp>{" "}
               </div>
               <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
             </div>
             <div className="grid grid-cols-4 gap-4 md:gap-8 justify-items-center">
               {technologyWeUse.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-4 rounded-[10px] w-full flex items-center justify-center"
-                >
-                  <TechStack stack={item.technologies} />
+                <div key={index}>
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <TechStack stack={item.technologies} />{" "}
+                  </SlideDown>
                 </div>
               ))}
             </div>
@@ -391,7 +448,10 @@ export default function Home() {
               {" "}
               <div className="col-span-1 md:col-span-2">
                 {" "}
-                <HeaderTwo text={"Why choose Tinqlab?"} />
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo text={"Why choose Tinqlab?"} />
+                </SlideUp>{" "}
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
@@ -399,11 +459,13 @@ export default function Home() {
               {whyUs.map((item, index) => (
                 <div key={index}>
                   {" "}
-                  <MainCard
-                    title={item.title}
-                    subtitle={item.subtitle}
-                    bgColor={null}
-                  />
+                  <SlideRight delay={index * 0.2} overflow={null}>
+                    <MainCard
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      bgColor={null}
+                    />{" "}
+                  </SlideRight>
                 </div>
               ))}
             </div>

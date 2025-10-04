@@ -26,6 +26,10 @@ import mongodb from "@/public/images/stacks/mongodb.png";
 import rn from "@/public/images/stacks/rn.png";
 import nodejs from "@/public/images/stacks/nodejs.png";
 import aws from "@/public/images/stacks/aws.png";
+import SlideUp from "@/animation/SlideUp";
+import SlideRight from "@/animation/SlideRight";
+import SlideDown from "@/animation/SlideDown";
+import SlideLeft from "@/animation/SlideLeft";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -220,15 +224,29 @@ export default function Home() {
             {" "}
             <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 items-start">
               {" "}
-              <HeaderTwo text={"Real Estate Software Development Company "} />
-              <MainText
-                text={
-                  "In today’s fast-paced real estate market, success depends on more than just location — it depends on technology. At TinqLab, we specialize in building custom real estate software that helps agencies, brokers, property managers, and investors streamline operations, attract clients, and close deals faster. Whether you need a feature-rich property listing platform, a powerful CRM, or an integrated property management system, our team delivers scalable, secure, and user-friendly solutions designed to fit your exact business model."
-                }
-                color={"text-[#12152E] opacity-50"}
-              />
+              <div>
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo
+                    text={"Real Estate Software Development Company "}
+                  />
+                </SlideUp>
+              </div>{" "}
+              <SlideRight duration={1.5}>
+                {" "}
+                <MainText
+                  text={
+                    "In today’s fast-paced real estate market, success depends on more than just location — it depends on technology. At TinqLab, we specialize in building custom real estate software that helps agencies, brokers, property managers, and investors streamline operations, attract clients, and close deals faster. Whether you need a feature-rich property listing platform, a powerful CRM, or an integrated property management system, our team delivers scalable, secure, and user-friendly solutions designed to fit your exact business model."
+                  }
+                  color={"text-[#12152E] opacity-50"}
+                />
+              </SlideRight>
             </div>
-            <div className="hidden md:block bg-features10 bg-contain bg-left bg-no-repeat min-h-[20vh]"></div>
+            <div className="hidden md:block min-h-[20vh]">
+              <SlideLeft>
+                <div className=" bg-features10 bg-contain bg-left bg-no-repeat h-full"></div>
+              </SlideLeft>
+            </div>{" "}
           </div>
         </DoublePageBorders>
         <PageBorders>
@@ -237,28 +255,40 @@ export default function Home() {
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-8 "
           >
             <div className="flex flex-col gap-4 md:gap-8 justify-start items-start ">
-              <HeaderTwo
-                text={"Our real estate software development process"}
-              />
-
-              <MainText
-                text={
-                  "We follow a proven, agile-driven approach to build high-performing real estate software that aligns with your business goals and market demands. Our process is built for flexibility, speed, and long-term scalability."
-                }
-                color={"text-[#12152E] opacity-50"}
-              />
-
-              <Link href={"/"}>
-                <MainButton text={"Book consultation"} />
-              </Link>
+              <div>
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo
+                    text={"Our real estate software development process"}
+                  />
+                </SlideUp>
+              </div>
+              <div>
+                {" "}
+                <SlideRight duration={1.5}>
+                  <MainText
+                    text={
+                      "We follow a proven, agile-driven approach to build high-performing real estate software that aligns with your business goals and market demands. Our process is built for flexibility, speed, and long-term scalability."
+                    }
+                    color={"text-[#12152E] opacity-50"}
+                  />{" "}
+                </SlideRight>
+              </div>
+              <SlideDown delay={0.2}>
+                <Link href={"/"}>
+                  <MainButton text={"Book consultation"} />
+                </Link>{" "}
+              </SlideDown>
             </div>
             <div className="grid grid-cols-1 gap-4 md:gap-8">
               {developmentServices.map((item, index) => (
                 <div key={index}>
-                  <SpecificationItem
-                    title={item.title}
-                    subTitle={item.subtitle}
-                  />
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <SpecificationItem
+                      title={item.title}
+                      subTitle={item.subtitle}
+                    />{" "}
+                  </SlideDown>
                 </div>
               ))}
             </div>
@@ -271,35 +301,49 @@ export default function Home() {
               {" "}
               <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8">
                 {" "}
-                <HeaderTwo text={"Real Estate Software Solutions"} />
-                <MainText
-                  text={
-                    "With a variety of bespoke software cases for real estate in our portfolio, TinqLab professionals will develop a wide range of products to meet the needs of your company.  We will select the best team and technology stack to ensure the smoothest workflow, whether it is a new application created from scratch or a large-scale update or upgrade to an existing solution."
-                  }
-                  color={"text-[#12152E] opacity-50"}
-                />
+                <div>
+                  <SlideUp>
+                    {" "}
+                    <HeaderTwo text={"Real Estate Software Solutions"} />
+                  </SlideUp>
+                </div>{" "}
+                <SlideRight duration={1.5}>
+                  <MainText
+                    text={
+                      "With a variety of bespoke software cases for real estate in our portfolio, TinqLab professionals will develop a wide range of products to meet the needs of your company.  We will select the best team and technology stack to ensure the smoothest workflow, whether it is a new application created from scratch or a large-scale update or upgrade to an existing solution."
+                    }
+                    color={"text-[#12152E] opacity-50"}
+                  />
+                </SlideRight>
               </div>
-              <div className="hidden md:block bg-retailBg bg-contain bg-left-bottom bg-no-repeat h-full"></div>
+              <div className="hidden md:block ">
+                <SlideLeft>
+                  <div className=" bg-retailBg bg-contain bg-left-bottom bg-no-repeat h-full"></div>
+                </SlideLeft>
+              </div>{" "}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2  gap-4 md:gap-8">
               {" "}
               {realEstateSoftwareSolutions.map((item, index) => (
                 <div key={index}>
-                  {" "}
-                  <MainCard
-                    title={item.title}
-                    hasIcon={true}
-                    icon={item.icon}
-                    bgColor={null}
-                  />
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <MainCard
+                      title={item.title}
+                      hasIcon={true}
+                      icon={item.icon}
+                      bgColor={null}
+                    />{" "}
+                  </SlideDown>
                 </div>
               ))}
             </div>
-            <div className="grid grid-cols-1 justify-items-center">
-              <Link href={"/"}>
-                <MainButton text={"Book consultation"} />
-              </Link>
-            </div>
+            <SlideDown delay={0.2}>
+              <div className="grid grid-cols-1 justify-items-center">
+                <Link href={"/"}>
+                  <MainButton text={"Book consultation"} />
+                </Link>
+              </div>
+            </SlideDown>
           </div>
         </PageBorders>
         <DoublePageBorders background={"bg-[#EDF4FE]"}>
@@ -309,22 +353,35 @@ export default function Home() {
               {" "}
               <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8">
                 {" "}
-                <HeaderTwo text={"Technology We Use"} />
-                <MainText
-                  text={
-                    "Modern Tools for Smarter Real Estate Solutions. At TinqLab, we combine industry expertise with cutting-edge technology to create real estate software that’s intuitive, secure, and scalable. Our tech stack supports everything from property listings and virtual tours to CRM systems and payment integrations."
-                  }
-                  color={"text-[#12152E] opacity-50"}
-                />
+                <div>
+                  <SlideUp>
+                    {" "}
+                    <HeaderTwo text={"Technology We Use"} />
+                  </SlideUp>
+                </div>{" "}
+                <SlideRight duration={1.5}>
+                  <MainText
+                    text={
+                      "Modern Tools for Smarter Real Estate Solutions. At TinqLab, we combine industry expertise with cutting-edge technology to create real estate software that’s intuitive, secure, and scalable. Our tech stack supports everything from property listings and virtual tours to CRM systems and payment integrations."
+                    }
+                    color={"text-[#12152E] opacity-50"}
+                  />{" "}
+                </SlideRight>
               </div>
-              <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat h-full"></div>
+              <div className="hidden md:block">
+                <SlideLeft>
+                  <div className=" bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat h-full"></div>
+                </SlideLeft>
+              </div>{" "}
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-8 gap-4 md:gap-8">
               {" "}
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
                   {" "}
-                  <TechStack stack={item.technologies} />
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <TechStack stack={item.technologies} />{" "}
+                  </SlideDown>
                 </div>
               ))}
             </div>
@@ -337,9 +394,12 @@ export default function Home() {
               {" "}
               <div className="col-span-1 md:col-span-2">
                 {" "}
-                <HeaderTwo
-                  text={"Benefits of real estate software development"}
-                />
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo
+                    text={"Benefits of real estate software development"}
+                  />
+                </SlideUp>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
@@ -347,11 +407,13 @@ export default function Home() {
               {realEstateBenefits.map((item, index) => (
                 <div key={index}>
                   {" "}
-                  <MoreContentCard
-                    title={item.title}
-                    items={item.items}
-                    bgColor={null}
-                  />
+                  <SlideRight delay={index * 0.2} overflow={null}>
+                    <MoreContentCard
+                      title={item.title}
+                      items={item.items}
+                      bgColor={null}
+                    />{" "}
+                  </SlideRight>
                 </div>
               ))}
             </div>
@@ -364,23 +426,27 @@ export default function Home() {
               {" "}
               <div className="col-span-1 md:col-span-2">
                 {" "}
-                <HeaderTwo
-                  text={
-                    "Why make Tinqlab your real estate software development partner?"
-                  }
-                />
+                <SlideUp>
+                  {" "}
+                  <HeaderTwo
+                    text={
+                      "Why make Tinqlab your real estate software development partner?"
+                    }
+                  />
+                </SlideUp>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
               {" "}
               {whyUs.map((item, index) => (
                 <div key={index}>
-                  {" "}
-                  <MainCard
-                    title={item.title}
-                    subtitle={item.subtitle}
-                    bgColor={null}
-                  />
+                  <SlideRight delay={index * 0.2} overflow={null}>
+                    <MainCard
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      bgColor={null}
+                    />{" "}
+                  </SlideRight>
                 </div>
               ))}
             </div>
