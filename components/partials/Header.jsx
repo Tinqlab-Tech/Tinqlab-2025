@@ -28,7 +28,7 @@ export default function Header({ hero }) {
 
     {
       parentId: 2,
-      title: "Software-engineering",
+      title: "Software Engineering",
       link: "/services/software-engineering",
     },
     { parentId: 2, title: "Product Design", link: "/services/product-design" },

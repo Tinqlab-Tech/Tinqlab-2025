@@ -16,17 +16,21 @@ export default function Footer() {
   // const t = useTranslations("Footer");
 
   const usefulLinks = [
+    // {
+    //   title: "Industry",
+    //   link: "/industry",
+    // },
     {
-      title: "Industry",
-      link: "/industry",
+      title: "Software Engineering",
+      link: "/services/software-engineering",
     },
     {
-      title: "Services",
-      link: "/services",
+      title: "Product Design",
+      link: "/services/product-design",
     },
     {
-      title: "Portfolio",
-      link: "/portfolio",
+      title: "Consulting",
+      link: "/services/consulting",
     },
     {
       title: "Career",
@@ -94,7 +98,7 @@ export default function Footer() {
       </div>
       <div className="flex justify-center md:justify-start items-center gap-4 md:gap-8 pb-[20px]">
         {" "}
-        <ConsentNav />
+        {/* {**<ConsentNav />**} */}
         <Link href="/cookie-policy">
           <MainText text="Cookie Policy" color={"text-white"} />
         </Link>
