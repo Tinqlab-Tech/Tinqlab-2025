@@ -33,7 +33,7 @@ import FeedbackCard from "@/components/card/FeedbackCard";
 import HeaderOne from "@/components/typography/HeaderOne";
 import box from "@/public/icons/box.png";
 import connect from "@/public/icons/connect.png";
-import network from "@/public/icons/network.png";
+import network from "@/public/icons/Network.png";
 import cloud from "@/public/icons/cloud.png";
 import mobile3 from "@/public/icons/mobile3.png";
 import wallet from "@/public/icons/wallet.png";
