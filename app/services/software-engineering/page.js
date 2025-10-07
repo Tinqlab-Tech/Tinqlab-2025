@@ -37,7 +37,7 @@ import network from "@/public/icons/Network.png";
 import cloud from "@/public/icons/cloud.png";
 import mobile3 from "@/public/icons/mobile3.png";
 import wallet from "@/public/icons/wallet.png";
-import web from "@/public/icons/web.png";
+import web from "@/public/icons/Web.png";
 import wifi from "@/public/icons/wifi.png";
 import fintech from "@/public/icons/fintech.png";
 import realEstate from "@/public/icons/realEstate.png";
