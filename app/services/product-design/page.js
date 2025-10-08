@@ -29,7 +29,7 @@ import ServicesCard from "@/components/card/ServicesCard";
 import HeaderOne from "@/components/typography/HeaderOne";
 import FeedbackCard from "@/components/card/FeedbackCard";
 import productHerobg from "@/public/images/productHerobg.png";
-import infographics from "@/public/images/infographics.svg";
+import infographics from "@/public/images/Infographics.svg";
 import SlideUp from "@/animation/SlideUp";
 import SlideRight from "@/animation/SlideRight";
 import SlideLeft from "@/animation/SlideLeft";

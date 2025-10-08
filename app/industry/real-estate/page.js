@@ -9,7 +9,7 @@ import HeaderTwo from "@/components/typography/HeaderTwo";
 import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
 import MoreContentCard from "@/components/card/MoreContentCard";
 import { SpecificationItem } from "@/components/section/SpecificationItem";
-import realEstateHerobg from "@/public/images/realEstateHerobg.svg";
+import realEstateHerobg from "@/public/images/RealEstateHerobg.svg";
 import TechStack from "@/components/section/TechStack";
 import features1 from "@/public/images/featuresbg/features1.png";
 import mobile2 from "@/public/icons/mobile2.svg";

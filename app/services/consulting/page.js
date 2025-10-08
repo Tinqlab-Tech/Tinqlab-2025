@@ -13,7 +13,7 @@ import aws from "@/public/images/stacks/aws.png";
 import react from "@/public/images/stacks/react.png";
 import nodejs from "@/public/images/stacks/nodejs.png";
 import flutter from "@/public/images/stacks/flutter.png";
-import googleCloud from "@/public/images/stacks/googlecloud.png";
+import googleCloud from "@/public/images/stacks/googleCloud.png";
 import FeedbackCard from "@/components/card/FeedbackCard";
 import SlideUp from "@/animation/SlideUp";
 import SlideRight from "@/animation/SlideRight";

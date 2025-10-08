@@ -13,7 +13,7 @@ export default function SocialMediaItem({ color, position }) {
       className={` flex items-center justify-start gap-8 text-white my-[20px]`}
     >
       <a
-        href="https://x.com/korsgy"
+        href="https://x.com/tinqlabtech"
         target="_blank"
         rel="noopener"
         className=" h-6 w-6"
@@ -21,20 +21,28 @@ export default function SocialMediaItem({ color, position }) {
         <FaXTwitter className="w-[18px] hover:scale-125 text-white" />
       </a>
       <a
-        href="https://www.linkedin.com/company/korsgy"
+        href="https://linkedin.com/company/tinqlabtech"
         target="_blank"
         rel="noopener"
         className="h-6 w-6"
       >
         <FaLinkedinIn className="w-[18px] hover:scale-12 text-white" />
       </a>
-      <a
-        href="https://facebook.com/korsgy"
+      {/* <a
+        href="https://www.facebook.com/people/Tinqlab/100064552795813/"
         target="_blank"
         rel="noopener"
         className="  h-6 w-6 "
       >
         <FaFacebookF className="w-[10px] hover:scale-125 text-white" />
+      </a> */}
+      <a
+        href="https://www.instagram.com/tinqlab/"
+        target="_blank"
+        rel="noopener"
+        className="  h-6 w-6 "
+      >
+        <FaInstagram className="w-[10px] hover:scale-125 text-white" />
       </a>
     </section>
   );

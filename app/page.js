@@ -6,7 +6,7 @@ import MainText from "@/components/typography/MainText";
 import HeaderOne from "@/components/typography/HeaderOne";
 import { OutlineButton } from "@/components/button/OutlineButton";
 import { IoIosAdd } from "react-icons/io";
-import IndustryCard from "@/components/card/industryCard";
+import IndustryCard from "@/components/card/IndustryCard";
 import Link from "next/link";
 import TechStack from "@/components/section/TechStack";
 import { SpecificationWrapper } from "@/components/wrappers/SpecificationWrapper";
