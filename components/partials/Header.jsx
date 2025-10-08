@@ -134,11 +134,13 @@ export default function Header({ hero }) {
             })}
 
             {/* Contact button */}
-            <MainButton
-              textColor={"text-black"}
-              bgcolor={"bg-white"}
-              text={"Contact Us"}
-            />
+            <Link href={"/contact-us"}>
+              <MainButton
+                textColor={"text-black"}
+                bgcolor={"bg-white"}
+                text={"Contact Us"}
+              />
+            </Link>
           </div>
 
           {/* Mobile Nav */}

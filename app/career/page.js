@@ -18,6 +18,7 @@ import SlideUp from "@/animation/SlideUp";
 import SlideRight from "@/animation/SlideRight";
 import SlideDown from "@/animation/SlideDown";
 import SlideLeft from "@/animation/SlideLeft";
+import AddIndexCard from "@/components/card/AddIndexCard";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -272,7 +273,7 @@ export default function Home() {
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-4 md:gap-8">
-            {benefits.map((item, index) => {
+            {/* {benefits.map((item, index) => {
               const slot = index + 1; // grid position (1-based)
               const imageSlots = [1]; // 👈 where images go
               const isImageSlot = imageSlots.includes(slot);
@@ -285,9 +286,33 @@ export default function Home() {
               return (
                 <div key={index}>
                   <SlideDown delay={index * 0.2} overflow={null}>
-                    <MoreContentCard
+                    <AddIndexCard
                       useIndexes={!isImageSlot}
                       indexes={isImageSlot ? null : cardIndex}
+                      title={item.title}
+                      items={item.items}
+                      bgColor={"bg-darkBlue"}
+                      addImage={true}
+                      gridSize={imageSlots}
+                      gridImg={["/images/featuresbg/features4.png"]}
+                    />
+                  </SlideDown>{" "}
+                </div>
+              );
+            })} */}
+            {benefits.map((item, index) => {
+              // keep a running index for cards only
+              let cardIndex = benefits
+                .slice(0, index + 1) // up to current
+                .filter((_, i) => !imageSlots.includes(i + 1)).length;
+
+              return (
+                <div key={index}>
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <AddIndexCard
+                      addImageIndex={true}
+                      useIndex={true}
+                      index={index + 1}
                       title={item.title}
                       items={item.items}
                       bgColor={"bg-darkBlue"}
