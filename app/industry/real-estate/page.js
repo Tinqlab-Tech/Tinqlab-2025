@@ -30,6 +30,8 @@ import SlideUp from "@/animation/SlideUp";
 import SlideRight from "@/animation/SlideRight";
 import SlideDown from "@/animation/SlideDown";
 import SlideLeft from "@/animation/SlideLeft";
+import Header from "@/components/partials/Header";
+import ItemCard from "@/components/card/ItemCard";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -209,13 +211,16 @@ export default function Home() {
           subtitle={
             "Real estate is one of the most dynamic and demanding industries and at Tinqlab, we thrive on that challenge. With deep domain expertise and a full-cycle development approach, we craft tailored digital solutions that simplify property buying, selling, and management. Our custom real estate software is built to drive efficiency, enhance user experience, and support your business every step of the way."
           }
-          btnLink={"/"}
+          btnLink={"/contact-us"}
           btnText={"Schedule a call"}
           image={realEstateHerobg}
+          isHeader={true}
         />
-        {/* consulting sevices */}
         <DoublePageBorders
           background={"bg-featuresbg bg-cover bg-center bg-no-repeat"}
+          overflowbg={
+            "bg-transparent z-10 -mt-[6em] md:-mt-[10em] lg:-mt-[12em] xl:-mt-[7em]"
+          }
         >
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8  p-6 rounded-[20px] scroll-mt-4"
@@ -249,12 +254,12 @@ export default function Home() {
             </div>{" "}
           </div>
         </DoublePageBorders>
-        <PageBorders>
+        <PageBorders overflow={null}>
           <div
             id={"about"}
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-8 "
           >
-            <div className="flex flex-col gap-4 md:gap-8 justify-start items-start ">
+            <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start  z-10 ">
               <div>
                 <SlideUp>
                   {" "}
@@ -275,7 +280,7 @@ export default function Home() {
                 </SlideRight>
               </div>
               <SlideDown delay={0.2}>
-                <Link href={"/"}>
+                <Link href={"/contact-us"}>
                   <MainButton text={"Book consultation"} />
                 </Link>{" "}
               </SlideDown>
@@ -316,9 +321,9 @@ export default function Home() {
                   />
                 </SlideRight>
               </div>
-              <div className="hidden md:block ">
+              <div className="hidden md:block h-full ">
                 <SlideLeft>
-                  <div className=" bg-retailBg bg-contain bg-left-bottom bg-no-repeat h-full"></div>
+                  <div className=" bg-retailBg bg-contain bg-left-bottom bg-no-repeat min-h-[40vh]"></div>
                 </SlideLeft>
               </div>{" "}
             </div>
@@ -327,7 +332,7 @@ export default function Home() {
               {realEstateSoftwareSolutions.map((item, index) => (
                 <div key={index}>
                   <SlideDown delay={index * 0.2} overflow={null}>
-                    <MainCard
+                    <ItemCard
                       title={item.title}
                       hasIcon={true}
                       icon={item.icon}
@@ -339,7 +344,7 @@ export default function Home() {
             </div>
             <SlideDown delay={0.2}>
               <div className="grid grid-cols-1 justify-items-center">
-                <Link href={"/"}>
+                <Link href={"/contact-us"}>
                   <MainButton text={"Book consultation"} />
                 </Link>
               </div>
@@ -374,7 +379,7 @@ export default function Home() {
                 </SlideLeft>
               </div>{" "}
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-8 gap-4 md:gap-8">
+            <div className="grid grid-cols-4 xl:grid-cols-8 gap-4 md:gap-8">
               {" "}
               {technologyWeUse.map((item, index) => (
                 <div key={index}>

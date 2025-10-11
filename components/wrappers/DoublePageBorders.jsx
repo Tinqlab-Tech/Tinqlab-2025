@@ -1,6 +1,13 @@
-export default function DoublePageBorders({ children, background, padding }) {
+export default function DoublePageBorders({
+  children,
+  background,
+  padding,
+  overflowbg,
+}) {
   return (
-    <div className={`bg-white px-[4vw] py-[8vh] overflow-hidden`}>
+    <div
+      className={`  ${overflowbg || "bg-white"} px-[4vw] py-[8vh] overflow-hidden `}
+    >
       <div
         className={`${background ? `${background}` : "bg-white"} 
        

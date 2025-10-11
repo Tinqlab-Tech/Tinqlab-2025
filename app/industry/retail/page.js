@@ -23,6 +23,7 @@ import SlideRight from "@/animation/SlideRight";
 import SlideDown from "@/animation/SlideDown";
 import SlideUp from "@/animation/SlideUp";
 import SlideLeft from "@/animation/SlideLeft";
+import Header from "@/components/partials/Header";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -35,45 +36,45 @@ export default function Home() {
     {
       title: "Dropshipping Platform",
       subtitle:
-        "To create engaging corporate training solutions for iOS and Android so learners can access courses on the go.",
+        "Launch or scale your retail business without holding inventory. Our dropshipping systems integrate with suppliers, automate order fulfillment, and ensure smooth customer delivery.",
     },
     {
-      title: "Custom online store",
+      title: "E-Commerce Platform",
       subtitle:
-        "To create engaging corporate training solutions for iOS and Android so learners can access courses on the go.",
+        "Mobile-friendly, scalable, and conversion-focused online stores with secure payment processing, intuitive navigation, and advanced search for a seamless shopping experience.",
     },
     {
-      title: "Online catalog",
+      title: "Customer Loyalty & CRM",
       subtitle:
-        "To create engaging corporate training solutions for iOS and Android so learners can access courses on the go.",
+        "Engage and retain customers with personalized offers, automated rewards, and detailed purchase history tracking to drive repeat sales.",
     },
     {
-      title: "Marketplace",
+      title: "Omnichannel Integration",
       subtitle:
-        "To create engaging corporate training solutions for iOS and Android so learners can access courses on the go.",
+        "Unify your online, in-store, and mobile sales channels into one seamless experience, with synchronized inventory, pricing, and promotions.",
     },
     {
       title: "Supplychain management systems",
       subtitle:
-        "To create engaging corporate training solutions for iOS and Android so learners can access courses on the go.",
+        "Track and optimize the flow of goods from suppliers to customers. Real-time data helps reduce delays, cut costs, and ensure stock availability.",
     },
     {
-      title: "Customer account management software",
+      title: "Inventory Management",
       subtitle:
-        "To create engaging corporate training solutions for iOS and Android so learners can access courses on the go.",
+        "Get real-time stock updates, automated restocking alerts, and detailed reporting to avoid stockouts and overstocking.",
     },
   ];
 
   const technologyWeUse = [
     {
-      title: "Online ordering systems",
+      title: "CRM & Loyalty Solutions",
       subtitle:
-        "Online ordering systems are an essential tool for any retail enterprise. Expansion of custom retail software development opportunities, increased audience, profit growth, and business growth is only a partial list of benefits from introducing new technologies, especially in a competitive market.",
+        "Our Customer Relationship Management (CRM) and loyalty systems help you understand, retain, and grow your customer base. We work with tools like Salesforce, HubSpot, or build custom CRMs to deliver centralized customer data, automated loyalty programs, purchase history tracking to power tailored marketing campaigns and many more.",
     },
     {
-      title: "E-commerce platforms & POS software solutions",
+      title: "E-Commerce & Retail Platforms",
       subtitle:
-        "We develop software solutions for retail companies around the world. During the custom software development process, we use the best marketing and e-commerce platforms such as Shopify, SAP Hybris, AWS, Salesforce, Magento, Microsoft Dynamics CRM, PayPal, and more.",
+        "We design and develop powerful online store platforms that are secure, scalable, and conversion-focused. Whether built on Shopify, Magento, WooCommerce, or as a custom solution. With TinqLab’s approach, you get an e-commerce platform that not only looks great but is optimized for sales, performance, and customer satisfaction.",
     },
     {
       title: "Diverse omnichannel solutions",
@@ -100,19 +101,19 @@ export default function Home() {
 
   const whyUs = [
     {
-      title: "Result",
+      title: "Custom-Fit Solutions",
       subtitle:
-        "Our Edtech software development services are customized for each project, so we can pivot quickly as requirements change.",
+        "No one-size-fits-all templates. We design and develop software that matches your workflows, branding, and market strategy.",
     },
     {
-      title: "Fast development",
+      title: "Domain Expertise",
       subtitle:
-        "Our software engineers have worked with educational organizations and companies around the world, gaining valuable expertise in the education domain.",
+        "We understand the challenges of modern retail from inventory control to customer engagement and build solutions tailored to your exact needs.",
     },
     {
       title: "Cost",
       subtitle:
-        "Our innovative education products stay up-to-date with the latest technologies and design trends in the education industry to create solutions that enhance the learning experience.",
+        "Our innovative retail products stay up-to-date with the latest technologies and design trends. We deliver high-quality, fully customized retail software at competitive rates.",
     },
   ];
 
@@ -181,29 +182,29 @@ export default function Home() {
 
   const developmentServices = [
     {
-      title: "Custom learning systems",
+      title: "Discovery & Strategy",
       subtitle:
-        "We develop custom LMS solutions for schools, universities, and educational institutions. We also can integrate your LMS with various third-party tools for a fully-featured solution.",
+        "We start by understanding your brand, customers, and business goals. This helps us design a mobile app that delivers real retail value.",
     },
     {
-      title: "School management systems",
+      title: "Design",
       subtitle:
-        "Our school management software services handle everything from student admissions to transportation management. We can customize the solution to your school's specific needs",
+        "We create sleek, intuitive interfaces that make shopping enjoyable and friction-free on any device.",
     },
     {
-      title: "E-learning platforms",
+      title: "Agile Development",
       subtitle:
-        "Our development team builds interactive e-learning web and mobile apps for education. These include apps for online courses, tutoring, language learning, coding, and more. ",
+        "Our team builds your app in iterative sprints, ensuring rapid progress, continuous feedback, and high-quality results.",
     },
     {
-      title: "Tutor booking platforms",
+      title: "Integration & Testing",
       subtitle:
-        "We build web and mobile platforms to connect tutors with students. These include solutions for booking in-person or online tutoring sessions, as well as full-fledged tutoring marketplace platforms. ",
+        "We connect your app to POS, CRM, inventory systems, and payment gateways, then test for speed, security, and flawless performance",
     },
     {
-      title: "Virtual classroom",
+      title: "Launch & Support",
       subtitle:
-        "We develop virtual classrooms and video streaming platforms for conducting live online classes, webinars, and video lectures. They can be used by schools, coaching institutes, and individual tutors.",
+        "After the tests of retail solutions, we handle deployment on the App Store and Google Play, plus provide ongoing updates, maintenance, and feature enhancements.",
     },
   ];
 
@@ -214,19 +215,20 @@ export default function Home() {
           bgImage={"bg-[#12152E]"}
           title={"Retail Software Development Services"}
           subtitle={
-            "Retail software is becoming an indispensable assistant for organizing purchases, delivery, storage, personnel management, and other activities related to offline sales. Automating all these processes helps increase your business's productivity and focus human resources on the core activity — sales."
+            "At TinqLab, we build custom retail software solutions that help you sell smarter, serve customers better, and scale faster. Whether you run a single store or a nationwide chain, our technology turns shopping into a seamless experience both online and offline."
           }
-          btnLink={"/"}
+          btnLink={"/contact-us"}
           btnText={"Schedule a call"}
           image={heroImage}
+          isHeader={true}
         />
 
-        <PageBorders>
+        <PageBorders overflow={null}>
           <div
             id={"about"}
-            className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-8 "
+            className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-8 "
           >
-            <div className="flex flex-col gap-4 md:gap-8 justify-start items-start ">
+            <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start  z-10 ">
               <div>
                 <SlideUp>
                   <HeaderTwo
@@ -238,14 +240,14 @@ export default function Home() {
                 <SlideRight duration={1.5}>
                   <MainText
                     text={
-                      "We believe focusing brings depth to our solutions. At TinqLab, we focus on digital transformation consulting services in FinTech, EdTech, retail, and real estate. We build complex strategies using latest solutions, product experience design services, profound product discovery as the basis for further achievements, technology consulting utilizing our TechLead's expertise, and many more."
+                      "We believe focusing brings depth to our solutions. At TinqLab, we follow a proven, agile-driven process to deliver mobile apps that boost sales, improve customer engagement, and make retail operations seamless."
                     }
                     color={"text-[#12152E] opacity-50"}
                   />
                 </SlideRight>
               </div>
               <SlideDown delay={0.2}>
-                <Link href={"/"}>
+                <Link href={"/contact-us"}>
                   <MainButton text={"Book consultation"} />
                 </Link>
               </SlideDown>
@@ -274,27 +276,27 @@ export default function Home() {
                 <div>
                   <SlideUp>
                     {" "}
-                    <HeaderTwo text={"Retail Software Solutions"} />
+                    <HeaderTwo text={"Our Retail Software Solutions"} />
                   </SlideUp>
                 </div>
                 <div>
                   <SlideRight duration={1.5}>
                     <MainText
                       text={
-                        "Our product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We provide you with complex market research to find out all clients’ pains and gains, analysis of digital products and provide a smooth process of digital transformation and product design services. "
+                        "Our retail product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We create tailored retail software that helps you sell more, manage better, and build lasting customer relationships. Our solutions cover the entire retail journey, from sourcing products to delighting loyal customers."
                       }
                       color={"text-[#12152E] opacity-50"}
                     />
                   </SlideRight>
                 </div>
               </div>
-              <div className="hidden md:block">
+              <div className="hidden md:block h-full">
                 <SlideLeft>
-                  <div className=" bg-retailBg bg-contain bg-left-bottom bg-no-repeat h-full"></div>
+                  <div className=" bg-retailBg bg-contain bg-left-bottom bg-no-repeat min-h-[40vh]"></div>
                 </SlideLeft>
               </div>{" "}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2  gap-4 md:gap-8">
               {" "}
               {retailSoftwareSolutions.map((item, index) => (
                 <div key={index}>
@@ -311,7 +313,7 @@ export default function Home() {
             </div>
             <SlideDown delay={0.2}>
               <div className="grid grid-cols-1 justify-items-center">
-                <Link href={"/"}>
+                <Link href={"/contact-us"}>
                   <MainButton text={"Book consultation"} />
                 </Link>
               </div>
@@ -342,7 +344,7 @@ export default function Home() {
               </div>
               <div className="hidden md:block ">
                 <SlideLeft>
-                  <div className="bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat h-full"></div>
+                  <div className="bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh]"></div>
                 </SlideLeft>
               </div>{" "}
             </div>
@@ -361,7 +363,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-8 gap-4 md:gap-8">
+            <div className="grid grid-cols-4 xl:grid-cols-8 gap-4 md:gap-8">
               {" "}
               {ourTechnology.map((item, index) => (
                 <div key={index}>
@@ -385,7 +387,7 @@ export default function Home() {
                 </SlideUp>{" "}
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 md:gap-8">
               {" "}
               {benefits.map((item, index) => (
                 <div key={index}>

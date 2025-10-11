@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import ImageWrapper from "../wrappers/ImageWrapper";
-import logo from "@/public/images/logowhite.svg";
+import logo from "@/public/images/logo.svg";
 import NavItem from "../typography/NavItem";
 import MobileNav from "./MobileNav";
 import { usePathname } from "next/navigation";
 import { MainButton } from "../button/MainButton";
 
-export default function Header() {
+export default function OtherHeader() {
   const pathname = usePathname();
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -85,26 +85,26 @@ export default function Header() {
                   {hasChildren ? (
                     <button
                       onClick={() => handleClick(index, hasChildren)}
-                      className="text-left "
+                      className="text-left"
                     >
                       <NavItem
                         text={item.title}
                         color={
                           pathname.startsWith(item.link) ||
                           activeIndex === index
-                            ? "text-primary font-semibold "
-                            : "text-mainWhite font-semibold hover:scale-x-105"
+                            ? "text-primary"
+                            : "text-darkestBlue font-semibold"
                         }
                       />
                     </button>
                   ) : (
-                    <Link href={item.link} className="">
+                    <Link href={item.link}>
                       <NavItem
                         text={item.title}
                         color={
                           pathname.startsWith(item.link)
-                            ? "text-primary font-semibold "
-                            : "text-mainWhite font-semibold hover:scale-x-105"
+                            ? "text-primary"
+                            : "text-darkestBlue font-semibold"
                         }
                       />
                     </Link>
@@ -112,7 +112,7 @@ export default function Header() {
 
                   {/* Floating nested menu */}
                   {activeIndex === index && hasChildren && (
-                    <div className="absolute top-full left-0 mt-2 flex flex-col gap-4 p-6 bg-mainWhite rounded-[10px] shadow-lg z-50 min-w-[200px]">
+                    <div className="absolute top-full left-0 mt-2 flex flex-col gap-4 p-6 bg-darkestBlue rounded-[10px] shadow-lg z-50 min-w-[200px]">
                       {nestedLinks
                         .filter((nested) => nested.parentId === item.id)
                         .map((nested, i) => (
@@ -121,8 +121,8 @@ export default function Header() {
                               text={nested.title}
                               color={
                                 pathname.startsWith(nested.link)
-                                  ? "text-primary font-semibold "
-                                  : "text-mainBlack font-semibold hover:scale-x-105"
+                                  ? "text-primary"
+                                  : "text-mainWhite font-semibold"
                               }
                             />
                           </Link>
@@ -136,8 +136,8 @@ export default function Header() {
             {/* Contact button */}
             <Link href={"/contact-us"}>
               <MainButton
-                textColor={"text-darkestBlue font-semibold"}
-                bgcolor={"bg-white"}
+                textColor={"text-mainWhite font-semibold"}
+                bgcolor={"bg-darkestBlue"}
                 text={"Contact Us"}
               />
             </Link>
@@ -145,7 +145,7 @@ export default function Header() {
 
           {/* Mobile Nav */}
           <div className="flex gap-4 justify-end items-center md:hidden">
-            <MobileNav />
+            <MobileNav iconBg={"text-darkestBlue"} />
           </div>
         </div>
       </div>

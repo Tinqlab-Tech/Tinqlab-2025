@@ -1,27 +1,23 @@
-import FeedbackCard from "@/components/card/FeedbackCard";
-import FeedackCard from "@/components/card/FeedbackCard";
-import IndustryCard from "@/components/card/IndustryCard";
-import MainCard from "@/components/card/MainCard";
-import MoreContentCard from "@/components/card/MoreContentCard";
-import OtherPageHero from "@/components/hero/OtherPageHero";
-import HeaderOne from "@/components/typography/HeaderOne";
 import HeaderTwo from "@/components/typography/HeaderTwo";
 import MainText from "@/components/typography/MainText";
 import PageBorders from "@/components/wrappers/PageBorders";
-import edtechHero from "@/public/images/edtechHero.svg";
-import careerHerobg from "@/public/images/careerHerobg.png";
 import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
-import vector1 from "@/public/images/vector1.png";
-import vector2 from "@/public/images/vector2.png";
-import vector3 from "@/public/images/vector3.png";
-import SlideUp from "@/animation/SlideUp";
-import SlideRight from "@/animation/SlideRight";
-import SlideDown from "@/animation/SlideDown";
-import SlideLeft from "@/animation/SlideLeft";
-import AddIndexCard from "@/components/card/AddIndexCard";
 import { ContactUsModal } from "@/components/forms/ContactUsModal";
 import { MainButton } from "@/components/button/MainButton";
 import ImageWrapper from "@/components/wrappers/ImageWrapper";
+import vector1 from "@/public/images/vector1.png";
+import logo from "@/public/images/logoWhite.svg";
+import UserMail from "@/components/forms/UserMail";
+import OtherHeader from "@/components/partials/OtherHeader";
+import HeaderOne from "@/components/typography/HeaderOne";
+import SlideUp from "@/animation/SlideUp";
+import SlideRight from "@/animation/SlideRight";
+import SlideDown from "@/animation/SlideDown";
+import locate from "@/public/images/locate.png";
+import insta from "@/public/images/insta.png";
+import twiter from "@/public/images/twiter.png";
+import arrow from "@/public/images/arrow.png";
+import mail from "@/public/images/mail.png";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -31,86 +27,143 @@ export const metadata = {
 
 export default function Home() {
   const connect = [
-    { title: "", subtitle: "", icon: "" },
-    { title: "", subtitle: "", icon: "" },
-    { title: "", subtitle: "", icon: "" },
-    { title: "", subtitle: "", icon: "" },
-    { title: "", subtitle: "", icon: "" },
+    {
+      title: "Headquaters",
+      subtitle: "8609 Westwood Center Dr. Suite 110 Tyson Corner, VA 22182",
+      icon: locate,
+    },
+    { title: "Email Us", subtitle: "Info@Tinqlab.com", icon: mail },
+    { title: "Connect On Linkedin", icon: arrow },
+    { title: "Follow us On X", icon: twiter },
+    { title: "Follow Us On Instagram", icon: insta },
   ];
   return (
     <div className="min-h-screen">
-      {/* hero */}
-      <div className="w-screen">
-        {" "}
-        <HeaderTwo text={"Get in Touch with Us "} />
-        <MainText
-          text={"We're delightedtowork with you on your incredible project"}
-        />
-      </div>
-      <PageBorders>
-        <div className="grid grid-cols-2 gap-4 md:gap-8">
-          {/* grid 1 */}
+      {/* Contact-us hero */}
+      <div className="h-screen w-screen flex flex-col bg-mainGrey">
+        <OtherHeader />
+        <div className="grid text-center justify-items-center gap-4 md:gap-8 m-auto">
+          {" "}
           <div>
-            <div>
-              <HeaderTwo text={"Have Questions? We're Just a Message Away"} />
+            <SlideUp>
+              <HeaderOne
+                text={"Get in Touch with Us "}
+                size="text-[60px] leading-[70px]"
+              />
+            </SlideUp>
+          </div>
+          <div className="px-4">
+            <SlideUp duration={1.5}>
               <MainText
                 text={
-                  "Fill out the form below, and one of our team members will get back to you shortly. "
+                  "We're delightedtowork with you on your incredible project"
                 }
+                centerText={true}
               />{" "}
-              <ContactUsModal />
-            </div>
-            <MainButton text={"Send Message"} />
+            </SlideUp>
+          </div>
+        </div>
+      </div>
+      <PageBorders>
+        <div className="grid xl:grid-cols-2 gap-4 md:gap-8 h-full">
+          {/* grid 1 */}
+          <div className="h-full">
+            <ContactUsModal />
           </div>
           {/* grid 2 */}
-          <div>
-            <div>
-              <HeaderTwo text={"Connect with us today"} />
-              <MainText text={"Let us know how we can help you "} />{" "}
+
+          <div className="bg-mainGrey grid gap-4 md:gap-8 p-[30px] rounded-[20px]">
+            <div className="overflow-hidden rounded-[20px]">
+              <div className="bg-contactCardBg bg-cover  bg-no-repeat min-h-[60vh] flex flex-col justify-start p-[30px]">
+                <ImageWrapper
+                  src={logo}
+                  width={150}
+                  height={50}
+                  alt="Tinqlab logo"
+                />
+                <div className="flex my-auto h-full w-3/4 ">
+                  <HeaderTwo
+                    text="Our experts will always help you"
+                    color={"text-mainWhite"}
+                  />
+                </div>
+              </div>
             </div>
-            <div>
+
+            <div className="flex flex-col items-start justify-center gap-4 p-6 pb-10 ">
+              <div>
+                {" "}
+                <SlideUp>
+                  {" "}
+                  <h1 className="text-[30px] md:text-[36px] leading-[40px] font-bold font-lato">
+                    Connect with us <span className="text-primary"> today</span>
+                  </h1>
+                </SlideUp>{" "}
+              </div>
+              <SlideRight duration={1.5}>
+                <MainText
+                  text={"Let us know how we can help you "}
+                  color={"opacity-50"}
+                />{" "}
+              </SlideRight>
+            </div>
+            <div className="grid gap-4 md:gap-8">
               {connect.map((item, index) => (
                 <div key={index}>
-                  <div className=" bg-primary h-full  p-[20px] md:py-[40px] flex flex-col gap-8 md:gap-8 justify-between rounded-[10px] shadow-custom-primary">
-                    {" "}
-                    <div>
+                  <SlideDown delay={index * 0.2} overflow={null}>
+                    <div className=" bg-primary h-full  p-[20px]  flex  gap-8 md:gap-8 justify-between items-center rounded-[10px] shadow-custom-primary">
                       {" "}
-                      <MainText
-                        text={item.title}
-                        bold={true}
-                        color={"text-mainWhite"}
-                      />
-                      <MainText text={item.subtitle} color={"text-mainWhite"} />
+                      <div className=" flex flex-col">
+                        {" "}
+                        <MainText text={item.title} color={"text-mainWhite"} />
+                        {item.subtitle && (
+                          <MainText
+                            text={item.subtitle}
+                            color={"text-mainWhite/50 "}
+                            size={"text-[14px] "}
+                          />
+                        )}{" "}
+                      </div>
+                      <div>
+                        <ImageWrapper
+                          src={item.icon}
+                          alt={"Contact Tinqlab"}
+                          width={15}
+                          height={15}
+                          style={"bg-contain bg-center bg-no-repeat"}
+                        />{" "}
+                      </div>
                     </div>
-                    <ImageWrapper
-                      src={item.icon}
-                      alt={"Contact Tinqlab"}
-                      width={30}
-                      height={30}
-                      className={"bg-contain bg-center bg-no-repeat"}
-                    />{" "}
-                  </div>
+                  </SlideDown>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </PageBorders>
-      <DoublePageBorders background={"bg-darkestBlue"}>
-        <div>
-          <div>
-            <HeaderTwo text={"Get the Latest Industry News & Insights"} />
-          </div>
-          {/* input */}
-          <div>
-            <div className="flex flex-end">
-              <input type="email" placeholder="Enter Your Email Address ">
-                {" "}
-                <button> Subscribe</button>
-              </input>
-            </div>
-          </div>
+      <DoublePageBorders
+        background={"bg-contactSectionBg bg-center bg-cover bg-no-repeat"}
+      >
+        <div className="grid lg:grid-cols-2 justify-center items-center gap-4 w-full  ">
+          {/* Text */}
+          <div className="text-center xl:text-start">
+            <SlideUp>
+              {" "}
+              <HeaderTwo
+                text="Get the Latest Industry News & Insights"
+                color="text-mainWhite"
+                size={"text-[24px] xl:text-[32px]"}
+              />
+            </SlideUp>
+          </div>{" "}
+          <div className="w-full  ">
+            <SlideRight duration={1.5}>
+              {" "}
+              <UserMail />
+            </SlideRight>
+          </div>{" "}
         </div>
+        ,{" "}
       </DoublePageBorders>
     </div>
   );

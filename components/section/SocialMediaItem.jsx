@@ -6,6 +6,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { FaFacebookSquare } from "react-icons/fa";
 
 export default function SocialMediaItem({ color, position }) {
   return (
@@ -16,33 +17,45 @@ export default function SocialMediaItem({ color, position }) {
         href="https://x.com/tinqlabtech"
         target="_blank"
         rel="noopener"
-        className=" h-6 w-6"
+        className=" "
       >
-        <FaXTwitter className="w-[18px] hover:scale-125 text-white" />
+        <FaXTwitter
+          size={50}
+          className="bg-[#BDBDBD] hover:scale-125 p-2 text-darkestBlue rounded-[10px]"
+        />
       </a>
       <a
         href="https://linkedin.com/company/tinqlabtech"
         target="_blank"
         rel="noopener"
-        className="h-6 w-6"
+        className=""
       >
-        <FaLinkedinIn className="w-[18px] hover:scale-12 text-white" />
+        <FaLinkedinIn
+          size={50}
+          className="bg-[#BDBDBD] hover:scale-125 p-2 text-darkestBlue rounded-[10px]"
+        />
       </a>
-      {/* <a
+      <a
         href="https://www.facebook.com/people/Tinqlab/100064552795813/"
         target="_blank"
         rel="noopener"
-        className="  h-6 w-6 "
+        className="   "
       >
-        <FaFacebookF className="w-[10px] hover:scale-125 text-white" />
-      </a> */}
+        <FaFacebookF
+          size={50}
+          className="bg-[#BDBDBD] hover:scale-125 p-2 text-darkestBlue rounded-[10px]"
+        />
+      </a>
       <a
         href="https://www.instagram.com/tinqlab/"
         target="_blank"
         rel="noopener"
-        className="  h-6 w-6 "
+        className="   "
       >
-        <FaInstagram className="w-[10px] hover:scale-125 text-white" />
+        <FaInstagram
+          size={50}
+          className="bg-[#BDBDBD] hover:scale-125 p-2 text-darkestBlue rounded-[10px]"
+        />
       </a>
     </section>
   );

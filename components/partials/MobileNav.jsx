@@ -20,7 +20,7 @@ import NavItem from "../typography/NavItem";
 import ImageWrapper from "../wrappers/ImageWrapper";
 import show2 from "@/public/images/show2.svg";
 
-export default function MobileNav() {
+export default function MobileNav({ iconBg }) {
   const [drawerState, setDrawerState] = useState(false);
   const pathname = usePathname();
   const [activeIndex, setActiveIndex] = useState(null);
@@ -83,7 +83,9 @@ export default function MobileNav() {
         }}
         className="relative inline-flex cursor-pointer  darks:bg-darkGray  md:hidden font-Gilroy "
       >
-        <CiMenuFries className="text-[32px] md:hidden flex text-white" />
+        <CiMenuFries
+          className={`${iconBg ? iconBg : "text-white"} text-[32px] md:hidden  flex `}
+        />
       </div>
       <Drawer
         isOpen={drawerState}

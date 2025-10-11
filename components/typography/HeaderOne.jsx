@@ -1,7 +1,7 @@
 export default function HeaderOne({ text, color, size }) {
   return (
     <h1
-      className={` ${color ? color : "text-black"} ${
+      className={` ${color ? color : "text-darkestBlue"} ${
         size ? size : "text-[32px] leading-[38px]"
       } font-bold font-lato`}
     >

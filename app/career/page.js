@@ -18,7 +18,12 @@ import SlideUp from "@/animation/SlideUp";
 import SlideRight from "@/animation/SlideRight";
 import SlideDown from "@/animation/SlideDown";
 import SlideLeft from "@/animation/SlideLeft";
-import AddIndexCard from "@/components/card/AddIndexCard";
+import Link from "next/link";
+import ImageWrapper from "@/components/wrappers/ImageWrapper";
+import Image from "next/image";
+import Header from "@/components/partials/Header";
+import { MainButton } from "@/components/button/MainButton";
+import BenefitCard from "@/components/card/Benefitcard";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -132,52 +137,46 @@ export default function Home() {
   ];
   const jobOpenings = [
     {
-      bgImage: vector1,
+      bgImg: vector1,
       title: "Junior BD Executive",
       subtitle:
         "Tinqlab is looking to hire a talented junior business development executive to join our company.",
-      btnLink: "/",
-      btnText2: "Apply now",
+      btnText: "Apply now",
     },
     {
-      bgImage: vector1,
+      bgImg: vector1,
       title: "Middle- Senior BD Executive",
       subtitle:
         "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
-      btnLink: "/",
-      btnText2: "Apply now",
+      btnText: "Apply now",
     },
     {
-      bgImage: vector1,
+      bgImg: vector1,
       title: "Middle- Senior BD Executive",
       subtitle:
         "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
-      btnLink: "/",
-      btnText2: "Apply now",
+      btnText: "Apply now",
     },
     {
-      bgImage: vector1,
+      bgImg: vector1,
       title: "Middle- Senior BD Executive",
       subtitle:
         "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
-      btnLink: "/",
-      btnText2: "Apply now",
+      btnText: "Apply now",
     },
     {
-      bgImage: vector2,
+      bgImg: vector2,
       title: "Middle- Senior BD Executive",
       subtitle:
         "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
-      btnLink: "/",
-      btnText2: "Apply now",
+      btnText: "Apply now",
     },
     {
-      bgImage: vector3,
+      bgImg: vector3,
       title: "Middle- DevOps Engineer",
       subtitle:
         "When you need ud to scale your team, then come to us we. Just sit and allow us to the heavy. ",
-      btnLink: "/",
-      btnText2: "Apply now",
+      btnText: "Apply now",
     },
   ];
 
@@ -191,23 +190,33 @@ export default function Home() {
         subtitle={"And we are here to properly value it."}
         btnLink={"/"}
         btnText={"Join TinqLab team"}
-      />
+        isHeader={true}
+      />{" "}
       <DoublePageBorders
-        background={"bg-featuresbg bg-cover bg-no-repeat bg-center pt-10"}
+        background={"bg-featuresbg bg-cover bg-no-repeat bg-center "}
         padding={null}
+        overflowbg={
+          "bg-transparent z-10 -mt-[6em] md:-mt-[10em] lg:-mt-[12em] xl:-mt-[7em]"
+        }
       >
         {" "}
         <div
-          className=" scroll-mt-4 overflow-hidden  grid grid-cols-1 md:grid-cols-2 gap-4   "
+          className=" scroll-mt-4 overflow-hidden gap-8 justify-center grid md:grid-cols-2    "
           id={"about"}
         >
-          <div className="hidden md:block h-full">
+          <div className="relative hidden  md:block h-full ">
             <SlideRight>
-              <div className=" h-full bg-features3 bg-cover bg-left-bottom bg-no-repeat "></div>
-            </SlideRight>{" "}
-          </div>{" "}
+              <Image
+                src="/images/featuresbg/features3.png"
+                alt="About Tinqlab"
+                fill
+                className="bg-right-bottom bg-no-repeat object-cover rounded-bl-[20px]"
+              />
+            </SlideRight>
+          </div>
+
           <SlideLeft>
-            <div className="flex flex-col items-start justify-center gap-5 p-6 pb-10 ">
+            <div className="flex flex-col items-start justify-center gap-4 p-6  ">
               {" "}
               <HeaderTwo text={"Who are Tinqlab?"} />
               <MainText
@@ -259,102 +268,104 @@ export default function Home() {
       {/*  Reason to be a tinqer*/}
       <PageBorders background={"bg-darkestBlue"}>
         <div className="flex flex-col gap-8" id="industry">
-          <div className="grid grid-cols-1 md:grid-cols-3  gap-4 md:gap-8 items-center ">
-            {" "}
-            <div className="col-span-1 md:col-span-2">
-              {" "}
-              <SlideUp>
-                {" "}
-                <HeaderTwo
-                  text={"Benefits Of Working With TinqLab"}
-                  color={"text-mainWhite"}
-                />
-              </SlideUp>
+          <div className="flex flex-col gap-4 md:gap-8">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+              <div className="flex flex-col gap-4 md:gap-8">
+                <div>
+                  <SlideUp>
+                    <HeaderTwo
+                      text="Benefits Of Working With TinqLab"
+                      color="text-mainWhite"
+                    />
+                  </SlideUp>
+                </div>
+                <SlideDown delay={0.2} overflow={null}>
+                  {" "}
+                  <BenefitCard
+                    {...benefits[0]}
+                    bgColor={"bg-darkBlue"}
+                    useIndex={true}
+                    index={1}
+                    hasBulletin={true}
+                  />
+                </SlideDown>{" "}
+              </div>
+              <div className="hidden md:block h-full ">
+                <SlideRight duration={1.5}>
+                  <div className=" bg-features4 bg-cover bg-no-repeat h-full" />
+                </SlideRight>{" "}
+              </div>{" "}
             </div>
-          </div>
-          <div className="grid md:grid-cols-2 gap-4 md:gap-8">
-            {/* {benefits.map((item, index) => {
-              const slot = index + 1; // grid position (1-based)
-              const imageSlots = [1]; // 👈 where images go
-              const isImageSlot = imageSlots.includes(slot);
 
-              // keep a running index for cards only
-              let cardIndex = benefits
-                .slice(0, index + 1) // up to current
-                .filter((_, i) => !imageSlots.includes(i + 1)).length;
-
-              return (
+            <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+              {benefits.slice(1).map((benefit, index) => (
                 <div key={index}>
                   <SlideDown delay={index * 0.2} overflow={null}>
-                    <AddIndexCard
-                      useIndexes={!isImageSlot}
-                      indexes={isImageSlot ? null : cardIndex}
-                      title={item.title}
-                      items={item.items}
+                    <BenefitCard
+                      {...benefit}
                       bgColor={"bg-darkBlue"}
-                      addImage={true}
-                      gridSize={imageSlots}
-                      gridImg={["/images/featuresbg/features4.png"]}
-                    />
-                  </SlideDown>{" "}
-                </div>
-              );
-            })} */}
-            {benefits.map((item, index) => {
-              // keep a running index for cards only
-              let cardIndex = benefits
-                .slice(0, index + 1) // up to current
-                .filter((_, i) => !imageSlots.includes(i + 1)).length;
-
-              return (
-                <div key={index}>
-                  <SlideDown delay={index * 0.2} overflow={null}>
-                    <AddIndexCard
-                      addImageIndex={true}
                       useIndex={true}
-                      index={index + 1}
-                      title={item.title}
-                      items={item.items}
-                      bgColor={"bg-darkBlue"}
-                      addImage={true}
-                      gridSize={imageSlots}
-                      gridImg={["/images/featuresbg/features4.png"]}
+                      index={index + 2}
+                      hasBulletin={true}
                     />
                   </SlideDown>{" "}
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
         </div>
       </PageBorders>
       {/* job Openings */}
       <PageBorders>
         <div className="flex flex-col gap-8" id="industry">
-          <div>
-            <SlideUp>
+          <SlideUp>
+            {" "}
+            <div className="py-2">
               {" "}
-              <HeaderOne text={"Consider our job openings!"} />
-            </SlideUp>
-          </div>
+              <HeaderTwo text={"Consider our job openings!"} />
+            </div>{" "}
+          </SlideUp>
 
           <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
             {jobOpenings.map((item, index) => (
               <div key={index}>
                 <SlideDown delay={index * 0.2} overflow={null}>
                   {" "}
-                  <IndustryCard
-                    title={item.title}
-                    subtitle={item.subtitle}
-                    bgImg={item.bgImage}
-                    background={null}
-                    hasbtnText={false}
-                    btnLink={item.btnLink}
-                    btnText={item.btnText2}
-                  />{" "}
+                  <div className="bg-Industrybg  bg-cover bg-no-repeat bg-center h-full p-[30px] flex justify-center items-center gap-8 rounded-[10px] shadow-custom-primary">
+                    <div className="flex flex-col gap-4 justify-center w-full  ">
+                      <div
+                        className="
+                        flex items-center text-[22px] lg:text-[32px] font-semibold leading-[32px] lg:leading-[32px] gap-4 text-darkestBlue font-lato"
+                      >
+                        {item.title}
+                      </div>
+
+                      <MainText text={item.subtitle} color={"opacity-50"} />
+
+                      <Link href={"/contact-us"} className="cursor-pointer">
+                        <MainText text={item.btnText} color="text-primary" />
+                      </Link>
+                    </div>
+
+                    <ImageWrapper
+                      alt={`Tinqlab Industrial Services `}
+                      src={item.bgImg}
+                      width={150}
+                      height={150}
+                      style=" bg-no-repeat bg-contain bg-center hidden lg:block "
+                    />
+                  </div>
                 </SlideDown>
               </div>
             ))}
           </div>
+          <SlideDown delay={1.2} overflow={null}>
+            <div className="grid justify-items-center">
+              <Link href={"/contact-us"}>
+                <MainButton text={"join Tinqlab Team"} morePadding={true} />
+              </Link>
+            </div>
+          </SlideDown>
         </div>
       </PageBorders>
       {/* Feedbackfrom Team mate */}

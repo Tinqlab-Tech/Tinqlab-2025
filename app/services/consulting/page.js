@@ -19,6 +19,8 @@ import SlideUp from "@/animation/SlideUp";
 import SlideRight from "@/animation/SlideRight";
 import SlideDown from "@/animation/SlideDown";
 import SlideLeft from "@/animation/SlideLeft";
+import OtherHeader from "@/components/partials/OtherHeader";
+import { GoDotFill } from "react-icons/go";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -101,9 +103,10 @@ export default function Home() {
           subtitle={
             "In a world shaped by rapid change, global disruption, digital acceleration, and shifting customer expectations, navigating transformation isn’t optional, it’s essential. At Tinqlab, we help you define the right digital strategy, adopt the right technologies, and unlock new value for your business. Let’s turn complexity into clarity—and make your digital breakthrough a reality."
           }
-          btnLink={"/"}
+          btnLink={"/contact-us"}
           btnText={"Schedule a call"}
           hasNav={true}
+          isHeader={false}
         />
         {/* consulting sevices */}
         <DoublePageBorders
@@ -149,12 +152,12 @@ export default function Home() {
         </DoublePageBorders>
 
         {/* Our Industry Expertise */}
-        <PageBorders>
+        <PageBorders overflow={null}>
           <div
             id={"about"}
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 "
           >
-            <div className="flex flex-col gap-8 justify-start items-start ">
+            <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start  z-10 ">
               <div>
                 <SlideUp>
                   {" "}
@@ -172,12 +175,11 @@ export default function Home() {
                   />
                 </SlideRight>{" "}
               </div>
-              <SlideDown duration={1.5}>
+              <SlideDown duration={1.5} overflow={null}>
                 {" "}
-                <Link href={"/"}>
+                <Link href={"/contact-us"}>
                   <MainButton text={"Book consultation"} />
                 </Link>{" "}
-                /
               </SlideDown>
             </div>
             <div className="grid grid-cols-1 gap-4 md:gap-8">
@@ -209,11 +211,11 @@ export default function Home() {
               </div>
               <div className="hidden md:block ">
                 <SlideLeft>
-                  <div className="bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+                  <div className="bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh]"></div>
                 </SlideLeft>
               </div>{" "}
             </div>
-            <div className="grid grid-cols-5 gap-4 md:gap-8 justify-items-center">
+            <div className="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-8 justify-items-center">
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
                   <SlideDown delay={index * 0.2} overflow={null}>
@@ -227,14 +229,14 @@ export default function Home() {
 
         {/* solutions offered in edtexh */}
         <DoublePageBorders
-          background={"bg-featuresbg2 bg-cover bg-no-repeat bg-center"}
+          background={"bg-featuresbg3 bg-cover bg-no-repeat bg-center"}
         >
           <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 scroll-mt-4"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4  scroll-mt-4"
             id={"services"}
           >
             {" "}
-            <div className="col-span-1 md:col-span-2 ">
+            <div className="">
               <SlideRight>
                 {" "}
                 <div className="flex flex-col gap-4 md:gap-8 items-start">
@@ -248,19 +250,31 @@ export default function Home() {
                     }
                     color={"text-[#12152E] opacity-50"}
                   />
-                  <MainText
-                    text={
-                      "We achieve your results by thriving and personalizing our approach to each case."
-                    }
-                    color={"text-[#12152E] opacity-50"}
-                  />
-                  <MainText
-                    text={
-                      "We are driven by metrics and numbers; you can measure our promise by time, analytics, performance, and in the end, your outcome, especially given that we work to exceed your expectations."
-                    }
-                    color={"text-[#12152E] opacity-50"}
-                  />
-                  <Link href={"/"}>
+                  <div className="flex gap-2 items-start">
+                    <span className="pt-2">
+                      {" "}
+                      <GoDotFill size={15} className={"text-lavenderBlue "} />
+                    </span>
+                    <MainText
+                      text={
+                        "We achieve your results by thriving and personalizing our approach to each case."
+                      }
+                      color={"text-[#12152E] opacity-50"}
+                    />
+                  </div>
+                  <div className="flex gap-2 items-start">
+                    <span className="pt-2">
+                      {" "}
+                      <GoDotFill size={15} className={"text-lavenderBlue "} />
+                    </span>{" "}
+                    <MainText
+                      text={
+                        "We are driven by metrics and numbers; you can measure our promise by time, analytics, performance, and in the end, your outcome, especially given that we work to exceed your expectations."
+                      }
+                      color={"text-[#12152E] opacity-50"}
+                    />
+                  </div>
+                  <Link href={"/contact-us"}>
                     <MainButton text={"Book consultation"} />
                   </Link>
                 </div>
@@ -276,21 +290,21 @@ export default function Home() {
         </DoublePageBorders>
 
         {/* consulting services we offer */}
-        <PageBorders>
+        <PageBorders overflow={null}>
           <div
             id={"about"}
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 "
           >
-            <div className="flex flex-col gap-8 justify-start items-start ">
+            <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start bg-white z-10 py-4">
               <div>
                 <SlideUp>
                   {" "}
                   <HeaderTwo text={"Consulting Services we Offer"} />
                 </SlideUp>
               </div>
-              <SlideRight duration={1.5}>
+              <SlideRight duration={1.5} overflow={null}>
                 {" "}
-                <Link href={"/"}>
+                <Link href={"/contact-us"}>
                   <MainButton text={"Get a consultation"} />
                 </Link>
               </SlideRight>

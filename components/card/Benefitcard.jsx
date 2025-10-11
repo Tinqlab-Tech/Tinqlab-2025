@@ -2,12 +2,13 @@ import React from "react";
 import MainText from "../typography/MainText";
 import { GoDotFill } from "react-icons/go";
 
-export default function MoreContentCard({
+export default function BenefitCard({
   bgColor,
   title,
   items,
   useIndex,
   index,
+  hasBulletin,
 }) {
   return (
     <div
@@ -29,9 +30,18 @@ export default function MoreContentCard({
       {items.map((item, index) => (
         <div
           key={index}
-          className={`${bgColor === null ? "text-[#12152E] " : "text-white"}  space-x-2 text-[18px] leading-[28px]`}
+          className={`${bgColor === null ? "text-[#12152E] " : "text-white"} flex  items-start gap-2 text-[18px] leading-[28px]`}
         >
-          <span className="text-primary">{item.title}</span>
+          {hasBulletin === true && (
+            <span className="py-1.5">
+              {" "}
+              <GoDotFill
+                size={15}
+                className={`${bgColor === null ? "text-primary " : "text-white"} `}
+              />
+            </span>
+          )}
+
           <span className="opacity-50"> {item.subtitle}</span>
         </div>
       ))}

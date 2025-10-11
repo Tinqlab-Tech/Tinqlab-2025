@@ -5,6 +5,11 @@ import { MainButton } from "../button/MainButton";
 import HeaderOne from "../typography/HeaderOne";
 import MainText from "../typography/MainText";
 import Slider from "react-slick";
+import Header from "../partials/Header";
+import AdsSlider from "../section/AdsSlider";
+import SlideUp from "@/animation/SlideUp";
+import SlideRight from "@/animation/SlideRight";
+import SlideDown from "@/animation/SlideDown";
 
 export default function HomepageHero() {
   const homeContent = [
@@ -12,6 +17,7 @@ export default function HomepageHero() {
       title: "Software Engineering",
       subtitle:
         "Build scalable, secure, and high-performance applications that power digital transformation across industries.",
+      btnLink: "/services/software-engineering",
       btnText: "Discover more",
       herobg: "bg-homeHerobg1",
     },
@@ -19,6 +25,7 @@ export default function HomepageHero() {
       title: "Product Design",
       subtitle:
         "We design cutting-edge products that go above and beyond your expectations while keeping UX in mind.",
+      btnLink: "/services/product-design",
       btnText: "Discover more",
       herobg: "bg-homeHerobg2",
     },
@@ -26,18 +33,19 @@ export default function HomepageHero() {
       title: "Consulting",
       subtitle:
         "Outcome-driven consulting services to grow your company and improve process efficiency.",
+      btnLink: "/services/consulting",
       btnText: "Discover more",
       herobg: "bg-homeHerobg3",
     },
   ];
 
   const services = [
-    { path: "/services/software-engineering", title: "Software Engineering" },
-    { path: "/services/product-design", title: "Product design" },
-    { path: "/services/consulting", title: "Consulting" },
+    { title: "Software Engineering" },
+    { title: "Product design" },
+    { title: "Consulting" },
   ];
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 600,
     autoplay: true,
@@ -47,43 +55,60 @@ export default function HomepageHero() {
   };
 
   return (
-    <div className="min-h-[80vh]  overflow-hidden">
+    <div className="h-screen overflow-hidden  ">
       <Slider {...settings}>
         {homeContent.map((item, index) => (
           <div
             key={index}
-            className={`${item.herobg} bg-cover  bg-center  flex flex-col justify-between `}
+            className={`${item.herobg} bg-cover  bg-center   h-screen`}
           >
             {/* overlay */}
-            <div className="bg-black/80 w-full h-full flex flex-col justify-between">
-              <section className="tracking-normal md:p-[6vw] min-h-[80vh] flex flex-col items-start justify-center gap-8 px-[4vw] py-[8vh] flex-1">
-                <HeaderOne
-                  text={item.title}
-                  color="text-white"
-                  size="text-[60px] leading-[70px]"
-                />
-                <MainText
-                  text={item.subtitle}
-                  size="text-[22px] leading-[38px] md:w-1/2"
-                  color="text-white "
-                />
-                <MainButton text={item.btnText} />
-              </section>
-
+            <div className="bg-darkestBlue/80 w-full h-full flex flex-col  justify-between">
+              <div className="w-full">
+                {" "}
+                <Header />
+              </div>{" "}
+              <div className="flex justify-center md:p-[6vw] px-[4vw] py-[8vh]">
+                <section className="tracking-normal   flex flex-col   items-start justify-center  gap-8  flex-1 ">
+                  <div>
+                    <SlideUp>
+                      {" "}
+                      <HeaderOne
+                        text={item.title}
+                        color="text-white"
+                        size="text-[60px] leading-[70px]"
+                      />
+                    </SlideUp>
+                  </div>
+                  <div>
+                    <SlideRight>
+                      {" "}
+                      <MainText
+                        text={item.subtitle}
+                        size="text-[22px] leading-[38px] md:w-1/2"
+                        color="text-white "
+                      />
+                    </SlideRight>
+                  </div>
+                  <SlideDown>
+                    <Link href={item.btnLink}>
+                      <MainButton text={item.btnText} lessPadding={true} />{" "}
+                    </Link>
+                  </SlideDown>
+                </section>
+              </div>
               {/* bottom nav links */}
-              <div className="grid grid-cols-3 gap-4 divide-x border border-[#2B305E] p-2">
+              <div className="grid grid-cols-3   divide-x divide-primary border border-[#2B305E] ">
                 {services.map((item, index) => {
                   return (
-                    <Link href={item.path} key={index}>
+                    <div key={index} className="py-2  w-full ">
                       <MainText
                         text={item.title}
                         size="text-[10px] md:text-[18px]"
-                        color={
-                          "text-white  w-full cursor-pointer hover:text-primary"
-                        }
+                        color={"text-white  w-full  "}
                         centerText
                       />
-                    </Link>
+                    </div>
                   );
                 })}
               </div>

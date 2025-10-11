@@ -20,7 +20,7 @@ const SlideDown = ({
     if (containerRef.current) {
       gsap.fromTo(
         containerRef.current,
-        { opacity: 0, y: "-100%" },
+        { opacity: 0, y: "-50%" },
         { opacity: 1, y: "0%", duration, delay, ease: "power2.inOut" }
       );
     }

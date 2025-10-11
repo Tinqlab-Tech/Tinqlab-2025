@@ -15,7 +15,7 @@ export default function ServicesCard({
         isSingleService === true
           ? "border-none border-white"
           : "border-[#F2F2F2] rounded-[5px] border-[1px]"
-      } text-[#1D1F13] h-full  p-[20px] flex flex-col gap-8 shadow-custom-primary`}
+      } text-[#1D1F13] h-full  p-[30px] rounded-[10px] md:rounded-[20px] flex flex-col gap-8 shadow-custom-primary`}
     >
       <div className="flex items-center gap-4">
         <ImageWrapper

@@ -8,7 +8,7 @@ export default function PageBorders({
     <div
       className={`${
         background ? `${background}` : "bg-white"
-      }   ${padding === null ? "" : "px-[6vw] py-[10vh] "}  ${overflow === null ? "" : "overflow-hidden"}`}
+      }   ${padding === null ? "" : "px-[6vw] py-[10vh] "}  ${overflow === null ? "" : "overflow-hidden"} `}
     >
       {children}
     </div>

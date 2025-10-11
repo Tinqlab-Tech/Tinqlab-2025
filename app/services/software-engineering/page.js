@@ -3,19 +3,11 @@ import Link from "next/link";
 import PageBorders from "@/components/wrappers/PageBorders";
 import MainText from "@/components/typography/MainText";
 import react from "@/public/images/react.png";
-import ImageWrapper from "@/components/wrappers/ImageWrapper";
 import OtherPageHero from "@/components/hero/OtherPageHero";
-import MainCard from "@/components/card/MainCard";
 import HeaderTwo from "@/components/typography/HeaderTwo";
 import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
 import MoreContentCard from "@/components/card/MoreContentCard";
 import { SpecificationItem } from "@/components/section/SpecificationItem";
-import assessment from "@/public/icons/assessment.svg";
-import comms from "@/public/icons/comms.svg";
-import consultation from "@/public/icons/consultation.svg";
-import custom from "@/public/icons/custom.svg";
-import mobile from "@/public/icons/mobile.svg";
-import study from "@/public/icons/study.svg";
 import softwareHerobg from "@/public/images/softwareHerobg.png";
 import TechStack from "@/components/section/TechStack";
 import java from "@/public/images/stacks/java.svg";
@@ -26,11 +18,8 @@ import javascript from "@/public/images/stacks/javascript.png";
 import swift from "@/public/images/stacks/swift.png";
 import vue from "@/public/images/stacks/vue.png";
 import angular from "@/public/images/stacks/angular.png";
-
-import features1 from "@/public/images/featuresbg/features1.png";
 import ServicesCard from "@/components/card/ServicesCard";
 import FeedbackCard from "@/components/card/FeedbackCard";
-import HeaderOne from "@/components/typography/HeaderOne";
 import box from "@/public/icons/box.png";
 import connect from "@/public/icons/connect.png";
 import network from "@/public/icons/Network.png";
@@ -47,6 +36,7 @@ import SlideDown from "@/animation/SlideDown";
 import SlideUp from "@/animation/SlideUp";
 import SlideRight from "@/animation/SlideRight";
 import SlideLeft from "@/animation/SlideLeft";
+import BenefitCard from "@/components/card/Benefitcard";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -108,28 +98,51 @@ export default function Home() {
   const tinqlabBenefits = [
     {
       title: "Create a customer-centric solution",
-      subtitle:
-        "With the Design Thinking framework and profound discovery, we reach the heart of the clients’ pain points and create digital products that make them happy. No matter whether we talk about cloud based solutions or mobile apps, digital product design has no limits!",
+      items: [
+        {
+          subtitle:
+            "With the Design Thinking framework and profound discovery, we reach the heart of the clients’ pain points and create digital products that make them happy. No matter whether we talk about cloud based solutions or mobile apps, digital product design has no limits!",
+        },
+      ],
     },
+
     {
       title: "Transparency and Agile",
-      subtitle:
-        "We provide consistent and clear communication at every stage of the estimated workflow by conducting digital product design using the Agile-based approach so our clients can create and modify a team of highly skilled engineers, designers, and business analysts as needed.",
+      items: [
+        {
+          subtitle:
+            "We provide consistent and clear communication at every stage of the estimated workflow by conducting digital product design using the Agile-based approach so our clients can create and modify a team of highly skilled engineers, designers, and business analysts as needed.",
+        },
+      ],
     },
     {
       title: "Cross-platform experience",
-      subtitle:
-        "As a digital product design company, we aim to help users switch between platforms and freely engage with your product on the go. It’s not only about visual design, but access and compliance. The experience across multiple devices has to be seamless and fast.",
+      items: [
+        {
+          subtitle:
+            "As a digital product design company, we aim to help users switch between platforms and freely engage with your product on the go. It’s not only about visual design, but access and compliance. The experience across multiple devices has to be seamless and fast.",
+        },
+      ],
     },
+
     {
       title: "Choose cost-effective solutions",
-      subtitle:
-        "We build interfaces by integrating the functions, ideas, and technologies that shape trends. We can offer you a cost-effective full-stack solution, from idea validation to product development, launch, and support.",
+      items: [
+        {
+          subtitle:
+            "We build interfaces by integrating the functions, ideas, and technologies that shape trends. We can offer you a cost-effective full-stack solution, from idea validation to product development, launch, and support.",
+        },
+      ],
     },
+
     {
       title: "Scaling and continuous development",
-      subtitle:
-        "Not only we design digital products. With flexible development methodologies, user testing techniques, and a continuous development cycle that's open to modifications and upgrades.",
+      items: [
+        {
+          subtitle:
+            "Not only we design digital products. With flexible development methodologies, user testing techniques, and a continuous development cycle that's open to modifications and upgrades.",
+        },
+      ],
     },
   ];
 
@@ -208,40 +221,43 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <div className="">
-        <OtherPageHero
-          bgImage={null}
-          image={softwareHerobg}
-          title={"Software Engineering"}
-          subtitle={
-            "At Tinqlab, we turn bold ideas into powerful, high-performance digital solutions. From concept to launch, we deliver full-cycle development that’s fast, scalable, and built to drive results. With the right tech partner, your possibilities are limitless."
-          }
-          btnLink={"/"}
-          btnText={"Schedule a call"}
-          hasNav={true}
-        />
+        <div className="relative">
+          <OtherPageHero
+            bgImage={null}
+            image={softwareHerobg}
+            title="Software Engineering"
+            subtitle="At Tinqlab, we turn bold ideas into powerful, high-performance digital solutions. From concept to launch, we deliver full-cycle development that’s fast, scalable, and built to drive results. With the right tech partner, your possibilities are limitless."
+            btnLink="/"
+            btnText="Schedule a call"
+            hasNav={true}
+            isHeader={false}
+          />
 
-        {/* our software solutions */}
-        <PageBorders>
-          <div id={"about"} className="scroll-mt-4 grid grid-cols-1  gap-8 ">
-            <SlideUp>
-              {" "}
-              <HeaderTwo text={"Our Software Engineering Solutions"} />
-            </SlideUp>
-            <div className="grid md:grid-cols-2 gap-4 md:gap-8">
-              {softwareEngineeringSolution.map((item, index) => (
-                <div key={index}>
-                  <SlideRight delay={index * 0.2} overflow={null}>
-                    <SpecificationItem
-                      bgIcon={item.bgIcon}
-                      title={item.title}
-                      subTitle={item.subtitle}
-                    />{" "}
-                  </SlideRight>
+          {/* our software solutions */}
+          <div className=" z-10 -mt-[10px]">
+            <PageBorders>
+              <div id="about" className="scroll-mt-4 grid grid-cols-1 gap-8">
+                <SlideUp>
+                  <div className="py-2">
+                    <HeaderTwo text="Our Software Engineering Solutions" />
+                  </div>{" "}
+                </SlideUp>
+
+                <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+                  {softwareEngineeringSolution.map((item, index) => (
+                    <SlideRight key={index} delay={index * 0.2} overflow={null}>
+                      <SpecificationItem
+                        bgIcon={item.bgIcon}
+                        title={item.title}
+                        subTitle={item.subtitle}
+                      />
+                    </SlideRight>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            </PageBorders>
           </div>
-        </PageBorders>
+        </div>
 
         {/*Technology we use  */}
         <DoublePageBorders background={"bg-[#EDF4FE]"}>
@@ -251,8 +267,9 @@ export default function Home() {
               {" "}
               <div className="col-span-1 md:col-span-2">
                 <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Technology Stack We Use"} />
+                  <div className="py-2">
+                    <HeaderTwo text={"Technology Stack We Use"} />
+                  </div>{" "}
                 </SlideUp>
               </div>
               <div className="hidden md:block">
@@ -261,7 +278,7 @@ export default function Home() {
                 </SlideLeft>{" "}
               </div>{" "}
             </div>
-            <div className="grid grid-cols-3 md:grid-cols-8 gap-4 md:gap-8 justify-items-center">
+            <div className="grid grid-cols-4 md:grid-cols-8 gap-4 md:gap-8 justify-items-center">
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
                   <SlideDown delay={index * 0.2} overflow={null}>
@@ -274,21 +291,22 @@ export default function Home() {
         </DoublePageBorders>
 
         {/* our Experties */}
-        <PageBorders>
+        <PageBorders overflow={null}>
           <div
             id={"about"}
-            className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 "
+            className="relative scroll-mt-4 grid grid-cols-1 md:grid-cols-2 h-full gap-8 "
           >
-            <div className="flex flex-col gap-8 justify-start items-start ">
+            <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start bg-white z-10 py-4">
               <div>
                 {" "}
                 <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Our Expertise Across Industries"} />
+                  <div className="py-2">
+                    <HeaderTwo text={"Our Expertise Across Industries"} />
+                  </div>
                 </SlideUp>
               </div>
-              <SlideRight duration={1.5}>
-                <Link href={"/"}>
+              <SlideRight duration={1.5} overflow={null}>
+                <Link href={"/contact-us"}>
                   <MainButton text={"Book a meeting"} />
                 </Link>
               </SlideRight>
@@ -312,88 +330,89 @@ export default function Home() {
 
         {/* benefit of working with tinqlab */}
         <PageBorders background={"bg-darkestBlue"}>
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
-            {" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
-              <div className="col-span-1 md:col-span-2">
-                {" "}
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo
-                    text={"Technology We Use"}
-                    color={"text-mainWhite"}
-                  />
-                </SlideUp>
-              </div>
-              <div className="hidden md:block">
-                <SlideLeft>
-                  <div className=" bg-features5 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
-                </SlideLeft>
-              </div>{" "}
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-              {" "}
-              {tinqlabBenefits.map((item, index) => (
-                <div key={index}>
-                  {" "}
-                  <SlideDown delay={index * 0.2} overflow={null}>
-                    <MainCard
-                      title={item.title}
-                      subtitle={item.subtitle}
+          <div className="flex flex-col gap-8" id="industry">
+            <div className="flex flex-col gap-4 md:gap-8">
+              <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+                <div className="flex flex-col gap-4 md:gap-8">
+                  <div>
+                    <SlideUp>
+                      <HeaderTwo
+                        text="Benefits Of Working With TinqLab"
+                        color="text-mainWhite"
+                      />
+                    </SlideUp>
+                  </div>
+                  <SlideDown delay={0.2} overflow={null}>
+                    {" "}
+                    <BenefitCard
+                      {...tinqlabBenefits[0]}
                       bgColor={"bg-darkBlue"}
-                    />{" "}
-                  </SlideDown>
+                    />
+                  </SlideDown>{" "}
                 </div>
-              ))}
+                <div className="hidden md:block h-full ">
+                  <SlideRight duration={1.5}>
+                    <div className=" bg-features5 bg-contain bg-center xl:bg-bottom bg-no-repeat h-full" />
+                  </SlideRight>{" "}
+                </div>{" "}
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+                {tinqlabBenefits.slice(1).map((item, index) => (
+                  <div key={index}>
+                    <SlideDown delay={index * 0.2} overflow={null}>
+                      <BenefitCard {...item} bgColor={"bg-darkBlue"} />
+                    </SlideDown>{" "}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </PageBorders>
-        {/* our software development Process */}
-        <PageBorders>
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
-            {" "}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 ">
-              <div className="flex flex-col gap-4 md:gap-8">
-                <div>
-                  {" "}
-                  <SlideUp>
-                    {" "}
-                    <HeaderTwo text={"Our Software Development Process"} />{" "}
-                  </SlideUp>{" "}
-                </div>
-                <SlideRight duration={1.5}>
-                  <Link href={"/"}>
-                    <MainButton text={"Get a consultation"} />
-                  </Link>{" "}
-                </SlideRight>
-              </div>
-              <ul className="flex flex-col ">
-                {softwareDevelopmentProcess.map((item, index) => (
-                  <div key={index}>
-                    {" "}
-                    <SlideDown delay={index * 0.2}>
-                      <li className="flex items-start gap-4 md:gap-8">
-                        <div className="flex flex-col items-center">
-                          <span className="h-12 w-12 rounded-full bg-tansparent text-mainBlack flex justify-center items-center font-semibold border border-mainGray shrink-0">
-                            {index + 1}
-                          </span>
+        <PageBorders overflow={null}>
+          <div
+            id="services"
+            className="relative h-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8"
+          >
+            <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start bg-white z-10 py-4">
+              <SlideUp>
+                <HeaderTwo text="Our Software Development Process" />
+              </SlideUp>
 
-                          <div className="  bg-line bg-contain  bg-center bg-no-repeat min-h-[10vh] min-w-[1vh]" />
-                        </div>
-                        <div className="pb-4 md:pb-4 pt-2">
-                          <h1 className="text-[18px] leading-[28px] text-[#12152E] font-medium">
-                            {item.title}
-                          </h1>
-                          <MainText text={item.subtitle} color={"opacity-50"} />
-                        </div>
-                      </li>
-                    </SlideDown>
-                  </div>
-                ))}
-              </ul>
+              <SlideRight duration={1.5} overflow={null}>
+                <Link href="/contact-us">
+                  <MainButton text="Get a consultation" />
+                </Link>
+              </SlideRight>
             </div>
-          </div>{" "}
+
+            <ul className="flex flex-col">
+              {softwareDevelopmentProcess.map((item, index) => (
+                <SlideDown key={index} delay={index * 0.2}>
+                  <li className="flex items-start gap-4 md:gap-8">
+                    <div className="flex flex-col items-center">
+                      <span className="h-12 w-12 rounded-full bg-transparent text-mainBlack flex justify-center items-center font-semibold border border-mainGray shrink-0">
+                        {index + 1}
+                      </span>
+
+                      {index !== softwareDevelopmentProcess.length - 1 && (
+                        <div className="bg-line bg-contain bg-center bg-no-repeat min-h-[20vh] min-w-[1vh]" />
+                      )}
+                    </div>
+
+                    <div className="pb-4 md:pb-4 pt-2">
+                      <h1 className="text-[18px] leading-[28px] text-[#12152E] font-medium">
+                        {item.title}
+                      </h1>
+                      <MainText text={item.subtitle} color="opacity-50" />
+                    </div>
+                  </li>
+                </SlideDown>
+              ))}
+            </ul>
+          </div>
         </PageBorders>
+
         <PageBorders>
           <div id="career">
             <FeedbackCard title={"Clients Feedback"} />

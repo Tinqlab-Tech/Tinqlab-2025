@@ -53,7 +53,7 @@ const SlideUp = ({
       className={`${overflow === null ? "" : "overflow-hidden"} w-full h-full`}
     >
       {" "}
-      <div ref={containerRef} className=" w-full h-full">
+      <div ref={containerRef} className=" w-full h-full py-2">
         {children}
       </div>
     </div>

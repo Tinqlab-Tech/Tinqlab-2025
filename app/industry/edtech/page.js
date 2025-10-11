@@ -19,12 +19,18 @@ import study from "@/public/icons/study.svg";
 import edtechHero from "@/public/images/edtechHero.svg";
 import TechStack from "@/components/section/TechStack";
 import java from "@/public/images/stacks/java.svg";
-import rn from "@/public/images/stacks/rn.png";
-import nodejs from "@/public/images/stacks/nodejs.png";
+import flutter from "@/public/images/stacks/flutter.png";
+import aws from "@/public/images/stacks/aws.png";
 import React from "@/public/images/stacks/react.png";
+import javascript from "@/public/images/stacks/javascript.png";
+import swift from "@/public/images/stacks/swift.png";
+import vue from "@/public/images/stacks/vue.png";
+import angular from "@/public/images/stacks/angular.png";
 import SlideUp from "@/animation/SlideUp";
 import SlideRight from "@/animation/SlideRight";
 import SlideDown from "@/animation/SlideDown";
+import Header from "@/components/partials/Header";
+import SlideLeft from "@/animation/SlideLeft";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -212,10 +218,14 @@ export default function Home() {
     },
   ];
   const technologyWeUse = [
+    { technologies: javascript },
+    { technologies: flutter },
+    { technologies: react },
     { technologies: java },
-    { technologies: rn },
-    { technologies: nodejs },
-    { technologies: React },
+    { technologies: swift },
+    { technologies: aws },
+    { technologies: vue },
+    { technologies: angular },
   ];
 
   return (
@@ -226,18 +236,19 @@ export default function Home() {
           image={edtechHero}
           title={"Education Software Development Services"}
           subtitle={
-            "TinqLab's FinTech software development expertise is a powerful tech partner who's here to create the best custom FinTech software for you! We also partner with some of the most proficient FinTech providers in the world: Galileo (banking as a service), Plaid (open banking), Finicity (open banking), and others to empower your services with trustworthy expertise."
+            "TinqLab’s EdTech software development expertise is a powerful tech partner who’s here to create the best custom EdTech software for you! We also partner with some of the most proficient EdTech providers in the world."
           }
-          btnLink={"/"}
+          btnLink={"/contact-us"}
           btnText={"Schedule a call"}
+          isHeader={true}
         />
 
-        <PageBorders>
+        <PageBorders overflow={null}>
           <div
             id={"about"}
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 "
           >
-            <div className="flex flex-col gap-8 justify-start items-start ">
+            <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start  z-10 ">
               <div>
                 <SlideUp>
                   {" "}
@@ -250,7 +261,7 @@ export default function Home() {
                 <SlideRight duration={1.5}>
                   <MainText
                     text={
-                      "We believe focusing brings depth to our solutions. At TinqLab, we focus on digital transformation consulting services in FinTech, EdTech, retail, and real estate. We build complex strategies using latest solutions, product experience design services, profound product discovery as the basis for further achievements, technology consulting utilizing our TechLead's expertise, and many more."
+                      "We use cutting-edge digital solutions to assist educational institutions, providers, and edtech startups in reimaging learning. Whether you're enhancing classroom experiences or building fully virtual platforms, our education software development services are designed to support interactive, scalable, and learner-centered outcomes."
                     }
                     color={"text-[#12152E] opacity-50"}
                   />
@@ -258,7 +269,7 @@ export default function Home() {
               </div>
               <div>
                 <SlideDown delay={0.2} overflow={null}>
-                  <Link href={"/"}>
+                  <Link href={"/contact-us"}>
                     <MainButton text={"Book consultation"} />
                   </Link>
                 </SlideDown>
@@ -299,7 +310,7 @@ export default function Home() {
                     {" "}
                     <MainText
                       text={
-                        "Our product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We provide you with complex market research to find out all clients’ pains and gains, analysis of digital products and provide a smooth process of digital transformation and product design services. Geniusee product designers have established a design process based on our practical expertise in 100+ projects that have performed well and won over the market!"
+                        "We empower educational institutions, startups, and enterprises with future-ready technology solutions that enhance learning experiences, streamline administration, and drive engagement."
                       }
                       color={"text-[#12152E] opacity-50"}
                     />
@@ -324,14 +335,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div></div>{" "}
-            <SlideDown delay={0.2} overflow={null}>
-              <div className="grid grid-cols-1 justify-items-center">
-                <Link href={"/"}>
-                  <MainButton text={"Book consultation"} />
-                </Link>
-              </div>
-            </SlideDown>
           </div>
         </PageBorders>
         <DoublePageBorders
@@ -369,7 +372,7 @@ export default function Home() {
               <div className=" flex items-center justify-start">
                 <div>
                   <SlideRight delay={0.2}>
-                    <Link href={"/"}>
+                    <Link href={"/contact-us"}>
                       <MainButton text={"Contact Us"} />
                     </Link>
                   </SlideRight>
@@ -378,12 +381,12 @@ export default function Home() {
             </div>
           </div>
         </DoublePageBorders>
-        <PageBorders>
+        <PageBorders overflow={null}>
           <div
             id={"about"}
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 "
           >
-            <div className="flex flex-col gap-8 justify-start items-start ">
+            <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start  z-10 ">
               <div>
                 {" "}
                 <SlideUp>
@@ -392,7 +395,7 @@ export default function Home() {
                 </SlideUp>
               </div>
               <SlideRight duration={1.5} overflow={null}>
-                <Link href={"/"}>
+                <Link href={"/contact-us"}>
                   <MainButton text={"Book consultation"} />
                 </Link>
               </SlideRight>
@@ -416,7 +419,9 @@ export default function Home() {
             </div>
           </div>
         </PageBorders>
-        <DoublePageBorders background={"bg-[#EDF4FE]"}>
+        <DoublePageBorders
+          background={"bg-featuresbg bg-cover bg-no-repeat bg-center "}
+        >
           <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
             {" "}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
@@ -428,9 +433,13 @@ export default function Home() {
                   <HeaderTwo text={"Technology We Use"} />
                 </SlideUp>{" "}
               </div>
-              <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+              <div className="hidden md:block h-full">
+                <SlideLeft>
+                  <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh]"></div>
+                </SlideLeft>
+              </div>{" "}
             </div>
-            <div className="grid grid-cols-4 gap-4 md:gap-8 justify-items-center">
+            <div className="grid grid-cols-4 gap-4 xl:grid-cols-8 md:gap-8 justify-items-center">
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
                   <SlideDown delay={index * 0.2} overflow={null}>

@@ -14,7 +14,7 @@ import SlideLeft from "@/animation/SlideLeft";
 
 function Card({ description, subTitle, title, icon }) {
   return (
-    <div className="   h-full  p-[20px] md:py-[40px] flex flex-col gap-8 justify-between rounded-[10px] shadow-custom-primary">
+    <div className="   h-full  p-[20px] md:p-[40px] flex flex-col gap-8 justify-between rounded-[10px] shadow-custom-primary">
       <div className="flex items-start gap-4 md:gap-8">
         <div className="bg-quote bg-no-repeat bg-contain w-12 h-12" />
         <MainText text={description} color="opacity-70" />
@@ -76,7 +76,7 @@ export default function FeedbackCard({ title }) {
     arrows: false,
     responsive: [
       {
-        breakpoint: 768, // below md
+        breakpoint: 1024, // below lg
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -92,26 +92,26 @@ export default function FeedbackCard({ title }) {
           {" "}
           <HeaderTwo text={title} />
         </SlideUp>
-        <div className="flex gap-4 md:gap-8">
+        <div className="flex gap-4 ">
           <SlideLeft overflow={null}>
             <button
               onClick={prev}
-              className="flex items-center justify-center p-4 shadow-custom-primary group hover:bg-primary h-12 w-12 rounded-full transition-colors duration-300"
+              className="flex items-center justify-center p-4  group  bg-mainGrey hover:bg-primary h-12 w-12 rounded-full transition-colors duration-300"
             >
               <ImArrowLeft
                 size={20}
-                className="text-primary group-hover:text-white transition-colors duration-300"
+                className="text-mainBlack/50 group-hover:text-white transition-colors duration-300"
               />
             </button>
           </SlideLeft>
           <SlideRight overflow={null}>
             <button
               onClick={next}
-              className="flex items-center justify-center p-4 shadow-custom-primary group hover:bg-primary h-12 w-12 rounded-full transition-colors duration-300"
+              className="flex items-center justify-center p-4  group  bg-mainGrey hover:bg-primary h-12 w-12 rounded-full transition-colors duration-300"
             >
               <ImArrowRight
                 size={20}
-                className="text-primary group-hover:text-white transition-colors duration-300"
+                className="text-mainBlack/50 group-hover:text-white transition-colors duration-300"
               />
             </button>
           </SlideRight>

@@ -42,7 +42,7 @@ export default function Home() {
       title: "Fintech",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
-      btnLink: "/",
+      btnLink: "/contact-us",
       btnText: "Learn more",
     },
     {
@@ -50,7 +50,7 @@ export default function Home() {
       title: "Edtech",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
-      btnLink: "/",
+      btnLink: "/contact-us",
       btnText: "Learn more",
     },
     {
@@ -58,7 +58,7 @@ export default function Home() {
       title: "Real Estate",
       subtitle:
         "To train employees on any device, from soft skills to technical expertise.",
-      btnLink: "/",
+      btnLink: "/contact-us",
       btnText: "Learn more",
     },
     {
@@ -66,7 +66,7 @@ export default function Home() {
       title: "Retail",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
-      btnLink: "/",
+      btnLink: "/contact-us",
       btnText: "Learn more",
     },
   ];
@@ -89,19 +89,41 @@ export default function Home() {
   ];
   const getHelp = [
     {
-      background: "bg-getHelpbg1",
+      background: "bg-getHelp1",
+      title: "Web | Mobile App Development",
+      subtitle:
+        "We deliver end to end, high performance web and mobile apps tailored to your business needs, with seamless user experience across platforms.",
     },
     {
-      background: "bg-getHelpbg2",
+      background: "bg-getHelp2",
+      title: "UI | UX Design",
+      subtitle:
+        "Building great digital products requires dedication, design thinking, sharp hard skills also domain expertise. The digital product design services by TinqLab includes all of that and more",
     },
     {
-      background: "bg-getHelpbg3",
+      background: "bg-getHelp3",
+      title: "AI | Machine Learning",
+      subtitle:
+        "The power of AI development is limited only by imagination. Together at TinqLab, we can develop intelligent solutions to optimize your business. We are ready to create AI that evolves with your vision.",
+    },
+
+    {
+      background: "bg-getHelp4",
+      title: "Cloud Infrastructure",
+      subtitle:
+        "Infrastructure is very important to maintaining a reliable operation. At TinqLab, we use our expertise in cloud and server solutions to derive and build high-performing environments.",
     },
     {
-      background: "bg-getHelpbg4",
+      background: "bg-getHelp5",
+      title: "IT Security",
+      subtitle:
+        "Let your company grow in the trusted and resilient digital world by using our cybersecurity services to overcome your competitors whilst providing a source of confidence. ",
     },
     {
-      background: "bg-getHelpbg5",
+      background: "bg-getHelp6",
+      title: "Custom Software Development",
+      subtitle:
+        "Finding a tech partner you can trust is tough. Many promise the world but fail to deliver. What you need is a team that gets your vision and has the skills to build it thats where we step in.",
     },
   ];
 
@@ -163,10 +185,7 @@ export default function Home() {
       <div className="">
         <HomepageHero />
         {/* Ads slider */}
-        <PageBorders background={"bg-mainGrey"}>
-          <AdsSlider />
-        </PageBorders>
-
+        <AdsSlider />
         {/* Discover Us */}
         <DoublePageBorders background={"bg-lightBlue"} padding={null}>
           <DiscoverUs />
@@ -203,31 +222,28 @@ export default function Home() {
                     "TinqLab Technologies was excited to work with TinqFi team, creating together an online tutoring platform that reshaped school education. the was a 100% reform and reconfiguration of the industry."
                   }
                 />
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-4">
                   {" "}
-                  <MainButton
-                    text={"Case details"}
-                    bgcolor={"bg-darkestBlue"}
-                  />
-                  <MainButton
-                    text={"All cases studies"}
-                    bgcolor={"bg-mainBlack/50"}
-                  />
+                  <Link href={"/contact-us"}>
+                    <MainButton
+                      text={"Case details"}
+                      bgcolor={"bg-darkestBlue"}
+                    />
+                  </Link>
+                  <Link href={"/contact-us"}>
+                    {" "}
+                    <MainButton
+                      text={"All cases studies"}
+                      bgcolor={"bg-mainBlack/50"}
+                    />
+                  </Link>
                 </div>
               </div>{" "}
             </SlideRight>{" "}
-            <div className="flex w-full items-center justify-center">
-              <div className="hidden md:block">
-                <SlideLeft>
-                  <ImageWrapper
-                    src="/images/featuresbg/features2.png"
-                    alt="about Tinqlab"
-                    width={400}
-                    height={400}
-                    className="w-full bg-contain bg-right-bottom bg-no-repeat"
-                  />
-                </SlideLeft>
-              </div>
+            <div className=" h-full">
+              <SlideLeft>
+                <div className="bg-features2  bg-contain bg-center bg-no-repeat h-full" />
+              </SlideLeft>
             </div>
           </div>
         </PageBorders>
@@ -250,7 +266,7 @@ export default function Home() {
                 <div className=" relative z-10  grid md:grid-cols-2 gap-4 md:gap-8">
                   {industryProduction.map((item, index) => (
                     <div key={index}>
-                      <SlideDown delay={index * 0.2}>
+                      <SlideDown delay={index * 0.2} overflow={null}>
                         <IndustryCard
                           title={item.title}
                           subtitle={item.subtitle}
@@ -284,8 +300,26 @@ export default function Home() {
                     {getHelp.map((item, index) => (
                       <div
                         key={index}
-                        className={`${item.background} flex-grow transition-all duration-300 hover:flex-[2] bg-cover bg-no-repeat bg-center overflow-hidden rounded-[10px] shadow-custom-primary min-h-[40vh] max-h-[60vh]`}
-                      ></div>
+                        className={`${item.background} group flex-[1] transition-all duration-500 ease-out bg-cover bg-center bg-no-repeat overflow-hidden rounded-[10px]  min-h-[40vh] max-h-[60vh] hover:flex-[12] lg:hover:flex-[6] xl:hover:flex-[2]`}
+                      >
+                        {/* Background overlay + content wrapper */}
+                        <div className="group-hover:bg-primaryGradient flex flex-col justify-end h-full">
+                          <div className="  md:h-1/2  flex flex-col justify-end gap-4 p-[20px] md:p-[30px]  text-mainWhite opacity-0 group-hover:opacity-100 transition-opacity duration-500 ">
+                            <h1 className="font-semibold text-[16px] lg:text-[20px] leading-tight font-lato">
+                              {item.title}
+                            </h1>
+                            <p className="text-[14px]  font-normal font-lato">
+                              {item.subtitle}
+                            </p>
+                            <Link href={"/contact-us"}>
+                              {" "}
+                              <button className="text-darkBlue font-semibold hover:underline font-lato">
+                                Learn More
+                              </button>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
                     ))}
                   </div>
                 </SlideDown>
@@ -311,8 +345,8 @@ export default function Home() {
                         }
                         color={"opacity-50"}
                       />
-                      <Link href={"/"}>
-                        <MainButton text={"Start today"} />
+                      <Link href={"/contact-us"}>
+                        <MainButton text={"Explore Now"} />
                       </Link>
                     </div>
                   </SlideLeft>

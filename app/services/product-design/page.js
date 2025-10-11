@@ -2,31 +2,18 @@ import { MainButton } from "@/components/button/MainButton";
 import Link from "next/link";
 import PageBorders from "@/components/wrappers/PageBorders";
 import MainText from "@/components/typography/MainText";
-import react from "@/public/images/react.png";
 import ImageWrapper from "@/components/wrappers/ImageWrapper";
 import OtherPageHero from "@/components/hero/OtherPageHero";
 import MainCard from "@/components/card/MainCard";
 import HeaderTwo from "@/components/typography/HeaderTwo";
 import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
 import MoreContentCard from "@/components/card/MoreContentCard";
-import { SpecificationItem } from "@/components/section/SpecificationItem";
-import assessment from "@/public/icons/assessment.svg";
-import comms from "@/public/icons/comms.svg";
-import consultation from "@/public/icons/consultation.svg";
-import custom from "@/public/icons/custom.svg";
-import mobile from "@/public/icons/mobile.svg";
-import study from "@/public/icons/study.svg";
-import edtechHero from "@/public/images/edtechHero.svg";
 import TechStack from "@/components/section/TechStack";
 import figma from "@/public/images/stacks/figma.png";
 import vision from "@/public/images/stacks/vision.png";
 import firebase from "@/public/images/stacks/firebase.png";
-import stack from "@/public/images/stacks/stack.svg";
+import stack from "@/public/images/stacks/stack.png";
 import figjam from "@/public/images/stacks/figjam.png";
-
-import features1 from "@/public/images/featuresbg/features1.png";
-import ServicesCard from "@/components/card/ServicesCard";
-import HeaderOne from "@/components/typography/HeaderOne";
 import FeedbackCard from "@/components/card/FeedbackCard";
 import productHerobg from "@/public/images/productHerobg.png";
 import infographics from "@/public/images/Infographics.svg";
@@ -34,6 +21,7 @@ import SlideUp from "@/animation/SlideUp";
 import SlideRight from "@/animation/SlideRight";
 import SlideLeft from "@/animation/SlideLeft";
 import SlideDown from "@/animation/SlideDown";
+import BenefitCard from "@/components/card/Benefitcard";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -73,28 +61,50 @@ export default function Home() {
   const tinqlabBenefits = [
     {
       title: "Create a customer-centric solution",
-      subtitle:
-        "With the Design Thinking framework and profound discovery, we reach the heart of the clients’ pain points and create digital products that make them happy. No matter whether we talk about cloud based solutions or mobile apps, digital product design has no limits!",
+      items: [
+        {
+          subtitle:
+            "With the Design Thinking framework and profound discovery, we reach the heart of the clients’ pain points and create digital products that make them happy. No matter whether we talk about cloud based solutions or mobile apps, digital product design has no limits!",
+        },
+      ],
     },
+
     {
       title: "Transparency and Agile",
-      subtitle:
-        "We provide consistent and clear communication at every stage of the estimated workflow by conducting digital product design using the Agile-based approach so our clients can create and modify a team of highly skilled engineers, designers, and business analysts as needed.",
+      items: [
+        {
+          subtitle:
+            "We provide consistent and clear communication at every stage of the estimated workflow by conducting digital product design using the Agile-based approach so our clients can create and modify a team of highly skilled engineers, designers, and business analysts as needed.",
+        },
+      ],
     },
     {
       title: "Cross-platform experience",
-      subtitle:
-        "As a digital product design company, we aim to help users switch between platforms and freely engage with your product on the go. It’s not only about visual design, but access and compliance. The experience across multiple devices has to be seamless and fast.",
+      items: [
+        {
+          subtitle:
+            "As a digital product design company, we aim to help users switch between platforms and freely engage with your product on the go. It’s not only about visual design, but access and compliance. The experience across multiple devices has to be seamless and fast.",
+        },
+      ],
     },
+
     {
       title: "Choose cost-effective solutions",
-      subtitle:
-        "We build interfaces by integrating the functions, ideas, and technologies that shape trends. We can offer you a cost-effective full-stack solution, from idea validation to product development, launch, and support.",
+      items: [
+        {
+          subtitle:
+            "We build interfaces by integrating the functions, ideas, and technologies that shape trends. We can offer you a cost-effective full-stack solution, from idea validation to product development, launch, and support.",
+        },
+      ],
     },
     {
       title: "Scaling and continuous development",
-      subtitle:
-        "Not only we design digital products. With flexible development methodologies, user testing techniques, and a continuous development cycle that's open to modifications and upgrades.",
+      items: [
+        {
+          subtitle:
+            "Not only we design digital products. With flexible development methodologies, user testing techniques, and a continuous development cycle that's open to modifications and upgrades.",
+        },
+      ],
     },
   ];
 
@@ -116,9 +126,10 @@ export default function Home() {
           subtitle={
             "Building great digital products requires dedication, design thinking, sharp hard skills, domain expertise, and sincere empathy for end-customer needs. The digital product design services by TinqLab include all of that, along with a cutting-edge tech stack and brilliant custom development. You should not agree to less! Create digital experiences that engage people at every touchpoint with us."
           }
-          btnLink={"/"}
+          btnLink={"/contact-us"}
           btnText={"Schedule a call"}
           hasNav={true}
+          isHeader={false}
         />
 
         {/* digital product */}
@@ -150,21 +161,24 @@ export default function Home() {
                 />
               </SlideRight>
             </div>
-            <div className="hidden md:block">
+            <div className="hidden md:block h-full">
               <SlideLeft>
                 {" "}
-                <div className=" bg-features6 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+                <div className=" bg-features6 bg-contain bg-right-bottom bg-no-repeat h-full"></div>
               </SlideLeft>{" "}
             </div>{" "}
           </div>
         </DoublePageBorders>
 
         {/* digital product design services */}
-        <PageBorders>
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
+        <PageBorders overflow={null}>
+          <div
+            className="relative flex flex-col gap-8 scroll-mt-4"
+            id={"services"}
+          >
             {" "}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 ">
-              <div className="flex flex-col gap-8 items-start ">
+              <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start bg-white z-10 py-4">
                 <div>
                   <SlideUp>
                     {" "}
@@ -207,21 +221,21 @@ export default function Home() {
             {" "}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
               {" "}
-              <div className="col-span-1 md:col-span-2">
+              <div className="col-span-1 md:col-span-2 py-2">
                 {" "}
                 <SlideUp>
                   {" "}
                   <HeaderTwo text={"Technology We Use"} />
                 </SlideUp>
               </div>
-              <div className="hidden md:block">
+              <div className="hidden md:block h-full">
                 {" "}
                 <SlideLeft>
-                  <div className=" bg-features7 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
+                  <div className=" bg-features7 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh]"></div>
                 </SlideLeft>
               </div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8 justify-items-center">
+            <div className="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-8 justify-items-center">
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
                   <SlideDown delay={index * 0.2} overflow={null}>
@@ -252,10 +266,10 @@ export default function Home() {
                   />
                 </SlideRight>
               </div>
-              <div className="hidden md:block">
+              <div className="hidden md:block h-full">
                 {" "}
                 <SlideLeft>
-                  <div className="bg-edtech1 bg-contain bg-left-bottom bg-no-repeat h-full"></div>
+                  <div className="bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[40vh]"></div>
                 </SlideLeft>{" "}
               </div>{" "}
             </div>
@@ -275,41 +289,39 @@ export default function Home() {
 
         {/* benefit of working with tinqlab */}
         <PageBorders background={"bg-lightBlue"}>
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
-            {" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
-              <div className="col-span-1 md:col-span-2">
-                {" "}
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Benefits Of Working With TinqLab"} />
-                </SlideUp>
-              </div>
-              <div className="hidden md:block">
-                {" "}
-                <SlideLeft>
-                  <div className=" bg-features5 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
-                </SlideLeft>{" "}
-              </div>{" "}
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-              {" "}
-              {tinqlabBenefits.map((item, index) => (
-                <div key={index}>
-                  <SlideDown delay={index * 0.2} overflow={null}>
+          <div className="flex flex-col gap-8" id="industry">
+            <div className="flex flex-col gap-4 md:gap-8">
+              <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+                <div className="flex flex-col gap-4 md:gap-8">
+                  <div>
+                    <SlideUp>
+                      <HeaderTwo text="Benefits Of Working With TinqLab" />
+                    </SlideUp>
+                  </div>
+                  <SlideDown delay={0.2}>
                     {" "}
-                    <MainCard
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      bgColor={null}
-                    />{" "}
-                  </SlideDown>
+                    <BenefitCard {...tinqlabBenefits[0]} bgColor={null} />
+                  </SlideDown>{" "}
                 </div>
-              ))}
+                <div className="hidden md:block h-full ">
+                  <SlideRight duration={1.5}>
+                    <div className=" bg-features5 bg-contain bg-center xl:bg-bottom bg-no-repeat h-full" />
+                  </SlideRight>{" "}
+                </div>{" "}
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+                {tinqlabBenefits.slice(1).map((item, index) => (
+                  <div key={index}>
+                    <SlideDown delay={index * 0.2}>
+                      <BenefitCard {...item} bgColor={null} />
+                    </SlideDown>{" "}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </PageBorders>
-
         <PageBorders>
           <div id="career">
             <FeedbackCard title={"Clients Feedback"} />

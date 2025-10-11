@@ -91,7 +91,9 @@ export default function Footer() {
               </SlideUp>
             </div>
             <SlideRight duration={1.5}>
-              <MainButton text={"Schedule a call"} />
+              <Link href={"/contact-us"}>
+                <MainButton text={"Schedule a call"} />
+              </Link>
             </SlideRight>
           </div>
         </div>

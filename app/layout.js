@@ -26,7 +26,6 @@ export default function RootLayout({ children }) {
       <html lang="en" className={`${lato.className} font-sans z-10`}>
         <body className="tracking-tight">
           <main>
-            <Header />
             {children}
             <Footer />
           </main>

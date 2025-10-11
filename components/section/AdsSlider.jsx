@@ -7,6 +7,8 @@ import adsImg4 from "@/public/images/adsImg4.png";
 import adsImg5 from "@/public/images/adsImg5.png";
 import adsImg6 from "@/public/images/adsImg6.png";
 import { Slide } from "@/animation/Slide";
+import HeaderOne from "../typography/HeaderOne";
+import HeaderTwo from "../typography/HeaderTwo";
 
 const Ads = () => {
   const partners = [adsImg1, adsImg2, adsImg3, adsImg4, adsImg5, adsImg6];
@@ -30,17 +32,13 @@ const Ads = () => {
 
 const AdsSlider = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col py-[6vh] gap-4 md:gap-8  ">
+      <div className="grid justify-items-center text-center">
+        {" "}
+        <HeaderTwo text={"Trusted by Leading Brands Worldwide"} />
+      </div>{" "}
       <Slide slideleft={true}>
-        <div className="flex ">
-          <Ads />
-        </div>
-      </Slide>
-
-      <Slide slideright={true}>
-        <div className="flex ">
-          <Ads />
-        </div>
+        <Ads />
       </Slide>
     </div>
   );

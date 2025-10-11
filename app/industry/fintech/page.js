@@ -29,6 +29,8 @@ import SlideUp from "@/animation/SlideUp";
 import SlideDown from "@/animation/SlideDown";
 import SlideRight from "@/animation/SlideRight";
 import SlideLeft from "@/animation/SlideLeft";
+import Header from "@/components/partials/Header";
+import ItemCard from "@/components/card/ItemCard";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -210,14 +212,15 @@ export default function Home() {
           btnLink={"/"}
           btnText={"Schedule a call"}
           image={fintechHerobg}
+          isHeader={true}
         />
 
-        <PageBorders>
+        <PageBorders overflow={null}>
           <div
             id={"about"}
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-8 "
           >
-            <div className="flex flex-col gap-4 md:gap-8 justify-start items-start ">
+            <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start bg-white z-10 py-4">
               <div>
                 <SlideUp>
                   {" "}
@@ -229,7 +232,7 @@ export default function Home() {
               <SlideRight duration={1.5}>
                 <MainText
                   text={
-                    "We believe focusing brings depth to our solutions. At TinqLab, we focus on digital transformation consulting services in FinTech, EdTech, retail, and real estate. We build complex strategies using latest solutions, product experience design services, profound product discovery as the basis for further achievements, technology consulting utilizing our TechLead's expertise, and many more."
+                    "We specialize in delivering cutting-edge fintech solutions tailored to the diverse needs of the financial services industry. Our team combines deep domain knowledge with advanced engineering to build secure, scalable, and high-performing financial products that drive innovation and efficiency."
                   }
                   color={"text-[#12152E] opacity-50"}
                 />
@@ -263,18 +266,20 @@ export default function Home() {
                     />
                   </SlideUp>
                 </div>
-                <SlideRight duration={1.5}>
-                  <MainText
-                    text={
-                      "We believe focusing brings depth to our solutions. At TinqLab, we focus on digital transformation consulting services in FinTech, EdTech, retail, and real estate. We build complex strategies using latest solutions, product experience design services, profound product discovery as the basis for further achievements, technology consulting utilizing our TechLead's expertise, and many more."
-                    }
-                    color={"text-[#12152E] opacity-50"}
-                  />
-                </SlideRight>
+                <div>
+                  <SlideRight duration={1.5}>
+                    <MainText
+                      text={
+                        "Entrust your full-cycle web and mobile fintech development to a team that understands both the pace of innovation and the demands of financial systems. At Tinqlab, we’ve delivered successful fintech solutions across blockchain, mobile banking, payment gateways, neobank platforms, and system integrations. With deep industry expertise, we help you build secure, scalable, products that meet today’s standards and tomorrow’s expectations."
+                      }
+                      color={"text-[#12152E] opacity-50"}
+                    />
+                  </SlideRight>
+                </div>
               </div>
               <div className="hidden md:block">
                 <SlideLeft>
-                  <div className=" bg-retailBg bg-contain bg-left-bottom bg-no-repeat min-h-[20vh] md:min-h-[30vh]"></div>
+                  <div className=" bg-retailBg3 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh] md:min-h-[30vh]"></div>
                 </SlideLeft>{" "}
               </div>
             </div>
@@ -284,7 +289,7 @@ export default function Home() {
                 <div key={index}>
                   <SlideDown delay={index * 0.2} overflow={null}>
                     {" "}
-                    <MainCard
+                    <ItemCard
                       title={item.title}
                       bgColor={null}
                       hasIcon={true}
@@ -305,7 +310,9 @@ export default function Home() {
             </div>
           </div>
         </PageBorders>
-        <DoublePageBorders background={"bg-[#EDF4FE]"}>
+        <DoublePageBorders
+          background={"bg-featuresbg bg-cover bg-center bg-no-repeat"}
+        >
           <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
             {" "}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center">
@@ -318,11 +325,11 @@ export default function Home() {
               </div>
               <div className="hidden md:block">
                 <SlideLeft>
-                  <div className=" bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh] md:min-h-[30vh]"></div>
+                  <div className=" bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh] md:min-h-[30vh]"></div>
                 </SlideLeft>{" "}
               </div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-8 gap-4 md:gap-8">
+            <div className="grid grid-cols-4 xl:grid-cols-8 gap-4 md:gap-8">
               {" "}
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
@@ -344,7 +351,6 @@ export default function Home() {
               <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8">
                 {" "}
                 <div>
-                  {" "}
                   <SlideUp>
                     {" "}
                     <HeaderTwo
@@ -352,18 +358,20 @@ export default function Home() {
                     />
                   </SlideUp>{" "}
                 </div>
-                <SlideRight duration={1.5}>
-                  <MainText
-                    text={
-                      "We follow a structured and agile development process designed to deliver secure, scalable, and user-focused fintech solutions. Our approach ensures your product meets regulatory standards, adapts to market shifts, and delivers exceptional customer experiences."
-                    }
-                    color={"text-[#12152E] opacity-50 "}
-                  />
-                </SlideRight>
+                <div>
+                  <SlideRight duration={1.5}>
+                    <MainText
+                      text={
+                        "We follow a structured and agile development process designed to deliver secure, scalable, and user-focused fintech solutions. Our approach ensures your product meets regulatory standards, adapts to market shifts, and delivers exceptional customer experiences."
+                      }
+                      color={"text-[#12152E] opacity-50 "}
+                    />
+                  </SlideRight>
+                </div>
               </div>
-              <div className="hidden md:block">
+              <div className="hidden md:block h-full">
                 <SlideLeft>
-                  <div className=" bg-retailBg bg-contain bg-left-bottom bg-no-repeat min-h-[20vh] md:min-h-[30vh]"></div>
+                  <div className=" bg-retailBg bg-contain bg-left-bottom bg-no-repeat min-h-[40vh]"></div>
                 </SlideLeft>
               </div>
             </div>
@@ -384,20 +392,11 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div>
-              <SlideDown delay={0.2} overflow={null}>
-                <div className=" grid grid-cols-1 justify-items-center">
-                  <Link href={"/"}>
-                    <MainButton text={"Book consultation"} />
-                  </Link>
-                </div>
-              </SlideDown>
-            </div>
           </div>
         </PageBorders>
 
         <DoublePageBorders
-          background={"bg-featuresbg bg-cover bg-no-repeat bg-center"}
+          background={"bg-featuresbg2 bg-cover bg-no-repeat bg-center"}
         >
           <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
             {" "}
@@ -405,14 +404,17 @@ export default function Home() {
               {" "}
               <div className="col-span-1 md:col-span-2 flex flex-col gap-8 md:w-4/5">
                 {" "}
-                <SlideUp>
+                <div>
                   {" "}
-                  <HeaderTwo
-                    text={
-                      "We Understand that the key to success is clear communication"
-                    }
-                  />
-                </SlideUp>
+                  <SlideUp>
+                    {" "}
+                    <HeaderTwo
+                      text={
+                        "We Understand that the key to success is clear communication"
+                      }
+                    />
+                  </SlideUp>
+                </div>
                 <SlideRight duration={1.5}>
                   <MainText
                     text={
@@ -426,7 +428,7 @@ export default function Home() {
                 <div>
                   {" "}
                   <SlideRight delay={0.2} overflow={null}>
-                    <Link href={"/"}>
+                    <Link href={"/contact-us"}>
                       <MainButton text={"Schedule a call"} />
                     </Link>{" "}
                   </SlideRight>
@@ -437,12 +439,12 @@ export default function Home() {
         </DoublePageBorders>
 
         {/* why work with tinqlab */}
-        <PageBorders>
+        <PageBorders overflow={null}>
           <div
             id={"about"}
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 "
           >
-            <div className="flex flex-col gap-8 justify-start items-start ">
+            <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start bg-white z-10 py-4">
               <div>
                 <SlideUp>
                   {" "}
@@ -462,7 +464,7 @@ export default function Home() {
                 </SlideRight>{" "}
               </div>
               <SlideDown delay={0.5}>
-                <Link href={"/"}>
+                <Link href={"/contact-us"}>
                   <MainButton text={"Get a consultation"} />
                 </Link>
               </SlideDown>

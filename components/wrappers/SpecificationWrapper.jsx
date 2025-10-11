@@ -7,25 +7,26 @@ import HeaderTwo from "../typography/HeaderTwo";
 export const SpecificationWrapper = ({ title, subTitle, items }) => {
   return (
     <>
-      <div className="w-full bg-white text-mainBlack px-[20px] py-[10px] md:px-[30px] md:py-[10px] rounded-[10px] lg:rounded-[40px] shadow-custom-primary dark:bg-mainGrey dark:text-white">
+      <div className="w-full bg-white text-mainBlack p-[20px]  md:p-[40px]  rounded-[10px] lg:rounded-[20px] shadow-custom-primary dark:bg-mainGrey dark:text-white">
         <details className="group ">
-          <summary className="flex justify-between  w-full items-center gap-4 md:p-2 marker:content-none hover:cursor-pointer">
+          <summary className="flex justify-between  w-full items-center gap-4 marker:content-none hover:cursor-pointer">
             <HeaderTwo centerText={false} text={title} bold={true} />{" "}
             <ImageWrapper
               src={show2}
               alt={`Tinqlab ${title} services`}
-              height={30}
-              width={30}
+              height={50}
+              width={50}
               style="group-open:rotate-180 scale-75 group-open:scale-100 transition duration-300"
             />
           </summary>
-
-          <MainText
-            text={subTitle}
-            color="text-[#12152E] opacity-50"
-            size="text-[16px] leading-[24px]"
-          />
-          <ul className="flex flex-col gap-8 mt-4">
+          <div className="mt-4 md:mt-8 ">
+            <MainText
+              text={subTitle}
+              color="text-[#12152E] opacity-50"
+              size="text-[16px] leading-[24px]"
+            />
+          </div>
+          <ul className="flex flex-col gap-8 mt-4 ">
             {items.map((item, index) => (
               <li
                 key={index}
@@ -35,7 +36,7 @@ export const SpecificationWrapper = ({ title, subTitle, items }) => {
                   <span>{index + 1 + `${"."}`}</span>
                   {item.title}
                 </h2>
-                <article className="list-inside list-disc break-words px-2 pb-4">
+                <article className="list-inside list-disc break-words  ">
                   <MainText
                     text={item.subTitle}
                     color="text-mainBlack opacity-50"
