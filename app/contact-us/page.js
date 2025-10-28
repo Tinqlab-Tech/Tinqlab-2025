@@ -6,7 +6,7 @@ import { ContactUsModal } from "@/components/forms/ContactUsModal";
 import { MainButton } from "@/components/button/MainButton";
 import ImageWrapper from "@/components/wrappers/ImageWrapper";
 import vector1 from "@/public/images/vector1.png";
-import logo from "@/public/images/logoWhite.svg";
+import logo from "@/public/images/logowhite.svg";
 import UserMail from "@/components/forms/UserMail";
 import OtherHeader from "@/components/partials/OtherHeader";
 import HeaderOne from "@/components/typography/HeaderOne";
