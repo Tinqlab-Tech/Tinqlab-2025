@@ -1,38 +1,38 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import ImageWrapper from "../wrappers/ImageWrapper";
-import logo from "@/public/images/logowhite.svg";
-import NavItem from "../typography/NavItem";
-import MobileNav from "./MobileNav";
-import { usePathname } from "next/navigation";
-import { MainButton } from "../button/MainButton";
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import ImageWrapper from '../wrappers/ImageWrapper';
+import logo from '@/public/images/logowhite.svg';
+import NavItem from '../typography/NavItem';
+import MobileNav from './MobileNav';
+import { usePathname } from 'next/navigation';
+import { MainButton } from '../button/MainButton';
 
 export default function Header() {
   const pathname = usePathname();
   const [activeIndex, setActiveIndex] = useState(null);
 
   const usefulLinks = [
-    { id: 1, title: "Industry", link: "/industry" },
-    { id: 2, title: "Services", link: "/services" },
-    { id: 3, title: "Career", link: "/career" },
-    { id: 4, title: "About", link: "/about" },
+    { id: 1, title: 'Industry', link: '/industry' },
+    { id: 2, title: 'Services', link: '/services' },
+    { id: 3, title: 'Career', link: '/career' },
+    { id: 4, title: 'About', link: '/about' },
   ];
 
   const nestedLinks = [
-    { parentId: 1, title: "Fintech", link: "/industry/fintech" },
-    { parentId: 1, title: "Edtech", link: "/industry/edtech" },
-    { parentId: 1, title: "Retail", link: "/industry/retail" },
-    { parentId: 1, title: "Real Estate", link: "/industry/real-estate" },
+    { parentId: 1, title: 'Fintech', link: '/industry/fintech' },
+    { parentId: 1, title: 'Edtech', link: '/industry/edtech' },
+    { parentId: 1, title: 'Retail', link: '/industry/retail' },
+    { parentId: 1, title: 'Real Estate', link: '/industry/real-estate' },
 
     {
       parentId: 2,
-      title: "Software Engineering",
-      link: "/services/software-engineering",
+      title: 'Software Engineering',
+      link: '/services/software-engineering',
     },
-    { parentId: 2, title: "Product Design", link: "/services/product-design" },
-    { parentId: 2, title: "Consulting", link: "/services/consulting" },
+    { parentId: 2, title: 'Product Design', link: '/services/product-design' },
+    { parentId: 2, title: 'Consulting', link: '/services/consulting' },
   ];
 
   // Auto-expand parent if pathname matches nested
@@ -60,20 +60,20 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-transparent w-full relative">
-      <div className="flex justify-between items-center sticky top-0 z-50  px-[4vw] py-[2vh]">
+    <header className="relative w-full bg-transparent">
+      <div className="sticky top-0 z-50 flex items-center justify-between px-[4vw] py-[2vh]">
         {/* Logo */}
-        <Link href={"/"}>
+        <Link href={'/'}>
           <ImageWrapper
             src={logo}
             width={150}
             height={50}
-            alt={"Tinqlab logo"}
+            alt={'Tinqlab logo'}
           />
         </Link>
 
         <div className="flex items-center justify-end gap-2 md:gap-2 lg:gap-8">
-          <div className="hidden md:flex items-center justify-end gap-2 md:gap-8 relative">
+          <div className="relative hidden items-center justify-end gap-2 md:flex md:gap-8">
             {/* Parent links */}
             {usefulLinks.map((item, index) => {
               const hasChildren = nestedLinks.some(
@@ -85,15 +85,15 @@ export default function Header() {
                   {hasChildren ? (
                     <button
                       onClick={() => handleClick(index, hasChildren)}
-                      className="text-left "
+                      className="text-left"
                     >
                       <NavItem
                         text={item.title}
                         color={
                           pathname.startsWith(item.link) ||
                           activeIndex === index
-                            ? "text-primary font-semibold "
-                            : "text-mainWhite font-semibold hover:scale-x-105"
+                            ? 'text-primary font-semibold '
+                            : 'text-mainWhite font-semibold hover:scale-x-105'
                         }
                       />
                     </button>
@@ -103,8 +103,8 @@ export default function Header() {
                         text={item.title}
                         color={
                           pathname.startsWith(item.link)
-                            ? "text-primary font-semibold "
-                            : "text-mainWhite font-semibold hover:scale-x-105"
+                            ? 'text-primary font-semibold '
+                            : 'text-mainWhite font-semibold hover:scale-x-105'
                         }
                       />
                     </Link>
@@ -112,7 +112,7 @@ export default function Header() {
 
                   {/* Floating nested menu */}
                   {activeIndex === index && hasChildren && (
-                    <div className="absolute top-full left-0 mt-2 flex flex-col gap-4 p-6 bg-mainWhite rounded-[10px] shadow-lg z-50 min-w-[200px]">
+                    <div className="absolute left-0 top-full z-50 mt-2 flex min-w-[200px] flex-col gap-4 rounded-[10px] bg-mainWhite p-6 shadow-lg">
                       {nestedLinks
                         .filter((nested) => nested.parentId === item.id)
                         .map((nested, i) => (
@@ -121,8 +121,8 @@ export default function Header() {
                               text={nested.title}
                               color={
                                 pathname.startsWith(nested.link)
-                                  ? "text-primary font-semibold "
-                                  : "text-mainBlack font-semibold hover:scale-x-105"
+                                  ? 'text-primary font-semibold '
+                                  : 'text-mainBlack font-semibold hover:scale-x-105'
                               }
                             />
                           </Link>
@@ -134,18 +134,19 @@ export default function Header() {
             })}
 
             {/* Contact button */}
-            <Link href={"/contact-us"}>
+          </div>{' '}
+          <div className="flex gap-4">
+            <Link href={'/contact-us'}>
               <MainButton
-                textColor={"text-darkestBlue font-semibold"}
-                bgcolor={"bg-white"}
-                text={"Contact Us"}
+                textColor={'text-darkestBlue font-semibold'}
+                bgcolor={'bg-white'}
+                text={'Contact Us'}
               />
             </Link>
-          </div>
-
-          {/* Mobile Nav */}
-          <div className="flex gap-4 justify-end items-center md:hidden">
-            <MobileNav />
+            {/* Mobile Nav */}
+            <div className="flex items-center justify-end gap-4 md:hidden">
+              <MobileNav />
+            </div>
           </div>
         </div>
       </div>

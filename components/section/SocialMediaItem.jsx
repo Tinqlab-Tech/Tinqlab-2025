@@ -4,14 +4,14 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
-} from "react-icons/fa";
-import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { FaFacebookSquare } from "react-icons/fa";
+} from 'react-icons/fa';
+import { FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+import { FaFacebookSquare } from 'react-icons/fa';
 
 export default function SocialMediaItem({ color, position }) {
   return (
     <section
-      className={` flex items-center justify-start gap-8 text-white my-[20px]`}
+      className={`my-[20px] flex items-center justify-start gap-8 text-white`}
     >
       <a
         href="https://x.com/tinqlabtech"
@@ -21,7 +21,7 @@ export default function SocialMediaItem({ color, position }) {
       >
         <FaXTwitter
           size={50}
-          className="bg-[#BDBDBD] hover:scale-125 p-2 text-darkestBlue rounded-[10px]"
+          className="rounded-[10px] bg-[#BDBDBD] p-2 text-darkestBlue transition-all duration-300 hover:scale-125"
         />
       </a>
       <a
@@ -32,29 +32,29 @@ export default function SocialMediaItem({ color, position }) {
       >
         <FaLinkedinIn
           size={50}
-          className="bg-[#BDBDBD] hover:scale-125 p-2 text-darkestBlue rounded-[10px]"
+          className="rounded-[10px] bg-[#BDBDBD] p-2 text-darkestBlue transition-all duration-300 hover:scale-125"
         />
       </a>
       <a
         href="https://www.facebook.com/people/Tinqlab/100064552795813/"
         target="_blank"
         rel="noopener"
-        className="   "
+        className=" "
       >
         <FaFacebookF
           size={50}
-          className="bg-[#BDBDBD] hover:scale-125 p-2 text-darkestBlue rounded-[10px]"
+          className="rounded-[10px] bg-[#BDBDBD] p-2 text-darkestBlue transition-all duration-300 hover:scale-125"
         />
       </a>
       <a
         href="https://www.instagram.com/tinqlab/"
         target="_blank"
         rel="noopener"
-        className="   "
+        className=" "
       >
         <FaInstagram
           size={50}
-          className="bg-[#BDBDBD] hover:scale-125 p-2 text-darkestBlue rounded-[10px]"
+          className="rounded-[10px] bg-[#BDBDBD] p-2 text-darkestBlue transition-all duration-300 hover:scale-125"
         />
       </a>
     </section>

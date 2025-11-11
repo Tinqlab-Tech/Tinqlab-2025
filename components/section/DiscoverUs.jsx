@@ -1,15 +1,16 @@
-"use client";
+'use client';
 
-import React, { useRef } from "react";
-import Slider from "react-slick";
-import { MainButton } from "../button/MainButton";
-import MainText from "../typography/MainText";
-import { FaArrowLeftLong } from "react-icons/fa6";
-import HeaderTwo from "../typography/HeaderTwo";
-import { IoIosAdd } from "react-icons/io";
-import ImageWrapper from "../wrappers/ImageWrapper";
-import SlideRight from "@/animation/SlideRight";
-import SlideLeft from "@/animation/SlideLeft";
+import React, { useRef } from 'react';
+import Slider from 'react-slick';
+import { MainButton } from '../button/MainButton';
+import MainText from '../typography/MainText';
+import { FaArrowLeftLong } from 'react-icons/fa6';
+import HeaderTwo from '../typography/HeaderTwo';
+import { IoIosAdd } from 'react-icons/io';
+import ImageWrapper from '../wrappers/ImageWrapper';
+import SlideRight from '@/animation/SlideRight';
+import SlideLeft from '@/animation/SlideLeft';
+import features1 from '@/public/images/featuresbg/features1.png';
 
 const DiscoverUs = () => {
   const sliderRef = useRef(null);
@@ -27,27 +28,27 @@ const DiscoverUs = () => {
 
   const discoverUs = [
     {
-      title: "Discover how we can assist in achieving your goals!",
+      title: 'Discover how we can assist in achieving your goals!',
       subtitle:
-        "Answer a few questions to aid us match our expertise and solutions to your industry.",
-      btnNav: "More",
+        'Answer a few questions to aid us match our expertise and solutions to your industry.',
+      btnNav: 'More',
       items: [
-        { btnText: "Fintech" },
-        { btnText: "Edtech" },
-        { btnText: "Retail" },
-        { btnText: "Technical Support" },
+        { btnText: 'Fintech' },
+        { btnText: 'Edtech' },
+        { btnText: 'Retail' },
+        { btnText: 'Technical Support' },
       ],
     },
     {
-      title: "Discover how we can assist in achieving your goals!",
+      title: 'Discover how we can assist in achieving your goals!',
       subtitle:
-        "Answer a few questions to aid us match our expertise and solutions to your industry.",
-      btnNav: "Back",
+        'Answer a few questions to aid us match our expertise and solutions to your industry.',
+      btnNav: 'Back',
       items: [
-        { btnText: "Product design" },
-        { btnText: "Consulting" },
-        { btnText: "Out staffing" },
-        { btnText: "Software Engineering Services" },
+        { btnText: 'Product design' },
+        { btnText: 'Consulting' },
+        { btnText: 'Out staffing' },
+        { btnText: 'Software Engineering Services' },
       ],
     },
   ];
@@ -57,18 +58,20 @@ const DiscoverUs = () => {
       <Slider ref={sliderRef} {...settings}>
         {discoverUs.map((item, index) => (
           <div key={index}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 ">
-              {/* Left image */}{" "}
-              <div className="hidden lg:block">
-                <div className="hidden md:block h-full lg:pl-4 lg:mt-[4vh]">
-                  <SlideRight>
-                    <div className="bg-features1 bg-contain  bg-bottom bg-no-repeat h-full"></div>
-                  </SlideRight>{" "}
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {/* Left image */}{' '}
+              <div className="flex h-full justify-center overflow-hidden">
+                <ImageWrapper
+                  src={features1}
+                  alt={'about Tinqlab'}
+                  width={500}
+                  height={300}
+                  style={' bg-cover bg-center bg-no-repeat'}
+                />
               </div>
               {/* Right content */}
-              <SlideLeft>
-                <div className="flex flex-col gap-4 p-[4vh] md:gap-8">
+              <SlideRight>
+                <div className="flex flex-col gap-4 p-[20px] md:gap-8">
                   <HeaderTwo text={item.title} />
 
                   <MainText text={item.subtitle} color="opacity-50" />
@@ -88,12 +91,11 @@ const DiscoverUs = () => {
 
                     {/* Nav button */}
                     <button
-                      onClick={() => (item.btnNav === "More" ? next() : prev())}
-                      className="flex items-center justify-center gap-3 cursor-pointer font-semibold rounded-full shadow-lg font-lato border-[1px] border-lavi 
-                  text-darkestBlue bg-lavenderBlue py-[12px] px-[50px] tracking-tight flex-row-reverse hover:scale-105  transition-all duration-300 font-lato"
+                      onClick={() => (item.btnNav === 'More' ? next() : prev())}
+                      className="font-lato border-lavi font-lato flex cursor-pointer flex-row-reverse items-center justify-center gap-3 rounded-full border-[1px] bg-lavenderBlue px-[50px] py-[12px] font-semibold tracking-tight text-darkestBlue shadow-lg transition-all duration-300 hover:scale-105"
                     >
                       <span>{item.btnNav}</span>
-                      {item.btnNav === "More" ? (
+                      {item.btnNav === 'More' ? (
                         <IoIosAdd size={20} />
                       ) : (
                         <FaArrowLeftLong size={18} />
@@ -101,7 +103,7 @@ const DiscoverUs = () => {
                     </button>
                   </div>
                 </div>
-              </SlideLeft>
+              </SlideRight>
             </div>
           </div>
         ))}

@@ -21,7 +21,7 @@ const SlideUp = ({
     if (containerRef.current) {
       gsap.fromTo(
         containerRef.current,
-        { opacity: 0, y: "100%" }, // start below + invisible
+        { opacity: 0, y: "50%" }, // start below + invisible
         {
           opacity: 1,
           y: "0%", // move to original position
@@ -48,10 +48,7 @@ const SlideUp = ({
   }, [duration, delay, playOnMount]);
 
   return (
-    <div
-      ref={sectionRef}
-      className={`${overflow === null ? "" : "overflow-hidden"} w-full h-full`}
-    >
+    <div ref={sectionRef} className="w-full h-full">
       {" "}
       <div ref={containerRef} className=" w-full h-full py-2">
         {children}

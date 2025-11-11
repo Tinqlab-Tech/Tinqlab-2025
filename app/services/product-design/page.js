@@ -1,58 +1,61 @@
-import { MainButton } from "@/components/button/MainButton";
-import Link from "next/link";
-import PageBorders from "@/components/wrappers/PageBorders";
-import MainText from "@/components/typography/MainText";
-import ImageWrapper from "@/components/wrappers/ImageWrapper";
-import OtherPageHero from "@/components/hero/OtherPageHero";
-import MainCard from "@/components/card/MainCard";
-import HeaderTwo from "@/components/typography/HeaderTwo";
-import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
-import MoreContentCard from "@/components/card/MoreContentCard";
-import TechStack from "@/components/section/TechStack";
-import figma from "@/public/images/stacks/figma.png";
-import vision from "@/public/images/stacks/vision.png";
-import firebase from "@/public/images/stacks/firebase.png";
-import stack from "@/public/images/stacks/stack.png";
-import figjam from "@/public/images/stacks/figjam.png";
-import FeedbackCard from "@/components/card/FeedbackCard";
-import productHerobg from "@/public/images/productHerobg.png";
-import infographics from "@/public/images/Infographics.svg";
-import SlideUp from "@/animation/SlideUp";
-import SlideRight from "@/animation/SlideRight";
-import SlideLeft from "@/animation/SlideLeft";
-import SlideDown from "@/animation/SlideDown";
-import BenefitCard from "@/components/card/Benefitcard";
+import { MainButton } from '@/components/button/MainButton';
+import Link from 'next/link';
+import PageBorders from '@/components/wrappers/PageBorders';
+import MainText from '@/components/typography/MainText';
+import ImageWrapper from '@/components/wrappers/ImageWrapper';
+import OtherPageHero from '@/components/hero/OtherPageHero';
+import MainCard from '@/components/card/MainCard';
+import HeaderTwo from '@/components/typography/HeaderTwo';
+import DoublePageBorders from '@/components/wrappers/DoublePageBorders';
+import MoreContentCard from '@/components/card/MoreContentCard';
+import TechStack from '@/components/section/TechStack';
+import figma from '@/public/images/stacks/figma.png';
+import vision from '@/public/images/stacks/vision.png';
+import firebase from '@/public/images/stacks/firebase.png';
+import stack from '@/public/images/stacks/stack.png';
+import figjam from '@/public/images/stacks/figjam.png';
+import FeedbackCard from '@/components/card/FeedbackCard';
+import productHerobg from '@/public/images/productHerobg.png';
+import infographics from '@/public/images/Infographics.svg';
+import SlideUp from '@/animation/SlideUp';
+import SlideRight from '@/animation/SlideRight';
+import SlideLeft from '@/animation/SlideLeft';
+import SlideDown from '@/animation/SlideDown';
+import BenefitCard from '@/components/card/Benefitcard';
+import features7 from '@/public/images/featuresbg/features7.svg';
+import features6 from '@/public/images/featuresbg/features6.svg';
+import edtech1 from '@/public/images/edtech1.svg';
 
 export const metadata = {
-  title: "Tinqlab - Expert software and blockchain developers",
+  title: 'Tinqlab - Expert software and blockchain developers',
   description:
-    "We Build Efficient And Low Cost Web, Mobile And Blockchain Applications With Great User Interface And Experience. | Software development company in Nigeria.",
+    'We Build Efficient And Low Cost Web, Mobile And Blockchain Applications With Great User Interface And Experience. | Software development company in Nigeria.',
 };
 
 export default function Home() {
   const productDesignServices = [
     {
-      title: "Market & User Research",
+      title: 'Market & User Research',
       subtitle:
-        "We uncover real customer needs, challenges, and behaviors, then translate those insights into opportunities for growth. Our market and user research helps you validate product ideas, shape meaningful user journeys, and ensures that your digital experience aligns with real market demand. Build with confidence, backed by data and direct user insight.",
+        'We uncover real customer needs, challenges, and behaviors, then translate those insights into opportunities for growth. Our market and user research helps you validate product ideas, shape meaningful user journeys, and ensures that your digital experience aligns with real market demand. Build with confidence, backed by data and direct user insight.',
     },
     {
-      title: "Brand Identity",
+      title: 'Brand Identity',
       subtitle:
         "Transform functional products into memorable brands through purposeful design. We craft visual identities that reflect your story, build trust, and resonate with the audience you're meant to serve. From logos to complete design systems, we ensure your brand stands out and speaks clearly to the people who matter most.",
     },
     {
-      title: "User Testing & Usability Audits",
+      title: 'User Testing & Usability Audits',
       subtitle:
         "A great design means nothing if it doesn't work for real users. We validate your product through hands-on user testing and in-depth usability audits, uncovering how users actually interact with your product, identifies friction points, and compares your UX against industry standards and competitors. By testing assumptions early, we ensure your product not only looks good but truly delivers on functionality, clarity, and user satisfaction.",
     },
     {
-      title: "UI/UX Design (Functional Prototyping)",
+      title: 'UI/UX Design (Functional Prototyping)',
       subtitle:
         "At this stage, Tinqlab's product design team, led by a dedicated project manager—transforms research insights into a complete set of UX prototypes. We craft user flows, wireframes, and interactive prototypes that form the foundation of your product's experience. Guided by strategy and creativity, our UI design process includes mood boards, visual concepts, and a full set of design assets tailored for all screen sizes and platforms. ",
     },
     {
-      title: "A/B Testing",
+      title: 'A/B Testing',
       subtitle:
         "Making the right design decisions shouldn't rely on guesswork. We use A/B testing to compare design variations in real-world conditions, so you can see exactly what resonates with your users. By measuring user behavior and conversion metrics, we identify what works best and why. With Tinqlab, you don't just launch—you learn, adapt, and grow smarter.",
     },
@@ -60,45 +63,45 @@ export default function Home() {
 
   const tinqlabBenefits = [
     {
-      title: "Create a customer-centric solution",
+      title: 'Create a customer-centric solution',
       items: [
         {
           subtitle:
-            "With the Design Thinking framework and profound discovery, we reach the heart of the clients’ pain points and create digital products that make them happy. No matter whether we talk about cloud based solutions or mobile apps, digital product design has no limits!",
+            'With the Design Thinking framework and profound discovery, we reach the heart of the clients’ pain points and create digital products that make them happy. No matter whether we talk about cloud based solutions or mobile apps, digital product design has no limits!',
         },
       ],
     },
 
     {
-      title: "Transparency and Agile",
+      title: 'Transparency and Agile',
       items: [
         {
           subtitle:
-            "We provide consistent and clear communication at every stage of the estimated workflow by conducting digital product design using the Agile-based approach so our clients can create and modify a team of highly skilled engineers, designers, and business analysts as needed.",
+            'We provide consistent and clear communication at every stage of the estimated workflow by conducting digital product design using the Agile-based approach so our clients can create and modify a team of highly skilled engineers, designers, and business analysts as needed.',
         },
       ],
     },
     {
-      title: "Cross-platform experience",
+      title: 'Cross-platform experience',
       items: [
         {
           subtitle:
-            "As a digital product design company, we aim to help users switch between platforms and freely engage with your product on the go. It’s not only about visual design, but access and compliance. The experience across multiple devices has to be seamless and fast.",
+            'As a digital product design company, we aim to help users switch between platforms and freely engage with your product on the go. It’s not only about visual design, but access and compliance. The experience across multiple devices has to be seamless and fast.',
         },
       ],
     },
 
     {
-      title: "Choose cost-effective solutions",
+      title: 'Choose cost-effective solutions',
       items: [
         {
           subtitle:
-            "We build interfaces by integrating the functions, ideas, and technologies that shape trends. We can offer you a cost-effective full-stack solution, from idea validation to product development, launch, and support.",
+            'We build interfaces by integrating the functions, ideas, and technologies that shape trends. We can offer you a cost-effective full-stack solution, from idea validation to product development, launch, and support.',
         },
       ],
     },
     {
-      title: "Scaling and continuous development",
+      title: 'Scaling and continuous development',
       items: [
         {
           subtitle:
@@ -122,84 +125,74 @@ export default function Home() {
         <OtherPageHero
           bgImage={null}
           image={productHerobg}
-          title={"Digital Product Design Services"}
+          title={'Digital Product Design Services'}
           subtitle={
-            "Building great digital products requires dedication, design thinking, sharp hard skills, domain expertise, and sincere empathy for end-customer needs. The digital product design services by TinqLab include all of that, along with a cutting-edge tech stack and brilliant custom development. You should not agree to less! Create digital experiences that engage people at every touchpoint with us."
+            'Building great digital products requires dedication, design thinking, sharp hard skills, domain expertise, and sincere empathy for end-customer needs. The digital product design services by TinqLab include all of that, along with a cutting-edge tech stack and brilliant custom development. You should not agree to less! Create digital experiences that engage people at every touchpoint with us.'
           }
-          btnLink={"/contact-us"}
-          btnText={"Schedule a call"}
+          btnLink={'/contact-us'}
+          btnText={'Schedule a call'}
           hasNav={true}
           isHeader={false}
         />
 
         {/* digital product */}
         <DoublePageBorders
-          background={"bg-productbg bg-no-repeat bg-center bg-cover"}
+          background={'bg-productbg bg-no-repeat bg-center bg-cover'}
         >
           <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8  p-6 rounded-[20px] scroll-mt-4"
-            id={"services"}
+            className="grid scroll-mt-4 grid-cols-1 gap-4 rounded-[20px] p-6 md:grid-cols-3 md:gap-8"
+            id={'services'}
           >
-            {" "}
-            <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 items-start">
-              {" "}
-              <div>
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo
-                    text={"Digital product Experience Design Services"}
-                  />
-                </SlideUp>
-              </div>
-              <SlideRight duration={1.5}>
-                {" "}
-                <MainText
-                  text={
-                    "At Tinqlab, our product design services blend creativity, strategy, and user insight to craft digital experiences that are not only beautiful, but functional, intuitive, and backed by data. We help businesses build products users love through a holistic design process focused on value, usability, and performance."
-                  }
-                  color={"text-[#12152E] opacity-50"}
-                />
-              </SlideRight>
+            {' '}
+            <div className="col-span-1 flex flex-col items-start gap-4 md:col-span-2 md:gap-8">
+              {' '}
+              <HeaderTwo text={'Digital product Experience Design Services'} />
+              <MainText
+                text={
+                  'At Tinqlab, our product design services blend creativity, strategy, and user insight to craft digital experiences that are not only beautiful, but functional, intuitive, and backed by data. We help businesses build products users love through a holistic design process focused on value, usability, and performance.'
+                }
+                color={'text-[#12152E] opacity-50'}
+              />
             </div>
-            <div className="hidden md:block h-full">
-              <SlideLeft>
-                {" "}
-                <div className=" bg-features6 bg-contain bg-right-bottom bg-no-repeat h-full"></div>
-              </SlideLeft>{" "}
-            </div>{" "}
+            <SlideLeft>
+              {' '}
+              <div className="hidden h-full justify-end overflow-hidden md:flex">
+                <ImageWrapper
+                  src={features6}
+                  alt={'about Tinqlab'}
+                  width={300}
+                  height={300}
+                  style={' bg-contain bg-center bg-no-repeat'}
+                />{' '}
+              </div>
+            </SlideLeft>
           </div>
         </DoublePageBorders>
 
         {/* digital product design services */}
-        <PageBorders overflow={null}>
+        <PageBorders>
           <div
-            className="relative flex flex-col gap-8 scroll-mt-4"
-            id={"services"}
+            className="relative flex scroll-mt-4 flex-col gap-8"
+            id={'services'}
           >
-            {" "}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 ">
-              <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start bg-white z-10 py-4">
-                <div>
-                  <SlideUp>
-                    {" "}
-                    <HeaderTwo
-                      text={"TinqLab's Digital Product Design Services"}
-                    />{" "}
-                  </SlideUp>{" "}
-                </div>
-                <SlideRight duration={1.5}>
-                  {" "}
-                  <Link href={"/"}>
-                    <MainButton text={"Get a consultation"} />
-                  </Link>{" "}
-                </SlideRight>
+            {' '}
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
+              <div className="z-10 flex flex-col items-start justify-start gap-8 self-start bg-white py-4 md:sticky md:top-0">
+                <HeaderTwo text={"TinqLab's Digital Product Design Services"} />
+
+                <SlideDown>
+                  {' '}
+                  <Link href={'/contact-us'}>
+                    <MainButton text={'Get a consultation'} />
+                  </Link>{' '}
+                </SlideDown>
               </div>
-              <div className="grid grid-cols-1  gap-4 md:gap-8">
-                {" "}
+              <div className="grid grid-cols-1 gap-4 md:gap-8">
+                {' '}
                 {productDesignServices.map((item, index) => (
                   <div key={index}>
-                    <SlideDown delay={index * 0.2} overflow={null}>
-                      {" "}
+                    <SlideDown delay={index * 0.2}>
+                      {' '}
                       <MainCard
                         title={item.title}
                         subtitle={item.subtitle}
@@ -212,33 +205,35 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </div>{" "}
+          </div>
         </PageBorders>
 
         {/*Technology we use  */}
-        <DoublePageBorders background={"bg-lightBlue"}>
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
-            {" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
-              {" "}
-              <div className="col-span-1 md:col-span-2 py-2">
-                {" "}
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Technology We Use"} />
-                </SlideUp>
+        <DoublePageBorders background={'bg-lightBlue'}>
+          <div className="flex scroll-mt-4 flex-col gap-8" id={'services'}>
+            {' '}
+            <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-3 md:gap-8">
+              {' '}
+              <div className="col-span-1 py-2 md:col-span-2">
+                <HeaderTwo text={'Technology We Use'} />
               </div>
-              <div className="hidden md:block h-full">
-                {" "}
-                <SlideLeft>
-                  <div className=" bg-features7 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh]"></div>
-                </SlideLeft>
-              </div>
+              <SlideLeft>
+                {' '}
+                <div className="hidden h-full justify-center overflow-hidden md:flex">
+                  <ImageWrapper
+                    src={features7}
+                    alt={'about Tinqlab'}
+                    width={300}
+                    height={300}
+                    style={' bg-contain bg-center bg-no-repeat'}
+                  />{' '}
+                </div>
+              </SlideLeft>
             </div>
-            <div className="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-8 justify-items-center">
+            <div className="grid grid-cols-3 justify-items-center gap-4 md:grid-cols-5 md:gap-8">
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
-                  <SlideDown delay={index * 0.2} overflow={null}>
+                  <SlideDown delay={index * 0.2}>
                     <TechStack stack={item.technologies} />
                   </SlideDown>
                 </div>
@@ -248,74 +243,68 @@ export default function Home() {
         </DoublePageBorders>
 
         <PageBorders>
-          <div className="flex flex-col gap-8  scroll-mt-4" id="services">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-              <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 items-start">
-                <div>
-                  {" "}
-                  <SlideUp>
-                    {" "}
-                    <HeaderTwo text="Our Design Model" />
-                  </SlideUp>
-                </div>
-                <SlideRight duration={1.5}>
-                  {" "}
-                  <MainText
-                    text="Our product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We provide you with complex market research to find out all clients’ pains and gains, analysis of digital products and provide a smooth process of digital transformation and product design services. Geniusee product designers have established a design process based on our practical expertise in 100+ projects that have performed well and won over the market!"
-                    color="opacity-50"
-                  />
-                </SlideRight>
+          <div className="flex scroll-mt-4 flex-col gap-8" id="services">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+              <div className="col-span-1 flex flex-col items-start gap-4 md:col-span-2 md:gap-8">
+                {' '}
+                <HeaderTwo text="Our Design Model" />{' '}
+                <MainText
+                  text="Our product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We provide you with complex market research to find out all clients’ pains and gains, analysis of digital products and provide a smooth process of digital transformation and product design services. Geniusee product designers have established a design process based on our practical expertise in 100+ projects that have performed well and won over the market!"
+                  color="opacity-50"
+                />
               </div>
-              <div className="hidden md:block h-full">
-                {" "}
-                <SlideLeft>
-                  <div className="bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[40vh]"></div>
-                </SlideLeft>{" "}
-              </div>{" "}
+              <SlideLeft>
+                {' '}
+                <div className="hidden h-full justify-center overflow-hidden md:flex">
+                  <ImageWrapper
+                    src={edtech1}
+                    alt={'about Tinqlab'}
+                    width={300}
+                    height={300}
+                    style={' bg-contain bg-center bg-no-repeat'}
+                  />{' '}
+                </div>
+              </SlideLeft>
             </div>
             <SlideDown>
-              <div className="flex w-full min-h-[40vh]  items-center justify-center">
-                {" "}
+              <div className="flex min-h-[40vh] w-full items-center justify-center">
+                {' '}
                 <ImageWrapper
                   src={infographics}
                   alt="Edtech"
                   fill
-                  className="object-contain object-center w-full"
+                  className="w-full object-contain object-center"
                 />
-              </div>{" "}
+              </div>{' '}
             </SlideDown>
           </div>
         </PageBorders>
 
         {/* benefit of working with tinqlab */}
-        <PageBorders background={"bg-lightBlue"}>
+        <PageBorders background={'bg-lightBlue'}>
           <div className="flex flex-col gap-8" id="industry">
             <div className="flex flex-col gap-4 md:gap-8">
-              <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+              <div className="grid gap-4 md:grid-cols-2 md:gap-8">
                 <div className="flex flex-col gap-4 md:gap-8">
-                  <div>
-                    <SlideUp>
-                      <HeaderTwo text="Benefits Of Working With TinqLab" />
-                    </SlideUp>
-                  </div>
+                  <HeaderTwo text="Benefits Of Working With TinqLab" />
                   <SlideDown delay={0.2}>
-                    {" "}
+                    {' '}
                     <BenefitCard {...tinqlabBenefits[0]} bgColor={null} />
-                  </SlideDown>{" "}
+                  </SlideDown>{' '}
                 </div>
-                <div className="hidden md:block h-full ">
+                <div className="hidden h-full md:block">
                   <SlideRight duration={1.5}>
-                    <div className=" bg-features5 bg-contain bg-center xl:bg-bottom bg-no-repeat h-full" />
-                  </SlideRight>{" "}
-                </div>{" "}
+                    <div className="h-full bg-features5 bg-contain bg-center bg-no-repeat xl:bg-bottom" />
+                  </SlideRight>{' '}
+                </div>{' '}
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4 md:gap-8">
+              <div className="grid gap-4 md:grid-cols-2 md:gap-8">
                 {tinqlabBenefits.slice(1).map((item, index) => (
                   <div key={index}>
                     <SlideDown delay={index * 0.2}>
                       <BenefitCard {...item} bgColor={null} />
-                    </SlideDown>{" "}
+                    </SlideDown>{' '}
                   </div>
                 ))}
               </div>
@@ -324,7 +313,7 @@ export default function Home() {
         </PageBorders>
         <PageBorders>
           <div id="career">
-            <FeedbackCard title={"Clients Feedback"} />
+            <FeedbackCard title={'Clients Feedback'} />
           </div>
         </PageBorders>
       </div>

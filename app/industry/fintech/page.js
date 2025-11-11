@@ -1,191 +1,194 @@
-import { MainButton } from "@/components/button/MainButton";
-import Link from "next/link";
-import PageBorders from "@/components/wrappers/PageBorders";
-import MainText from "@/components/typography/MainText";
-import react from "@/public/images/react.png";
-import ImageWrapper from "@/components/wrappers/ImageWrapper";
-import OtherPageHero from "@/components/hero/OtherPageHero";
-import MainCard from "@/components/card/MainCard";
-import HeaderTwo from "@/components/typography/HeaderTwo";
-import DoublePageBorders from "@/components/wrappers/DoublePageBorders";
-import MoreContentCard from "@/components/card/MoreContentCard";
-import { SpecificationItem } from "@/components/section/SpecificationItem";
-import fintechHerobg from "@/public/images/fintechHerobg.svg";
-import TechStack from "@/components/section/TechStack";
-import mobile2 from "@/public/icons/mobile2.svg";
-import location from "@/public/icons/location.svg";
-import file from "@/public/icons/file.svg";
-import rep from "@/public/icons/rep.svg";
-import star from "@/public/icons/star.svg";
-import tv from "@/public/icons/tv.svg";
-import javascript from "@/public/images/stacks/javascript.png";
-import flutter from "@/public/images/stacks/flutter.png";
-import java from "@/public/images/stacks/java.svg";
-import swift from "@/public/images/stacks/swift.png";
-import aws from "@/public/images/stacks/aws.png";
-import vue from "@/public/images/stacks/vue.png";
-import angular from "@/public/images/stacks/angular.png";
-import SlideUp from "@/animation/SlideUp";
-import SlideDown from "@/animation/SlideDown";
-import SlideRight from "@/animation/SlideRight";
-import SlideLeft from "@/animation/SlideLeft";
-import Header from "@/components/partials/Header";
-import ItemCard from "@/components/card/ItemCard";
+import { MainButton } from '@/components/button/MainButton';
+import Link from 'next/link';
+import PageBorders from '@/components/wrappers/PageBorders';
+import MainText from '@/components/typography/MainText';
+import react from '@/public/images/react.png';
+import ImageWrapper from '@/components/wrappers/ImageWrapper';
+import OtherPageHero from '@/components/hero/OtherPageHero';
+import MainCard from '@/components/card/MainCard';
+import HeaderTwo from '@/components/typography/HeaderTwo';
+import DoublePageBorders from '@/components/wrappers/DoublePageBorders';
+import MoreContentCard from '@/components/card/MoreContentCard';
+import { SpecificationItem } from '@/components/section/SpecificationItem';
+import fintechHerobg from '@/public/images/fintechHerobg.svg';
+import TechStack from '@/components/section/TechStack';
+import mobile2 from '@/public/icons/mobile2.svg';
+import location from '@/public/icons/location.svg';
+import file from '@/public/icons/file.svg';
+import rep from '@/public/icons/rep.svg';
+import star from '@/public/icons/star.svg';
+import tv from '@/public/icons/tv.svg';
+import javascript from '@/public/images/stacks/javascript.png';
+import flutter from '@/public/images/stacks/flutter.png';
+import java from '@/public/images/stacks/java.svg';
+import swift from '@/public/images/stacks/swift.png';
+import aws from '@/public/images/stacks/aws.png';
+import vue from '@/public/images/stacks/vue.png';
+import angular from '@/public/images/stacks/angular.png';
+import SlideUp from '@/animation/SlideUp';
+import SlideDown from '@/animation/SlideDown';
+import SlideRight from '@/animation/SlideRight';
+import SlideLeft from '@/animation/SlideLeft';
+import Header from '@/components/partials/Header';
+import ItemCard from '@/components/card/ItemCard';
+import retailBg3 from '@/public/images/retailBg3.svg';
+import retailBg2 from '@/public/images/retailBg2.svg';
+import retailBg from '@/public/images/retailBg.svg';
 
 export const metadata = {
-  title: "Tinqlab - Expert software and blockchain developers",
+  title: 'Tinqlab - Expert software and blockchain developers',
   description:
-    "We Build Efficient And Low Cost Web, Mobile And Blockchain Applications With Great User Interface And Experience. | Software development company in Nigeria.",
+    'We Build Efficient And Low Cost Web, Mobile And Blockchain Applications With Great User Interface And Experience. | Software development company in Nigeria.',
 };
 
 export default function Home() {
   const softwareSolutions = [
     {
       icon: mobile2,
-      title: "Blockchain-based platforms",
+      title: 'Blockchain-based platforms',
     },
     {
       icon: file,
-      title: "Financial analysis solutions",
+      title: 'Financial analysis solutions',
     },
     {
       icon: star,
-      title: "Cryptocurrency exchanges",
+      title: 'Cryptocurrency exchanges',
     },
     {
       icon: tv,
-      title: "Investment/savings solutions",
+      title: 'Investment/savings solutions',
     },
     {
       icon: rep,
-      title: "Multiple wallets types",
+      title: 'Multiple wallets types',
     },
     {
       icon: location,
-      title: "Automated trading bots",
+      title: 'Automated trading bots',
     },
   ];
 
   const softwareDevelopment = [
     {
-      title: "Requirements",
+      title: 'Requirements',
       subtitle:
-        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,",
+        'Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,',
     },
     {
-      title: "Design",
+      title: 'Design',
       subtitle:
-        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,",
+        'Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,',
     },
 
     {
-      title: "Development",
+      title: 'Development',
       subtitle:
-        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,",
+        'Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,',
     },
     {
-      title: "Testing",
+      title: 'Testing',
       subtitle:
-        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,",
+        'Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,',
     },
     {
-      title: "Release",
+      title: 'Release',
       subtitle:
-        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,",
+        'Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,',
     },
     {
-      title: "Support",
+      title: 'Support',
       subtitle:
-        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,",
+        'Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration,',
     },
   ];
 
   const fintechSoftwareDevelopment = [
     {
-      title: "Online ordering systems",
+      title: 'Online ordering systems',
       subtitle:
-        "Online ordering systems are an essential tool for any retail enterprise. Expansion of custom retail software development opportunities, increased audience, profit growth, and business growth is only a partial list of benefits from introducing new technologies, especially in a competitive market.",
+        'Online ordering systems are an essential tool for any retail enterprise. Expansion of custom retail software development opportunities, increased audience, profit growth, and business growth is only a partial list of benefits from introducing new technologies, especially in a competitive market.',
     },
     {
-      title: "E-commerce platforms & POS software solutions",
+      title: 'E-commerce platforms & POS software solutions',
       subtitle:
-        "We develop software solutions for retail companies around the world. During the custom software development process, we use the best marketing and e-commerce platforms such as Shopify, SAP Hybris, AWS, Salesforce, Magento, Microsoft Dynamics CRM, PayPal, and more.",
+        'We develop software solutions for retail companies around the world. During the custom software development process, we use the best marketing and e-commerce platforms such as Shopify, SAP Hybris, AWS, Salesforce, Magento, Microsoft Dynamics CRM, PayPal, and more.',
     },
     {
-      title: "Diverse omnichannel solutions",
+      title: 'Diverse omnichannel solutions',
       subtitle:
-        "With the help of well-designed software, you get an omnichannel retail model, which implies that the client themselves choose where and how to buy. We create solutions that get to the very essence of the omnichannel approach — to satisfy the needs of the client here and now, providing superior customer experience.",
+        'With the help of well-designed software, you get an omnichannel retail model, which implies that the client themselves choose where and how to buy. We create solutions that get to the very essence of the omnichannel approach — to satisfy the needs of the client here and now, providing superior customer experience.',
     },
     {
-      title: "POS software solutions",
+      title: 'POS software solutions',
       subtitle:
-        "Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration, propelling us to new heights of success.",
+        'Our experience is enhanced by teamwork, allowing us to achieve exceptional results while cultivating a culture of mutual support.  We create extraordinary achievements by combining talents, dedication, and collaboration, propelling us to new heights of success.',
     },
   ];
 
   const workWithTinqlab = [
     {
-      title: "Proven Fintech expertise",
+      title: 'Proven Fintech expertise',
       subtitle:
-        "With a strong portfolio of successful projects across fintech, retail, edtech, and more, we bring domain-specific knowledge and technical excellence to every solution. From neobanks for Gen Z, blockchain ecosystems, and many more.",
+        'With a strong portfolio of successful projects across fintech, retail, edtech, and more, we bring domain-specific knowledge and technical excellence to every solution. From neobanks for Gen Z, blockchain ecosystems, and many more.',
     },
     {
-      title: "Agile development",
+      title: 'Agile development',
       subtitle:
-        "Our agile teams adapt quickly to evolving needs. We build fast, test early, and deliver results that align with your goals and market realities.",
+        'Our agile teams adapt quickly to evolving needs. We build fast, test early, and deliver results that align with your goals and market realities.',
     },
     {
-      title: "Security and compliance",
+      title: 'Security and compliance',
       subtitle:
-        "Security and regulatory compliance are embedded in every stage of our development process. We build with industry standards in mind, including GDPR, PCI-DSS, SOC 2, and PSD2 — so your product is both secure and compliant from day one.",
+        'Security and regulatory compliance are embedded in every stage of our development process. We build with industry standards in mind, including GDPR, PCI-DSS, SOC 2, and PSD2 — so your product is both secure and compliant from day one.',
     },
     {
-      title: "Experts with microservices",
+      title: 'Experts with microservices',
       subtitle:
-        "Our engineers are experienced in building modern, modular systems using microservices, enabling faster deployment, easier maintenance, and scalable performance across complex digital ecosystems.",
+        'Our engineers are experienced in building modern, modular systems using microservices, enabling faster deployment, easier maintenance, and scalable performance across complex digital ecosystems.',
     },
     {
-      title: "End-to-End Partnership",
+      title: 'End-to-End Partnership',
       subtitle:
-        "From strategy and product design to development, launch, and support, we partner with you through the full lifecycle — ensuring speed, quality, and long-term scalability.",
+        'From strategy and product design to development, launch, and support, we partner with you through the full lifecycle — ensuring speed, quality, and long-term scalability.',
     },
   ];
 
   const developmentServices = [
     {
-      title: "Banking software development",
+      title: 'Banking software development',
       subtitle:
-        "We design and build core banking systems, digital banking platforms, and custom tools that streamline operations and enhance customer experiences for both traditional and neobanks.",
+        'We design and build core banking systems, digital banking platforms, and custom tools that streamline operations and enhance customer experiences for both traditional and neobanks.',
     },
     {
-      title: "Lending software",
+      title: 'Lending software',
       subtitle:
-        "From loan origination and credit scoring to automated workflows and repayment systems, we develop end-to-end lending platforms that simplify borrowing for users and reduce risk for providers.",
+        'From loan origination and credit scoring to automated workflows and repayment systems, we develop end-to-end lending platforms that simplify borrowing for users and reduce risk for providers.',
     },
     {
-      title: "e-wallet development",
+      title: 'e-wallet development',
       subtitle:
-        "Our team creates secure, compliant, and user-friendly digital wallets that support fast transactions, multi-currency payments, and seamless integration with third-party services.",
+        'Our team creates secure, compliant, and user-friendly digital wallets that support fast transactions, multi-currency payments, and seamless integration with third-party services.',
     },
     {
-      title: "Accounting software",
+      title: 'Accounting software',
       subtitle:
-        "We develop intuitive, scalable accounting tools that automate financial processes, improve accuracy, and support real-time financial reporting and compliance.",
+        'We develop intuitive, scalable accounting tools that automate financial processes, improve accuracy, and support real-time financial reporting and compliance.',
     },
     {
-      title: "Trading software",
+      title: 'Trading software',
       subtitle:
-        "We engineer high-performance platforms for stock, forex, and crypto trading, complete with real-time analytics, market data integration, and user-focused dashboards.",
+        'We engineer high-performance platforms for stock, forex, and crypto trading, complete with real-time analytics, market data integration, and user-focused dashboards.',
     },
     {
-      title: "Risk management",
+      title: 'Risk management',
       subtitle:
-        "Tinqlab builds intelligent risk analysis and compliance tools to help financial organizations detect fraud, monitor regulatory obligations, and safeguard assets effectively.",
+        'Tinqlab builds intelligent risk analysis and compliance tools to help financial organizations detect fraud, monitor regulatory obligations, and safeguard assets effectively.',
     },
     {
-      title: "Wealth and investment software",
+      title: 'Wealth and investment software',
       subtitle:
-        "We deliver digital solutions that empower financial advisors and clients with smart portfolio tools, performance tracking, and personalized investment insights.",
+        'We deliver digital solutions that empower financial advisors and clients with smart portfolio tools, performance tracking, and personalized investment insights.',
     },
   ];
 
@@ -204,44 +207,38 @@ export default function Home() {
     <div className="min-h-screen">
       <div className="">
         <OtherPageHero
-          bgImage={"bg-[#12152E]"}
-          title={"Fintech Software Development Services"}
+          bgImage={'bg-[#12152E]'}
+          title={'Fintech Software Development Services'}
           subtitle={
-            "TinqLab’s FinTech software development expertise is a powerful tech partner who’s here to create the best custom FinTech software for you! We’ve also partnered with some of the most proficient FinTech providers in the world."
+            'TinqLab’s FinTech software development expertise is a powerful tech partner who’s here to create the best custom FinTech software for you! We’ve also partnered with some of the most proficient FinTech providers in the world.'
           }
-          btnLink={"/"}
-          btnText={"Schedule a call"}
+          btnLink={'/contact-us'}
+          btnText={'Schedule a call'}
           image={fintechHerobg}
           isHeader={true}
         />
 
-        <PageBorders overflow={null}>
+        <PageBorders>
           <div
-            id={"about"}
-            className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-8 "
+            id={'about'}
+            className="grid scroll-mt-4 grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 lg:gap-8"
           >
-            <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start bg-white z-10 py-4">
-              <div>
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo
-                    text={"Our Industry Expertise in Fintech Development"}
-                  />
-                </SlideUp>
-              </div>
-              <SlideRight duration={1.5}>
-                <MainText
-                  text={
-                    "We specialize in delivering cutting-edge fintech solutions tailored to the diverse needs of the financial services industry. Our team combines deep domain knowledge with advanced engineering to build secure, scalable, and high-performing financial products that drive innovation and efficiency."
-                  }
-                  color={"text-[#12152E] opacity-50"}
-                />
-              </SlideRight>
+            <div className="flex flex-col gap-8 self-start py-4 md:sticky md:top-0">
+              {' '}
+              <HeaderTwo
+                text={'Our Industry Expertise in Fintech Development'}
+              />
+              <MainText
+                text={
+                  'We specialize in delivering cutting-edge fintech solutions tailored to the diverse needs of the financial services industry. Our team combines deep domain knowledge with advanced engineering to build secure, scalable, and high-performing financial products that drive innovation and efficiency.'
+                }
+                color={'text-[#12152E] opacity-50'}
+              />
             </div>
             <div className="grid grid-cols-1 gap-4 md:gap-8">
               {developmentServices.map((item, index) => (
                 <div key={index}>
-                  <SlideDown delay={index * 0.2} overflow={null}>
+                  <SlideDown delay={index * 0.2}>
                     <SpecificationItem
                       title={item.title}
                       subTitle={item.subtitle}
@@ -253,42 +250,41 @@ export default function Home() {
           </div>
         </PageBorders>
         <PageBorders>
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
-            {" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
-              {" "}
-              <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8">
-                {" "}
+          <div className="flex scroll-mt-4 flex-col gap-8" id={'services'}>
+            {' '}
+            <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-3 md:gap-8">
+              {' '}
+              <div className="col-span-1 flex flex-col gap-4 md:col-span-2 md:gap-8">
+                {' '}
+                <HeaderTwo
+                  text={"TinqLab's Fintech software development solutions"}
+                />
                 <div>
-                  <SlideUp>
-                    <HeaderTwo
-                      text={"TinqLab's Fintech software development solutions"}
-                    />
-                  </SlideUp>
-                </div>
-                <div>
-                  <SlideRight duration={1.5}>
-                    <MainText
-                      text={
-                        "Entrust your full-cycle web and mobile fintech development to a team that understands both the pace of innovation and the demands of financial systems. At Tinqlab, we’ve delivered successful fintech solutions across blockchain, mobile banking, payment gateways, neobank platforms, and system integrations. With deep industry expertise, we help you build secure, scalable, products that meet today’s standards and tomorrow’s expectations."
-                      }
-                      color={"text-[#12152E] opacity-50"}
-                    />
-                  </SlideRight>
+                  <MainText
+                    text={
+                      'Entrust your full-cycle web and mobile fintech development to a team that understands both the pace of innovation and the demands of financial systems. At Tinqlab, we’ve delivered successful fintech solutions across blockchain, mobile banking, payment gateways, neobank platforms, and system integrations. With deep industry expertise, we help you build secure, scalable, products that meet today’s standards and tomorrow’s expectations.'
+                    }
+                    color={'text-[#12152E] opacity-50'}
+                  />
                 </div>
               </div>
-              <div className="hidden md:block">
-                <SlideLeft>
-                  <div className=" bg-retailBg3 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh] md:min-h-[30vh]"></div>
-                </SlideLeft>{" "}
-              </div>
+              <SlideLeft>
+                {' '}
+                <div className="hidden h-full justify-center overflow-hidden md:flex">
+                  <ImageWrapper
+                    src={retailBg3}
+                    alt={'about Tinqlab'}
+                    width={300}
+                    height={300}
+                    style={' bg-contain bg-center bg-no-repeat'}
+                  />{' '}
+                </div>
+              </SlideLeft>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2  gap-4 md:gap-8">
-              {" "}
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
               {softwareSolutions.map((item, index) => (
                 <div key={index}>
                   <SlideDown delay={index * 0.2} overflow={null}>
-                    {" "}
                     <ItemCard
                       title={item.title}
                       bgColor={null}
@@ -298,12 +294,12 @@ export default function Home() {
                   </SlideDown>
                 </div>
               ))}
-            </div>{" "}
+            </div>{' '}
             <div>
-              <SlideDown delay={0.2} overflow={null}>
+              <SlideDown>
                 <div className="grid justify-items-center">
-                  <Link href={"/"}>
-                    <MainButton text={"Book consultation"} />
+                  <Link href={'/contact-us'}>
+                    <MainButton text={'Book consultation'} />
                   </Link>
                 </div>
               </SlideDown>
@@ -311,32 +307,38 @@ export default function Home() {
           </div>
         </PageBorders>
         <DoublePageBorders
-          background={"bg-featuresbg bg-cover bg-center bg-no-repeat"}
+          background={'bg-featuresbg bg-cover bg-center bg-no-repeat'}
         >
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
-            {" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center">
-              {" "}
-              <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8">
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Technology We Use"} />
-                </SlideUp>{" "}
+          <div className="flex scroll-mt-4 flex-col gap-8" id={'services'}>
+            {' '}
+            <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-3 md:gap-8">
+              {' '}
+              <div className="col-span-1 flex flex-col gap-4 md:col-span-2 md:gap-8">
+                {' '}
+                <HeaderTwo text={'Technology We Use'} />
               </div>
-              <div className="hidden md:block">
-                <SlideLeft>
-                  <div className=" bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh] md:min-h-[30vh]"></div>
-                </SlideLeft>{" "}
-              </div>
+              <SlideLeft>
+                {' '}
+                <div className="hidden h-full justify-center overflow-hidden md:flex">
+                  {' '}
+                  <ImageWrapper
+                    src={retailBg2}
+                    alt={'about Tinqlab'}
+                    width={300}
+                    height={300}
+                    style={' bg-contain bg-center bg-no-repeat'}
+                  />{' '}
+                </div>{' '}
+              </SlideLeft>
             </div>
-            <div className="grid grid-cols-4 xl:grid-cols-8 gap-4 md:gap-8">
-              {" "}
+            <div className="grid grid-cols-4 gap-4 md:gap-8 xl:grid-cols-8">
+              {' '}
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
-                  <SlideDown delay={index * 0.2} overflow={null}>
-                    {" "}
+                  <SlideDown delay={index * 0.2}>
+                    {' '}
                     <TechStack stack={item.technologies} />
-                  </SlideDown>{" "}
+                  </SlideDown>{' '}
                 </div>
               ))}
             </div>
@@ -344,43 +346,40 @@ export default function Home() {
         </DoublePageBorders>
         {/* our fintech development process */}
         <PageBorders>
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
-            {" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
-              {" "}
-              <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8">
-                {" "}
-                <div>
-                  <SlideUp>
-                    {" "}
-                    <HeaderTwo
-                      text={"Our Fintech Software Development Process"}
-                    />
-                  </SlideUp>{" "}
-                </div>
-                <div>
-                  <SlideRight duration={1.5}>
-                    <MainText
-                      text={
-                        "We follow a structured and agile development process designed to deliver secure, scalable, and user-focused fintech solutions. Our approach ensures your product meets regulatory standards, adapts to market shifts, and delivers exceptional customer experiences."
-                      }
-                      color={"text-[#12152E] opacity-50 "}
-                    />
-                  </SlideRight>
-                </div>
+          <div className="flex scroll-mt-4 flex-col gap-8" id={'services'}>
+            {' '}
+            <div className="grid grid-cols-1 items-center gap-4 md:grid-cols-3 md:gap-8">
+              {' '}
+              <div className="col-span-1 flex flex-col gap-4 md:col-span-2 md:gap-8">
+                {' '}
+                <HeaderTwo text={'Our Fintech Software Development Process'} />
+                <MainText
+                  text={
+                    'We follow a structured and agile development process designed to deliver secure, scalable, and user-focused fintech solutions. Our approach ensures your product meets regulatory standards, adapts to market shifts, and delivers exceptional customer experiences.'
+                  }
+                  color={'text-[#12152E] opacity-50 '}
+                />
               </div>
-              <div className="hidden md:block h-full">
-                <SlideLeft>
-                  <div className=" bg-retailBg bg-contain bg-left-bottom bg-no-repeat min-h-[40vh]"></div>
-                </SlideLeft>
-              </div>
+              <SlideLeft>
+                {' '}
+                <div className="hidden h-full justify-center overflow-hidden md:flex">
+                  {' '}
+                  <ImageWrapper
+                    src={retailBg}
+                    alt={'about Tinqlab'}
+                    width={300}
+                    height={300}
+                    style={' bg-contain bg-center bg-no-repeat'}
+                  />{' '}
+                </div>{' '}
+              </SlideLeft>
             </div>
-            <div className=" grid grid-cols-1 md:grid-cols-2  gap-4 md:gap-8">
-              {" "}
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
+              {' '}
               {softwareDevelopment.map((item, index) => (
                 <div key={index}>
                   <SlideDown delay={index * 0.2} overflow={null}>
-                    {" "}
+                    {' '}
                     <MainCard
                       title={item.title}
                       subtitle={item.subtitle}
@@ -396,41 +395,32 @@ export default function Home() {
         </PageBorders>
 
         <DoublePageBorders
-          background={"bg-featuresbg2 bg-cover bg-no-repeat bg-center"}
+          background={'bg-featuresbg2 bg-cover bg-no-repeat bg-center'}
         >
-          <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
-            {" "}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
-              {" "}
-              <div className="col-span-1 md:col-span-2 flex flex-col gap-8 md:w-4/5">
-                {" "}
-                <div>
-                  {" "}
-                  <SlideUp>
-                    {" "}
-                    <HeaderTwo
-                      text={
-                        "We Understand that the key to success is clear communication"
-                      }
-                    />
-                  </SlideUp>
-                </div>
-                <SlideRight duration={1.5}>
-                  <MainText
-                    text={
-                      "The product owner gets full access to project documentation and planning, which gives them control over the entire process of custom software development at all stages. Our FinTech software development services team is adaptive to clients’ schedules and workflow."
-                    }
-                    color={"opacity-50"}
-                  />
-                </SlideRight>
+          <div className="flex scroll-mt-4 flex-col gap-8" id={'services'}>
+            {' '}
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+              {' '}
+              <div className="col-span-1 flex flex-col gap-8 md:col-span-2 md:w-4/5">
+                {' '}
+                <HeaderTwo
+                  text={
+                    'We Understand that the key to success is clear communication'
+                  }
+                />
+                <MainText
+                  text={
+                    'The product owner gets full access to project documentation and planning, which gives them control over the entire process of custom software development at all stages. Our FinTech software development services team is adaptive to clients’ schedules and workflow.'
+                  }
+                  color={'opacity-50'}
+                />
               </div>
-              <div className=" flex items-center justify-start">
+              <div className="flex items-center justify-start">
                 <div>
-                  {" "}
-                  <SlideRight delay={0.2} overflow={null}>
-                    <Link href={"/contact-us"}>
-                      <MainButton text={"Schedule a call"} />
-                    </Link>{" "}
+                  <SlideRight>
+                    <Link href={'/contact-us'}>
+                      <MainButton text={'Schedule a call'} />
+                    </Link>{' '}
                   </SlideRight>
                 </div>
               </div>
@@ -439,40 +429,30 @@ export default function Home() {
         </DoublePageBorders>
 
         {/* why work with tinqlab */}
-        <PageBorders overflow={null}>
+        <PageBorders>
           <div
-            id={"about"}
-            className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 "
+            id={'about'}
+            className="grid scroll-mt-4 grid-cols-1 gap-8 md:grid-cols-2"
           >
-            <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start bg-white z-10 py-4">
-              <div>
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Why Work with Tinqlab?"} />
-                </SlideUp>
-              </div>
-              <div>
-                {" "}
-                <SlideRight duration={1.5}>
-                  {" "}
-                  <MainText
-                    text={
-                      "At Tinqlab, we do more than just build software — we solve real business challenges with technology that delivers measurable impact. Our approach is rooted in collaboration, innovation, and a deep understanding of the industries we serve."
-                    }
-                    color={"opacity-50"}
-                  />
-                </SlideRight>{" "}
-              </div>
-              <SlideDown delay={0.5}>
-                <Link href={"/contact-us"}>
-                  <MainButton text={"Get a consultation"} />
+            <div className="z-10 flex flex-col items-start justify-start gap-8 self-start bg-white py-4 md:sticky md:top-0">
+              {' '}
+              <HeaderTwo text={'Why Work with Tinqlab?'} />
+              <MainText
+                text={
+                  'At Tinqlab, we do more than just build software — we solve real business challenges with technology that delivers measurable impact. Our approach is rooted in collaboration, innovation, and a deep understanding of the industries we serve.'
+                }
+                color={'opacity-50'}
+              />
+              <SlideDown>
+                <Link href={'/contact-us'}>
+                  <MainButton text={'Get a consultation'} />
                 </Link>
               </SlideDown>
             </div>
             <div className="grid grid-cols-1 gap-4 md:gap-8">
               {workWithTinqlab.map((item, index) => (
                 <div key={index}>
-                  <SlideDown delay={index * 0.2} overflow={null}>
+                  <SlideDown delay={index * 0.2}>
                     <MainCard
                       title={item.title}
                       subtitle={item.subtitle}

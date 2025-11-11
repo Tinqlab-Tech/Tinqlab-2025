@@ -1,23 +1,24 @@
-"use client";
+'use client';
 
-import React, { useRef } from "react";
-import MainText from "../typography/MainText";
-import ImageWrapper from "../wrappers/ImageWrapper";
-import feedback1 from "@/public/images/feedback1.png";
-import feedback2 from "@/public/images/feedback2.png";
-import Slider from "react-slick";
-import HeaderTwo from "../typography/HeaderTwo";
-import { ImArrowLeft, ImArrowRight } from "react-icons/im";
-import SlideRight from "@/animation/SlideRight";
-import SlideUp from "@/animation/SlideUp";
-import SlideLeft from "@/animation/SlideLeft";
+import React, { useRef } from 'react';
+import MainText from '../typography/MainText';
+import ImageWrapper from '../wrappers/ImageWrapper';
+import feedback1 from '@/public/images/feedback1.png';
+import feedback2 from '@/public/images/feedback2.png';
+import Slider from 'react-slick';
+import HeaderTwo from '../typography/HeaderTwo';
+import { ImArrowLeft, ImArrowRight } from 'react-icons/im';
+import SlideRight from '@/animation/SlideRight';
+import SlideUp from '@/animation/SlideUp';
+import SlideLeft from '@/animation/SlideLeft';
+import SlideDown from '@/animation/SlideDown';
 
 function Card({ description, subTitle, title, icon }) {
   return (
-    <div className="   h-full  p-[20px] md:p-[40px] flex flex-col gap-8 justify-between rounded-[10px] shadow-custom-primary">
+    <div className="flex h-full flex-col justify-between gap-8 rounded-[10px] p-[20px] shadow-custom-primary md:p-[40px]">
       <div className="flex items-start gap-4 md:gap-8">
-        <div className="bg-quote bg-no-repeat bg-contain w-12 h-12" />
-        <MainText text={description} color="opacity-70" />
+        <div className="h-12 w-12 bg-quote bg-contain bg-no-repeat" />
+        <MainText text={description} color="opacity-70" textLeft={true} />
       </div>
 
       <div className="flex items-center justify-end gap-4 md:gap-8">
@@ -41,24 +42,24 @@ export default function FeedbackCard({ title }) {
   const clientFeedback = [
     {
       description:
-        "“TinqLab has helped us get to market faster, allowing us to fill products gaps easily.”",
+        '“TinqLab has helped us get to market faster, allowing us to fill products gaps easily.”',
       icon: feedback1,
-      title: "Gavin Aaron",
-      subTitle: "Lead Software Developer, Hungrit Ltd",
+      title: 'Gavin Aaron',
+      subTitle: 'Lead Software Developer, Hungrit Ltd',
     },
     {
       description:
-        "“They were able to handle everything we threw at them fairly easily.”",
+        '“They were able to handle everything we threw at them fairly easily.”',
       icon: feedback2,
-      title: "Dimitry Konoval",
-      subTitle: "Founder & CEO, BlackBunny Capital",
+      title: 'Dimitry Konoval',
+      subTitle: 'Founder & CEO, BlackBunny Capital',
     },
     {
       description:
-        "“TinqLab has helped us get to market faster, allowing us to fill products gaps easily.”",
+        '“TinqLab has helped us get to market faster, allowing us to fill products gaps easily.”',
       icon: feedback1,
-      title: "Gavin Aaron",
-      subTitle: "Lead Software Developer, Hungrit Ltd",
+      title: 'Gavin Aaron',
+      subTitle: 'Lead Software Developer, Hungrit Ltd',
     },
   ];
 
@@ -86,35 +87,29 @@ export default function FeedbackCard({ title }) {
   };
 
   return (
-    <section className="flex flex-col gap-8 ">
-      <div className="flex justify-between md:items-center gap-4 md:gap-8 h-full">
-        <SlideUp>
-          {" "}
-          <HeaderTwo text={title} />
-        </SlideUp>
-        <div className="flex gap-4 ">
-          <SlideLeft overflow={null}>
-            <button
-              onClick={prev}
-              className="flex items-center justify-center p-4  group  bg-mainGrey hover:bg-primary h-12 w-12 rounded-full transition-colors duration-300"
-            >
-              <ImArrowLeft
-                size={20}
-                className="text-mainBlack/50 group-hover:text-white transition-colors duration-300"
-              />
-            </button>
-          </SlideLeft>
-          <SlideRight overflow={null}>
-            <button
-              onClick={next}
-              className="flex items-center justify-center p-4  group  bg-mainGrey hover:bg-primary h-12 w-12 rounded-full transition-colors duration-300"
-            >
-              <ImArrowRight
-                size={20}
-                className="text-mainBlack/50 group-hover:text-white transition-colors duration-300"
-              />
-            </button>
-          </SlideRight>
+    <section className="flex flex-col gap-8">
+      <div className="flex h-full justify-between gap-4 md:items-center md:gap-8">
+        {' '}
+        <HeaderTwo text={title} />
+        <div className="flex gap-4">
+          <button
+            onClick={prev}
+            className="group flex h-12 w-12 items-center justify-center rounded-full bg-mainGrey p-4 transition-colors duration-300 hover:bg-primary"
+          >
+            <ImArrowLeft
+              size={20}
+              className="text-mainBlack/50 transition-colors duration-300 group-hover:text-white"
+            />
+          </button>
+          <button
+            onClick={next}
+            className="group flex h-12 w-12 items-center justify-center rounded-full bg-mainGrey p-4 transition-colors duration-300 hover:bg-primary"
+          >
+            <ImArrowRight
+              size={20}
+              className="text-mainBlack/50 transition-colors duration-300 group-hover:text-white"
+            />
+          </button>
         </div>
       </div>
 
@@ -122,9 +117,9 @@ export default function FeedbackCard({ title }) {
         {clientFeedback.map((item, index) => (
           <div key={index}>
             {/* flex + equal height */}
-            <SlideRight delay={index * 0.2} overflow={null}>
-              {" "}
-              <div className=" p-[2vh] md:p-[4vh]">
+            <SlideDown delay={index * 0.2}>
+              {' '}
+              <div className="p-[2vh] md:p-[4vh]">
                 <Card
                   description={item.description}
                   icon={item.icon}
@@ -132,7 +127,7 @@ export default function FeedbackCard({ title }) {
                   subTitle={item.subTitle}
                 />
               </div>
-            </SlideRight>
+            </SlideDown>
           </div>
         ))}
       </Slider>

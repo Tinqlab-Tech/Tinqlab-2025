@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,8 +20,8 @@ const SlideDown = ({
     if (containerRef.current) {
       gsap.fromTo(
         containerRef.current,
-        { opacity: 0, y: "-50%" },
-        { opacity: 1, y: "0%", duration, delay, ease: "power2.inOut" }
+        { opacity: 0, y: '-30%' },
+        { opacity: 1, y: '0%', duration, delay, ease: 'power2.inOut' }
       );
     }
   };
@@ -32,7 +32,7 @@ const SlideDown = ({
     } else if (sectionRef.current) {
       ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: "top 80%",
+        start: 'top 80%',
         onEnter: () => animate(),
         markers: false,
       });
@@ -40,12 +40,9 @@ const SlideDown = ({
   }, [duration, delay, playOnMount]);
 
   return (
-    <div
-      ref={sectionRef}
-      className={`${overflow === null ? "" : "overflow-hidden"} w-full h-full`}
-    >
-      {" "}
-      <div ref={containerRef} className="w-full h-full">
+    <div ref={sectionRef} className="h-full w-full">
+      {' '}
+      <div ref={containerRef} className="h-full w-full">
         {children}
       </div>
     </div>

@@ -2,9 +2,9 @@ export const OutlineButton = ({ text, textColor, icon, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className={` flex items-center justify-center gap-3 cursor-pointer font-normal rounded-full shadow-lg font-lato border-[1px] border-primary ${
-        textColor ? textColor : "text-primary"
-      } py-[12px] px-[24px] text-[16px] tracking-tight`}
+      className={`font-lato flex cursor-pointer items-center justify-center gap-3 rounded-full border-[1px] border-primary font-normal shadow-lg ${
+        textColor ? textColor : 'text-primary'
+      } px-[24px] py-[12px] text-[14px] tracking-tight md:text-[16px]`}
     >
       {icon && <span>{icon}</span>}
       {text}

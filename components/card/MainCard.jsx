@@ -1,6 +1,6 @@
-import React from "react";
-import MainText from "../typography/MainText";
-import ImageWrapper from "../wrappers/ImageWrapper";
+import React from 'react';
+import MainText from '../typography/MainText';
+import ImageWrapper from '../wrappers/ImageWrapper';
 
 export default function MainCard({
   bgColor,
@@ -13,10 +13,10 @@ export default function MainCard({
 }) {
   return (
     <div
-      className={`${bgColor ? bgColor : "bg-white"}    h-full  p-[30px] md:p-[40px] flex flex-col gap-8  rounded-[10px] shadow-custom-primary`}
+      className={`${bgColor ? bgColor : 'bg-white'} flex h-full flex-col gap-8 rounded-[10px] p-[30px] shadow-custom-primary md:p-[40px]`}
     >
       <div
-        className={`${bgColor === null ? "text-black" : "text-white"}  flex items-center justify-start text-[18px] lg:text-[24px] leading-[24px] lg:leading-[32px]  font-semibold font-lato text-darkestBlue  gap-4 w-4/5`}
+        className={`${bgColor === null ? 'text-black' : 'text-white'} font-lato flex w-4/5 items-center justify-start gap-4 text-[18px] font-semibold leading-[24px] text-darkestBlue lg:text-[24px] lg:leading-[32px]`}
       >
         {hasIcon === true && (
           <ImageWrapper
@@ -24,21 +24,21 @@ export default function MainCard({
             src={icon}
             width={40}
             height={40}
-            style={""}
+            style={''}
           />
         )}
         {useIndex === true && (
-          <span className="h-12 w-12 border-[2px] rounded-full border-[#5A67D8] border-opacity-20 flex justify-center items-center">
+          <span className="flex h-12 w-12 items-center justify-center rounded-full border-[2px] border-[#5A67D8] border-opacity-20">
             {index}
           </span>
         )}
         {title}
       </div>
 
-      {subtitle != "" && (
+      {subtitle != '' && (
         <MainText
           text={subtitle}
-          color={`${bgColor === null ? "text-[#12152E] opacity-50" : "text-white"}`}
+          color={`${bgColor === null ? 'text-[#12152E] opacity-50' : 'text-white'}`}
         />
       )}
     </div>
