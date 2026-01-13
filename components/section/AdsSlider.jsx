@@ -11,7 +11,7 @@ import HeaderOne from "../typography/HeaderOne";
 import HeaderTwo from "../typography/HeaderTwo";
 
 const Ads = () => {
-  const partners = [adsImg1, adsImg2, adsImg3, adsImg4, adsImg5, adsImg6];
+  const partners = [adsImg5, adsImg6];
 
   return (
     <div className="flex justify-start gap-4 md:gap-8">

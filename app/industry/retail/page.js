@@ -229,23 +229,15 @@ export default function Home() {
             className="scroll-mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 lg:gap-8 "
           >
             <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start  z-10 ">
-              <div>
-                <SlideUp>
-                  <HeaderTwo
-                    text={"Our retail mobile app development process"}
-                  />
-                </SlideUp>
-              </div>
-              <div>
-                <SlideRight duration={1.5}>
-                  <MainText
-                    text={
-                      "We believe focusing brings depth to our solutions. At TinqLab, we follow a proven, agile-driven process to deliver mobile apps that boost sales, improve customer engagement, and make retail operations seamless."
-                    }
-                    color={"text-[#12152E] opacity-50"}
-                  />
-                </SlideRight>
-              </div>
+              <HeaderTwo text={"Our retail mobile app development process"} />
+
+              <MainText
+                text={
+                  "We believe focusing brings depth to our solutions. At TinqLab, we follow a proven, agile-driven process to deliver mobile apps that boost sales, improve customer engagement, and make retail operations seamless."
+                }
+                color={"text-[#12152E] opacity-50"}
+              />
+
               <SlideDown delay={0.2}>
                 <Link href={"/contact-us"}>
                   <MainButton text={"Book consultation"} />
@@ -272,28 +264,17 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 ">
               {" "}
               <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8">
-                {" "}
-                <div>
-                  <SlideUp>
-                    {" "}
-                    <HeaderTwo text={"Our Retail Software Solutions"} />
-                  </SlideUp>
-                </div>
-                <div>
-                  <SlideRight duration={1.5}>
-                    <MainText
-                      text={
-                        "Our retail product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We create tailored retail software that helps you sell more, manage better, and build lasting customer relationships. Our solutions cover the entire retail journey, from sourcing products to delighting loyal customers."
-                      }
-                      color={"text-[#12152E] opacity-50"}
-                    />
-                  </SlideRight>
-                </div>
+                <HeaderTwo text={"Our Retail Software Solutions"} />
+
+                <MainText
+                  text={
+                    "Our retail product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We create tailored retail software that helps you sell more, manage better, and build lasting customer relationships. Our solutions cover the entire retail journey, from sourcing products to delighting loyal customers."
+                  }
+                  color={"text-[#12152E] opacity-50"}
+                />
               </div>
               <div className="hidden md:block h-full">
-                <SlideLeft>
-                  <div className=" bg-retailBg bg-contain bg-left-bottom bg-no-repeat min-h-[40vh]"></div>
-                </SlideLeft>
+                <div className=" bg-retailBg bg-contain bg-left-bottom bg-no-repeat min-h-[40vh]"></div>
               </div>{" "}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2  gap-4 md:gap-8">
@@ -311,13 +292,11 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <SlideDown delay={0.2}>
-              <div className="grid grid-cols-1 justify-items-center">
-                <Link href={"/contact-us"}>
-                  <MainButton text={"Book consultation"} />
-                </Link>
-              </div>
-            </SlideDown>
+            <div className="grid grid-cols-1 justify-items-center">
+              <Link href={"/contact-us"}>
+                <MainButton text={"Book consultation"} />
+              </Link>
+            </div>
           </div>
         </PageBorders>
         <DoublePageBorders background={"bg-[#EDF4FE]"}>
@@ -326,40 +305,28 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 ">
               {" "}
               <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8">
-                {" "}
-                <div>
-                  <SlideUp>
-                    {" "}
-                    <HeaderTwo text={"Technology We Use"} />
-                  </SlideUp>
-                </div>
-                <SlideRight duration={1.5}>
-                  <MainText
-                    text={
-                      "No retail business owner can grow without implementing a stack of technologies that will best meet the company's challenges. With many years of retail software development experience, we consult our clients on what retail technologies can positively impact their business."
-                    }
-                    color={"text-[#12152E] opacity-50"}
-                  />
-                </SlideRight>
+                <HeaderTwo text={"Technology We Use"} />
+
+                <MainText
+                  text={
+                    "No retail business owner can grow without implementing a stack of technologies that will best meet the company's challenges. With many years of retail software development experience, we consult our clients on what retail technologies can positively impact their business."
+                  }
+                  color={"text-[#12152E] opacity-50"}
+                />
               </div>
               <div className="hidden md:block ">
-                <SlideLeft>
-                  <div className="bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh]"></div>
-                </SlideLeft>
+                <div className="bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh]"></div>
               </div>{" "}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               {" "}
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
-                  <SlideDown delay={index * 0.2} overflow={null}>
-                    {" "}
-                    <MainCard
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      bgColor={null}
-                    />
-                  </SlideDown>
+                  <MainCard
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    bgColor={null}
+                  />
                 </div>
               ))}
             </div>
@@ -381,10 +348,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 ">
               {" "}
               <div className="col-span-1 md:col-span-2">
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Benefits of retail software development"} />
-                </SlideUp>{" "}
+                <HeaderTwo text={"Benefits of retail software development"} />
               </div>
             </div>
             <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 md:gap-8">
@@ -409,13 +373,11 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 ">
               {" "}
               <div className="col-span-1 md:col-span-2">
-                <SlideUp>
-                  <HeaderTwo
-                    text={
-                      "Why make Tinqlab your retail software development partner?"
-                    }
-                  />{" "}
-                </SlideUp>
+                <HeaderTwo
+                  text={
+                    "Why make Tinqlab your retail software development partner?"
+                  }
+                />{" "}
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">

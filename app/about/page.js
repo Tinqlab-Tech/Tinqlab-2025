@@ -136,39 +136,31 @@ export default function Home() {
           {" "}
           <div className="flex flex-col gap-4 md:gap-8 p-4  ">
             <div>
-              <SlideUp>
-                {" "}
-                <HeaderOne text={"Who are Tinqlab?"} />{" "}
-              </SlideUp>
+              <HeaderOne text={"Who are Tinqlab?"} />{" "}
             </div>{" "}
-            <SlideRight duration={1.5}>
-              {" "}
-              <div className="flex flex-col gap-4">
-                <MainText
-                  text={
-                    "TinqLab is a company that develops mobile applications, online apps, and custom blockchain software."
-                  }
-                  color={"opacity-50"}
-                />{" "}
-                <MainText
-                  text={
-                    "We solve business problems in addition to creating digital solutions.  With a team of 40+ experts, 55+ completed projects, and more than 6 years of expertise, we know what it takes to transform your ideas into real outcomes."
-                  }
-                  color={"opacity-50"}
-                />{" "}
-                <MainText
-                  text={
-                    "What makes us unique?  We comprehend your objectives, company difficulties, and possibilities in order to develop digital solutions that offer real value.  Our clients, who range from creative startups to well-established businesses, rely on us to improve consumer experiences, optimize processes, and spur expansion."
-                  }
-                  color={"opacity-50"}
-                />
-              </div>
-            </SlideRight>
+            <div className="flex flex-col gap-4">
+              <MainText
+                text={
+                  "TinqLab is a company that develops mobile applications, online apps, and custom blockchain software."
+                }
+                color={"opacity-50"}
+              />{" "}
+              <MainText
+                text={
+                  "We solve business problems in addition to creating digital solutions.  With a team of 40+ experts, 55+ completed projects, and more than 6 years of expertise, we know what it takes to transform your ideas into real outcomes."
+                }
+                color={"opacity-50"}
+              />{" "}
+              <MainText
+                text={
+                  "What makes us unique?  We comprehend your objectives, company difficulties, and possibilities in order to develop digital solutions that offer real value.  Our clients, who range from creative startups to well-established businesses, rely on us to improve consumer experiences, optimize processes, and spur expansion."
+                }
+                color={"opacity-50"}
+              />
+            </div>
           </div>{" "}
           <div className="hidden lg:block h-full">
-            <SlideLeft>
-              <div className="bg-vector4 bg-contain bg-left-bottom bg-no-repeat h-full"></div>
-            </SlideLeft>{" "}
+            <div className="bg-vector4 bg-contain bg-left-bottom bg-no-repeat h-full"></div>
           </div>
         </div>
       </DoublePageBorders>{" "}
@@ -176,10 +168,7 @@ export default function Home() {
       <PageBorders>
         <div className="flex flex-col gap-8" id="industry">
           <div className="px-4">
-            <SlideUp>
-              {" "}
-              <HeaderTwo text={"Our  Core Values"} />
-            </SlideUp>
+            <HeaderTwo text={"Our  Core Values"} />
           </div>
           <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
             {ourCoreValues.map((item, index) => (
@@ -203,10 +192,8 @@ export default function Home() {
       {/* tinqlab team */}
       <PageBorders>
         <div className="flex flex-col gap-8" id="industry">
-          <SlideUp>
-            {" "}
-            <HeaderTwo text={"TinqLab Team"} />
-          </SlideUp>
+          <HeaderTwo text={"TinqLab Team"} />
+
           <SlideDown>
             <div className=" h-full   flex gap-8 items-center  ">
               {" "}
@@ -244,13 +231,11 @@ export default function Home() {
             {" "}
             {ourTechnologies.map((item, index) => (
               <div key={index}>
-                <SlideRight delay={index * 0.2} overflow={null}>
-                  <ItemCard
-                    title={item.title}
-                    bgColor={null}
-                    icon={item.icon}
-                  />{" "}
-                </SlideRight>
+                <ItemCard
+                  title={item.title}
+                  bgColor={null}
+                  icon={item.icon}
+                />{" "}
               </div>
             ))}
           </div>
@@ -265,46 +250,42 @@ export default function Home() {
         >
           {" "}
           <div className="relative hidden  md:block  h-full">
-            <SlideRight>
-              <Image
-                src="/images/featuresbg/features3.png"
-                alt="About Tinqlab"
-                fill
-                className="bg-left-bottom bg-no-repeat object-cover rounded-tl-[25px] rounded-bl-[20px]"
-              />
-            </SlideRight>
+            <Image
+              src="/images/featuresbg/features3.png"
+              alt="About Tinqlab"
+              fill
+              className="bg-left-bottom bg-no-repeat object-cover rounded-tl-[25px] rounded-bl-[20px]"
+            />
           </div>
           <div>
-            <SlideLeft>
-              <div className="flex flex-col gap-8 justify-center p-[4vw] pr-[6vw] ">
-                <HeaderTwo text={"Our Mission"} color={"text-mainWhite"} />
-                <MainText
-                  text={
-                    "We help businesses thrive through tech partnerships and strengthen the engineering community by sharing knowledge and creating opportunities."
-                  }
-                  color={"text-mainWhite"}
-                />
-                <HeaderTwo text={"Our Vision"} color={"text-mainWhite"} />
-                <div className="flex flex-wrap items-center gap-4 md:gap-8">
-                  {" "}
-                  <MainButton
-                    text={"Innovate"}
-                    bgcolor={"bg-lavenderBlue"}
-                    lessPadding={true}
-                  />{" "}
-                  <MainButton
-                    text={"Innovate"}
-                    bgcolor={"bg-lavenderBlue"}
-                    lessPadding={true}
-                  />{" "}
-                  <MainButton
-                    text={"Innovate"}
-                    bgcolor={"bg-lavenderBlue"}
-                    lessPadding={true}
-                  />{" "}
-                </div>
+            <div className="flex flex-col gap-8 justify-center p-[4vw] pr-[6vw] ">
+              <HeaderTwo text={"Our Mission"} color={"text-mainWhite"} />
+              <MainText
+                text={
+                  "We help businesses thrive through tech partnerships and strengthen the engineering community by sharing knowledge and creating opportunities."
+                }
+                color={"text-mainWhite"}
+              />
+              <HeaderTwo text={"Our Vision"} color={"text-mainWhite"} />
+              <div className="flex flex-wrap items-center gap-4 md:gap-8">
+                {" "}
+                <MainButton
+                  text={"Innovate"}
+                  bgcolor={"bg-lavenderBlue"}
+                  lessPadding={true}
+                />{" "}
+                <MainButton
+                  text={"Innovate"}
+                  bgcolor={"bg-lavenderBlue"}
+                  lessPadding={true}
+                />{" "}
+                <MainButton
+                  text={"Innovate"}
+                  bgcolor={"bg-lavenderBlue"}
+                  lessPadding={true}
+                />{" "}
               </div>
-            </SlideLeft>
+            </div>
           </div>
         </div>
       </DoublePageBorders>
@@ -312,9 +293,7 @@ export default function Home() {
       <PageBorders>
         <div className="flex flex-col gap-8" id="career">
           <div className="px-4">
-            <SlideUp>
-              <HeaderTwo text={"Our Clients"} />
-            </SlideUp>
+            <HeaderTwo text={"Our Clients"} />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 ">
             {ourClient.map((item, index) => (

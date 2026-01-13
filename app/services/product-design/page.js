@@ -180,34 +180,27 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 ">
               <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start bg-white z-10 py-4">
                 <div>
-                  <SlideUp>
-                    {" "}
-                    <HeaderTwo
-                      text={"TinqLab's Digital Product Design Services"}
-                    />{" "}
-                  </SlideUp>{" "}
-                </div>
-                <SlideRight duration={1.5}>
                   {" "}
-                  <Link href={"/"}>
-                    <MainButton text={"Get a consultation"} />
-                  </Link>{" "}
-                </SlideRight>
+                  <HeaderTwo
+                    text={"TinqLab's Digital Product Design Services"}
+                  />{" "}
+                </div>{" "}
+                <Link href={"/"}>
+                  <MainButton text={"Get a consultation"} />
+                </Link>{" "}
               </div>
               <div className="grid grid-cols-1  gap-4 md:gap-8">
                 {" "}
                 {productDesignServices.map((item, index) => (
                   <div key={index}>
-                    <SlideDown delay={index * 0.2} overflow={null}>
-                      {" "}
-                      <MainCard
-                        title={item.title}
-                        subtitle={item.subtitle}
-                        bgColor={null}
-                        useIndex={true}
-                        index={index + 1}
-                      />
-                    </SlideDown>
+                    {" "}
+                    <MainCard
+                      title={item.title}
+                      subtitle={item.subtitle}
+                      bgColor={null}
+                      useIndex={true}
+                      index={index + 1}
+                    />
                   </div>
                 ))}
               </div>
@@ -222,25 +215,17 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
               {" "}
               <div className="col-span-1 md:col-span-2 py-2">
-                {" "}
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Technology We Use"} />
-                </SlideUp>
+                <HeaderTwo text={"Technology We Use"} />
               </div>
               <div className="hidden md:block h-full">
                 {" "}
-                <SlideLeft>
-                  <div className=" bg-features7 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh]"></div>
-                </SlideLeft>
+                <div className=" bg-features7 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh]"></div>
               </div>
             </div>
             <div className="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-8 justify-items-center">
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
-                  <SlideDown delay={index * 0.2} overflow={null}>
-                    <TechStack stack={item.technologies} />
-                  </SlideDown>
+                  <TechStack stack={item.technologies} />
                 </div>
               ))}
             </div>
@@ -252,38 +237,26 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
               <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 items-start">
                 <div>
-                  {" "}
-                  <SlideUp>
-                    {" "}
-                    <HeaderTwo text="Our Design Model" />
-                  </SlideUp>
-                </div>
-                <SlideRight duration={1.5}>
-                  {" "}
-                  <MainText
-                    text="Our product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We provide you with complex market research to find out all clients’ pains and gains, analysis of digital products and provide a smooth process of digital transformation and product design services. Geniusee product designers have established a design process based on our practical expertise in 100+ projects that have performed well and won over the market!"
-                    color="opacity-50"
-                  />
-                </SlideRight>
+                  <HeaderTwo text="Our Design Model" />
+                </div>{" "}
+                <MainText
+                  text="Our product design services are not just about beautiful visualization but also tailorization to customers' needs and expectations. We provide you with complex market research to find out all clients’ pains and gains, analysis of digital products and provide a smooth process of digital transformation and product design services. Geniusee product designers have established a design process based on our practical expertise in 100+ projects that have performed well and won over the market!"
+                  color="opacity-50"
+                />
               </div>
               <div className="hidden md:block h-full">
-                {" "}
-                <SlideLeft>
-                  <div className="bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[40vh]"></div>
-                </SlideLeft>{" "}
+                <div className="bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[40vh]"></div>
               </div>{" "}
             </div>
-            <SlideDown>
-              <div className="flex w-full min-h-[40vh]  items-center justify-center">
-                {" "}
-                <ImageWrapper
-                  src={infographics}
-                  alt="Edtech"
-                  fill
-                  className="object-contain object-center w-full"
-                />
-              </div>{" "}
-            </SlideDown>
+            <div className="flex w-full min-h-[40vh]  items-center justify-center">
+              {" "}
+              <ImageWrapper
+                src={infographics}
+                alt="Edtech"
+                fill
+                className="object-contain object-center w-full"
+              />
+            </div>{" "}
           </div>
         </PageBorders>
 
@@ -294,28 +267,19 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-4 md:gap-8">
                 <div className="flex flex-col gap-4 md:gap-8">
                   <div>
-                    <SlideUp>
-                      <HeaderTwo text="Benefits Of Working With TinqLab" />
-                    </SlideUp>
-                  </div>
-                  <SlideDown delay={0.2}>
-                    {" "}
-                    <BenefitCard {...tinqlabBenefits[0]} bgColor={null} />
-                  </SlideDown>{" "}
+                    <HeaderTwo text="Benefits Of Working With TinqLab" />
+                  </div>{" "}
+                  <BenefitCard {...tinqlabBenefits[0]} bgColor={null} />
                 </div>
                 <div className="hidden md:block h-full ">
-                  <SlideRight duration={1.5}>
-                    <div className=" bg-features5 bg-contain bg-center xl:bg-bottom bg-no-repeat h-full" />
-                  </SlideRight>{" "}
+                  <div className=" bg-features5 bg-contain bg-center xl:bg-bottom bg-no-repeat h-full" />
                 </div>{" "}
               </div>
 
               <div className="grid md:grid-cols-2 gap-4 md:gap-8">
                 {tinqlabBenefits.slice(1).map((item, index) => (
                   <div key={index}>
-                    <SlideDown delay={index * 0.2}>
-                      <BenefitCard {...item} bgColor={null} />
-                    </SlideDown>{" "}
+                    <BenefitCard {...item} bgColor={null} />
                   </div>
                 ))}
               </div>

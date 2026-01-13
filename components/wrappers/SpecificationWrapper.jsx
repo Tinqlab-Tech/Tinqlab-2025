@@ -9,14 +9,14 @@ export const SpecificationWrapper = ({ title, subTitle, items }) => {
     <>
       <div className="w-full bg-white text-mainBlack p-[20px]  md:p-[40px]  rounded-[10px] lg:rounded-[20px] shadow-custom-primary dark:bg-mainGrey dark:text-white">
         <details className="group ">
-          <summary className="flex justify-between  w-full items-center gap-4 marker:content-none hover:cursor-pointer">
+          <summary className="flex justify-between  w-full marker:content-none hover:cursor-pointer">
             <HeaderTwo centerText={false} text={title} bold={true} />{" "}
             <ImageWrapper
               src={show2}
               alt={`Tinqlab ${title} services`}
               height={50}
               width={50}
-              style="group-open:rotate-180 scale-75 group-open:scale-100 transition duration-300"
+              style="group-open:rotate-180 scale-50 group-open:scale-65 transition duration-300"
             />
           </summary>
           <div className="mt-4 md:mt-8 ">

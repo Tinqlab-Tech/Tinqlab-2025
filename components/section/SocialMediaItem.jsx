@@ -21,7 +21,7 @@ export default function SocialMediaItem({ color, position }) {
       >
         <FaXTwitter
           size={50}
-          className="bg-[#BDBDBD] hover:scale-125 p-2 text-darkestBlue rounded-[10px]"
+          className="bg-[#BDBDBD] transform transition-transform duration-300 hover:scale-110 p-2 text-darkestBlue rounded-[10px]"
         />
       </a>
       <a
@@ -32,7 +32,7 @@ export default function SocialMediaItem({ color, position }) {
       >
         <FaLinkedinIn
           size={50}
-          className="bg-[#BDBDBD] hover:scale-125 p-2 text-darkestBlue rounded-[10px]"
+          className="bg-[#BDBDBD] transform transition-transform duration-300 hover:scale-110 p-2 text-darkestBlue rounded-[10px]"
         />
       </a>
       <a
@@ -43,7 +43,7 @@ export default function SocialMediaItem({ color, position }) {
       >
         <FaFacebookF
           size={50}
-          className="bg-[#BDBDBD] hover:scale-125 p-2 text-darkestBlue rounded-[10px]"
+          className="bg-[#BDBDBD] transform transition-transform duration-300 hover:scale-110 p-2 text-darkestBlue rounded-[10px]"
         />
       </a>
       <a
@@ -54,7 +54,7 @@ export default function SocialMediaItem({ color, position }) {
       >
         <FaInstagram
           size={50}
-          className="bg-[#BDBDBD] hover:scale-125 p-2 text-darkestBlue rounded-[10px]"
+          className="bg-[#BDBDBD] transform transition-transform duration-300 hover:scale-110 p-2 text-darkestBlue rounded-[10px]"
         />
       </a>
     </section>

@@ -250,29 +250,22 @@ export default function Home() {
           >
             <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start  z-10 ">
               <div>
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo
-                    text={"Our educational software development services"}
-                  />
-                </SlideUp>
+                <HeaderTwo
+                  text={"Our educational software development services"}
+                />
               </div>
               <div>
-                <SlideRight duration={1.5}>
-                  <MainText
-                    text={
-                      "We use cutting-edge digital solutions to assist educational institutions, providers, and edtech startups in reimaging learning. Whether you're enhancing classroom experiences or building fully virtual platforms, our education software development services are designed to support interactive, scalable, and learner-centered outcomes."
-                    }
-                    color={"text-[#12152E] opacity-50"}
-                  />
-                </SlideRight>
+                <MainText
+                  text={
+                    "We use cutting-edge digital solutions to assist educational institutions, providers, and edtech startups in reimaging learning. Whether you're enhancing classroom experiences or building fully virtual platforms, our education software development services are designed to support interactive, scalable, and learner-centered outcomes."
+                  }
+                  color={"text-[#12152E] opacity-50"}
+                />
               </div>
               <div>
-                <SlideDown delay={0.2} overflow={null}>
-                  <Link href={"/contact-us"}>
-                    <MainButton text={"Book consultation"} />
-                  </Link>
-                </SlideDown>
+                <Link href={"/contact-us"}>
+                  <MainButton text={"Book consultation"} />
+                </Link>
               </div>
             </div>
             <div className="grid grid-cols-1 gap-4 md:gap-8">
@@ -297,24 +290,17 @@ export default function Home() {
               <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8 ">
                 {" "}
                 <div>
-                  {" "}
-                  <SlideUp>
-                    {" "}
-                    <HeaderTwo
-                      text={"Solutions we offer in EdTech for clients"}
-                    />
-                  </SlideUp>{" "}
+                  <HeaderTwo
+                    text={"Solutions we offer in EdTech for clients"}
+                  />
                 </div>{" "}
                 <div>
-                  <SlideRight duration={1.5}>
-                    {" "}
-                    <MainText
-                      text={
-                        "We empower educational institutions, startups, and enterprises with future-ready technology solutions that enhance learning experiences, streamline administration, and drive engagement."
-                      }
-                      color={"text-[#12152E] opacity-50"}
-                    />
-                  </SlideRight>
+                  <MainText
+                    text={
+                      "We empower educational institutions, startups, and enterprises with future-ready technology solutions that enhance learning experiences, streamline administration, and drive engagement."
+                    }
+                    color={"text-[#12152E] opacity-50"}
+                  />
                 </div>
               </div>
               <div className=" hidden md:block bg-edtech1 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
@@ -347,36 +333,26 @@ export default function Home() {
               <div className="col-span-1 md:col-span-2 flex flex-col gap-8 md:w-4/5">
                 {" "}
                 <div>
-                  {" "}
-                  <SlideUp>
-                    {" "}
-                    <HeaderTwo
-                      text={
-                        "We Understand that the key to success is clear communication"
-                      }
-                      color={"text-white"}
-                    />
-                  </SlideUp>
+                  <HeaderTwo
+                    text={
+                      "We understand that the key to success is clear communication"
+                    }
+                    color={"text-white"}
+                  />
                 </div>
                 <div>
-                  <SlideRight duration={1.5}>
-                    <MainText
-                      text={
-                        "Are you looking for a full cycle product development? go no further. just fill out the contact us form and we will reach out immediately."
-                      }
-                      color={"text-white"}
-                    />
-                  </SlideRight>
+                  <MainText
+                    text={
+                      "Are you looking for a full cycle product development? go no further. just fill out the contact us form and we will reach out immediately."
+                    }
+                    color={"text-white"}
+                  />
                 </div>
               </div>
               <div className=" flex items-center justify-start">
-                <div>
-                  <SlideRight delay={0.2}>
-                    <Link href={"/contact-us"}>
-                      <MainButton text={"Contact Us"} />
-                    </Link>
-                  </SlideRight>
-                </div>
+                <Link href={"/contact-us"}>
+                  <MainButton text={"Contact Us"} />
+                </Link>
               </div>
             </div>
           </div>
@@ -388,17 +364,12 @@ export default function Home() {
           >
             <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start  z-10 ">
               <div>
-                {" "}
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Our cooperation process"} />
-                </SlideUp>
+                <HeaderTwo text={"Our cooperation process"} />
               </div>
-              <SlideRight duration={1.5} overflow={null}>
-                <Link href={"/contact-us"}>
-                  <MainButton text={"Book consultation"} />
-                </Link>
-              </SlideRight>
+
+              <Link href={"/contact-us"}>
+                <MainButton text={"Book consultation"} />
+              </Link>
             </div>
             <div className="grid grid-cols-1 gap-4 md:gap-8">
               {process.map((item, index) => (
@@ -427,16 +398,10 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
               {" "}
               <div className="col-span-1 md:col-span-2">
-                {" "}
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Technology We Use"} />
-                </SlideUp>{" "}
+                <HeaderTwo text={"Technology We Use"} />
               </div>
               <div className="hidden md:block h-full">
-                <SlideLeft>
-                  <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh]"></div>
-                </SlideLeft>
+                <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh]"></div>
               </div>{" "}
             </div>
             <div className="grid grid-cols-4 gap-4 xl:grid-cols-8 md:gap-8 justify-items-center">
@@ -456,11 +421,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 ">
               {" "}
               <div className="col-span-1 md:col-span-2">
-                {" "}
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Why choose Tinqlab?"} />
-                </SlideUp>{" "}
+                <HeaderTwo text={"Why choose Tinqlab?"} />
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">

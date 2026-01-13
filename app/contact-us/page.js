@@ -18,6 +18,15 @@ import insta from "@/public/images/insta.png";
 import twiter from "@/public/images/twiter.png";
 import arrow from "@/public/images/arrow.png";
 import mail from "@/public/images/mail.png";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedinIn,
+  FaLocationDot,
+  FaLocationPin,
+  FaMessage,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 export const metadata = {
   title: "Tinqlab - Expert software and blockchain developers",
@@ -29,43 +38,64 @@ export default function Home() {
   const connect = [
     {
       title: "Headquaters",
-      subtitle: "8609 Westwood Center Dr. Suite 110 Tyson Corner, VA 22182",
-      icon: locate,
+      subtitle: "Lagos, Nigeria",
+      icon: <FaLocationDot color="white" />,
+      link: "",
     },
-    { title: "Email Us", subtitle: "Info@Tinqlab.com", icon: mail },
-    { title: "Connect On Linkedin", icon: arrow },
-    { title: "Follow us On X", icon: twiter },
-    { title: "Follow Us On Instagram", icon: insta },
+    {
+      title: "Email Us",
+      subtitle: "Info@Tinqlab.com",
+      icon: <FaMessage color="white" />,
+      link: "",
+    },
+    {
+      title: "Connect On Linkedin",
+      icon: <FaLinkedinIn color="white" />,
+      link: "https://linkedin.com/company/tinqlabtech",
+    },
+    {
+      title: "Follow us On X",
+      icon: <FaXTwitter color="white" />,
+      link: "https://x.com/tinqlabtech",
+    },
+    {
+      title: "Follow Us On Instagram",
+      icon: <FaInstagram color="white" />,
+      link: "https://www.instagram.com/tinqlab/",
+    },
+    {
+      title: "Follow Us On Facebook",
+      icon: <FaFacebook color="white" />,
+      link: "https://www.facebook.com/people/Tinqlab/100064552795813/",
+    },
   ];
   return (
     <div className="min-h-screen">
       {/* Contact-us hero */}
-      <div className="h-screen w-screen flex flex-col bg-mainGrey">
+      <div className="xl:h-[40vh] w-screen flex flex-col bg-mainGrey">
         <OtherHeader />
-        <div className="grid text-center justify-items-center gap-4 md:gap-8 m-auto">
+        <div className="flex flex-col text-center items-center justify-center gap-2 p-4">
           {" "}
-          <div>
+          <div className="">
             <SlideUp>
               <HeaderOne
                 text={"Get in Touch with Us "}
-                size="text-[60px] leading-[70px]"
+                size="md:text-[60px] md:leading-[70px] text-[24px]"
               />
             </SlideUp>
           </div>
-          <div className="px-4">
-            <SlideUp duration={1.5}>
-              <MainText
-                text={
-                  "We're delightedtowork with you on your incredible project"
-                }
-                centerText={true}
-              />{" "}
-            </SlideUp>
+          <div className="w-3/4">
+            <MainText
+              text={
+                "We're delighted to work with you on your incredible project"
+              }
+              centerText={true}
+            />{" "}
           </div>
         </div>
       </div>
       <PageBorders>
-        <div className="grid xl:grid-cols-2 gap-4 md:gap-8 h-full">
+        <div className="grid xl:grid-cols-2 gap-4 md:gap-8">
           {/* grid 1 */}
           <div className="h-full">
             <ContactUsModal />
@@ -90,28 +120,26 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col items-start justify-center gap-4 p-6 pb-10 ">
+            <div className="flex flex-col items-start justify-center gap-2 ">
               <div>
-                {" "}
-                <SlideUp>
-                  {" "}
-                  <h1 className="text-[30px] md:text-[36px] leading-[40px] font-bold font-lato">
-                    Connect with us <span className="text-primary"> today</span>
-                  </h1>
-                </SlideUp>{" "}
+                <h1 className="text-[30px] md:text-[36px] leading-[40px] font-bold font-lato">
+                  Connect with us <span className="text-primary"> today</span>
+                </h1>
               </div>
-              <SlideRight duration={1.5}>
-                <MainText
-                  text={"Let us know how we can help you "}
-                  color={"opacity-50"}
-                />{" "}
-              </SlideRight>
+              <MainText
+                text={"Let us know how we can help you "}
+                color={"opacity-50"}
+              />{" "}
             </div>
-            <div className="grid gap-4 md:gap-8">
+            <div className="grid gap-4">
               {connect.map((item, index) => (
-                <div key={index}>
+                <a
+                  key={index}
+                  href={`${item.link != "" ? item.link : "/"}`}
+                  className={`${item.link != "" && "cursor-pointer"}`}
+                >
                   <SlideDown delay={index * 0.2} overflow={null}>
-                    <div className=" bg-primary h-full  p-[20px]  flex  gap-8 md:gap-8 justify-between items-center rounded-[10px] shadow-custom-primary">
+                    <div className=" bg-primary h-full  p-[10px]  flex  gap-8 justify-between items-center rounded-[10px] shadow-custom-primary">
                       {" "}
                       <div className=" flex flex-col">
                         {" "}
@@ -124,18 +152,10 @@ export default function Home() {
                           />
                         )}{" "}
                       </div>
-                      <div>
-                        <ImageWrapper
-                          src={item.icon}
-                          alt={"Contact Tinqlab"}
-                          width={15}
-                          height={15}
-                          style={"bg-contain bg-center bg-no-repeat"}
-                        />{" "}
-                      </div>
+                      <div>{item.icon}</div>
                     </div>
                   </SlideDown>
-                </div>
+                </a>
               ))}
             </div>
           </div>
@@ -147,20 +167,15 @@ export default function Home() {
         <div className="grid lg:grid-cols-2 justify-center items-center gap-4 w-full  ">
           {/* Text */}
           <div className="text-center xl:text-start">
-            <SlideUp>
-              {" "}
-              <HeaderTwo
-                text="Get the Latest Industry News & Insights"
-                color="text-mainWhite"
-                size={"text-[24px] xl:text-[32px]"}
-              />
-            </SlideUp>
+            <HeaderTwo
+              text="Get the Latest Industry News & Insights"
+              color="text-mainWhite"
+              size={"text-[24px] xl:text-[32px]"}
+            />
           </div>{" "}
           <div className="w-full  ">
-            <SlideRight duration={1.5}>
-              {" "}
-              <UserMail />
-            </SlideRight>
+            {" "}
+            <UserMail />
           </div>{" "}
         </div>
         ,{" "}

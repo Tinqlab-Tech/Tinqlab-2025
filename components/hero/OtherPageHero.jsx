@@ -87,26 +87,24 @@ export default function OtherPageHero({
               const isActive = pathname === item.path;
               return (
                 <div key={index} className="">
-                  <SlideDown delay={0.5} overflow={null}>
-                    <Link href={item.path} className="md:block hidden h-full  ">
-                      <div
-                        className={`flex justify-center   shadow-custom-primary p-2 md:p-[20px] bg-mainGrey items-center rounded-t-[4px] border-t-[10px]  cursor-pointer
+                  <Link href={item.path} className="md:block hidden h-full  ">
+                    <div
+                      className={`flex justify-center   shadow-custom-primary p-2 md:p-[20px] bg-mainGrey items-center rounded-t-[4px] border-t-[10px]  cursor-pointer
                      ${isActive ? "border-primary" : "border-mainBlack/50"}  hover:border-primary`}
-                      >
-                        <MainText
-                          text={item.title}
-                          size="text-[10px] md:text-[18px] text-bold "
-                          color={`w-full cursor-pointer ${
-                            isActive
-                              ? "text-mainBlack"
-                              : "text-mainBlack opacity-50 hover:opacity-100 hover:text-primary"
-                          } ${isActive ? "hover:text-primary" : ""}`}
-                          centerText={true}
-                          bold={true}
-                        />
-                      </div>
-                    </Link>
-                  </SlideDown>
+                    >
+                      <MainText
+                        text={item.title}
+                        size="text-[10px] md:text-[18px] text-bold "
+                        color={`w-full cursor-pointer ${
+                          isActive
+                            ? "text-mainBlack"
+                            : "text-mainBlack opacity-50 hover:opacity-100 hover:text-primary"
+                        } ${isActive ? "hover:text-primary" : ""}`}
+                        centerText={true}
+                        bold={true}
+                      />
+                    </div>
+                  </Link>
                 </div>
               );
             })}

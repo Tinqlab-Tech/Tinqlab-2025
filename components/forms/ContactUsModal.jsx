@@ -185,32 +185,27 @@ export const ContactUsModal = ({ btnText }) => {
           </div>
         </div>
       </Modal> */}{" "}
-      <div className="m-auto px-7 pt-6 pb-8 bg-mainGrey font-Gilroy rounded-[20px] h-full">
+      <div className="m-auto px-10 pt-2 pb-4 bg-mainGrey font-Gilroy rounded-[20px]">
         <div>
           {" "}
-          <div className="flex flex-col items-start justify-center gap-4 p-6 pb-10 ">
-            {" "}
-            <div>
+          <div className="flex flex-col items-start justify-center gap-2 ">
+            <SlideUp>
               {" "}
-              <SlideUp>
-                {" "}
-                <h1 className="text-[30px] md:text-[36px] leading-[40px] font-bold font-lato">
-                  Have Questions? We're Just a Message{" "}
-                  <span className="text-primary"> Away</span>
-                </h1>
-              </SlideUp>
-            </div>
-            <SlideRight duration={1.5}>
-              <MainText
-                text={
-                  "Fill out the form below, and one of our team members will get back to you shortly. "
-                }
-                color={"opacity-50"}
-              />
-            </SlideRight>
+              <h1 className="text-[30px] md:text-[36px] leading-[1.5em] font-bold font-lato">
+                Have Questions? <br /> We're Just a Message{" "}
+                <span className="text-primary"> Away</span>
+              </h1>
+            </SlideUp>
+
+            <MainText
+              text={
+                "Fill out the form below, and one of our team members will get back to you shortly. "
+              }
+              color={"opacity-50"}
+            />
           </div>
           {/* form */}
-          <div className="flex flex-col justify-between h-full">
+          <div className="flex flex-col justify-between">
             <SlideDown delay={0.2}>
               {" "}
               <form
@@ -219,7 +214,7 @@ export const ContactUsModal = ({ btnText }) => {
                 action="#"
                 className="bg-transparent rounded-[5px] md:py-[10px]"
               >
-                <div className="text-left md:py-[25px] md:px-[25px] py-[10px] px-0 ">
+                <div className="text-left md:py-[25px] py-[10px] px-0 ">
                   {response !== null && (
                     <div className="text-[12px] font-extralight bg-opacity-50 p-2 bg-green-400 my-2 rounded-[5px]">
                       {
@@ -304,7 +299,7 @@ export const ContactUsModal = ({ btnText }) => {
                         </label>{" "}
                         <input
                           type="text"
-                          placeholder="Choose Industry"
+                          placeholder="Enter your Industry"
                           className={`${
                             errors.lastname &&
                             "border-primary focus:border-primary"
@@ -329,16 +324,16 @@ export const ContactUsModal = ({ btnText }) => {
                         </label>{" "}
                         <input
                           type="text"
-                          placeholder="Select"
+                          placeholder="Enter your budget"
                           className={`${
                             errors.email &&
                             "border-primary focus:border-primary"
                           } w-full outline-none rounded-[5px] shadow-custom-primary bg-[#ffffff] px-[16px] py-[19px]  placeholder:text-graySecond focus:border-primary `}
-                          {...register("email", { required: true })}
+                          {...register("budget", { required: true })}
                         />
                         {errors.email && (
                           <span className="text-xs text-red-400">
-                            {"Please enter an email address"}
+                            {"Please enter your project budget"}
                           </span>
                         )}
                       </div>
@@ -367,17 +362,15 @@ export const ContactUsModal = ({ btnText }) => {
               </form>{" "}
             </SlideDown>
             {/* button */}
-            <SlideRight overflow={null}>
-              <div className="flex justify-center items-center md:justify-end ">
-                {" "}
-                <button
-                  type="submit"
-                  className={`cursor-pointer font-normal rounded-full shadow-custom-primary  bg-primary px-[20px] py-[10px] md:px-[40px] md:py-[14px] text-[10px] text-white md:text-[14px] tracking-wider`}
-                >
-                  Send Message{" "}
-                </button>
-              </div>{" "}
-            </SlideRight>
+            <div className="flex justify-center items-center md:justify-end ">
+              {" "}
+              <button
+                type="submit"
+                className={`cursor-pointer font-normal rounded-full shadow-custom-primary  bg-primary px-[20px] py-[10px] md:px-[40px] md:py-[14px] text-[10px] text-white md:text-[14px] tracking-wider`}
+              >
+                Send Message{" "}
+              </button>
+            </div>{" "}
           </div>
         </div>
       </div>

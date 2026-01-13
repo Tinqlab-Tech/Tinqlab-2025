@@ -165,15 +165,12 @@ export default function Home() {
                 </SlideUp>{" "}
               </div>
               <div>
-                <SlideRight duration={1.5}>
-                  {" "}
-                  <MainText
-                    text={
-                      "We believe focusing brings depth to our solutions. At Tinqlab, our technology consulting services are grounded in deep industry understanding such as FinTech, EdTech, retail, and real estate. We help businesses across those key sectors navigate digital transformation, adopt the right tech stack, and unlock scalable growth. With Tinqlab, consulting isn’t just advice—it’s actionable strategy."
-                    }
-                    color={"text-[#12152E] opacity-50"}
-                  />
-                </SlideRight>{" "}
+                <MainText
+                  text={
+                    "We believe focusing brings depth to our solutions. At Tinqlab, our technology consulting services are grounded in deep industry understanding such as FinTech, EdTech, retail, and real estate. We help businesses across those key sectors navigate digital transformation, adopt the right tech stack, and unlock scalable growth. With Tinqlab, consulting isn’t just advice—it’s actionable strategy."
+                  }
+                  color={"text-[#12152E] opacity-50"}
+                />
               </div>
               <SlideDown duration={1.5} overflow={null}>
                 {" "}
@@ -185,12 +182,10 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-4 md:gap-8">
               {industryExpertise.map((item, index) => (
                 <div key={index}>
-                  <SlideRight delay={index * 0.2} overflow={null}>
-                    <SpecificationItem
-                      title={item.title}
-                      subTitle={item.subtitle}
-                    />
-                  </SlideRight>
+                  <SpecificationItem
+                    title={item.title}
+                    subTitle={item.subtitle}
+                  />
                 </div>
               ))}
             </div>
@@ -199,28 +194,18 @@ export default function Home() {
         {/* technology we use */}
         <DoublePageBorders background={"bg-[#EDF4FE]"}>
           <div className="flex flex-col gap-8 scroll-mt-4" id={"services"}>
-            {" "}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
-              {" "}
               <div className="col-span-1 md:col-span-2">
-                {" "}
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Technology We Use"} />{" "}
-                </SlideUp>
+                <HeaderTwo text={"Technology We Use"} />
               </div>
               <div className="hidden md:block ">
-                <SlideLeft>
-                  <div className="bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh]"></div>
-                </SlideLeft>
+                <div className="bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh]"></div>
               </div>{" "}
             </div>
             <div className="grid grid-cols-3 md:grid-cols-5 gap-4 md:gap-8 justify-items-center">
               {technologyWeUse.map((item, index) => (
                 <div key={index}>
-                  <SlideDown delay={index * 0.2} overflow={null}>
-                    <TechStack stack={item.technologies} />{" "}
-                  </SlideDown>
+                  <TechStack stack={item.technologies} />{" "}
                 </div>
               ))}
             </div>
@@ -237,54 +222,46 @@ export default function Home() {
           >
             {" "}
             <div className="">
-              <SlideRight>
+              <div className="flex flex-col gap-4 md:gap-8 items-start">
                 {" "}
-                <div className="flex flex-col gap-4 md:gap-8 items-start">
-                  {" "}
-                  <HeaderTwo
-                    text={"Solutions we offer in EdTech for clients"}
-                  />
+                <HeaderTwo text={"Solutions we offer in EdTech for clients"} />
+                <MainText
+                  text={
+                    "As an experienced IT consulting services company, we understand how important it is for you that your IT strategy meets your business goals. Our team of IT consultants has a proven track of successfully completed projects. Tinqlab’s senior experts in information technology consulting can handle any challenge for multiple reasons:"
+                  }
+                  color={"text-[#12152E] opacity-50"}
+                />
+                <div className="flex gap-2 items-start">
+                  <span className="pt-2">
+                    {" "}
+                    <GoDotFill size={15} className={"text-lavenderBlue "} />
+                  </span>
                   <MainText
                     text={
-                      "As an experienced IT consulting services company, we understand how important it is for you that your IT strategy meets your business goals. Our team of IT consultants has a proven track of successfully completed projects. Tinqlab’s senior experts in information technology consulting can handle any challenge for multiple reasons:"
+                      "We achieve your results by thriving and personalizing our approach to each case."
                     }
                     color={"text-[#12152E] opacity-50"}
                   />
-                  <div className="flex gap-2 items-start">
-                    <span className="pt-2">
-                      {" "}
-                      <GoDotFill size={15} className={"text-lavenderBlue "} />
-                    </span>
-                    <MainText
-                      text={
-                        "We achieve your results by thriving and personalizing our approach to each case."
-                      }
-                      color={"text-[#12152E] opacity-50"}
-                    />
-                  </div>
-                  <div className="flex gap-2 items-start">
-                    <span className="pt-2">
-                      {" "}
-                      <GoDotFill size={15} className={"text-lavenderBlue "} />
-                    </span>{" "}
-                    <MainText
-                      text={
-                        "We are driven by metrics and numbers; you can measure our promise by time, analytics, performance, and in the end, your outcome, especially given that we work to exceed your expectations."
-                      }
-                      color={"text-[#12152E] opacity-50"}
-                    />
-                  </div>
-                  <Link href={"/contact-us"}>
-                    <MainButton text={"Book consultation"} />
-                  </Link>
                 </div>
-              </SlideRight>{" "}
-            </div>{" "}
+                <div className="flex gap-2 items-start">
+                  <span className="pt-2">
+                    {" "}
+                    <GoDotFill size={15} className={"text-lavenderBlue "} />
+                  </span>{" "}
+                  <MainText
+                    text={
+                      "We are driven by metrics and numbers; you can measure our promise by time, analytics, performance, and in the end, your outcome, especially given that we work to exceed your expectations."
+                    }
+                    color={"text-[#12152E] opacity-50"}
+                  />
+                </div>
+                <Link href={"/contact-us"}>
+                  <MainButton text={"Book consultation"} />
+                </Link>
+              </div>
+            </div>
             <div className="hidden md:block h-full">
-              {" "}
-              <SlideLeft>
-                <div className=" bg-features9 bg-contain bg-left bg-no-repeat h-full"></div>
-              </SlideLeft>{" "}
+              <div className=" bg-features9 bg-contain bg-left bg-no-repeat h-full"></div>
             </div>
           </div>
         </DoublePageBorders>
@@ -297,32 +274,24 @@ export default function Home() {
           >
             <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start bg-white z-10 py-4">
               <div>
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Consulting Services we Offer"} />
-                </SlideUp>
-              </div>
-              <SlideRight duration={1.5} overflow={null}>
-                {" "}
-                <Link href={"/contact-us"}>
-                  <MainButton text={"Get a consultation"} />
-                </Link>
-              </SlideRight>
+                <HeaderTwo text={"Consulting Services we Offer"} />
+              </div>{" "}
+              <Link href={"/contact-us"}>
+                <MainButton text={"Get a consultation"} />
+              </Link>
             </div>
             <div className="grid grid-cols-1 gap-4 md:gap-8">
               {consultingServices.map((item, index) => (
                 <div key={index}>
-                  <SlideDown delay={index * 0.2} overflow={null}>
-                    <MainCard
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      bgColor={null}
-                      hasIcon={false}
-                      useIndex={true}
-                      index={index + 1}
-                      icon={item.icon}
-                    />{" "}
-                  </SlideDown>
+                  <MainCard
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    bgColor={null}
+                    hasIcon={false}
+                    useIndex={true}
+                    index={index + 1}
+                    icon={item.icon}
+                  />{" "}
                 </div>
               ))}
             </div>

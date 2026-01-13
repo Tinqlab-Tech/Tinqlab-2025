@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import { MainButton } from "../button/MainButton";
 import MainText from "../typography/MainText";
-import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowLeft, FaArrowLeftLong } from "react-icons/fa6";
 import HeaderTwo from "../typography/HeaderTwo";
 import { IoIosAdd } from "react-icons/io";
 import ImageWrapper from "../wrappers/ImageWrapper";
@@ -75,7 +75,7 @@ const DiscoverUs = () => {
 
                   <MainText text="Choose your industry" />
 
-                  <div className="flex flex-wrap items-center gap-4 md:gap-8">
+                  <div className="flex flex-wrap items-center gap-2 md:gap-8">
                     {item.items.map((btn, i) => (
                       <div key={i}>
                         <MainButton
@@ -89,14 +89,14 @@ const DiscoverUs = () => {
                     {/* Nav button */}
                     <button
                       onClick={() => (item.btnNav === "More" ? next() : prev())}
-                      className="flex items-center justify-center gap-3 cursor-pointer font-semibold rounded-full shadow-lg font-lato border-[1px] border-lavi 
-                  text-darkestBlue bg-lavenderBlue py-[12px] px-[50px] tracking-tight flex-row-reverse hover:scale-105  transition-all duration-300 font-lato"
+                      className="flex items-center justify-center gap-1 cursor-pointer font-semibold rounded-full shadow-lg font-lato border-[1px]
+                  text-darkestBlue bg-lavenderBlue py-[10px] px-[40px] text-[12px] md:text-[16px] tracking-tight flex-row-reverse hover:scale-105  transition-all duration-300 font-lato"
                     >
                       <span>{item.btnNav}</span>
                       {item.btnNav === "More" ? (
-                        <IoIosAdd size={20} />
+                        <IoIosAdd size={18} />
                       ) : (
-                        <FaArrowLeftLong size={18} />
+                        <FaArrowLeft size={18} />
                       )}
                     </button>
                   </div>

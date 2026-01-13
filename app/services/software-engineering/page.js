@@ -245,13 +245,12 @@ export default function Home() {
 
                 <div className="grid md:grid-cols-2 gap-4 md:gap-8">
                   {softwareEngineeringSolution.map((item, index) => (
-                    <SlideRight key={index} delay={index * 0.2} overflow={null}>
-                      <SpecificationItem
-                        bgIcon={item.bgIcon}
-                        title={item.title}
-                        subTitle={item.subtitle}
-                      />
-                    </SlideRight>
+                    <SpecificationItem
+                      key={index}
+                      bgIcon={item.bgIcon}
+                      title={item.title}
+                      subTitle={item.subtitle}
+                    />
                   ))}
                 </div>
               </div>
@@ -266,16 +265,12 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center ">
               {" "}
               <div className="col-span-1 md:col-span-2">
-                <SlideUp>
-                  <div className="py-2">
-                    <HeaderTwo text={"Technology Stack We Use"} />
-                  </div>{" "}
-                </SlideUp>
+                <div className="py-2">
+                  <HeaderTwo text={"Technology Stack We Use"} />
+                </div>{" "}
               </div>
               <div className="hidden md:block">
-                <SlideLeft>
-                  <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
-                </SlideLeft>{" "}
+                <div className="hidden md:block bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[20vh]"></div>
               </div>{" "}
             </div>
             <div className="grid grid-cols-4 md:grid-cols-8 gap-4 md:gap-8 justify-items-center">
@@ -314,14 +309,12 @@ export default function Home() {
             <div className="grid xl:grid-cols-2 gap-4 md:gap-8">
               {expertise.map((item, index) => (
                 <div key={index}>
-                  <SlideDown delay={index * 0.2} overflow={null}>
-                    <ServicesCard
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      icon={item.icon}
-                      isSingleService={true}
-                    />{" "}
-                  </SlideDown>
+                  <ServicesCard
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    icon={item.icon}
+                    isSingleService={true}
+                  />{" "}
                 </div>
               ))}
             </div>
@@ -360,9 +353,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-4 md:gap-8">
                 {tinqlabBenefits.slice(1).map((item, index) => (
                   <div key={index}>
-                    <SlideDown delay={index * 0.2} overflow={null}>
-                      <BenefitCard {...item} bgColor={"bg-darkBlue"} />
-                    </SlideDown>{" "}
+                    <BenefitCard {...item} bgColor={"bg-darkBlue"} />
                   </div>
                 ))}
               </div>

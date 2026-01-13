@@ -205,50 +205,42 @@ export default function Home() {
           id={"about"}
         >
           <div className="relative hidden  md:block h-full ">
-            <SlideRight>
-              <Image
-                src="/images/featuresbg/features3.png"
-                alt="About Tinqlab"
-                fill
-                className="bg-right-bottom bg-no-repeat object-cover rounded-bl-[20px]"
-              />
-            </SlideRight>
+            <Image
+              src="/images/featuresbg/features3.png"
+              alt="About Tinqlab"
+              fill
+              className="bg-right-bottom bg-no-repeat object-cover rounded-bl-[20px]"
+            />
           </div>
-
-          <SlideLeft>
-            <div className="flex flex-col items-start justify-center gap-4 p-6  ">
-              {" "}
-              <HeaderTwo text={"Who are Tinqlab?"} />
-              <MainText
-                text={
-                  "TinqLab is a software development company founded in 2019 which develops mobile applications, web apps, and custom blockchain software"
-                }
-                color={"opacity-50"}
-              />{" "}
-              <MainText
-                text={
-                  "We solve business problems in addition to creating digital solutions. With a team of 40+ experts, 55+ completed projects, and more than 6 years of expertise, we know what it takes to transform your ideas into real outcomes."
-                }
-                color={"opacity-50"}
-              />{" "}
-              <MainText
-                text={
-                  "What makes us unique?  We comprehend your objectives, company difficulties, and possibilities in order to develop digital solutions that offer real value.  Our clients, who range from creative startups to well-established businesses, rely on us to improve consumer experiences, optimize processes, and spur expansion."
-                }
-                color={"opacity-50"}
-              />
-            </div>{" "}
-          </SlideLeft>
+          <div className="flex flex-col items-start justify-center gap-4 p-6  ">
+            {" "}
+            <HeaderTwo text={"Who are Tinqlab?"} />
+            <MainText
+              text={
+                "TinqLab is a software development company founded in 2019 which develops mobile applications, web apps, and custom blockchain software"
+              }
+              color={"opacity-50"}
+            />{" "}
+            <MainText
+              text={
+                "We solve business problems in addition to creating digital solutions. With a team of 40+ experts, 55+ completed projects, and more than 6 years of expertise, we know what it takes to transform your ideas into real outcomes."
+              }
+              color={"opacity-50"}
+            />{" "}
+            <MainText
+              text={
+                "What makes us unique?  We comprehend your objectives, company difficulties, and possibilities in order to develop digital solutions that offer real value.  Our clients, who range from creative startups to well-established businesses, rely on us to improve consumer experiences, optimize processes, and spur expansion."
+              }
+              color={"opacity-50"}
+            />
+          </div>{" "}
         </div>
       </DoublePageBorders>{" "}
       {/* Our Values */}
       <PageBorders>
         <div className="flex flex-col gap-8" id="industry">
           <div className="px-4">
-            <SlideUp>
-              {" "}
-              <HeaderTwo text={"Our Values"} />
-            </SlideUp>
+            <HeaderTwo text={"Our Values"} />
           </div>
           <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
             {ourValues.map((item, index) => (
@@ -272,12 +264,10 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-4 md:gap-8">
               <div className="flex flex-col gap-4 md:gap-8">
                 <div>
-                  <SlideUp>
-                    <HeaderTwo
-                      text="Benefits Of Working With TinqLab"
-                      color="text-mainWhite"
-                    />
-                  </SlideUp>
+                  <HeaderTwo
+                    text="Benefits Of Working With TinqLab"
+                    color="text-mainWhite"
+                  />
                 </div>
                 <SlideDown delay={0.2} overflow={null}>
                   {" "}
@@ -317,14 +307,16 @@ export default function Home() {
       </PageBorders>
       {/* job Openings */}
       <PageBorders>
+        <div className="flex justify-center items-center gap-8" id="industry">
+          <HeaderTwo text={"No job openings at the moment!"} />
+        </div>
+      </PageBorders>
+      {/* <PageBorders>
         <div className="flex flex-col gap-8" id="industry">
-          <SlideUp>
+          <div className="py-2">
             {" "}
-            <div className="py-2">
-              {" "}
-              <HeaderTwo text={"Consider our job openings!"} />
-            </div>{" "}
-          </SlideUp>
+            <HeaderTwo text={"Consider our job openings!"} />
+          </div>
 
           <div className="grid md:grid-cols-2 gap-4 md:gap-8 ">
             {jobOpenings.map((item, index) => (
@@ -367,7 +359,7 @@ export default function Home() {
             </div>
           </SlideDown>
         </div>
-      </PageBorders>
+      </PageBorders> */}
       {/* Feedbackfrom Team mate */}
       <PageBorders>
         <div id="career">

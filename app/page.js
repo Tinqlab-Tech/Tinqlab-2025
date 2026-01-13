@@ -42,7 +42,7 @@ export default function Home() {
       title: "Fintech",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
-      btnLink: "/contact-us",
+      btnLink: "/industry/fintech",
       btnText: "Learn more",
     },
     {
@@ -50,7 +50,7 @@ export default function Home() {
       title: "Edtech",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
-      btnLink: "/contact-us",
+      btnLink: "/industry/edtech",
       btnText: "Learn more",
     },
     {
@@ -58,7 +58,7 @@ export default function Home() {
       title: "Real Estate",
       subtitle:
         "To train employees on any device, from soft skills to technical expertise.",
-      btnLink: "/contact-us",
+      btnLink: "/industry/real-estate",
       btnText: "Learn more",
     },
     {
@@ -66,7 +66,7 @@ export default function Home() {
       title: "Retail",
       subtitle:
         "We're your go-to financial innovation - banking e-wallet, lending, trading and blockchain solutions",
-      btnLink: "/contact-us",
+      btnLink: "/industry/retail",
       btnText: "Learn more",
     },
   ];
@@ -219,22 +219,25 @@ export default function Home() {
                 </div>
                 <MainText
                   text={
-                    "TinqLab Technologies was excited to work with TinqFi team, creating together an online tutoring platform that reshaped school education. the was a 100% reform and reconfiguration of the industry."
+                    "Tinqfi is a crypto financial platform that aims to help users manage, grow, and use their cryptocurrency assets. It’s essentially a digital asset management service with several financial products bundled into one app or ecosystem."
                   }
                 />
                 <div className="flex flex-wrap gap-4">
                   {" "}
-                  <Link href={"/contact-us"}>
+                  {/* <Link href={"/contact-us"}>
                     <MainButton
                       text={"Case details"}
                       bgcolor={"bg-darkestBlue"}
                     />
-                  </Link>
-                  <Link href={"/contact-us"}>
-                    {" "}
+                  </Link> */}
+                  <Link
+                    href="https://www.tinqfi.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <MainButton
-                      text={"All cases studies"}
-                      bgcolor={"bg-mainBlack/50"}
+                      text={"Visit Tinqfi"}
+                      bgcolor={"bg-darkestBlue"}
                     />
                   </Link>
                 </div>
@@ -266,17 +269,15 @@ export default function Home() {
                 <div className=" relative z-10  grid md:grid-cols-2 gap-4 md:gap-8">
                   {industryProduction.map((item, index) => (
                     <div key={index}>
-                      <SlideDown delay={index * 0.2} overflow={null}>
-                        <IndustryCard
-                          title={item.title}
-                          subtitle={item.subtitle}
-                          bgImg={item.bgImage}
-                          btnLink={item.btnLink}
-                          hasbtnText={true}
-                          btnText={item.btnText}
-                          background={"bg-darkBlue"}
-                        />
-                      </SlideDown>
+                      <IndustryCard
+                        title={item.title}
+                        subtitle={item.subtitle}
+                        bgImg={item.bgImage}
+                        btnLink={item.btnLink}
+                        hasbtnText={true}
+                        btnText={item.btnText}
+                        background={"bg-darkBlue"}
+                      />
                     </div>
                   ))}
                 </div>{" "}
@@ -324,32 +325,27 @@ export default function Home() {
                   </div>
                 </SlideDown>
                 <div className="grid md:grid-cols-2 gap-4 md:gap-8">
-                  <SlideRight>
-                    {" "}
-                    <HeaderTwo
-                      text={"Engage with our experts: Free discovery session"}
+                  {" "}
+                  <HeaderTwo
+                    text={"Engage with our experts: Free discovery session"}
+                  />
+                  <div className="flex flex-col justify-center gap-2">
+                    <MainText
+                      text={
+                        "Through some basic info we'll schedule a 30 minute-call to discover how we can collaborate."
+                      }
+                      color={"opacity-50"}
                     />
-                  </SlideRight>
-                  <SlideLeft>
-                    {" "}
-                    <div className="flex flex-col justify-center gap-5">
-                      <MainText
-                        text={
-                          "Through some basic info we'll schedule a 30 minute-call to discover how we can collaborate."
-                        }
-                        color={"opacity-50"}
-                      />
-                      <MainText
-                        text={
-                          "Our team of experts is here to identify ways to enhance and scale your digital solutions."
-                        }
-                        color={"opacity-50"}
-                      />
-                      <Link href={"/contact-us"}>
-                        <MainButton text={"Explore Now"} />
-                      </Link>
-                    </div>
-                  </SlideLeft>
+                    <MainText
+                      text={
+                        "Our team of experts is here to identify ways to enhance and scale your digital solutions."
+                      }
+                      color={"opacity-50"}
+                    />
+                    <Link href={"/contact-us"}>
+                      <MainButton text={"Explore Now"} />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </PageBorders>

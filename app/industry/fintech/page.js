@@ -260,42 +260,34 @@ export default function Home() {
               <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8">
                 {" "}
                 <div>
-                  <SlideUp>
-                    <HeaderTwo
-                      text={"TinqLab's Fintech software development solutions"}
-                    />
-                  </SlideUp>
+                  <HeaderTwo
+                    text={"TinqLab's Fintech software development solutions"}
+                  />
                 </div>
                 <div>
-                  <SlideRight duration={1.5}>
-                    <MainText
-                      text={
-                        "Entrust your full-cycle web and mobile fintech development to a team that understands both the pace of innovation and the demands of financial systems. At Tinqlab, we’ve delivered successful fintech solutions across blockchain, mobile banking, payment gateways, neobank platforms, and system integrations. With deep industry expertise, we help you build secure, scalable, products that meet today’s standards and tomorrow’s expectations."
-                      }
-                      color={"text-[#12152E] opacity-50"}
-                    />
-                  </SlideRight>
+                  <MainText
+                    text={
+                      "Entrust your full-cycle web and mobile fintech development to a team that understands both the pace of innovation and the demands of financial systems. At Tinqlab, we’ve delivered successful fintech solutions across blockchain, mobile banking, payment gateways, neobank platforms, and system integrations. With deep industry expertise, we help you build secure, scalable, products that meet today’s standards and tomorrow’s expectations."
+                    }
+                    color={"text-[#12152E] opacity-50"}
+                  />
                 </div>
               </div>
               <div className="hidden md:block">
-                <SlideLeft>
-                  <div className=" bg-retailBg3 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh] md:min-h-[30vh]"></div>
-                </SlideLeft>{" "}
+                <div className=" bg-retailBg3 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh] md:min-h-[30vh]"></div>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2  gap-4 md:gap-8">
               {" "}
               {softwareSolutions.map((item, index) => (
                 <div key={index}>
-                  <SlideDown delay={index * 0.2} overflow={null}>
-                    {" "}
-                    <ItemCard
-                      title={item.title}
-                      bgColor={null}
-                      hasIcon={true}
-                      icon={item.icon}
-                    />
-                  </SlideDown>
+                  {" "}
+                  <ItemCard
+                    title={item.title}
+                    bgColor={null}
+                    hasIcon={true}
+                    icon={item.icon}
+                  />
                 </div>
               ))}
             </div>{" "}
@@ -318,15 +310,10 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center">
               {" "}
               <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8">
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Technology We Use"} />
-                </SlideUp>{" "}
+                <HeaderTwo text={"Technology We Use"} />
               </div>
               <div className="hidden md:block">
-                <SlideLeft>
-                  <div className=" bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh] md:min-h-[30vh]"></div>
-                </SlideLeft>{" "}
+                <div className=" bg-retailBg2 bg-contain bg-left-bottom bg-no-repeat min-h-[30vh] md:min-h-[30vh]"></div>
               </div>
             </div>
             <div className="grid grid-cols-4 xl:grid-cols-8 gap-4 md:gap-8">
@@ -351,44 +338,34 @@ export default function Home() {
               <div className="col-span-1 md:col-span-2 flex flex-col gap-4 md:gap-8">
                 {" "}
                 <div>
-                  <SlideUp>
-                    {" "}
-                    <HeaderTwo
-                      text={"Our Fintech Software Development Process"}
-                    />
-                  </SlideUp>{" "}
+                  <HeaderTwo
+                    text={"Our Fintech Software Development Process"}
+                  />
                 </div>
                 <div>
-                  <SlideRight duration={1.5}>
-                    <MainText
-                      text={
-                        "We follow a structured and agile development process designed to deliver secure, scalable, and user-focused fintech solutions. Our approach ensures your product meets regulatory standards, adapts to market shifts, and delivers exceptional customer experiences."
-                      }
-                      color={"text-[#12152E] opacity-50 "}
-                    />
-                  </SlideRight>
+                  <MainText
+                    text={
+                      "We follow a structured and agile development process designed to deliver secure, scalable, and user-focused fintech solutions. Our approach ensures your product meets regulatory standards, adapts to market shifts, and delivers exceptional customer experiences."
+                    }
+                    color={"text-[#12152E] opacity-50 "}
+                  />
                 </div>
               </div>
               <div className="hidden md:block h-full">
-                <SlideLeft>
-                  <div className=" bg-retailBg bg-contain bg-left-bottom bg-no-repeat min-h-[40vh]"></div>
-                </SlideLeft>
+                <div className=" bg-retailBg bg-contain bg-left-bottom bg-no-repeat min-h-[40vh]"></div>
               </div>
             </div>
             <div className=" grid grid-cols-1 md:grid-cols-2  gap-4 md:gap-8">
               {" "}
               {softwareDevelopment.map((item, index) => (
                 <div key={index}>
-                  <SlideDown delay={index * 0.2} overflow={null}>
-                    {" "}
-                    <MainCard
-                      title={item.title}
-                      subtitle={item.subtitle}
-                      bgColor={null}
-                      useIndex={true}
-                      index={index + 1}
-                    />
-                  </SlideDown>
+                  <MainCard
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    bgColor={null}
+                    useIndex={true}
+                    index={index + 1}
+                  />
                 </div>
               ))}
             </div>
@@ -405,33 +382,25 @@ export default function Home() {
               <div className="col-span-1 md:col-span-2 flex flex-col gap-8 md:w-4/5">
                 {" "}
                 <div>
-                  {" "}
-                  <SlideUp>
-                    {" "}
-                    <HeaderTwo
-                      text={
-                        "We Understand that the key to success is clear communication"
-                      }
-                    />
-                  </SlideUp>
-                </div>
-                <SlideRight duration={1.5}>
-                  <MainText
+                  <HeaderTwo
                     text={
-                      "The product owner gets full access to project documentation and planning, which gives them control over the entire process of custom software development at all stages. Our FinTech software development services team is adaptive to clients’ schedules and workflow."
+                      "We Understand that the key to success is clear communication"
                     }
-                    color={"opacity-50"}
                   />
-                </SlideRight>
+                </div>
+                <MainText
+                  text={
+                    "The product owner gets full access to project documentation and planning, which gives them control over the entire process of custom software development at all stages. Our FinTech software development services team is adaptive to clients’ schedules and workflow."
+                  }
+                  color={"opacity-50"}
+                />
               </div>
               <div className=" flex items-center justify-start">
                 <div>
                   {" "}
-                  <SlideRight delay={0.2} overflow={null}>
-                    <Link href={"/contact-us"}>
-                      <MainButton text={"Schedule a call"} />
-                    </Link>{" "}
-                  </SlideRight>
+                  <Link href={"/contact-us"}>
+                    <MainButton text={"Schedule a call"} />
+                  </Link>{" "}
                 </div>
               </div>
             </div>
@@ -446,28 +415,20 @@ export default function Home() {
           >
             <div className="md:sticky md:top-0 self-start flex flex-col gap-8 justify-start items-start bg-white z-10 py-4">
               <div>
-                <SlideUp>
-                  {" "}
-                  <HeaderTwo text={"Why Work with Tinqlab?"} />
-                </SlideUp>
+                <HeaderTwo text={"Why Work with Tinqlab?"} />
               </div>
               <div>
-                {" "}
-                <SlideRight duration={1.5}>
-                  {" "}
-                  <MainText
-                    text={
-                      "At Tinqlab, we do more than just build software — we solve real business challenges with technology that delivers measurable impact. Our approach is rooted in collaboration, innovation, and a deep understanding of the industries we serve."
-                    }
-                    color={"opacity-50"}
-                  />
-                </SlideRight>{" "}
+                <MainText
+                  text={
+                    "At Tinqlab, we do more than just build software — we solve real business challenges with technology that delivers measurable impact. Our approach is rooted in collaboration, innovation, and a deep understanding of the industries we serve."
+                  }
+                  color={"opacity-50"}
+                />
               </div>
-              <SlideDown delay={0.5}>
-                <Link href={"/contact-us"}>
-                  <MainButton text={"Get a consultation"} />
-                </Link>
-              </SlideDown>
+
+              <Link href={"/contact-us"}>
+                <MainButton text={"Get a consultation"} />
+              </Link>
             </div>
             <div className="grid grid-cols-1 gap-4 md:gap-8">
               {workWithTinqlab.map((item, index) => (
