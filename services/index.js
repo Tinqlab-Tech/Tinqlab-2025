@@ -4,11 +4,10 @@ import axios from "axios";
 export const getData = async (url) => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/${url}`);
   if (!res.ok) {
-    console.log(res);
     return {
       success: false,
       data: null,
-      msg: "Not Found",
+      msg: `${res.statusText}`,
     };
   }
   return res.json();
