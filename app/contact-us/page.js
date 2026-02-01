@@ -44,7 +44,7 @@ export default function Home() {
     },
     {
       title: "Email Us",
-      subtitle: "Info@Tinqlab.com",
+      subtitle: "Info [at] Tinqlab.com",
       icon: <FaMessage color="white" />,
       link: "",
     },

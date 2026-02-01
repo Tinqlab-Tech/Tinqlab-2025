@@ -13,6 +13,7 @@ import { MainButton } from "../button/MainButton";
 import SlideUp from "@/animation/SlideUp";
 import SlideRight from "@/animation/SlideRight";
 import SlideDown from "@/animation/SlideDown";
+import toast from "react-hot-toast";
 
 export const ContactUsModal = ({ btnText }) => {
   const [modalState, setModalState] = useState(false);
@@ -30,17 +31,16 @@ export const ContactUsModal = ({ btnText }) => {
     postData("contact-us", { ...data }).then((res) => {
       //alert feature
       if (res.success === true) {
-        setResponse(res);
+        toast.success(`${res.msg}`);
       } else {
+        toast.error(`${res.msg}`);
       }
     });
     setIsLoading(false);
   };
 
   useEffect(() => {
-    getData("wake").then((res) => {
-      console.log(res);
-    });
+    getData("wake").then((res) => {});
   }, []);
 
   return (
@@ -75,13 +75,6 @@ export const ContactUsModal = ({ btnText }) => {
                 className="bg-transparent rounded-[5px] md:py-[10px]"
               >
                 <div className="text-left md:py-[25px] py-[10px] px-0 ">
-                  {response !== null && (
-                    <div className="text-[12px] font-extralight bg-opacity-50 p-2 bg-green-400 my-2 rounded-[5px]">
-                      {
-                        "Your message has been sent successfully. Our Team will get back to you via @ehdgroupllc.com email soon."
-                      }
-                    </div>
-                  )}
                   <div className="flex flex-col gap-2 md:gap-6 ">
                     {/*Name  */}
                     <div className="flex flex-col items-start gap-2 ">
@@ -212,19 +205,19 @@ export const ContactUsModal = ({ btnText }) => {
                       )}
                     </div>
                   </div>
+                  <div className="flex justify-center items-center md:justify-end my-[40px] ">
+                    {" "}
+                    <button
+                      type="submit"
+                      className={`cursor-pointer font-normal rounded-full shadow-custom-primary  bg-primary px-[20px] py-[10px] md:px-[40px] md:py-[14px] text-[10px] text-white md:text-[14px] tracking-wider`}
+                    >
+                      Send Message{" "}
+                    </button>
+                  </div>{" "}
                 </div>
               </form>{" "}
             </SlideDown>
             {/* button */}
-            <div className="flex justify-center items-center md:justify-end ">
-              {" "}
-              <button
-                type="submit"
-                className={`cursor-pointer font-normal rounded-full shadow-custom-primary  bg-primary px-[20px] py-[10px] md:px-[40px] md:py-[14px] text-[10px] text-white md:text-[14px] tracking-wider`}
-              >
-                Send Message{" "}
-              </button>
-            </div>{" "}
           </div>
         </div>
       </div>
