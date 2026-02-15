@@ -30,9 +30,22 @@ import SlideDown from "@/animation/SlideDown";
 import SlideUp from "@/animation/SlideUp";
 
 export const metadata = {
-  title: "Tinqlab - Expert software and blockchain developers",
+  title: "Tinqlab | Expert Software & Blockchain Development in Nigeria",
   description:
-    "We Build Efficient And Low Cost Web, Mobile And Blockchain Applications With Great User Interface And Experience. | Software development company in Nigeria.",
+    "Tinqlab delivers high-quality, cost-effective web, mobile, and blockchain applications with exceptional UI/UX. Trusted software development company in Nigeria for startups and enterprises.",
+  keywords: [
+    "Tinqlab",
+    "software development Nigeria",
+    "blockchain developers",
+    "web app development",
+    "mobile app development",
+    "UI/UX design",
+    "custom software solutions",
+  ],
+  author: "Tinqlab",
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1",
+  canonical: "https://www.tinqlab.com/",
 };
 
 export default function Home() {
