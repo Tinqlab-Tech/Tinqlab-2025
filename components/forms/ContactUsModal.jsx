@@ -5,7 +5,7 @@ import { Modal, ActionIcon } from "rizzui";
 import { useForm, Controller } from "react-hook-form";
 import ReactPhoneInput from "react-phone-input-2";
 import { getData, postData } from "@/services/index";
-
+import { useRouter } from "next/navigation";
 import { MdClose } from "react-icons/md";
 import PageStarter from "../section/PageStarter";
 import MainText from "../typography/MainText";
@@ -19,6 +19,7 @@ export const ContactUsModal = ({ btnText }) => {
   const [modalState, setModalState] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [response, setResponse] = useState("");
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -32,6 +33,8 @@ export const ContactUsModal = ({ btnText }) => {
       //alert feature
       if (res.success === true) {
         toast.success(`${res.msg}`);
+        router.push("/");
+        rout;
       } else {
         toast.error(`${res.msg}`);
       }
