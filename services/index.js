@@ -36,9 +36,10 @@ export const postData = async (url, data) => {
     });
     return response.data; // parses JSON response into native JavaScript objects
   } catch (error) {
+    console.log(error);
     return {
       success: false,
-      message: "Network error occurred",
+      msg: "Network error occurred",
     };
   }
 };
@@ -78,7 +79,7 @@ export const postDataWithFile = async (url, data) => {
   } catch (error) {
     return {
       success: false,
-      message: "Network error occurred",
+      msg: "Network error occurred",
     };
   }
 };

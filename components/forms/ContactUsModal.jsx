@@ -30,6 +30,7 @@ export const ContactUsModal = ({ btnText }) => {
   const onSubmit = (data) => {
     setIsLoading(true);
     postData("contact-us", { ...data }).then((res) => {
+      console.log(res);
       //alert feature
       if (res.success === true) {
         toast.success(`${res.msg}`);
